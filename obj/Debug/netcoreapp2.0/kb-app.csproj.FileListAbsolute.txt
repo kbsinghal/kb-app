@@ -1,0 +1,10 @@
+C:\Working\KB\kb-app\bin\Debug\netcoreapp2.0\kb-app.deps.json
+C:\Working\KB\kb-app\bin\Debug\netcoreapp2.0\kb-app.runtimeconfig.json
+C:\Working\KB\kb-app\bin\Debug\netcoreapp2.0\kb-app.runtimeconfig.dev.json
+C:\Working\KB\kb-app\bin\Debug\netcoreapp2.0\kb-app.dll
+C:\Working\KB\kb-app\bin\Debug\netcoreapp2.0\kb-app.pdb
+C:\Working\KB\kb-app\obj\Debug\netcoreapp2.0\kb-app.csproj.CoreCompileInputs.cache
+C:\Working\KB\kb-app\obj\Debug\netcoreapp2.0\kb-app.AssemblyInfoInputs.cache
+C:\Working\KB\kb-app\obj\Debug\netcoreapp2.0\kb-app.AssemblyInfo.cs
+C:\Working\KB\kb-app\obj\Debug\netcoreapp2.0\kb-app.dll
+C:\Working\KB\kb-app\obj\Debug\netcoreapp2.0\kb-app.pdb

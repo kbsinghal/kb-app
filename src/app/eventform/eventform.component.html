@@ -1,0 +1,98 @@
+<form  (ngSubmit)="onSubmit(eventFrm)"  [formGroup]="eventFrm">  
+  <h2>{{data.modalTitle}}</h2>  
+    
+  <div>  
+      <mat-form-field appearance="outline">  
+      <mat-label>Event Name</mat-label>  
+      <input matInput placeholder="Event Name" formControlName="eventName">  
+      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+      <!-- <mat-hint>Hint</mat-hint> -->  
+      <mat-error *ngIf="formErrors.eventName">  
+        {{ formErrors.EventName }}  
+      </mat-error>  
+    </mat-form-field>  
+  </div>  
+  <div>  
+    <mat-form-field appearance="outline">  
+      <mat-label>Event Description</mat-label>  
+      <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
+      <input matInput placeholder="Event Description" formControlName="eventDescription">
+      <mat-error *ngIf="formErrors.eventDescription">  
+        {{ formErrors.EventDescription }}  
+      </mat-error>  
+    </mat-form-field>  
+    
+  </div> 
+  <div>  
+    <mat-form-field appearance="outline">  
+      <mat-label>Event Address</mat-label>  
+      <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
+      <input matInput placeholder="Event Address" formControlName="eventAddress">
+      <mat-error *ngIf="formErrors.eventAddress">  
+        {{ formErrors.EventAddress }}  
+      </mat-error>  
+    </mat-form-field>  
+    
+  </div>  
+  <!-- <p>  
+      <mat-radio-group class="contact-radio-group" formControlName="gender" >  
+        <mat-radio-button class="contact-radio-button" *ngFor="let gndr of genders" [value]="gndr.id">  
+          {{ gndr.name }}  
+        </mat-radio-button>  
+      </mat-radio-group>  
+      <mat-error *ngIf="formErrors.gender">  
+        {{ formErrors.gender }}  
+      </mat-error>  
+  </p>   -->
+  <div>  
+    <mat-form-field appearance="outline">  
+      <input matInput [matDatepicker]="picker1" placeholder="Choose start date" formControlName="eventStartDate">  
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>  
+      <mat-datepicker #picker1></mat-datepicker>  
+      
+    <mat-error *ngIf="formErrors.eventStartDate ">  
+      {{ formErrors.EventStartDate }}  
+    </mat-error>  
+    </mat-form-field>  
+  </div>  
+
+      <div>  
+          <mat-form-field appearance="outline">  
+            <input matInput [matDatepicker]="picker2" placeholder="Choose end date" formControlName="eventEndDate">  
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>  
+            <mat-datepicker #picker2></mat-datepicker>  
+            
+          <mat-error *ngIf="formErrors.eventEndDate ">  
+            {{ formErrors.EventEndDate }}  
+          </mat-error>  
+          </mat-form-field>  
+        </div>  
+       
+<!-- <div>
+    <mat-form-field appearance="outline">  
+      <mat-select placeholder="Select a Technology" formControlName="techno">  
+        <mat-option>-- None --</mat-option>  
+        <mat-option *ngFor="let techno  of technologies" [value]="techno">  
+          {{ techno }}  
+        </mat-option>  
+      </mat-select>  
+      <mat-error *ngIf="formErrors.techno ">  
+        {{ formErrors.techno }}  
+      </mat-error>  
+    </mat-form-field>  
+  </div>   -->
+  <!-- <div>  
+    <mat-form-field appearance="outline">  
+      <textarea matInput placeholder="Message..." formControlName="message"></textarea>  
+      <mat-error *ngIf="formErrors.message ">  
+        {{ formErrors.message }}  
+      </mat-error>  
+    </mat-form-field>  
+  </div>   -->
+  <div>  
+    
+    <button type="button" mat-raised-button color="warn" (click)="dialogRef.close()">Cancel</button>   
+    <button type="submit" mat-raised-button color="primary" [disabled]="eventFrm.invalid">{{data.modalBtnTitle}}</button>  
+  </div>  
+    
+  </form> 
