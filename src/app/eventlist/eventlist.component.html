@@ -11,7 +11,7 @@
         <ng-container matColumnDef="eventID">  
         <th mat-header-cell *matHeaderCellDef>Event Id </th>  
         <td mat-cell *matCellDef="let element"> {{element.eventID}} </td>  
-      </ng-container>
+        </ng-container>
     
         <!-- Event Name Column -->  
         <ng-container matColumnDef="eventName">  
@@ -44,29 +44,22 @@
           <td mat-cell *matCellDef="let element"> {{element.eventEndDate | date: 'MM-dd-yyyy' }} </td>  
         </ng-container>  
     
-        <!-- Technology Column -->  
-        <!-- <ng-container matColumnDef="techno">  
-          <th mat-header-cell *matHeaderCellDef> Technology </th>  
-          <td mat-cell *matCellDef="let element"> {{element.techno}} </td>  
-        </ng-container>  
-    
-        <!-- Message Column -->  
-        <!-- <ng-container matColumnDef="message">  
-          <th mat-header-cell *matHeaderCellDef> Message </th>  
-          <td mat-cell *matCellDef="let element"> {{element.message}} </td>  
-        </ng-container>   --> -->
-    
+         
         <ng-container matColumnDef="action">  
-          <th mat-header-cell *matHeaderCellDef> Action </th>  
+          <th mat-header-cell *matHeaderCellDef>Action</th>  
           <td mat-cell *matCellDef="let element">  
             <button title="Edit" mat-raised-button color="primary" (click)="editEvent(element.eventID)">Edit</button>  
             <button title="Delete" mat-raised-button color="warn" (click)="deleteEvent(element.eventID)">Delete</button>  
           </td>  
         </ng-container>  
-    
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>  
+
+        <!-- <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row> -->
+        <!-- <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row> -->
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>  
       </table>  
+
     
+
     </div>  
   </ng-template> 

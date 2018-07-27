@@ -24,7 +24,7 @@ export class EventlistComponent implements OnInit {
 
   // set columns that will need to show in listing table
   // displayedColumns = ['name', 'email', 'gender', 'birth', 'techno', 'message', 'action'];
-  displayedColumns = ['eventID','eventName', 'eventDescription', 'eventAddress', 'eventStartDate', 'eventEndDate'];
+  displayedColumns = ['eventID','eventName', 'eventDescription', 'eventAddress', 'eventStartDate', 'eventEndDate','action'];
   
   // setting up datasource for material table
   dataSource = new MatTableDataSource<IEvent>();

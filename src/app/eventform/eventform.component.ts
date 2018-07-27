@@ -38,14 +38,14 @@ export class EventformComponent implements OnInit {
   ngOnInit() {
     // built event form
     this.eventFrm = this.fb.group({
-      EventID: [''],
-      EventName: ['', [Validators.required, Validators.maxLength(50)]],
-      EventDescription: ['', [Validators.required, Validators.maxLength(50)]],
-      EventAddress: ['', [Validators.required, Validators.maxLength(50)]],
+      eventID: [''],
+      eventName: ['', [Validators.required, Validators.maxLength(50)]],
+      eventDescription: ['', [Validators.required, Validators.maxLength(50)]],
+      eventAddress: ['', [Validators.required, Validators.maxLength(50)]],
       //email: ['', [Validators.required, Validators.email]],
       //gender: ['', [Validators.required]],
-      EventStartDate: ['', [Validators.required]],
-      EventEndDate: ['', [Validators.required]]
+      eventStartDate: ['', [Validators.required]],
+      eventEndDate: ['', [Validators.required]]
       
     });
     //this.genders = Global.genders;
@@ -84,24 +84,24 @@ export class EventformComponent implements OnInit {
   // form errors model
   // tslint:disable-next-line:member-ordering
   formErrors = {
-    'EventName': '',
-    'EventDescription': '',
-    'EventAddress': '',
-    'EventStartDate': '',
-    'EventEndDate': ''
+    'eventName': '',
+    'eventDescription': '',
+    'eventAddress': '',
+    'eventStartDate': '',
+    'eventEndDate': ''
   };
   // custom valdiation messages
   // tslint:disable-next-line:member-ordering
   validationMessages = {
-    'EventName': {
+    'eventName': {
       'maxlength': 'eventname cannot be more than 50 characters long.',
       'required': 'eventname is required.'
     },
-    'EventDescription': {
+    'eventDescription': {
       'maxlength': 'eventdescription cannot be more than 50 characters long.',
       'required': 'eventdescription is required.'
     },
-    'EventAddress': {
+    'eventAddress': {
       'maxlength': 'EventAddress cannot be more than 50 characters long.',
       'required': 'EventAddress is required.'
     },
@@ -115,10 +115,10 @@ export class EventformComponent implements OnInit {
     // 'techno': {
     //   'required': 'Technology is required.'
     // },
-    'EventStartDate': {
+    'eventStartDate': {
       'required': 'eventstartdate is required.'
     },
-    'EventEndDate': {
+    'eventEndDate': {
       'required': 'eventenddate is required.'
     }
 
@@ -142,7 +142,7 @@ export class EventformComponent implements OnInit {
         );
         break;
       case DBOperation.update:
-        this._eventService.updateEvent(Global.BASE_USER_ENDPOINT + 'updateEvent', eventData.EventID, eventData).subscribe(
+        this._eventService.updateEvent(Global.BASE_USER_ENDPOINT + 'updateEvent', eventData.eventID, eventData).subscribe(
           data => {
             // Success
             if (data.message) {
@@ -157,7 +157,7 @@ export class EventformComponent implements OnInit {
         );
         break;
       case DBOperation.delete:
-        this._eventService.deleteEvent(Global.BASE_USER_ENDPOINT + 'deleteEvent', eventData.EventID).subscribe(
+        this._eventService.deleteEvent(Global.BASE_USER_ENDPOINT + 'deleteEvent', eventData.eventID).subscribe(
           data => {
             // Success
             if (data.message) {
@@ -178,8 +178,8 @@ export class EventformComponent implements OnInit {
   }
 
   mapDateData(event: IEvent): IEvent {
-    event.EventStartDate = new Date(event.EventStartDate).toISOString();
-    event.EventEndDate = new Date(event.EventEndDate).toISOString();
+    event.eventStartDate = new Date(event.eventStartDate).toISOString();
+    event.eventEndDate = new Date(event.eventEndDate).toISOString();
     return event;
   }
 }
