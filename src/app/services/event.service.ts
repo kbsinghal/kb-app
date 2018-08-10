@@ -25,7 +25,7 @@ const httpPostOptions = {
   headers: new HttpHeaders({  
     //'Content-Type': 'application/x-www-form-urlencoded',
     'Content-Type': 'application/json; charset=UTF-8',
-    'Authorization': 'Basic ' + btoa('kalyaanbhav : M0rph!us'),
+    //'Authorization': 'Basic ' + btoa('kalyaanbhav : M0rph!us'),
       'Accept': 'application/json',
       'dataType': 'json'
       //'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT, OPTIONS',
@@ -56,8 +56,8 @@ export class EventService {
   // insert new event details
   addEvent(url: string, event: IEvent): Observable<any> {
     //return this.http.post(url, event, httpPostOptions)
-    return this.http.post(url, JSON.stringify(event), httpPostOptions)
-    //return this.http.post(url, JSON.stringify(event), httpOptions)
+    //return this.http.post(url, JSON.stringify(event), httpPostOptions)
+    return this.http.post(url, JSON.stringify(event), httpOptions)
     //return this.http.post(url, event, httpPostOptions)
       .pipe(
         catchError(this.handleError)

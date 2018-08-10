@@ -59,8 +59,8 @@ export class EventService {
   }  
   // insert new event details    
   addEvent(url: string, event: IEvent): Observable < any > {  
-    //return this.http.post(url, event, httpPostOptions).pipe(catchError(this.handleError));    
-    return this.http.post(url, JSON.stringify(event), httpPostOptions).pipe(catchError(this.handleError));  
+    return this.http.post(url, event, httpPostOptions).pipe(catchError(this.handleError));    
+    //return this.http.post(url, JSON.stringify(event), httpPostOptions).pipe(catchError(this.handleError));  
     //return this.http.post(url, JSON.stringify(event), httpOptions).pipe(catchError(this.handleError));  
       //return this.http.post(url, event, httpPostOptions).pipe(catchError(this.handleError));  
   }  

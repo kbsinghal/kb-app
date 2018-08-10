@@ -694,7 +694,7 @@ var httpPostOptions = {
     headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
         //'Content-Type': 'application/x-www-form-urlencoded',
         'Content-Type': 'application/json; charset=UTF-8',
-        'Authorization': 'Basic ' + btoa('kalyaanbhav : M0rph!us'),
+        //'Authorization': 'Basic ' + btoa('kalyaanbhav : M0rph!us'),
         'Accept': 'application/json',
         'dataType': 'json'
         //'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT, OPTIONS',
@@ -720,7 +720,8 @@ var EventService = /** @class */ (function () {
     // insert new event details
     EventService.prototype.addEvent = function (url, event) {
         //return this.http.post(url, event, httpPostOptions)
-        return this.http.post(url, JSON.stringify(event), httpPostOptions)
+        //return this.http.post(url, JSON.stringify(event), httpPostOptions)
+        return this.http.post(url, JSON.stringify(event), httpOptions)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
     // update event details
