@@ -24,7 +24,7 @@ export class EventlistComponent implements OnInit {
 
   // set columns that will need to show in listing table
   // displayedColumns = ['name', 'email', 'gender', 'birth', 'techno', 'message', 'action'];
-  displayedColumns = ['eventID','eventName', 'eventDescription', 'eventAddress', 'eventStartDate', 'eventEndDate','action'];
+  displayedColumns = ['EventID','EventName', 'EventDescription', 'EventAddress', 'EventStartDate', 'EventEndDate','action'];
   
   // setting up datasource for material table
   dataSource = new MatTableDataSource<IEvent>();
@@ -91,14 +91,14 @@ export class EventlistComponent implements OnInit {
     this.dbops = DBOperation.update;
     this.modalTitle = 'Edit Event';
     this.modalBtnTitle = 'Update';
-    this.event = this.dataSource.data.filter(x => x.eventID === id)[0];
+    this.event = this.dataSource.data.filter(x => x.EventID === id)[0];
     this.openDialog();
   }
   deleteEvent(id: number) {
     this.dbops = DBOperation.delete;
     this.modalTitle = 'Confirm to Delete ?';
     this.modalBtnTitle = 'Delete';
-    this.event = this.dataSource.data.filter(x => x.eventID === id)[0];
+    this.event = this.dataSource.data.filter(x => x.EventID === id)[0];
     this.openDialog();
   }
   showMessage(msg: string) {

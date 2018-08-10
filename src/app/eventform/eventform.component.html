@@ -4,11 +4,11 @@
   <div>  
       <mat-form-field appearance="outline">  
       <mat-label>Event Name</mat-label>  
-      <input matInput placeholder="Event Name" formControlName="eventName">  
+      <input matInput placeholder="Event Name" formControlName="EventName">  
       <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
       <!-- <mat-hint>Hint</mat-hint> -->  
-      <mat-error *ngIf="formErrors.eventName">  
-        {{ formErrors.eventName }}  
+      <mat-error *ngIf="formErrors.EventName">  
+        {{ formErrors.EventName }}  
       </mat-error>  
     </mat-form-field>  
   </div>  
@@ -16,9 +16,9 @@
     <mat-form-field appearance="outline">  
       <mat-label>Event Description</mat-label>  
       <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
-      <input matInput placeholder="Event Description" formControlName="eventDescription">
-      <mat-error *ngIf="formErrors.eventDescription">  
-        {{ formErrors.eventDescription }}  
+      <input matInput placeholder="Event Description" formControlName="EventDescription">
+      <mat-error *ngIf="formErrors.EventDescription">  
+        {{ formErrors.EventDescription }}  
       </mat-error>  
     </mat-form-field>  
     
@@ -27,12 +27,11 @@
     <mat-form-field appearance="outline">  
       <mat-label>Event Address</mat-label>  
       <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
-      <input matInput placeholder="Event Address" formControlName="eventAddress">
-      <mat-error *ngIf="formErrors.eventAddress">  
-        {{ formErrors.eventAddress }}  
+      <input matInput placeholder="Event Address" formControlName="EventAddress">
+      <mat-error *ngIf="formErrors.EventAddress">  
+        {{ formErrors.EventAddress }}  
       </mat-error>  
     </mat-form-field>  
-    
   </div>  
   <!-- <p>  
       <mat-radio-group class="contact-radio-group" formControlName="gender" >  
@@ -46,27 +45,127 @@
   </p>   -->
   <div>  
     <mat-form-field appearance="outline">  
-      <input matInput [matDatepicker]="picker1" placeholder="Choose start date" formControlName="eventStartDate">  
+      <input matInput [matDatepicker]="picker1" placeholder="Choose start date" formControlName="EventStartDate">  
       <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>  
       <mat-datepicker #picker1></mat-datepicker>  
       
-    <mat-error *ngIf="formErrors.eventStartDate ">  
-      {{ formErrors.eventStartDate }}  
+    <mat-error *ngIf="formErrors.EventStartDate ">  
+      {{ formErrors.EventStartDate }}  
     </mat-error>  
     </mat-form-field>  
   </div>  
 
       <div>  
           <mat-form-field appearance="outline">  
-            <input matInput [matDatepicker]="picker2" placeholder="Choose end date" formControlName="eventEndDate">  
+            <input matInput [matDatepicker]="picker2" placeholder="Choose end date" formControlName="EventEndDate">  
             <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>  
             <mat-datepicker #picker2></mat-datepicker>  
             
-          <mat-error *ngIf="formErrors.eventEndDate ">  
-            {{ formErrors.eventEndDate }}  
+          <mat-error *ngIf="formErrors.EventEndDate ">  
+            {{ formErrors.EventEndDate }}  
           </mat-error>  
           </mat-form-field>  
         </div>  
+
+        <div>  
+          <mat-form-field appearance="outline">  
+            <mat-label>Event Start Time</mat-label>  
+            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
+            <input matInput placeholder="Event Start Time" formControlName="EventStartTime">
+            <mat-error *ngIf="formErrors.EventStartTime">  
+              {{ formErrors.EventStartTime }}  
+            </mat-error>  
+          </mat-form-field>  
+        </div> 
+
+        <div>  
+          <mat-form-field appearance="outline">  
+            <mat-label>Event End Time</mat-label>  
+            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
+            <input matInput placeholder="Event End Time" formControlName="EventEndTime">
+            <mat-error *ngIf="formErrors.EventEndTime">  
+              {{ formErrors.EventEndTime }}  
+            </mat-error>  
+          </mat-form-field>  
+        </div> 
+
+        <div>  
+          <mat-form-field appearance="outline">  
+            <mat-label>Event Venue Latitude</mat-label>  
+            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
+            <input matInput placeholder="Event Venue Latitude" formControlName="EventVenueLatitude">
+            <mat-error *ngIf="formErrors.EventVenueLatitude">  
+              {{ formErrors.EventVenueLatitude }}  
+            </mat-error>  
+          </mat-form-field>  
+        </div> 
+
+        <div>  
+          <mat-form-field appearance="outline">  
+            <mat-label>Event Venue Longitude</mat-label>  
+            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
+            <input matInput placeholder="Event Venue Longitude" formControlName="EventVenueLongitude">
+            <mat-error *ngIf="formErrors.EventVenueLongitude">  
+              {{ formErrors.EventVenueLongitude }}  
+            </mat-error>  
+          </mat-form-field>  
+        </div> 
+
+        
+        <div>  
+          <mat-form-field appearance="outline">  
+            <mat-label>CountryID</mat-label>  
+            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
+            <input matInput placeholder="Country ID" formControlName="CountryID">
+            <mat-error *ngIf="formErrors.CountryID">  
+              {{ formErrors.CountryID }}  
+            </mat-error>  
+          </mat-form-field>  
+        </div> 
+
+        <div>  
+          <mat-form-field appearance="outline">  
+            <mat-label>StateID</mat-label>  
+            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
+            <input matInput placeholder="StateID" formControlName="StateID">
+            <mat-error *ngIf="formErrors.StateID">  
+              {{ formErrors.StateID }}  
+            </mat-error>  
+          </mat-form-field>  
+        </div>
+        
+        <div>  
+          <mat-form-field appearance="outline">  
+            <mat-label>CityID</mat-label>  
+            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
+            <input matInput placeholder="CityID" formControlName="CityID">
+            <mat-error *ngIf="formErrors.CityID">  
+              {{ formErrors.CityID }}  
+            </mat-error>  
+          </mat-form-field>  
+        </div>
+
+        <div>  
+          <mat-form-field appearance="outline">  
+            <mat-label>AreaID</mat-label>  
+            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
+            <input matInput placeholder="AreaID" formControlName="AreaID">
+            <mat-error *ngIf="formErrors.AreaID">  
+              {{ formErrors.AreaID }}  
+            </mat-error>  
+          </mat-form-field>  
+        </div>
+
+        <div>  
+          <mat-form-field appearance="outline">  
+            <mat-label>IsActive</mat-label>  
+            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
+            <input matInput placeholder="IsActive" formControlName="IsActive">
+            <mat-error *ngIf="formErrors.IsActive">  
+              {{ formErrors.IsActive }}  
+            </mat-error>  
+          </mat-form-field>  
+        </div>
        
 <!-- <div>
     <mat-form-field appearance="outline">  

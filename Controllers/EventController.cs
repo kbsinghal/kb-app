@@ -43,7 +43,9 @@ public class EventController: Controller {
         
     [HttpPost]  
     [Route("addEvent")]  
-    public IActionResult Create([FromBody] Event item) {  
+  //public IActionResult Create([FromBody] Event item) {  
+  public IActionResult Create([FromBody] Event item) {  
+  //  public IActionResult Create(Event item) {  
             // set bad request if contact data is not provided in body  
             if (item == null) {  
                 return BadRequest();  
@@ -53,7 +55,16 @@ public class EventController: Controller {
                     EventDescription = item.EventDescription,  
                     EventStartDate = item.EventStartDate,  
                     EventEndDate = item.EventEndDate,  
-                    EventAddress = item.EventAddress  
+                    EventAddress = item.EventAddress,
+                    EventStartTime=item.EventStartTime,
+                    EventEndTime=item.EventEndTime,
+                    EventVenueLatitude=item.EventVenueLatitude,
+                    EventVenueLongitude=item.EventVenueLongitude,
+                    CountryID=item.CountryID,
+                    StateID=item.StateID,
+                    CityID=item.CityID,
+                    AreaID=item.AreaID,
+                    IsActive=item.IsActive
                     //,message = item.message  
             });  
             _context.SaveChanges();  

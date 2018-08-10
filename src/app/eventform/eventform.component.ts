@@ -38,15 +38,24 @@ export class EventformComponent implements OnInit {
   ngOnInit() {
     // built event form
     this.eventFrm = this.fb.group({
-      eventID: [''],
-      eventName: ['', [Validators.required, Validators.maxLength(50)]],
-      eventDescription: ['', [Validators.required, Validators.maxLength(50)]],
-      eventAddress: ['', [Validators.required, Validators.maxLength(50)]],
+      EventID: [''],
+      EventName: ['', [Validators.required, Validators.maxLength(250)]],
+      EventDescription: ['', [Validators.required, Validators.maxLength(500)]],
+      EventAddress: ['', [Validators.required, Validators.maxLength(250)]],
       //email: ['', [Validators.required, Validators.email]],
       //gender: ['', [Validators.required]],
-      eventStartDate: ['', [Validators.required]],
-      eventEndDate: ['', [Validators.required]]
-      
+      EventStartDate: ['', [Validators.required]],
+      EventEndDate: ['', [Validators.required]],
+      EventStartTime: ['', [Validators.required]],
+      EventEndTime: ['', [Validators.required]],
+      EventVenueLatitude: ['', [Validators.required]],
+      EventVenueLongitude: ['', [Validators.required]],
+      CountryID: ['', [Validators.required]],
+      StateID: ['', [Validators.required]],
+      CityID: ['', [Validators.required]],
+      AreaID: ['', [Validators.required]],
+      IsActive: ['', [Validators.required]]
+     
     });
     //this.genders = Global.genders;
     //this.technologies = Global.technologies;
@@ -84,11 +93,21 @@ export class EventformComponent implements OnInit {
   // form errors model
   // tslint:disable-next-line:member-ordering
   formErrors = {
-    'eventName': '',
-    'eventDescription': '',
-    'eventAddress': '',
-    'eventStartDate': '',
-    'eventEndDate': ''
+    'EventName': '',
+    'EventDescription': '',
+    'EventAddress': '',
+    'EventStartDate': '',
+    'EventEndDate': '',
+     'EventStartTime': '',
+     'EventEndTime': '',
+      'EventVenueLatitude': '',
+      'EventVenueLongitude': '',
+      'CountryID': '',
+      'StateID': '',
+      'CityID': '',
+      'AreaID': '',
+      'IsActive': ''
+
   };
   // custom valdiation messages
   // tslint:disable-next-line:member-ordering
@@ -142,7 +161,7 @@ export class EventformComponent implements OnInit {
         );
         break;
       case DBOperation.update:
-        this._eventService.updateEvent(Global.BASE_USER_ENDPOINT + 'updateEvent', eventData.eventID, eventData).subscribe(
+        this._eventService.updateEvent(Global.BASE_USER_ENDPOINT + 'updateEvent', eventData.EventID, eventData).subscribe(
           data => {
             // Success
             if (data.message) {
@@ -157,7 +176,7 @@ export class EventformComponent implements OnInit {
         );
         break;
       case DBOperation.delete:
-        this._eventService.deleteEvent(Global.BASE_USER_ENDPOINT + 'deleteEvent', eventData.eventID).subscribe(
+        this._eventService.deleteEvent(Global.BASE_USER_ENDPOINT + 'deleteEvent', eventData.EventID).subscribe(
           data => {
             // Success
             if (data.message) {
@@ -178,8 +197,8 @@ export class EventformComponent implements OnInit {
   }
 
   mapDateData(event: IEvent): IEvent {
-    event.eventStartDate = new Date(event.eventStartDate).toISOString();
-    event.eventEndDate = new Date(event.eventEndDate).toISOString();
+    event.EventStartDate = new Date(event.EventStartDate).toISOString();
+    event.EventEndDate = new Date(event.EventEndDate).toISOString();
     return event;
   }
 }

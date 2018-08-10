@@ -8,9 +8,9 @@ namespace kb_app.DAL
 {
      internal interface IEventRespository
   {
-      List<Event> GetEvents(int amount, string sort);
+    //   List<Event> GetEvents(int amount, string sort);
 
-      Event GetSingleEvent(int eventId);
+    //   Event GetSingleEvent(int eventId);
 
       //bool InsertEvent(Event ourEvent);
 
