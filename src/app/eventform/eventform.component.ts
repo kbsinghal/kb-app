@@ -38,12 +38,12 @@ export class EventformComponent implements OnInit {
   ngOnInit() {
     // built event form
     this.eventFrm = this.fb.group({
-      EventID: [''],
+      EventID: [-1],
       EventName: ['', [Validators.required, Validators.maxLength(250)]],
       EventDescription: ['', [Validators.required, Validators.maxLength(500)]],
       EventAddress: ['', [Validators.required, Validators.maxLength(250)]],
-      //email: ['', [Validators.required, Validators.email]],
-      //gender: ['', [Validators.required]],
+      // email: ['', [Validators.required, Validators.email]],
+      // gender: ['', [Validators.required]],
       EventStartDate: ['', [Validators.required]],
       EventEndDate: ['', [Validators.required]],
       EventStartTime: ['', [Validators.required]],
@@ -55,10 +55,9 @@ export class EventformComponent implements OnInit {
       CityID: ['', [Validators.required]],
       AreaID: ['', [Validators.required]],
       IsActive: ['', [Validators.required]]
-     
-    });
-    //this.genders = Global.genders;
-    //this.technologies = Global.technologies;
+         });
+    // this.genders = Global.genders;
+    // this.technologies = Global.technologies;
 
     // subscribe on value changed event of form to show validation message
     this.eventFrm.valueChanges.subscribe(data => this.onValueChanged(data));
@@ -98,29 +97,28 @@ export class EventformComponent implements OnInit {
     'EventAddress': '',
     'EventStartDate': '',
     'EventEndDate': '',
-     'EventStartTime': '',
-     'EventEndTime': '',
-      'EventVenueLatitude': '',
-      'EventVenueLongitude': '',
-      'CountryID': '',
-      'StateID': '',
-      'CityID': '',
-      'AreaID': '',
-      'IsActive': ''
-
+    'EventStartTime': '',
+    'EventEndTime': '',
+    'EventVenueLatitude': '',
+    'EventVenueLongitude': '',
+    'CountryID': '',
+    'StateID': '',
+    'CityID': '',
+    'AreaID': '',
+    'IsActive': ''
   };
   // custom valdiation messages
   // tslint:disable-next-line:member-ordering
   validationMessages = {
-    'eventName': {
+    'EventName': {
       'maxlength': 'eventname cannot be more than 50 characters long.',
       'required': 'eventname is required.'
     },
-    'eventDescription': {
+    'EventDescription': {
       'maxlength': 'eventdescription cannot be more than 50 characters long.',
       'required': 'eventdescription is required.'
     },
-    'eventAddress': {
+    'EventAddress': {
       'maxlength': 'EventAddress cannot be more than 50 characters long.',
       'required': 'EventAddress is required.'
     },
@@ -134,18 +132,46 @@ export class EventformComponent implements OnInit {
     // 'techno': {
     //   'required': 'Technology is required.'
     // },
-    'eventStartDate': {
+    'EventStartDate': {
       'required': 'eventstartdate is required.'
     },
-    'eventEndDate': {
+    'EventEndDate': {
       'required': 'eventenddate is required.'
+    },
+    'EventStartTime': {
+      'required': 'eventstartdate is required.'
+    },
+    'EventEndTime': {
+      'required': 'eventstartdate is required.'
+    },
+    'EventVenueLatitude': {
+      'required': 'eventstartdate is required.'
+    },
+    'EventVenueLongitude': {
+      'required': 'eventstartdate is required.'
+    },
+    'CountryID': {
+      'required': 'eventstartdate is required.'
+    },
+    'StateID': {
+      'required': 'eventstartdate is required.'
+    },
+    'CityID': {
+      'required': 'eventstartdate is required.'
+    },
+    'AreaID': {
+      'required': 'eventstartdate is required.'
+    },
+    'IsActive': {
+      'required': 'eventstartdate is required.'
     }
 
   };
   onSubmit(formData: any) {
-    const eventData = this.mapDateData(formData.value);
+     const eventData = this.mapDateData(this.mapEventID(formData.value));
     switch (this.data.dbops) {
       case DBOperation.create:
+     
         this._eventService.addEvent(Global.BASE_USER_ENDPOINT + 'addEvent', eventData).subscribe(
           data => {
             // Success
@@ -199,6 +225,15 @@ export class EventformComponent implements OnInit {
   mapDateData(event: IEvent): IEvent {
     event.EventStartDate = new Date(event.EventStartDate).toISOString();
     event.EventEndDate = new Date(event.EventEndDate).toISOString();
+      
+    return event;
+  }
+
+  mapEventID(event: IEvent): IEvent {
+    if (event.EventID == null)
+    {
+      event.EventID = -1; 
+    }
     return event;
   }
 }

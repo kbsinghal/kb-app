@@ -36,10 +36,11 @@ const httpPostOptions = {
   headers: new HttpHeaders({  
     
     //'Content-Type': 'application/x-www-form-urlencoded',
-    'Content-Type': 'application/json; charset=UTF-8',
+    //'Content-Type': 'application/json; charset=UTF-8',
+    'Content-Type': 'application/json; charset=utf-8',
     //'Authorization': 'Basic ' + btoa('kalyaanbhav : M0rph!us'),
-      'Accept': 'application/json',
-      'dataType': 'json'
+      'Accept': 'application/json'
+      //'dataType': 'json',
       //'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT, OPTIONS',
       //'Access-Control-Allow-Origin' : 'http://localhost:5000',
       //'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type',
@@ -59,10 +60,10 @@ export class EventService {
   }  
   // insert new event details    
   addEvent(url: string, event: IEvent): Observable < any > {  
-    return this.http.post(url, event, httpPostOptions).pipe(catchError(this.handleError));    
     //return this.http.post(url, JSON.stringify(event), httpPostOptions).pipe(catchError(this.handleError));  
-    //return this.http.post(url, JSON.stringify(event), httpOptions).pipe(catchError(this.handleError));  
-      //return this.http.post(url, event, httpPostOptions).pipe(catchError(this.handleError));  
+    return this.http.post(url, event, httpPostOptions).pipe(catchError(this.handleError));  
+    
+    
   }  
   // update event details    
   updateEvent(url: string, id: number, event: IEvent): Observable < any > {  

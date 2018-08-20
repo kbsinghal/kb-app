@@ -10,6 +10,7 @@ import { IEvent } from '../model/event';
 
 const httpOptions = {
   headers: new HttpHeaders({
+    
     'Content-Type': 'application/json; charset=utf-8',
     'Accept': 'application/json'
     //'Access-Control-Allow-Origin':'*',
@@ -24,10 +25,10 @@ const httpPostOptions = {
   
   headers: new HttpHeaders({  
     //'Content-Type': 'application/x-www-form-urlencoded',
-    'Content-Type': 'application/json; charset=UTF-8',
+    'Content-Type': 'application/json; charset=utf-8',
     //'Authorization': 'Basic ' + btoa('kalyaanbhav : M0rph!us'),
-      'Accept': 'application/json',
-      'dataType': 'json'
+      'Accept': 'application/json'
+      //'dataType': 'json',
       //'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT, OPTIONS',
       //'Access-Control-Allow-Origin': 'http://localhost:5000',
       //'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type',
@@ -43,7 +44,6 @@ export class EventService {
   constructor(private http: HttpClient) { }
 
   // get all event data
-  //events(url: string): Observable<IEvent[]> {
   getAllEvent(url: string): Observable<IEvent[]> {
     console.log(url);
     return this.http.get<IEvent[]>(url)
@@ -55,10 +55,8 @@ export class EventService {
 
   // insert new event details
   addEvent(url: string, event: IEvent): Observable<any> {
-    //return this.http.post(url, event, httpPostOptions)
-    //return this.http.post(url, JSON.stringify(event), httpPostOptions)
-    return this.http.post(url, JSON.stringify(event), httpOptions)
-    //return this.http.post(url, event, httpPostOptions)
+    // return this.http.post(url, JSON.stringify(event), httpPostOptions)
+    return this.http.post(url, event, httpPostOptions)
       .pipe(
         catchError(this.handleError)
       );

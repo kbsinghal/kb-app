@@ -341,15 +341,15 @@ var EventformComponent = /** @class */ (function () {
         // custom valdiation messages
         // tslint:disable-next-line:member-ordering
         this.validationMessages = {
-            'eventName': {
+            'EventName': {
                 'maxlength': 'eventname cannot be more than 50 characters long.',
                 'required': 'eventname is required.'
             },
-            'eventDescription': {
+            'EventDescription': {
                 'maxlength': 'eventdescription cannot be more than 50 characters long.',
                 'required': 'eventdescription is required.'
             },
-            'eventAddress': {
+            'EventAddress': {
                 'maxlength': 'EventAddress cannot be more than 50 characters long.',
                 'required': 'EventAddress is required.'
             },
@@ -363,11 +363,38 @@ var EventformComponent = /** @class */ (function () {
             // 'techno': {
             //   'required': 'Technology is required.'
             // },
-            'eventStartDate': {
+            'EventStartDate': {
                 'required': 'eventstartdate is required.'
             },
-            'eventEndDate': {
+            'EventEndDate': {
                 'required': 'eventenddate is required.'
+            },
+            'EventStartTime': {
+                'required': 'eventstartdate is required.'
+            },
+            'EventEndTime': {
+                'required': 'eventstartdate is required.'
+            },
+            'EventVenueLatitude': {
+                'required': 'eventstartdate is required.'
+            },
+            'EventVenueLongitude': {
+                'required': 'eventstartdate is required.'
+            },
+            'CountryID': {
+                'required': 'eventstartdate is required.'
+            },
+            'StateID': {
+                'required': 'eventstartdate is required.'
+            },
+            'CityID': {
+                'required': 'eventstartdate is required.'
+            },
+            'AreaID': {
+                'required': 'eventstartdate is required.'
+            },
+            'IsActive': {
+                'required': 'eventstartdate is required.'
             }
         };
     }
@@ -375,12 +402,12 @@ var EventformComponent = /** @class */ (function () {
         var _this = this;
         // built event form
         this.eventFrm = this.fb.group({
-            EventID: [''],
+            EventID: [-1],
             EventName: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(250)]],
             EventDescription: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(500)]],
             EventAddress: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(250)]],
-            //email: ['', [Validators.required, Validators.email]],
-            //gender: ['', [Validators.required]],
+            // email: ['', [Validators.required, Validators.email]],
+            // gender: ['', [Validators.required]],
             EventStartDate: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
             EventEndDate: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
             EventStartTime: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
@@ -393,8 +420,8 @@ var EventformComponent = /** @class */ (function () {
             AreaID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
             IsActive: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]]
         });
-        //this.genders = Global.genders;
-        //this.technologies = Global.technologies;
+        // this.genders = Global.genders;
+        // this.technologies = Global.technologies;
         // subscribe on value changed event of form to show validation message
         this.eventFrm.valueChanges.subscribe(function (data) { return _this.onValueChanged(data); });
         this.onValueChanged();
@@ -429,7 +456,7 @@ var EventformComponent = /** @class */ (function () {
     };
     EventformComponent.prototype.onSubmit = function (formData) {
         var _this = this;
-        var eventData = this.mapDateData(formData.value);
+        var eventData = this.mapDateData(this.mapEventID(formData.value));
         switch (this.data.dbops) {
             case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create:
                 this._eventService.addEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'addEvent', eventData).subscribe(function (data) {
@@ -478,6 +505,12 @@ var EventformComponent = /** @class */ (function () {
     EventformComponent.prototype.mapDateData = function (event) {
         event.EventStartDate = new Date(event.EventStartDate).toISOString();
         event.EventEndDate = new Date(event.EventEndDate).toISOString();
+        return event;
+    };
+    EventformComponent.prototype.mapEventID = function (event) {
+        if (event.EventID == null) {
+            event.EventID = -1;
+        }
         return event;
     };
     EventformComponent = __decorate([
@@ -693,10 +726,10 @@ var httpPostOptions = {
     //withCredentials: true,
     headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
         //'Content-Type': 'application/x-www-form-urlencoded',
-        'Content-Type': 'application/json; charset=UTF-8',
+        'Content-Type': 'application/json; charset=utf-8',
         //'Authorization': 'Basic ' + btoa('kalyaanbhav : M0rph!us'),
-        'Accept': 'application/json',
-        'dataType': 'json'
+        'Accept': 'application/json'
+        //'dataType': 'json',
         //'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT, OPTIONS',
         //'Access-Control-Allow-Origin': 'http://localhost:5000',
         //'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type',
@@ -711,7 +744,6 @@ var EventService = /** @class */ (function () {
         this.http = http;
     }
     // get all event data
-    //events(url: string): Observable<IEvent[]> {
     EventService.prototype.getAllEvent = function (url) {
         console.log(url);
         return this.http.get(url)
@@ -719,9 +751,8 @@ var EventService = /** @class */ (function () {
     };
     // insert new event details
     EventService.prototype.addEvent = function (url, event) {
-        //return this.http.post(url, event, httpPostOptions)
-        //return this.http.post(url, JSON.stringify(event), httpPostOptions)
-        return this.http.post(url, JSON.stringify(event), httpOptions)
+        // return this.http.post(url, JSON.stringify(event), httpPostOptions)
+        return this.http.post(url, event, httpPostOptions)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
     // update event details

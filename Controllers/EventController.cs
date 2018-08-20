@@ -51,7 +51,7 @@ public class EventController: Controller {
                 return BadRequest();  
             }  
             _context.Event.Add(new Event {  
-                EventName = item.EventName,  
+                    EventName = item.EventName,  
                     EventDescription = item.EventDescription,  
                     EventStartDate = item.EventStartDate,  
                     EventEndDate = item.EventEndDate,  

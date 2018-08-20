@@ -43,6 +43,7 @@ namespace kb_app
             services.AddMvc()
             .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 
+            
              //System.Web.Http.GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
             //Configuration.Formatters.Insert(0, new System.Net.Http.Formatting.JsonMediaTypeFormatter());
             //GlobalConfiguration.Configuration.Formatters.Insert(0, new System.Net.Http.Formatting.JsonMediaTypeFormatter());
@@ -79,6 +80,9 @@ app.Use(async (context, next) => {
     //context.Request.Headers.Add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     context.Request.Headers.Add("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
     context.Request.Headers.Add("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE, PUT, OPTIONS");
+
+
+    
 
 
     //'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT, OPTIONS',

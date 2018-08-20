@@ -2,7 +2,6 @@ export interface IEvent {
     EventID: number;
     EventName: string;
     EventDescription: string;
-    //gender: number;
     EventAddress: string;
     EventStartDate: string;
     EventEndDate: string;
@@ -14,8 +13,5 @@ export interface IEvent {
     EventVenueLatitude: number;
     EventVenueLongitude: number;
     EventStartTime: string;
-    EventEndTime: string
-
-    
-   
+    EventEndTime: string;
 }
