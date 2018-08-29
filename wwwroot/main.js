@@ -178,13 +178,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _eventform_eventform_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./eventform/eventform.component */ "./src/app/eventform/eventform.component.ts");
 /* harmony import */ var _eventlist_eventlist_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./eventlist/eventlist.component */ "./src/app/eventlist/eventlist.component.ts");
 /* harmony import */ var _services_event_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/event.service */ "./src/app/services/event.service.ts");
-/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
+/* harmony import */ var _countryform_countryform_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./countryform/countryform.component */ "./src/app/countryform/countryform.component.ts");
+/* harmony import */ var _countrylist_countrylist_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./countrylist/countrylist.component */ "./src/app/countrylist/countrylist.component.ts");
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./services/country.service */ "./src/app/services/country.service.ts");
+/* harmony import */ var _stateform_stateform_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./stateform/stateform.component */ "./src/app/stateform/stateform.component.ts");
+/* harmony import */ var _statelist_statelist_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./statelist/statelist.component */ "./src/app/statelist/statelist.component.ts");
+/* harmony import */ var _services_state_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/state.service */ "./src/app/services/state.service.ts");
+/* harmony import */ var _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./cityform/cityform.component */ "./src/app/cityform/cityform.component.ts");
+/* harmony import */ var _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./citylist/citylist.component */ "./src/app/citylist/citylist.component.ts");
+/* harmony import */ var _services_city_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services/city.service */ "./src/app/services/city.service.ts");
+/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
+
+
 
 
 
@@ -206,7 +224,13 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
                 _eventform_eventform_component__WEBPACK_IMPORTED_MODULE_9__["EventformComponent"],
-                _eventlist_eventlist_component__WEBPACK_IMPORTED_MODULE_10__["EventlistComponent"]
+                _eventlist_eventlist_component__WEBPACK_IMPORTED_MODULE_10__["EventlistComponent"],
+                _countryform_countryform_component__WEBPACK_IMPORTED_MODULE_12__["CountryformComponent"],
+                _countrylist_countrylist_component__WEBPACK_IMPORTED_MODULE_13__["CountrylistComponent"],
+                _stateform_stateform_component__WEBPACK_IMPORTED_MODULE_15__["StateformComponent"],
+                _statelist_statelist_component__WEBPACK_IMPORTED_MODULE_16__["StatelistComponent"],
+                _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_18__["CityformComponent"],
+                _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_19__["CitylistComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -217,9 +241,14 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
                 _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_7__["LayoutModule"],
                 _app_routing__WEBPACK_IMPORTED_MODULE_4__["Routing"],
-                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_12__["MatToolbarModule"]
+                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_21__["MatToolbarModule"]
             ],
-            providers: [_services_event_service__WEBPACK_IMPORTED_MODULE_11__["EventService"]],
+            providers: [
+                _services_event_service__WEBPACK_IMPORTED_MODULE_11__["EventService"],
+                _services_country_service__WEBPACK_IMPORTED_MODULE_14__["CountryService"],
+                _services_state_service__WEBPACK_IMPORTED_MODULE_17__["StateService"],
+                _services_city_service__WEBPACK_IMPORTED_MODULE_20__["CityService"]
+            ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
@@ -241,16 +270,726 @@ var AppModule = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Routing", function() { return Routing; });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _eventlist_eventlist_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./eventlist/eventlist.component */ "./src/app/eventlist/eventlist.component.ts");
-/* harmony import */ var _eventform_eventform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./eventform/eventform.component */ "./src/app/eventform/eventform.component.ts");
+/* harmony import */ var _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./citylist/citylist.component */ "./src/app/citylist/citylist.component.ts");
+/* harmony import */ var _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cityform/cityform.component */ "./src/app/cityform/cityform.component.ts");
 
 
 
 var appRoutes = [
-    { path: '', pathMatch: 'full', component: _eventlist_eventlist_component__WEBPACK_IMPORTED_MODULE_1__["EventlistComponent"] },
-    { path: 'eventform', component: _eventform_eventform_component__WEBPACK_IMPORTED_MODULE_2__["EventformComponent"] }
+    // { path: '',  pathMatch: 'full' , component: EventlistComponent },
+    // { path: 'eventform', component: EventformComponent }
+    //  { path: '',  pathMatch: 'full' , component: CountrylistComponent },
+    // { path: 'countryform', component: CountryformComponent }
+    // { path: '',  pathMatch: 'full' , component: StatelistComponent },
+    // { path: 'stateform', component: StateformComponent },
+    { path: '', pathMatch: 'full', component: _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_1__["CitylistComponent"] },
+    { path: 'cityform', component: _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_2__["CityformComponent"] }
 ];
 var Routing = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes);
+
+
+/***/ }),
+
+/***/ "./src/app/cityform/cityform.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/cityform/cityform.component.css ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/cityform/cityform.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/cityform/cityform.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<form  (ngSubmit)=\"onSubmit(cityFrm)\"  [formGroup]=\"cityFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>City Name</mat-label>  \n      <input matInput placeholder=\"City Name\" formControlName=\"CityName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.CityName\">  \n        {{ formErrors.CityName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n    <mat-label>Country ID</mat-label>  \n    <input matInput placeholder=\"Country ID\" formControlName=\"CountryID\">  \n    <mat-error *ngIf=\"formErrors.CountryID\">  \n      {{ formErrors.CountryID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>   -->\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a State\" formControlName=\"StateID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let state of states\" [value]=\"state.StateID\">  \n        {{ state.StateName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.StateID \">  \n      {{ formErrors.StateID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"cityFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+
+/***/ }),
+
+/***/ "./src/app/cityform/cityform.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/cityform/cityform.component.ts ***!
+  \************************************************/
+/*! exports provided: CityformComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CityformComponent", function() { return CityformComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _services_city_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/city.service */ "./src/app/services/city.service.ts");
+/* harmony import */ var _services_state_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/state.service */ "./src/app/services/state.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+var CityformComponent = /** @class */ (function () {
+    function CityformComponent(data, fb, _stateService, _cityService, dialogRef) {
+        this.data = data;
+        this.fb = fb;
+        this._stateService = _stateService;
+        this._cityService = _cityService;
+        this.dialogRef = dialogRef;
+        this.indLoading = false;
+        // genders = [];
+        // technologies = [];
+        this.states = [];
+        // form errors model
+        // tslint:disable-next-line:member-ordering
+        this.formErrors = {
+            'CityName': '',
+            'StateID': '',
+        };
+        // custom valdiation messages
+        // tslint:disable-next-line:member-ordering
+        this.validationMessages = {
+            'CityName': {
+                'maxlength': 'CityName cannot be more than 50 characters long.',
+                'required': 'CityName is required.'
+            },
+            'StateID': {
+                'maxlength': 'StateID cannot be more than 50 characters long.',
+                'required': 'StateID is required.'
+            }
+        };
+    }
+    CityformComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // built state form
+        this.cityFrm = this.fb.group({
+            CityID: [''],
+            CityName: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(250)]],
+            StateID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]]
+        });
+        // this.genders = Global.genders;
+        // this.technologies = Global.technologies;
+        this._stateService.getAllState(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'State/' + 'getAllState')
+            .subscribe(function (states) {
+            _this.states = states;
+        });
+        // subscribe on value changed event of form to show validation message
+        this.cityFrm.valueChanges.subscribe(function (data) { return _this.onValueChanged(data); });
+        this.onValueChanged();
+        if (this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create) {
+            this.cityFrm.reset();
+        }
+        else {
+            this.cityFrm.setValue(this.data.state);
+            console.log(this.data);
+        }
+        this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete ? false : true);
+    };
+    // form value change event
+    CityformComponent.prototype.onValueChanged = function (data) {
+        if (!this.cityFrm) {
+            return;
+        }
+        var form = this.cityFrm;
+        // tslint:disable-next-line:forin
+        for (var field in this.formErrors) {
+            // clear previous error message (if any)
+            this.formErrors[field] = '';
+            var control = form.get(field);
+            // setup custom validation message to form
+            if (control && control.dirty && !control.valid) {
+                var messages = this.validationMessages[field];
+                // tslint:disable-next-line:forin
+                for (var key in control.errors) {
+                    this.formErrors[field] += messages[key] + ' ';
+                }
+            }
+        }
+    };
+    CityformComponent.prototype.onSubmit = function (formData) {
+        var _this = this;
+        var cityData = this.mapCityID(formData.value);
+        switch (this.data.dbops) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create:
+                this._cityService.addCity(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'City/' + 'addCity', cityData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].update:
+                this._cityService.updateCity(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'City/' + 'updateCity', cityData.CityID, cityData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete:
+                this._cityService.deleteCity(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'City/' + 'deleteCity', cityData.CityID).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+        }
+    };
+    CityformComponent.prototype.SetControlsState = function (isEnable) {
+        isEnable ? this.cityFrm.enable() : this.cityFrm.disable();
+    };
+    CityformComponent.prototype.mapCityID = function (city) {
+        if (city.CityID == null) {
+            city.CityID = -1;
+        }
+        return city;
+    };
+    CityformComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-cityform',
+            template: __webpack_require__(/*! ./cityform.component.html */ "./src/app/cityform/cityform.component.html"),
+            styles: [__webpack_require__(/*! ./cityform.component.css */ "./src/app/cityform/cityform.component.css")]
+        }),
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [Object, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+            _services_state_service__WEBPACK_IMPORTED_MODULE_4__["StateService"],
+            _services_city_service__WEBPACK_IMPORTED_MODULE_3__["CityService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]])
+    ], CityformComponent);
+    return CityformComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/citylist/citylist.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/citylist/citylist.component.css ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* .citylist{\r\n  text-align: center;\r\n} */\r\n\r\n.spinner{\r\n  top: 45%;\r\n  left: 47%;\r\n  position: fixed;\r\n}\r\n\r\n.citylist-container, #paginator {\r\n  display: flex;\r\n  flex-direction: column;\r\n  min-width: 300px;\r\n  max-width: 1200px;\r\n  max-height: 700px;\r\n  overflow: auto;\r\n  margin: 0 auto;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/citylist/citylist.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/citylist/citylist.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else citylist\">  \n  <mat-spinner></mat-spinner>  \n  </div>  \n  <ng-template class=\"citylist\" #citylist>  \n    <h2 style=\"text-align: center;\">City List</h2>  \n    <div class=\"citylist-container mat-elevation-z8\">  \n      <div><button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addCity()\">Create</button></div>  \n      <table mat-table #table [dataSource]=\"dataSource\">  \n    \n        <!-- Id Column -->  \n        <ng-container matColumnDef=\"CityID\">  \n        <th mat-header-cell *matHeaderCellDef>City Id </th>  \n        <td mat-cell *matCellDef=\"let element\">{{element.CityID}} </td>  \n        </ng-container>\n    \n        <!-- City Name Column -->  \n        <ng-container matColumnDef=\"CityName\">  \n          <th mat-header-cell *matHeaderCellDef>City Name</th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.CityName}} </td>  \n        </ng-container>\n        \n        <!-- State Id Column -->  \n        <ng-container matColumnDef=\"StateID\">  \n          <th mat-header-cell *matHeaderCellDef>State Id </th>  \n          <td mat-cell *matCellDef=\"let element\">{{element.StateID}} </td>  \n          </ng-container>\n    \n      \n         \n        <ng-container matColumnDef=\"action\">  \n          <th mat-header-cell *matHeaderCellDef>Action</th>  \n          <td mat-cell *matCellDef=\"let element\">  \n            <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editCity(element.CityID)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteCity(element.CityID)\">Delete</button>  \n            <!-- <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editCity(1)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteCity(1)\">Delete</button>   -->\n          </td>  \n        </ng-container>  \n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>  \n\n        <!-- <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row> -->\n        <!-- <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row> -->\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>  \n      </table>  \n      </div>  \n  </ng-template> "
+
+/***/ }),
+
+/***/ "./src/app/citylist/citylist.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/citylist/citylist.component.ts ***!
+  \************************************************/
+/*! exports provided: CitylistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CitylistComponent", function() { return CitylistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../cityform/cityform.component */ "./src/app/cityform/cityform.component.ts");
+/* harmony import */ var _services_city_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/city.service */ "./src/app/services/city.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var CitylistComponent = /** @class */ (function () {
+    function CitylistComponent(snackBar, _cityService, dialog) {
+        this.snackBar = snackBar;
+        this._cityService = _cityService;
+        this.dialog = dialog;
+        // set columns that will need to show in listing table
+        this.displayedColumns = ['CityID', 'CityName', 'StateID', 'action'];
+        // setting up datasource for material table
+        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"]();
+    }
+    CitylistComponent.prototype.ngOnInit = function () {
+        this.loadingState = true;
+        this.loadCities();
+    };
+    CitylistComponent.prototype.openDialog = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(_cityform_cityform_component__WEBPACK_IMPORTED_MODULE_2__["CityformComponent"], {
+            width: '500px',
+            data: { dbops: this.dbops, modalTitle: this.modalTitle, modalBtnTitle: this.modalBtnTitle, city: this.city }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            // console.log('The dialog was closed');
+            if (result === 'success') {
+                _this.loadingState = true;
+                _this.loadCities();
+                switch (_this.dbops) {
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create:
+                        _this.showMessage('Data successfully added.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update:
+                        _this.showMessage('Data successfully updated.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete:
+                        _this.showMessage('Data successfully deleted.');
+                        break;
+                }
+            }
+            else if (result === 'error') {
+                _this.showMessage('There is some issue in saving records, please contact to system administrator!');
+            }
+            else {
+                _this.showMessage('Please try again, something went wrong');
+            }
+        });
+    };
+    CitylistComponent.prototype.loadCities = function () {
+        var _this = this;
+        // console.log(Global.BASE_USER_ENDPOINT + 'City/' + 'getAllCity');
+        this._cityService.getAllCity(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'City/' + 'getAllCity')
+            .subscribe(function (cities) {
+            _this.loadingState = false;
+            _this.dataSource.data = cities;
+        });
+    };
+    CitylistComponent.prototype.getGender = function (gender) {
+        return _shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].genders.filter(function (ele) { return ele.id === gender; }).map(function (ele) { return ele.name; })[0];
+    };
+    CitylistComponent.prototype.addCity = function () {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create;
+        this.modalTitle = 'Add New City';
+        this.modalBtnTitle = 'Add';
+        this.openDialog();
+    };
+    CitylistComponent.prototype.editCity = function (id) {
+        console.log('id:' + id);
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update;
+        this.modalTitle = 'Edit City';
+        this.modalBtnTitle = 'Update';
+        this.city = this.dataSource.data.filter(function (x) { return x.CityID === id; })[0];
+        console.log('this.city');
+        console.log(this.city);
+        this.openDialog();
+    };
+    CitylistComponent.prototype.deleteCity = function (id) {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete;
+        this.modalTitle = 'Confirm to Delete ?';
+        this.modalBtnTitle = 'Delete';
+        this.city = this.dataSource.data.filter(function (x) { return x.CityID === id; })[0];
+        this.openDialog();
+    };
+    CitylistComponent.prototype.showMessage = function (msg) {
+        this.snackBar.open(msg, '', {
+            duration: 3000
+        });
+    };
+    CitylistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-citylist',
+            template: __webpack_require__(/*! ./citylist.component.html */ "./src/app/citylist/citylist.component.html"),
+            styles: [__webpack_require__(/*! ./citylist.component.css */ "./src/app/citylist/citylist.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSnackBar"], _services_city_service__WEBPACK_IMPORTED_MODULE_3__["CityService"], _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
+    ], CitylistComponent);
+    return CitylistComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/countryform/countryform.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/countryform/countryform.component.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/countryform/countryform.component.html":
+/*!********************************************************!*\
+  !*** ./src/app/countryform/countryform.component.html ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<form  (ngSubmit)=\"onSubmit(countryFrm)\"  [formGroup]=\"countryFrm\">  \r\n    <h2>{{data.modalTitle}}</h2>  \r\n      \r\n    <div>  \r\n        <mat-form-field appearance=\"outline\">  \r\n        <mat-label>Country Name</mat-label>  \r\n        <input matInput placeholder=\"Country Name\" formControlName=\"CountryName\">  \r\n        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \r\n        <!-- <mat-hint>Hint</mat-hint> -->  \r\n        <mat-error *ngIf=\"formErrors.CountryName\">  \r\n          {{ formErrors.CountryName }}  \r\n        </mat-error>  \r\n      </mat-form-field>  \r\n    </div>  \r\n    \r\n    <div>  \r\n      \r\n      <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \r\n      <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"countryFrm.invalid\">{{data.modalBtnTitle}}</button>  \r\n    </div>  \r\n      \r\n    </form> "
+
+/***/ }),
+
+/***/ "./src/app/countryform/countryform.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/countryform/countryform.component.ts ***!
+  \******************************************************/
+/*! exports provided: CountryformComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountryformComponent", function() { return CountryformComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/country.service */ "./src/app/services/country.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+var CountryformComponent = /** @class */ (function () {
+    function CountryformComponent(data, fb, _countryService, dialogRef) {
+        this.data = data;
+        this.fb = fb;
+        this._countryService = _countryService;
+        this.dialogRef = dialogRef;
+        this.indLoading = false;
+        this.genders = [];
+        this.technologies = [];
+        // form errors model
+        // tslint:disable-next-line:member-ordering
+        this.formErrors = {
+            'CountryName': '',
+        };
+        // custom valdiation messages
+        // tslint:disable-next-line:member-ordering
+        this.validationMessages = {
+            'CountryName': {
+                'maxlength': 'countryname cannot be more than 50 characters long.',
+                'required': 'countryname is required.'
+            }
+        };
+    }
+    CountryformComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // built country form
+        this.countryFrm = this.fb.group({
+            CountryID: [-1],
+            CountryName: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(250)]],
+        });
+        // this.genders = Global.genders;
+        // this.technologies = Global.technologies;
+        // subscribe on value changed event of form to show validation message
+        this.countryFrm.valueChanges.subscribe(function (data) { return _this.onValueChanged(data); });
+        this.onValueChanged();
+        if (this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create) {
+            this.countryFrm.reset();
+        }
+        else {
+            this.countryFrm.setValue(this.data.country);
+        }
+        this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete ? false : true);
+    };
+    // form value change event
+    CountryformComponent.prototype.onValueChanged = function (data) {
+        if (!this.countryFrm) {
+            return;
+        }
+        var form = this.countryFrm;
+        // tslint:disable-next-line:forin
+        for (var field in this.formErrors) {
+            // clear previous error message (if any)
+            this.formErrors[field] = '';
+            var control = form.get(field);
+            // setup custom validation message to form
+            if (control && control.dirty && !control.valid) {
+                var messages = this.validationMessages[field];
+                // tslint:disable-next-line:forin
+                for (var key in control.errors) {
+                    this.formErrors[field] += messages[key] + ' ';
+                }
+            }
+        }
+    };
+    CountryformComponent.prototype.onSubmit = function (formData) {
+        var _this = this;
+        var countryData = this.mapCountryID(formData.value);
+        switch (this.data.dbops) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create:
+                this._countryService.addCountry(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'Country/' + 'addCountry', countryData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update:
+                this._countryService.updateCountry(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'Country/' + 'updateCountry', countryData.CountryID, countryData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete:
+                this._countryService.deleteCountry(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'Country/' + 'deleteCountry', countryData.CountryID).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+        }
+    };
+    CountryformComponent.prototype.SetControlsState = function (isEnable) {
+        isEnable ? this.countryFrm.enable() : this.countryFrm.disable();
+    };
+    CountryformComponent.prototype.mapCountryID = function (country) {
+        if (country.CountryID == null) {
+            country.CountryID = -1;
+        }
+        return country;
+    };
+    CountryformComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-countryform',
+            template: __webpack_require__(/*! ./countryform.component.html */ "./src/app/countryform/countryform.component.html"),
+            styles: [__webpack_require__(/*! ./countryform.component.css */ "./src/app/countryform/countryform.component.css")]
+        }),
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [Object, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+            _services_country_service__WEBPACK_IMPORTED_MODULE_3__["CountryService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]])
+    ], CountryformComponent);
+    return CountryformComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/countrylist/countrylist.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/countrylist/countrylist.component.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* .countrylist{\r\n  text-align: center;\r\n} */\r\n\r\n.spinner{\r\n    top: 45%;\r\n    left: 47%;\r\n    position: fixed;\r\n  }\r\n\r\n.countrylist-container, #paginator {\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-width: 300px;\r\n    max-width: 1200px;\r\n    max-height: 700px;\r\n    overflow: auto;\r\n    margin: 0 auto;\r\n  }\r\n  "
+
+/***/ }),
+
+/***/ "./src/app/countrylist/countrylist.component.html":
+/*!********************************************************!*\
+  !*** ./src/app/countrylist/countrylist.component.html ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else countrylist\">  \r\n    <mat-spinner></mat-spinner>  \r\n    </div>  \r\n    <ng-template class=\"countrylist\" #countrylist>  \r\n      <h2 style=\"text-align: center;\">Country List</h2>  \r\n      <div class=\"countrylist-container mat-elevation-z8\">  \r\n        <div><button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addCountry()\">Create</button></div>  \r\n        <table mat-table #table [dataSource]=\"dataSource\">  \r\n      \r\n          <!-- Id Column -->  \r\n          <ng-container matColumnDef=\"CountryID\">  \r\n          <th mat-header-cell *matHeaderCellDef>Country Id </th>  \r\n          <td mat-cell *matCellDef=\"let element\">{{element.CountryID}} </td>  \r\n          </ng-container>\r\n      \r\n          <!-- Country Name Column -->  \r\n          <ng-container matColumnDef=\"CountryName\">  \r\n            <th mat-header-cell *matHeaderCellDef>Country Name</th>  \r\n            <td mat-cell *matCellDef=\"let element\"> {{element.CountryName}} </td>  \r\n          </ng-container>  \r\n      \r\n        \r\n           \r\n          <ng-container matColumnDef=\"action\">  \r\n            <th mat-header-cell *matHeaderCellDef>Action</th>  \r\n            <td mat-cell *matCellDef=\"let element\">  \r\n              <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editCountry(element.CountryID)\">Edit</button>  \r\n              <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteCountry(element.CountryID)\">Delete</button>  \r\n            </td>  \r\n          </ng-container>  \r\n          <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>  \r\n  \r\n          <!-- <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row> -->\r\n          <!-- <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row> -->\r\n          <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>  \r\n        </table>  \r\n        </div>  \r\n    </ng-template> "
+
+/***/ }),
+
+/***/ "./src/app/countrylist/countrylist.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/countrylist/countrylist.component.ts ***!
+  \******************************************************/
+/*! exports provided: CountrylistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountrylistComponent", function() { return CountrylistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _countryform_countryform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../countryform/countryform.component */ "./src/app/countryform/countryform.component.ts");
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/country.service */ "./src/app/services/country.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var CountrylistComponent = /** @class */ (function () {
+    function CountrylistComponent(snackBar, _countryService, dialog) {
+        this.snackBar = snackBar;
+        this._countryService = _countryService;
+        this.dialog = dialog;
+        // set columns that will need to show in listing table
+        this.displayedColumns = ['CountryID', 'CountryName', 'action'];
+        // setting up datasource for material table
+        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"]();
+    }
+    CountrylistComponent.prototype.ngOnInit = function () {
+        this.loadingState = true;
+        this.loadCountries();
+    };
+    CountrylistComponent.prototype.openDialog = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(_countryform_countryform_component__WEBPACK_IMPORTED_MODULE_2__["CountryformComponent"], {
+            width: '500px',
+            data: { dbops: this.dbops, modalTitle: this.modalTitle, modalBtnTitle: this.modalBtnTitle, country: this.country }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            // console.log('The dialog was closed');
+            if (result === 'success') {
+                _this.loadingState = true;
+                _this.loadCountries();
+                switch (_this.dbops) {
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create:
+                        _this.showMessage('Data successfully added.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update:
+                        _this.showMessage('Data successfully updated.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete:
+                        _this.showMessage('Data successfully deleted.');
+                        break;
+                }
+            }
+            else if (result === 'error') {
+                _this.showMessage('There is some issue in saving records, please contact to system administrator!');
+            }
+            else {
+                _this.showMessage('Please try again, something went wrong');
+            }
+        });
+    };
+    CountrylistComponent.prototype.loadCountries = function () {
+        var _this = this;
+        this._countryService.getAllCountry(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry')
+            .subscribe(function (countries) {
+            _this.loadingState = false;
+            _this.dataSource.data = countries;
+        });
+    };
+    CountrylistComponent.prototype.getGender = function (gender) {
+        return _shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].genders.filter(function (ele) { return ele.id === gender; }).map(function (ele) { return ele.name; })[0];
+    };
+    CountrylistComponent.prototype.addCountry = function () {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create;
+        this.modalTitle = 'Add New Country';
+        this.modalBtnTitle = 'Add';
+        this.openDialog();
+    };
+    CountrylistComponent.prototype.editCountry = function (id) {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update;
+        this.modalTitle = 'Edit Country';
+        this.modalBtnTitle = 'Update';
+        this.country = this.dataSource.data.filter(function (x) { return x.CountryID === id; })[0];
+        this.openDialog();
+    };
+    CountrylistComponent.prototype.deleteCountry = function (id) {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete;
+        this.modalTitle = 'Confirm to Delete ?';
+        this.modalBtnTitle = 'Delete';
+        this.country = this.dataSource.data.filter(function (x) { return x.CountryID === id; })[0];
+        this.openDialog();
+    };
+    CountrylistComponent.prototype.showMessage = function (msg) {
+        this.snackBar.open(msg, '', {
+            duration: 3000
+        });
+    };
+    CountrylistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-countrylist',
+            template: __webpack_require__(/*! ./countrylist.component.html */ "./src/app/countrylist/countrylist.component.html"),
+            styles: [__webpack_require__(/*! ./countrylist.component.css */ "./src/app/countrylist/countrylist.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSnackBar"], _services_country_service__WEBPACK_IMPORTED_MODULE_3__["CountryService"], _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
+    ], CountrylistComponent);
+    return CountrylistComponent;
+}());
+
 
 
 /***/ }),
@@ -273,7 +1012,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form  (ngSubmit)=\"onSubmit(eventFrm)\"  [formGroup]=\"eventFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Name</mat-label>  \n      <input matInput placeholder=\"Event Name\" formControlName=\"EventName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.EventName\">  \n        {{ formErrors.EventName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Description</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Description\" formControlName=\"EventDescription\">\n      <mat-error *ngIf=\"formErrors.EventDescription\">  \n        {{ formErrors.EventDescription }}  \n      </mat-error>  \n    </mat-form-field>  \n    \n  </div> \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Address</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Address\" formControlName=\"EventAddress\">\n      <mat-error *ngIf=\"formErrors.EventAddress\">  \n        {{ formErrors.EventAddress }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <!-- <p>  \n      <mat-radio-group class=\"contact-radio-group\" formControlName=\"gender\" >  \n        <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let gndr of genders\" [value]=\"gndr.id\">  \n          {{ gndr.name }}  \n        </mat-radio-button>  \n      </mat-radio-group>  \n      <mat-error *ngIf=\"formErrors.gender\">  \n        {{ formErrors.gender }}  \n      </mat-error>  \n  </p>   -->\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <input matInput [matDatepicker]=\"picker1\" placeholder=\"Choose start date\" formControlName=\"EventStartDate\">  \n      <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>  \n      <mat-datepicker #picker1></mat-datepicker>  \n      \n    <mat-error *ngIf=\"formErrors.EventStartDate \">  \n      {{ formErrors.EventStartDate }}  \n    </mat-error>  \n    </mat-form-field>  \n  </div>  \n\n      <div>  \n          <mat-form-field appearance=\"outline\">  \n            <input matInput [matDatepicker]=\"picker2\" placeholder=\"Choose end date\" formControlName=\"EventEndDate\">  \n            <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>  \n            <mat-datepicker #picker2></mat-datepicker>  \n            \n          <mat-error *ngIf=\"formErrors.EventEndDate \">  \n            {{ formErrors.EventEndDate }}  \n          </mat-error>  \n          </mat-form-field>  \n        </div>  \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Start Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Start Time\" formControlName=\"EventStartTime\">\n            <mat-error *ngIf=\"formErrors.EventStartTime\">  \n              {{ formErrors.EventStartTime }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event End Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event End Time\" formControlName=\"EventEndTime\">\n            <mat-error *ngIf=\"formErrors.EventEndTime\">  \n              {{ formErrors.EventEndTime }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Venue Latitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Latitude\" formControlName=\"EventVenueLatitude\">\n            <mat-error *ngIf=\"formErrors.EventVenueLatitude\">  \n              {{ formErrors.EventVenueLatitude }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Venue Longitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Longitude\" formControlName=\"EventVenueLongitude\">\n            <mat-error *ngIf=\"formErrors.EventVenueLongitude\">  \n              {{ formErrors.EventVenueLongitude }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        \n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>CountryID</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Country ID\" formControlName=\"CountryID\">\n            <mat-error *ngIf=\"formErrors.CountryID\">  \n              {{ formErrors.CountryID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>StateID</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"StateID\" formControlName=\"StateID\">\n            <mat-error *ngIf=\"formErrors.StateID\">  \n              {{ formErrors.StateID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n        \n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>CityID</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"CityID\" formControlName=\"CityID\">\n            <mat-error *ngIf=\"formErrors.CityID\">  \n              {{ formErrors.CityID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>AreaID</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"AreaID\" formControlName=\"AreaID\">\n            <mat-error *ngIf=\"formErrors.AreaID\">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>IsActive</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"IsActive\" formControlName=\"IsActive\">\n            <mat-error *ngIf=\"formErrors.IsActive\">  \n              {{ formErrors.IsActive }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n       \n<!-- <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Technology\" formControlName=\"techno\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let techno  of technologies\" [value]=\"techno\">  \n          {{ techno }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.techno \">  \n        {{ formErrors.techno }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n      <textarea matInput placeholder=\"Message...\" formControlName=\"message\"></textarea>  \n      <mat-error *ngIf=\"formErrors.message \">  \n        {{ formErrors.message }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+module.exports = "<form  (ngSubmit)=\"onSubmit(eventFrm)\"  [formGroup]=\"eventFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Name</mat-label>  \n      <input matInput placeholder=\"Event Name\" formControlName=\"EventName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.EventName\">  \n        {{ formErrors.EventName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Description</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Description\" formControlName=\"EventDescription\">\n      <mat-error *ngIf=\"formErrors.EventDescription\">  \n        {{ formErrors.EventDescription }}  \n      </mat-error>  \n    </mat-form-field>  \n    \n  </div> \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Address</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Address\" formControlName=\"EventAddress\">\n      <mat-error *ngIf=\"formErrors.EventAddress\">  \n        {{ formErrors.EventAddress }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <!-- <p>  \n      <mat-radio-group class=\"contact-radio-group\" formControlName=\"gender\" >  \n        <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let gndr of genders\" [value]=\"gndr.id\">  \n          {{ gndr.name }}  \n        </mat-radio-button>  \n      </mat-radio-group>  \n      <mat-error *ngIf=\"formErrors.gender\">  \n        {{ formErrors.gender }}  \n      </mat-error>  \n  </p>   -->\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <input matInput [matDatepicker]=\"picker1\" placeholder=\"Choose start date\" formControlName=\"EventStartDate\">  \n      <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>  \n      <mat-datepicker #picker1></mat-datepicker>  \n      \n    <mat-error *ngIf=\"formErrors.EventStartDate \">  \n      {{ formErrors.EventStartDate }}  \n    </mat-error>  \n    </mat-form-field>  \n  </div>  \n\n      <div>  \n          <mat-form-field appearance=\"outline\">  \n            <input matInput [matDatepicker]=\"picker2\" placeholder=\"Choose end date\" formControlName=\"EventEndDate\">  \n            <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>  \n            <mat-datepicker #picker2></mat-datepicker>  \n            \n          <mat-error *ngIf=\"formErrors.EventEndDate \">  \n            {{ formErrors.EventEndDate }}  \n          </mat-error>  \n          </mat-form-field>  \n        </div>  \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Start Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Start Time\" formControlName=\"EventStartTime\">\n            <mat-error *ngIf=\"formErrors.EventStartTime\">  \n              {{ formErrors.EventStartTime }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event End Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event End Time\" formControlName=\"EventEndTime\">\n            <mat-error *ngIf=\"formErrors.EventEndTime\">  \n              {{ formErrors.EventEndTime }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Venue Latitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Latitude\" formControlName=\"EventVenueLatitude\">\n            <mat-error *ngIf=\"formErrors.EventVenueLatitude\">  \n              {{ formErrors.EventVenueLatitude }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Venue Longitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Longitude\" formControlName=\"EventVenueLongitude\">\n            <mat-error *ngIf=\"formErrors.EventVenueLongitude\">  \n              {{ formErrors.EventVenueLongitude }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        \n        <!-- <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>CountryID</mat-label>  \n            <input matInput placeholder=\"Country ID\" formControlName=\"CountryID\">\n            <mat-error *ngIf=\"formErrors.CountryID\">  \n              {{ formErrors.CountryID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>  -->\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a Country\" formControlName=\"CountryID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let country  of countries\" [value]=\"country.CountryID\">  \n                {{ country.CountryName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.CountryID \">  \n              {{ formErrors.CountryID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>StateID</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"StateID\" formControlName=\"StateID\">\n            <mat-error *ngIf=\"formErrors.StateID\">  \n              {{ formErrors.StateID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n        \n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>CityID</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"CityID\" formControlName=\"CityID\">\n            <mat-error *ngIf=\"formErrors.CityID\">  \n              {{ formErrors.CityID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>AreaID</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"AreaID\" formControlName=\"AreaID\">\n            <mat-error *ngIf=\"formErrors.AreaID\">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>IsActive</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"IsActive\" formControlName=\"IsActive\">\n            <mat-error *ngIf=\"formErrors.IsActive\">  \n              {{ formErrors.IsActive }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n       \n<!-- <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Technology\" formControlName=\"techno\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let techno  of technologies\" [value]=\"techno\">  \n          {{ techno }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.techno \">  \n        {{ formErrors.techno }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n      <textarea matInput placeholder=\"Message...\" formControlName=\"message\"></textarea>  \n      <mat-error *ngIf=\"formErrors.message \">  \n        {{ formErrors.message }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
 
 /***/ }),
 
@@ -291,8 +1030,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _services_event_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/event.service */ "./src/app/services/event.service.ts");
-/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
-/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/country.service */ "./src/app/services/country.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -311,15 +1051,19 @@ var __param = (undefined && undefined.__param) || function (paramIndex, decorato
 
 
 
+
 var EventformComponent = /** @class */ (function () {
-    function EventformComponent(data, fb, _eventService, dialogRef) {
+    function EventformComponent(data, fb, _eventService, _countryService, dialogRef) {
         this.data = data;
         this.fb = fb;
         this._eventService = _eventService;
+        this._countryService = _countryService;
         this.dialogRef = dialogRef;
         this.indLoading = false;
         this.genders = [];
         this.technologies = [];
+        // countries = new MatTableDataSource<ICountry>();
+        this.countries = [];
         // form errors model
         // tslint:disable-next-line:member-ordering
         this.formErrors = {
@@ -367,34 +1111,34 @@ var EventformComponent = /** @class */ (function () {
                 'required': 'eventstartdate is required.'
             },
             'EventEndDate': {
-                'required': 'eventenddate is required.'
+                'required': 'Event End Date is required.'
             },
             'EventStartTime': {
-                'required': 'eventstartdate is required.'
+                'required': 'Event Start Time is required.'
             },
             'EventEndTime': {
-                'required': 'eventstartdate is required.'
+                'required': 'Event End Time is required.'
             },
             'EventVenueLatitude': {
-                'required': 'eventstartdate is required.'
+                'required': 'Event Venue Latitude is required.'
             },
             'EventVenueLongitude': {
-                'required': 'eventstartdate is required.'
+                'required': 'Event Venue Longitude is required.'
             },
             'CountryID': {
-                'required': 'eventstartdate is required.'
+                'required': 'Country is required.'
             },
             'StateID': {
-                'required': 'eventstartdate is required.'
+                'required': 'State is required.'
             },
             'CityID': {
-                'required': 'eventstartdate is required.'
+                'required': 'City is required.'
             },
             'AreaID': {
-                'required': 'eventstartdate is required.'
+                'required': 'Area is required.'
             },
             'IsActive': {
-                'required': 'eventstartdate is required.'
+                'required': 'IsActive is required.'
             }
         };
     }
@@ -422,16 +1166,27 @@ var EventformComponent = /** @class */ (function () {
         });
         // this.genders = Global.genders;
         // this.technologies = Global.technologies;
+        // this.countries = Global.countries;
+        // var aaaaa = this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'getAllCountry');
+        // console.log(this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry'));
+        // loadCountriesddl():void{ this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'getAllCountry')
+        // .subscribe(countries => {this.countries = countries;})}; // KB
+        //   loadCountriesDDL(): void {
+        this._countryService.getAllCountry(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry')
+            .subscribe(function (countries) {
+            _this.countries = countries;
+        });
+        //  };
         // subscribe on value changed event of form to show validation message
         this.eventFrm.valueChanges.subscribe(function (data) { return _this.onValueChanged(data); });
         this.onValueChanged();
-        if (this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create) {
+        if (this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create) {
             this.eventFrm.reset();
         }
         else {
             this.eventFrm.setValue(this.data.event);
         }
-        this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete ? false : true);
+        this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete ? false : true);
     };
     // form value change event
     EventformComponent.prototype.onValueChanged = function (data) {
@@ -458,8 +1213,8 @@ var EventformComponent = /** @class */ (function () {
         var _this = this;
         var eventData = this.mapDateData(this.mapEventID(formData.value));
         switch (this.data.dbops) {
-            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create:
-                this._eventService.addEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'addEvent', eventData).subscribe(function (data) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create:
+                this._eventService.addEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Event/' + 'addEvent', eventData).subscribe(function (data) {
                     // Success
                     if (data.message) {
                         _this.dialogRef.close('success');
@@ -471,8 +1226,8 @@ var EventformComponent = /** @class */ (function () {
                     _this.dialogRef.close('error');
                 });
                 break;
-            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update:
-                this._eventService.updateEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'updateEvent', eventData.EventID, eventData).subscribe(function (data) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].update:
+                this._eventService.updateEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Event/' + 'updateEvent', eventData.EventID, eventData).subscribe(function (data) {
                     // Success
                     if (data.message) {
                         _this.dialogRef.close('success');
@@ -484,8 +1239,8 @@ var EventformComponent = /** @class */ (function () {
                     _this.dialogRef.close('error');
                 });
                 break;
-            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete:
-                this._eventService.deleteEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'deleteEvent', eventData.EventID).subscribe(function (data) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete:
+                this._eventService.deleteEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Event/' + 'deleteEvent', eventData.EventID).subscribe(function (data) {
                     // Success
                     if (data.message) {
                         _this.dialogRef.close('success');
@@ -522,6 +1277,7 @@ var EventformComponent = /** @class */ (function () {
         __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
         __metadata("design:paramtypes", [Object, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
             _services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"],
+            _services_country_service__WEBPACK_IMPORTED_MODULE_4__["CountryService"],
             _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]])
     ], EventformComponent);
     return EventformComponent;
@@ -538,7 +1294,7 @@ var EventformComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* .contactlist{\r\n  text-align: center;\r\n} */\r\n\r\n.spinner{\r\n    top: 45%;\r\n    left: 47%;\r\n    position: fixed;\r\n  }\r\n\r\n.eventlist-container, #paginator {\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-width: 300px;\r\n    max-width: 1200px;\r\n    max-height: 700px;\r\n    overflow: auto;\r\n    margin: 0 auto;\r\n  }\r\n  "
+module.exports = "/* .eventlist{\r\n  text-align: center;\r\n} */\r\n\r\n.spinner{\r\n    top: 45%;\r\n    left: 47%;\r\n    position: fixed;\r\n  }\r\n\r\n.eventlist-container, #paginator {\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-width: 300px;\r\n    max-width: 1200px;\r\n    max-height: 700px;\r\n    overflow: auto;\r\n    margin: 0 auto;\r\n  }\r\n  "
 
 /***/ }),
 
@@ -607,7 +1363,7 @@ var EventlistComponent = /** @class */ (function () {
             data: { dbops: this.dbops, modalTitle: this.modalTitle, modalBtnTitle: this.modalBtnTitle, event: this.event }
         });
         dialogRef.afterClosed().subscribe(function (result) {
-            console.log('The dialog was closed');
+            // console.log('The dialog was closed');
             if (result === 'success') {
                 _this.loadingState = true;
                 _this.loadEvents();
@@ -633,12 +1389,10 @@ var EventlistComponent = /** @class */ (function () {
     };
     EventlistComponent.prototype.loadEvents = function () {
         var _this = this;
-        this._eventService.getAllEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'getAllEvent')
+        this._eventService.getAllEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'Event/' + 'getAllEvent')
             .subscribe(function (events) {
             _this.loadingState = false;
             _this.dataSource.data = events;
-            console.log(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'getAllEvent');
-            //console.log(this.dataSource.data);
         });
     };
     EventlistComponent.prototype.getGender = function (gender) {
@@ -684,6 +1438,190 @@ var EventlistComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/city.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/services/city.service.ts ***!
+  \******************************************/
+/*! exports provided: CityService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CityService", function() { return CityService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var httpPostOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var CityService = /** @class */ (function () {
+    function CityService(http) {
+        this.http = http;
+    }
+    // get all city data
+    CityService.prototype.getAllCity = function (url) {
+        return this.http.get(url)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // insert new city details
+    CityService.prototype.addCity = function (url, city) {
+        return this.http.post(url, city, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // update city details
+    CityService.prototype.updateCity = function (url, id, city) {
+        var newurl = url + "?id=" + id;
+        return this.http.put(newurl, city, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // delete city information
+    CityService.prototype.deleteCity = function (url, id) {
+        var newurl = url + "?id=" + id; // DELETE api/city?id=42
+        return this.http.delete(newurl, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // custom handler
+    CityService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    CityService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], CityService);
+    return CityService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/country.service.ts":
+/*!*********************************************!*\
+  !*** ./src/app/services/country.service.ts ***!
+  \*********************************************/
+/*! exports provided: CountryService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountryService", function() { return CountryService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var httpPostOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var CountryService = /** @class */ (function () {
+    function CountryService(http) {
+        this.http = http;
+    }
+    // get all country data
+    CountryService.prototype.getAllCountry = function (url) {
+        return this.http.get(url)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // insert new country details
+    CountryService.prototype.addCountry = function (url, country) {
+        return this.http.post(url, country, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // update country details
+    CountryService.prototype.updateCountry = function (url, id, country) {
+        var newurl = url + "?id=" + id;
+        return this.http.put(newurl, country, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // delete country information
+    CountryService.prototype.deleteCountry = function (url, id) {
+        var newurl = url + "?id=" + id; // DELETE api/country?id=42
+        return this.http.delete(newurl, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // custom handler
+    CountryService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    CountryService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], CountryService);
+    return CountryService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/event.service.ts":
 /*!*******************************************!*\
   !*** ./src/app/services/event.service.ts ***!
@@ -716,27 +1654,12 @@ var httpOptions = {
     headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
         'Content-Type': 'application/json; charset=utf-8',
         'Accept': 'application/json'
-        //'Access-Control-Allow-Origin':'*',
-        //'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept',
-        //'Authorization':'Basic a2FseWFhbmJoYXYgOiBNMHJwaCF1cw=='
-        //'auth-token':'C3PO R2D2'
     })
 };
 var httpPostOptions = {
-    //withCredentials: true,
     headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
-        //'Content-Type': 'application/x-www-form-urlencoded',
         'Content-Type': 'application/json; charset=utf-8',
-        //'Authorization': 'Basic ' + btoa('kalyaanbhav : M0rph!us'),
         'Accept': 'application/json'
-        //'dataType': 'json',
-        //'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT, OPTIONS',
-        //'Access-Control-Allow-Origin': 'http://localhost:5000',
-        //'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type',
-        //'Access-Control-Allow-Origin': '*'
-        //'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept',
-        //'Authorization': 'Basic a2FseWFhbmJoYXYgOiBNMHJwaCF1cw=='
-        //'auth-token':'C3PO R2D2'
     })
 };
 var EventService = /** @class */ (function () {
@@ -757,13 +1680,14 @@ var EventService = /** @class */ (function () {
     };
     // update event details
     EventService.prototype.updateEvent = function (url, id, event) {
-        var newurl = '${url}?id=${id}';
-        return this.http.put(newurl, event, httpOptions)
+        // const newurl = '${url}?id=${id}';
+        var newurl = url + "?id=" + id;
+        return this.http.put(newurl, event, httpPostOptions)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
     // delete event information
     EventService.prototype.deleteEvent = function (url, id) {
-        var newurl = '${url}?id=${id}'; // DELETE api/event?id=42
+        var newurl = url + "?id=" + id; // DELETE api/event?id=42
         return this.http.delete(newurl, httpOptions)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
@@ -787,6 +1711,98 @@ var EventService = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], EventService);
     return EventService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/state.service.ts":
+/*!*******************************************!*\
+  !*** ./src/app/services/state.service.ts ***!
+  \*******************************************/
+/*! exports provided: StateService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StateService", function() { return StateService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var httpPostOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var StateService = /** @class */ (function () {
+    function StateService(http) {
+        this.http = http;
+    }
+    // get all state data
+    StateService.prototype.getAllState = function (url) {
+        return this.http.get(url)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // insert new state details
+    StateService.prototype.addState = function (url, state) {
+        return this.http.post(url, state, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // update state details
+    StateService.prototype.updateState = function (url, id, state) {
+        var newurl = url + "?id=" + id;
+        return this.http.put(newurl, state, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // delete state information
+    StateService.prototype.deleteState = function (url, id) {
+        var newurl = url + "?id=" + id; // DELETE api/state?id=42
+        return this.http.delete(newurl, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // custom handler
+    StateService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    StateService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], StateService);
+    return StateService;
 }());
 
 
@@ -826,9 +1842,9 @@ __webpack_require__.r(__webpack_exports__);
 var Global = /** @class */ (function () {
     function Global() {
     }
-    //public static BASE_USER_ENDPOINT = 'api/event/';
-    //public static BASE_USER_ENDPOINT = 'kbapi-dev.us-east-2.elasticbeanstalk.com/';
-    Global.BASE_USER_ENDPOINT = 'http://localhost:5000/kbapi/Event/';
+    // public static BASE_USER_ENDPOINT = 'api/event/';
+    // public static BASE_USER_ENDPOINT = 'kbapi-dev.us-east-2.elasticbeanstalk.com/';
+    Global.BASE_USER_ENDPOINT = 'http://localhost:5000/kbapi/';
     Global.genders = [{
             name: 'Male',
             id: 0,
@@ -838,6 +1854,363 @@ var Global = /** @class */ (function () {
         }];
     Global.technologies = ['JavaScript', 'SharePoint', 'C#'];
     return Global;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/stateform/stateform.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/stateform/stateform.component.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/stateform/stateform.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/stateform/stateform.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<form  (ngSubmit)=\"onSubmit(stateFrm)\"  [formGroup]=\"stateFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>State Name</mat-label>  \n      <input matInput placeholder=\"State Name\" formControlName=\"StateName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.StateName\">  \n        {{ formErrors.StateName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n    <mat-label>Country ID</mat-label>  \n    <input matInput placeholder=\"Country ID\" formControlName=\"CountryID\">  \n    <mat-error *ngIf=\"formErrors.CountryID\">  \n      {{ formErrors.CountryID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>   -->\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a Country\" formControlName=\"CountryID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let country  of countries\" [value]=\"country.CountryID\">  \n        {{ country.CountryName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.CountryID \">  \n      {{ formErrors.CountryID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"stateFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+
+/***/ }),
+
+/***/ "./src/app/stateform/stateform.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/stateform/stateform.component.ts ***!
+  \**************************************************/
+/*! exports provided: StateformComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StateformComponent", function() { return StateformComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/country.service */ "./src/app/services/country.service.ts");
+/* harmony import */ var _services_state_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/state.service */ "./src/app/services/state.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+var StateformComponent = /** @class */ (function () {
+    function StateformComponent(data, fb, _stateService, _countryService, dialogRef) {
+        this.data = data;
+        this.fb = fb;
+        this._stateService = _stateService;
+        this._countryService = _countryService;
+        this.dialogRef = dialogRef;
+        this.indLoading = false;
+        // genders = [];
+        // technologies = [];
+        this.countries = [];
+        // form errors model
+        // tslint:disable-next-line:member-ordering
+        this.formErrors = {
+            'StateName': '',
+            'CountryID': '',
+        };
+        // custom valdiation messages
+        // tslint:disable-next-line:member-ordering
+        this.validationMessages = {
+            'StateName': {
+                'maxlength': 'statename cannot be more than 50 characters long.',
+                'required': 'statename is required.'
+            },
+            'CountryID': {
+                'maxlength': 'country cannot be more than 50 characters long.',
+                'required': 'country is required.'
+            }
+        };
+    }
+    StateformComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // built state form
+        this.stateFrm = this.fb.group({
+            StateID: [],
+            StateName: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(250)]],
+            CountryID: [],
+        });
+        // this.genders = Global.genders;
+        // this.technologies = Global.technologies;
+        this._countryService.getAllCountry(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry')
+            .subscribe(function (countries) {
+            _this.countries = countries;
+        });
+        // subscribe on value changed event of form to show validation message
+        this.stateFrm.valueChanges.subscribe(function (data) { return _this.onValueChanged(data); });
+        this.onValueChanged();
+        if (this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create) {
+            this.stateFrm.reset();
+        }
+        else {
+            this.stateFrm.setValue(this.data.state);
+        }
+        this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete ? false : true);
+    };
+    // form value change event
+    StateformComponent.prototype.onValueChanged = function (data) {
+        if (!this.stateFrm) {
+            return;
+        }
+        var form = this.stateFrm;
+        // tslint:disable-next-line:forin
+        for (var field in this.formErrors) {
+            // clear previous error message (if any)
+            this.formErrors[field] = '';
+            var control = form.get(field);
+            // setup custom validation message to form
+            if (control && control.dirty && !control.valid) {
+                var messages = this.validationMessages[field];
+                // tslint:disable-next-line:forin
+                for (var key in control.errors) {
+                    this.formErrors[field] += messages[key] + ' ';
+                }
+            }
+        }
+    };
+    StateformComponent.prototype.onSubmit = function (formData) {
+        var _this = this;
+        var stateData = this.mapStateID(formData.value);
+        switch (this.data.dbops) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create:
+                this._stateService.addState(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'State/' + 'addState', stateData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].update:
+                this._stateService.updateState(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'State/' + 'updateState', stateData.StateID, stateData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete:
+                this._stateService.deleteState(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'State/' + 'deleteState', stateData.StateID).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+        }
+    };
+    StateformComponent.prototype.SetControlsState = function (isEnable) {
+        isEnable ? this.stateFrm.enable() : this.stateFrm.disable();
+    };
+    StateformComponent.prototype.mapStateID = function (state) {
+        if (state.StateID == null) {
+            state.StateID = -1;
+        }
+        return state;
+    };
+    StateformComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-stateform',
+            template: __webpack_require__(/*! ./stateform.component.html */ "./src/app/stateform/stateform.component.html"),
+            styles: [__webpack_require__(/*! ./stateform.component.css */ "./src/app/stateform/stateform.component.css")]
+        }),
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [Object, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+            _services_state_service__WEBPACK_IMPORTED_MODULE_4__["StateService"],
+            _services_country_service__WEBPACK_IMPORTED_MODULE_3__["CountryService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]])
+    ], StateformComponent);
+    return StateformComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/statelist/statelist.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/statelist/statelist.component.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* .statelist{\r\n  text-align: center;\r\n} */\r\n\r\n.spinner{\r\n    top: 45%;\r\n    left: 47%;\r\n    position: fixed;\r\n  }\r\n\r\n.statelist-container, #paginator {\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-width: 300px;\r\n    max-width: 1200px;\r\n    max-height: 700px;\r\n    overflow: auto;\r\n    margin: 0 auto;\r\n  }\r\n  "
+
+/***/ }),
+
+/***/ "./src/app/statelist/statelist.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/statelist/statelist.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else statelist\">  \n  <mat-spinner></mat-spinner>  \n  </div>  \n  <ng-template class=\"statelist\" #statelist>  \n    <h2 style=\"text-align: center;\">State List</h2>  \n    <div class=\"statelist-container mat-elevation-z8\">  \n      <div><button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addState()\">Create</button></div>  \n      <table mat-table #table [dataSource]=\"dataSource\">  \n    \n        <!-- Id Column -->  \n        <ng-container matColumnDef=\"StateID\">  \n        <th mat-header-cell *matHeaderCellDef>State Id </th>  \n        <td mat-cell *matCellDef=\"let element\">{{element.StateID}} </td>  \n        </ng-container>\n    \n        <!-- State Name Column -->  \n        <ng-container matColumnDef=\"StateName\">  \n          <th mat-header-cell *matHeaderCellDef>State Name</th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.StateName}} </td>  \n        </ng-container>\n        \n        <!-- Id Column -->  \n        <ng-container matColumnDef=\"CountryID\">  \n          <th mat-header-cell *matHeaderCellDef>Country Id </th>  \n          <td mat-cell *matCellDef=\"let element\">{{element.CountryID}} </td>  \n          </ng-container>\n    \n      \n         \n        <ng-container matColumnDef=\"action\">  \n          <th mat-header-cell *matHeaderCellDef>Action</th>  \n          <td mat-cell *matCellDef=\"let element\">  \n            <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editState(element.StateID)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteState(element.StateID)\">Delete</button>  \n          </td>  \n        </ng-container>  \n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>  \n\n        <!-- <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row> -->\n        <!-- <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row> -->\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>  \n      </table>  \n      </div>  \n  </ng-template> "
+
+/***/ }),
+
+/***/ "./src/app/statelist/statelist.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/statelist/statelist.component.ts ***!
+  \**************************************************/
+/*! exports provided: StatelistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StatelistComponent", function() { return StatelistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _stateform_stateform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../stateform/stateform.component */ "./src/app/stateform/stateform.component.ts");
+/* harmony import */ var _services_state_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/state.service */ "./src/app/services/state.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var StatelistComponent = /** @class */ (function () {
+    function StatelistComponent(snackBar, _stateService, dialog) {
+        this.snackBar = snackBar;
+        this._stateService = _stateService;
+        this.dialog = dialog;
+        // set columns that will need to show in listing table
+        this.displayedColumns = ['StateID', 'StateName', 'CountryID', 'action'];
+        // setting up datasource for material table
+        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"]();
+    }
+    StatelistComponent.prototype.ngOnInit = function () {
+        this.loadingState = true;
+        this.loadStates();
+    };
+    StatelistComponent.prototype.openDialog = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(_stateform_stateform_component__WEBPACK_IMPORTED_MODULE_2__["StateformComponent"], {
+            width: '500px',
+            data: { dbops: this.dbops, modalTitle: this.modalTitle, modalBtnTitle: this.modalBtnTitle, state: this.state }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            // console.log('The dialog was closed');
+            if (result === 'success') {
+                _this.loadingState = true;
+                _this.loadStates();
+                switch (_this.dbops) {
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create:
+                        _this.showMessage('Data successfully added.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update:
+                        _this.showMessage('Data successfully updated.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete:
+                        _this.showMessage('Data successfully deleted.');
+                        break;
+                }
+            }
+            else if (result === 'error') {
+                _this.showMessage('There is some issue in saving records, please contact to system administrator!');
+            }
+            else {
+                _this.showMessage('Please try again, something went wrong');
+            }
+        });
+    };
+    StatelistComponent.prototype.loadStates = function () {
+        var _this = this;
+        this._stateService.getAllState(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'State/' + 'getAllState')
+            .subscribe(function (states) {
+            _this.loadingState = false;
+            _this.dataSource.data = states;
+        });
+    };
+    StatelistComponent.prototype.getGender = function (gender) {
+        return _shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].genders.filter(function (ele) { return ele.id === gender; }).map(function (ele) { return ele.name; })[0];
+    };
+    StatelistComponent.prototype.addState = function () {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create;
+        this.modalTitle = 'Add New State';
+        this.modalBtnTitle = 'Add';
+        this.openDialog();
+    };
+    StatelistComponent.prototype.editState = function (id) {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update;
+        this.modalTitle = 'Edit State';
+        this.modalBtnTitle = 'Update';
+        this.state = this.dataSource.data.filter(function (x) { return x.StateID === id; })[0];
+        this.openDialog();
+    };
+    StatelistComponent.prototype.deleteState = function (id) {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete;
+        this.modalTitle = 'Confirm to Delete ?';
+        this.modalBtnTitle = 'Delete';
+        this.state = this.dataSource.data.filter(function (x) { return x.StateID === id; })[0];
+        this.openDialog();
+    };
+    StatelistComponent.prototype.showMessage = function (msg) {
+        this.snackBar.open(msg, '', {
+            duration: 3000
+        });
+    };
+    StatelistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-statelist',
+            template: __webpack_require__(/*! ./statelist.component.html */ "./src/app/statelist/statelist.component.html"),
+            styles: [__webpack_require__(/*! ./statelist.component.css */ "./src/app/statelist/statelist.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSnackBar"], _services_state_service__WEBPACK_IMPORTED_MODULE_3__["StateService"], _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
+    ], StatelistComponent);
+    return StatelistComponent;
 }());
 
 

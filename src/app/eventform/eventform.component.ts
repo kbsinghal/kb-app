@@ -1,13 +1,17 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MatTableDataSource, MatSnackBar } from '@angular/material';
 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, AUTOCOMPLETE_PANEL_HEIGHT } from '@angular/material';
 
 import { EventlistComponent } from '../eventlist/eventlist.component';
 
 import { IEvent } from '../model/event';
+import { ICountry } from '../model/country';
 import { EventService } from '../services/event.service';
+import { CountryService } from '../services/country.service';
+
 import { DBOperation } from '../shared/DBOperation';
 import { Global } from '../shared/Global';
 
@@ -29,10 +33,13 @@ export class EventformComponent implements OnInit {
    event: IEvent;
   genders = [];
   technologies = [];
+  // countries = new MatTableDataSource<ICountry>();
+   countries = [];
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder,
     private _eventService: EventService,
+    private _countryService: CountryService,
     public dialogRef: MatDialogRef<EventlistComponent>) { }
 
   ngOnInit() {
@@ -58,6 +65,20 @@ export class EventformComponent implements OnInit {
          });
     // this.genders = Global.genders;
     // this.technologies = Global.technologies;
+      // this.countries = Global.countries;
+     // var aaaaa = this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'getAllCountry');
+     // console.log(this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry'));
+    // loadCountriesddl():void{ this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'getAllCountry')
+    // .subscribe(countries => {this.countries = countries;})}; // KB
+
+
+    //   loadCountriesDDL(): void {
+       this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry')
+       .subscribe(countries => {
+         this.countries = countries;
+       });
+    //  };
+
 
     // subscribe on value changed event of form to show validation message
     this.eventFrm.valueChanges.subscribe(data => this.onValueChanged(data));
@@ -136,34 +157,34 @@ export class EventformComponent implements OnInit {
       'required': 'eventstartdate is required.'
     },
     'EventEndDate': {
-      'required': 'eventenddate is required.'
+      'required': 'Event End Date is required.'
     },
     'EventStartTime': {
-      'required': 'eventstartdate is required.'
+      'required': 'Event Start Time is required.'
     },
     'EventEndTime': {
-      'required': 'eventstartdate is required.'
+      'required': 'Event End Time is required.'
     },
     'EventVenueLatitude': {
-      'required': 'eventstartdate is required.'
+      'required': 'Event Venue Latitude is required.'
     },
     'EventVenueLongitude': {
-      'required': 'eventstartdate is required.'
+      'required': 'Event Venue Longitude is required.'
     },
     'CountryID': {
-      'required': 'eventstartdate is required.'
+      'required': 'Country is required.'
     },
     'StateID': {
-      'required': 'eventstartdate is required.'
+      'required': 'State is required.'
     },
     'CityID': {
-      'required': 'eventstartdate is required.'
+      'required': 'City is required.'
     },
     'AreaID': {
-      'required': 'eventstartdate is required.'
+      'required': 'Area is required.'
     },
     'IsActive': {
-      'required': 'eventstartdate is required.'
+      'required': 'IsActive is required.'
     }
 
   };
@@ -172,7 +193,7 @@ export class EventformComponent implements OnInit {
     switch (this.data.dbops) {
       case DBOperation.create:
      
-        this._eventService.addEvent(Global.BASE_USER_ENDPOINT + 'addEvent', eventData).subscribe(
+        this._eventService.addEvent(Global.BASE_USER_ENDPOINT + 'Event/' + 'addEvent', eventData).subscribe(
           data => {
             // Success
             if (data.message) {
@@ -187,7 +208,7 @@ export class EventformComponent implements OnInit {
         );
         break;
       case DBOperation.update:
-        this._eventService.updateEvent(Global.BASE_USER_ENDPOINT + 'updateEvent', eventData.EventID, eventData).subscribe(
+        this._eventService.updateEvent(Global.BASE_USER_ENDPOINT + 'Event/' + 'updateEvent', eventData.EventID, eventData).subscribe(
           data => {
             // Success
             if (data.message) {
@@ -202,7 +223,7 @@ export class EventformComponent implements OnInit {
         );
         break;
       case DBOperation.delete:
-        this._eventService.deleteEvent(Global.BASE_USER_ENDPOINT + 'deleteEvent', eventData.EventID).subscribe(
+        this._eventService.deleteEvent(Global.BASE_USER_ENDPOINT + 'Event/' + 'deleteEvent', eventData.EventID).subscribe(
           data => {
             // Success
             if (data.message) {

@@ -1,0 +1,22 @@
+<form  (ngSubmit)="onSubmit(countryFrm)"  [formGroup]="countryFrm">  
+    <h2>{{data.modalTitle}}</h2>  
+      
+    <div>  
+        <mat-form-field appearance="outline">  
+        <mat-label>Country Name</mat-label>  
+        <input matInput placeholder="Country Name" formControlName="CountryName">  
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+        <!-- <mat-hint>Hint</mat-hint> -->  
+        <mat-error *ngIf="formErrors.CountryName">  
+          {{ formErrors.CountryName }}  
+        </mat-error>  
+      </mat-form-field>  
+    </div>  
+    
+    <div>  
+      
+      <button type="button" mat-raised-button color="warn" (click)="dialogRef.close()">Cancel</button>   
+      <button type="submit" mat-raised-button color="primary" [disabled]="countryFrm.invalid">{{data.modalBtnTitle}}</button>  
+    </div>  
+      
+    </form> 

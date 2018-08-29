@@ -9,5 +9,12 @@ namespace kb_app.Models
         }
 
         public DbSet<Event> Event { get; set; }
+        public DbSet<Entity> Entity { get; set; }
+
+        public DbSet<Country> Country { get; set; }
+
+        public DbSet<State> State { get; set; }
+
+        public DbSet<City> City { get; set; }
     }
 }

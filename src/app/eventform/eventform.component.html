@@ -112,16 +112,32 @@
         </div> 
 
         
-        <div>  
+        <!-- <div>  
           <mat-form-field appearance="outline">  
             <mat-label>CountryID</mat-label>  
-            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
             <input matInput placeholder="Country ID" formControlName="CountryID">
             <mat-error *ngIf="formErrors.CountryID">  
               {{ formErrors.CountryID }}  
             </mat-error>  
           </mat-form-field>  
-        </div> 
+        </div>  -->
+
+
+        <div>
+          <mat-form-field appearance="outline">  
+            <mat-select placeholder="Select a Country" formControlName="CountryID">  
+              <mat-option>-- None --</mat-option>  
+              <mat-option *ngFor="let country  of countries" [value]="country.CountryID">  
+                {{ country.CountryName }}  
+              </mat-option>  
+            </mat-select>  
+            <mat-error *ngIf="formErrors.CountryID ">  
+              {{ formErrors.CountryID }}  
+            </mat-error>  
+          </mat-form-field>  
+        </div>
+
+
 
         <div>  
           <mat-form-field appearance="outline">  

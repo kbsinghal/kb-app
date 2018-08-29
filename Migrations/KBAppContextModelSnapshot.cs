@@ -4,8 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore.Storage.Internal;
+using MySql.Data.EntityFrameworkCore.Storage.Internal;
 using System;
 
 namespace kbapp.Migrations
@@ -17,7 +16,49 @@ namespace kbapp.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.1-rtm-125");
+                .HasAnnotation("ProductVersion", "2.0.2-rtm-10011");
+
+            modelBuilder.Entity("kb_app.Models.City", b =>
+                {
+                    b.Property<int>("CityID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("CityName");
+
+                    b.Property<int>("CreatedBy");
+
+                    b.Property<DateTime>("CreatedOn");
+
+                    b.Property<int>("StateID");
+
+                    b.Property<int>("UpdatedBy");
+
+                    b.Property<DateTime>("UpdatedOn");
+
+                    b.HasKey("CityID");
+
+                    b.ToTable("City");
+                });
+
+            modelBuilder.Entity("kb_app.Models.Country", b =>
+                {
+                    b.Property<int>("CountryID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("CountryName");
+
+                    b.Property<int>("CreatedBy");
+
+                    b.Property<DateTime>("CreatedOn");
+
+                    b.Property<int>("UpdatedBy");
+
+                    b.Property<DateTime>("UpdatedOn");
+
+                    b.HasKey("CountryID");
+
+                    b.ToTable("Country");
+                });
 
             modelBuilder.Entity("kb_app.Models.Entity", b =>
                 {
@@ -96,15 +137,13 @@ namespace kbapp.Migrations
 
                     b.Property<int>("AreaID");
 
-                    b.Property<string>("AreaName");
-
                     b.Property<int>("CityID");
-
-                    b.Property<string>("CityName");
 
                     b.Property<int>("CountryID");
 
-                    b.Property<string>("CountryName");
+                    b.Property<int>("CreatedBy");
+
+                    b.Property<DateTime>("CreatedOn");
 
                     b.Property<string>("EventAddress");
 
@@ -124,70 +163,39 @@ namespace kbapp.Migrations
 
                     b.Property<float>("EventVenueLongitude");
 
-                    b.Property<bool>("IsActive");
+                    b.Property<int>("IsActive");
 
                     b.Property<int>("StateID");
 
-                    b.Property<string>("StateName");
+                    b.Property<int>("UpdatedBy");
+
+                    b.Property<DateTime>("UpdatedOn");
 
                     b.HasKey("EventID");
 
                     b.ToTable("Event");
                 });
 
-            modelBuilder.Entity("kb_app.Models.EventBanner", b =>
+            modelBuilder.Entity("kb_app.Models.State", b =>
                 {
-                    b.Property<int>("EventBannerID")
+                    b.Property<int>("StateID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<byte[]>("Banner");
+                    b.Property<int>("CountryID");
 
-                    b.Property<int>("EventID");
+                    b.Property<int>("CreatedBy");
 
-                    b.HasKey("EventBannerID");
+                    b.Property<DateTime>("CreatedOn");
 
-                    b.HasIndex("EventID");
+                    b.Property<string>("StateName");
 
-                    b.ToTable("EventBanner");
-                });
+                    b.Property<int>("UpdatedBy");
 
-            modelBuilder.Entity("kb_app.Models.EventOrganizer", b =>
-                {
-                    b.Property<int>("EventOrganizerID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<DateTime>("UpdatedOn");
 
-                    b.Property<int>("EntityID");
+                    b.HasKey("StateID");
 
-                    b.Property<int>("EventID");
-
-                    b.HasKey("EventOrganizerID");
-
-                    b.HasIndex("EntityID");
-
-                    b.HasIndex("EventID");
-
-                    b.ToTable("EventOrganizer");
-                });
-
-            modelBuilder.Entity("kb_app.Models.EventBanner", b =>
-                {
-                    b.HasOne("kb_app.Models.Event")
-                        .WithMany("EventBanners")
-                        .HasForeignKey("EventID")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("kb_app.Models.EventOrganizer", b =>
-                {
-                    b.HasOne("kb_app.Models.Entity", "EntityOrganizer")
-                        .WithMany()
-                        .HasForeignKey("EntityID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("kb_app.Models.Event")
-                        .WithMany("EventOrganizers")
-                        .HasForeignKey("EventID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                    b.ToTable("State");
                 });
 #pragma warning restore 612, 618
         }

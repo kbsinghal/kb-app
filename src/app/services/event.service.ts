@@ -10,32 +10,15 @@ import { IEvent } from '../model/event';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    
     'Content-Type': 'application/json; charset=utf-8',
     'Accept': 'application/json'
-    //'Access-Control-Allow-Origin':'*',
-      //'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept',
-      //'Authorization':'Basic a2FseWFhbmJoYXYgOiBNMHJwaCF1cw=='
-      //'auth-token':'C3PO R2D2'
   })
 };
 
 const httpPostOptions = {  
-  //withCredentials: true,
-  
   headers: new HttpHeaders({  
-    //'Content-Type': 'application/x-www-form-urlencoded',
     'Content-Type': 'application/json; charset=utf-8',
-    //'Authorization': 'Basic ' + btoa('kalyaanbhav : M0rph!us'),
       'Accept': 'application/json'
-      //'dataType': 'json',
-      //'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT, OPTIONS',
-      //'Access-Control-Allow-Origin': 'http://localhost:5000',
-      //'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type',
-      //'Access-Control-Allow-Origin': '*'
-      //'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept',
-      //'Authorization': 'Basic a2FseWFhbmJoYXYgOiBNMHJwaCF1cw=='
-      //'auth-token':'C3PO R2D2'
   })  
 }; 
 
@@ -50,7 +33,6 @@ export class EventService {
       .pipe(
         catchError(this.handleError)
       );
-      
   }
 
   // insert new event details
@@ -64,8 +46,9 @@ export class EventService {
 
   // update event details
   updateEvent(url: string, id: number, event: IEvent): Observable<any> {
-    const newurl = '${url}?id=${id}';
-    return this.http.put(newurl, event, httpOptions)
+    // const newurl = '${url}?id=${id}';
+    const newurl = `${url}?id=${id}`;
+    return this.http.put(newurl, event, httpPostOptions)
       .pipe(
         catchError(this.handleError)
       );
@@ -73,7 +56,7 @@ export class EventService {
 
   // delete event information
   deleteEvent(url: string, id: number): Observable<any> {
-    const newurl = '${url}?id=${id}'; // DELETE api/event?id=42
+    const newurl = `${url}?id=${id}`; // DELETE api/event?id=42
     return this.http.delete(newurl, httpOptions)
       .pipe(
         catchError(this.handleError)

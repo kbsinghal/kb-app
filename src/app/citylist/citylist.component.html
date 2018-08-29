@@ -1,0 +1,46 @@
+<div class="spinner" *ngIf="loadingState; else citylist">  
+  <mat-spinner></mat-spinner>  
+  </div>  
+  <ng-template class="citylist" #citylist>  
+    <h2 style="text-align: center;">City List</h2>  
+    <div class="citylist-container mat-elevation-z8">  
+      <div><button title="Create" mat-raised-button color="accent" (click)="addCity()">Create</button></div>  
+      <table mat-table #table [dataSource]="dataSource">  
+    
+        <!-- Id Column -->  
+        <ng-container matColumnDef="CityID">  
+        <th mat-header-cell *matHeaderCellDef>City Id </th>  
+        <td mat-cell *matCellDef="let element">{{element.CityID}} </td>  
+        </ng-container>
+    
+        <!-- City Name Column -->  
+        <ng-container matColumnDef="CityName">  
+          <th mat-header-cell *matHeaderCellDef>City Name</th>  
+          <td mat-cell *matCellDef="let element"> {{element.CityName}} </td>  
+        </ng-container>
+        
+        <!-- State Id Column -->  
+        <ng-container matColumnDef="StateID">  
+          <th mat-header-cell *matHeaderCellDef>State Id </th>  
+          <td mat-cell *matCellDef="let element">{{element.StateID}} </td>  
+          </ng-container>
+    
+      
+         
+        <ng-container matColumnDef="action">  
+          <th mat-header-cell *matHeaderCellDef>Action</th>  
+          <td mat-cell *matCellDef="let element">  
+            <button title="Edit" mat-raised-button color="primary" (click)="editCity(element.CityID)">Edit</button>  
+            <button title="Delete" mat-raised-button color="warn" (click)="deleteCity(element.CityID)">Delete</button>  
+            <!-- <button title="Edit" mat-raised-button color="primary" (click)="editCity(1)">Edit</button>  
+            <button title="Delete" mat-raised-button color="warn" (click)="deleteCity(1)">Delete</button>   -->
+          </td>  
+        </ng-container>  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>  
+
+        <!-- <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row> -->
+        <!-- <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row> -->
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>  
+      </table>  
+      </div>  
+  </ng-template> 

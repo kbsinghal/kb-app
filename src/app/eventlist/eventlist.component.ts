@@ -24,9 +24,8 @@ export class EventlistComponent implements OnInit {
 
   // set columns that will need to show in listing table
   // displayedColumns = ['name', 'email', 'gender', 'birth', 'techno', 'message', 'action'];
-  displayedColumns = ['EventID','EventName', 'EventDescription', 'EventAddress', 'EventStartDate', 'EventEndDate','action'];
-  
-  // setting up datasource for material table
+  displayedColumns = ['EventID', 'EventName', 'EventDescription', 'EventAddress', 'EventStartDate', 'EventEndDate', 'action'];
+   // setting up datasource for material table
   dataSource = new MatTableDataSource<IEvent>();
 
   constructor(public snackBar: MatSnackBar, private _eventService: EventService, private dialog: MatDialog) { }
@@ -42,7 +41,7 @@ export class EventlistComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      // console.log('The dialog was closed');
       if (result === 'success') {
         this.loadingState = true;
         this.loadEvents();
@@ -66,15 +65,11 @@ export class EventlistComponent implements OnInit {
   }
 
   loadEvents(): void {
-    this._eventService.getAllEvent(Global.BASE_USER_ENDPOINT + 'getAllEvent')
-    
-    //this._eventService.events(Global.BASE_USER_ENDPOINT + 'events')
-      .subscribe(events => {
-        this.loadingState = false;
-        this.dataSource.data = events;
-        console.log(Global.BASE_USER_ENDPOINT + 'getAllEvent')
-        //console.log(this.dataSource.data);
-      });
+    this._eventService.getAllEvent(Global.BASE_USER_ENDPOINT + 'Event/' +'getAllEvent')
+    .subscribe(events => {
+    this.loadingState = false;
+    this.dataSource.data = events;
+    });
   }
 
   getGender(gender: number): string {
