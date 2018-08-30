@@ -111,16 +111,6 @@
           </mat-form-field>  
         </div> 
 
-        
-        <!-- <div>  
-          <mat-form-field appearance="outline">  
-            <mat-label>CountryID</mat-label>  
-            <input matInput placeholder="Country ID" formControlName="CountryID">
-            <mat-error *ngIf="formErrors.CountryID">  
-              {{ formErrors.CountryID }}  
-            </mat-error>  
-          </mat-form-field>  
-        </div>  -->
 
 
         <div>
@@ -139,38 +129,62 @@
 
 
 
-        <div>  
+        <div>
           <mat-form-field appearance="outline">  
-            <mat-label>StateID</mat-label>  
-            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
-            <input matInput placeholder="StateID" formControlName="StateID">
-            <mat-error *ngIf="formErrors.StateID">  
+            <mat-select placeholder="Select a State" formControlName="StateID">  
+              <mat-option>-- None --</mat-option>  
+              <mat-option *ngFor="let state of states" [value]="state.StateID">  
+                {{ state.StateName }}  
+              </mat-option>  
+            </mat-select>  
+            <mat-error *ngIf="formErrors.StateID ">  
               {{ formErrors.StateID }}  
             </mat-error>  
           </mat-form-field>  
         </div>
-        
-        <div>  
+
+
+        <div>
           <mat-form-field appearance="outline">  
-            <mat-label>CityID</mat-label>  
-            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
-            <input matInput placeholder="CityID" formControlName="CityID">
-            <mat-error *ngIf="formErrors.CityID">  
+            <mat-select placeholder="Select a City" formControlName="CityID">  
+              <mat-option>-- None --</mat-option>  
+              <mat-option *ngFor="let city of cities" [value]="city.CityID">  
+                {{ city.CityName }}  
+              </mat-option>  
+            </mat-select>  
+            <mat-error *ngIf="formErrors.CityID ">  
               {{ formErrors.CityID }}  
             </mat-error>  
           </mat-form-field>  
         </div>
+        
+   
 
-        <div>  
+        <div>
+          <mat-form-field appearance="outline">  
+            <mat-select placeholder="Select a Area" formControlName="AreaID">  
+              <mat-option>-- None --</mat-option>  
+              <mat-option *ngFor="let area of areas" [value]="area.AreaID">  
+                {{ area.AreaName }}  
+              </mat-option>  
+            </mat-select>  
+            <mat-error *ngIf="formErrors.AreaID ">  
+              {{ formErrors.AreaID }}  
+            </mat-error>  
+          </mat-form-field>  
+        </div>
+ 
+
+
+        <!-- <div>  
           <mat-form-field appearance="outline">  
             <mat-label>AreaID</mat-label>  
-            <!-- <input type="email" matInput placeholder="email" formControlName="email">   -->
             <input matInput placeholder="AreaID" formControlName="AreaID">
             <mat-error *ngIf="formErrors.AreaID">  
               {{ formErrors.AreaID }}  
             </mat-error>  
           </mat-form-field>  
-        </div>
+        </div> -->
 
         <div>  
           <mat-form-field appearance="outline">  

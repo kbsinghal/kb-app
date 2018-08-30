@@ -187,13 +187,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./cityform/cityform.component */ "./src/app/cityform/cityform.component.ts");
 /* harmony import */ var _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./citylist/citylist.component */ "./src/app/citylist/citylist.component.ts");
 /* harmony import */ var _services_city_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services/city.service */ "./src/app/services/city.service.ts");
-/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
+/* harmony import */ var _areaform_areaform_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./areaform/areaform.component */ "./src/app/areaform/areaform.component.ts");
+/* harmony import */ var _arealist_arealist_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./arealist/arealist.component */ "./src/app/arealist/arealist.component.ts");
+/* harmony import */ var _services_area_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./services/area.service */ "./src/app/services/area.service.ts");
+/* harmony import */ var _entityform_entityform_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./entityform/entityform.component */ "./src/app/entityform/entityform.component.ts");
+/* harmony import */ var _entitylist_entitylist_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./entitylist/entitylist.component */ "./src/app/entitylist/entitylist.component.ts");
+/* harmony import */ var _services_entity_service__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./services/entity.service */ "./src/app/services/entity.service.ts");
+/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
 
 
 
@@ -230,7 +242,11 @@ var AppModule = /** @class */ (function () {
                 _stateform_stateform_component__WEBPACK_IMPORTED_MODULE_15__["StateformComponent"],
                 _statelist_statelist_component__WEBPACK_IMPORTED_MODULE_16__["StatelistComponent"],
                 _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_18__["CityformComponent"],
-                _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_19__["CitylistComponent"]
+                _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_19__["CitylistComponent"],
+                _areaform_areaform_component__WEBPACK_IMPORTED_MODULE_21__["AreaformComponent"],
+                _arealist_arealist_component__WEBPACK_IMPORTED_MODULE_22__["ArealistComponent"],
+                _entityform_entityform_component__WEBPACK_IMPORTED_MODULE_24__["EntityformComponent"],
+                _entitylist_entitylist_component__WEBPACK_IMPORTED_MODULE_25__["EntitylistComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -241,13 +257,15 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
                 _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_7__["LayoutModule"],
                 _app_routing__WEBPACK_IMPORTED_MODULE_4__["Routing"],
-                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_21__["MatToolbarModule"]
+                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_27__["MatToolbarModule"]
             ],
             providers: [
                 _services_event_service__WEBPACK_IMPORTED_MODULE_11__["EventService"],
                 _services_country_service__WEBPACK_IMPORTED_MODULE_14__["CountryService"],
                 _services_state_service__WEBPACK_IMPORTED_MODULE_17__["StateService"],
-                _services_city_service__WEBPACK_IMPORTED_MODULE_20__["CityService"]
+                _services_city_service__WEBPACK_IMPORTED_MODULE_20__["CityService"],
+                _services_area_service__WEBPACK_IMPORTED_MODULE_23__["AreaService"],
+                _services_entity_service__WEBPACK_IMPORTED_MODULE_26__["EntityService"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
@@ -270,22 +288,386 @@ var AppModule = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Routing", function() { return Routing; });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./citylist/citylist.component */ "./src/app/citylist/citylist.component.ts");
-/* harmony import */ var _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cityform/cityform.component */ "./src/app/cityform/cityform.component.ts");
+/* harmony import */ var _entitylist_entitylist_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./entitylist/entitylist.component */ "./src/app/entitylist/entitylist.component.ts");
+/* harmony import */ var _entityform_entityform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./entityform/entityform.component */ "./src/app/entityform/entityform.component.ts");
 
 
 
 var appRoutes = [
-    // { path: '',  pathMatch: 'full' , component: EventlistComponent },
-    // { path: 'eventform', component: EventformComponent }
-    //  { path: '',  pathMatch: 'full' , component: CountrylistComponent },
-    // { path: 'countryform', component: CountryformComponent }
+    //{ path: '',  pathMatch: 'full' , component: EventlistComponent },
+    //{ path: 'eventform', component: EventformComponent },
+    // { path: '',  pathMatch: 'full' , component: CountrylistComponent },
+    // { path: 'countryform', component: CountryformComponent },
     // { path: '',  pathMatch: 'full' , component: StatelistComponent },
     // { path: 'stateform', component: StateformComponent },
-    { path: '', pathMatch: 'full', component: _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_1__["CitylistComponent"] },
-    { path: 'cityform', component: _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_2__["CityformComponent"] }
+    //  { path: '',  pathMatch: 'full' , component: CitylistComponent },
+    //  { path: 'cityform', component: CityformComponent },
+    // { path: '',  pathMatch: 'full' , component: ArealistComponent },
+    // { path: 'areaform', component: AreaformComponent },
+    { path: '', pathMatch: 'full', component: _entitylist_entitylist_component__WEBPACK_IMPORTED_MODULE_1__["EntitylistComponent"] },
+    { path: 'entityform', component: _entityform_entityform_component__WEBPACK_IMPORTED_MODULE_2__["EntityformComponent"] }
 ];
 var Routing = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes);
+
+
+/***/ }),
+
+/***/ "./src/app/areaform/areaform.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/areaform/areaform.component.css ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/areaform/areaform.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/areaform/areaform.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<form  (ngSubmit)=\"onSubmit(areaFrm)\" [formGroup]=\"areaFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>Area Name</mat-label>  \n      <input matInput placeholder=\"Area Name\" formControlName=\"AreaName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.AreaName\">  \n        {{ formErrors.AreaName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n    <mat-label>Country ID</mat-label>  \n    <input matInput placeholder=\"Country ID\" formControlName=\"CountryID\">  \n    <mat-error *ngIf=\"formErrors.CountryID\">  \n      {{ formErrors.CountryID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>   -->\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a City\" formControlName=\"CityID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let city of cities\" [value]=\"city.CityID\">  \n        {{ city.CityName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.CityID \">  \n      {{ formErrors.CityID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"areaFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+
+/***/ }),
+
+/***/ "./src/app/areaform/areaform.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/areaform/areaform.component.ts ***!
+  \************************************************/
+/*! exports provided: AreaformComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AreaformComponent", function() { return AreaformComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _services_city_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/city.service */ "./src/app/services/city.service.ts");
+/* harmony import */ var _services_area_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/area.service */ "./src/app/services/area.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+var AreaformComponent = /** @class */ (function () {
+    function AreaformComponent(data, fb, _areaService, _cityService, dialogRef) {
+        this.data = data;
+        this.fb = fb;
+        this._areaService = _areaService;
+        this._cityService = _cityService;
+        this.dialogRef = dialogRef;
+        this.indLoading = false;
+        // genders = [];
+        // technologies = [];
+        this.cities = [];
+        // form errors model
+        // tslint:disable-next-line:member-ordering
+        this.formErrors = {
+            'AreaName': '',
+            'CityID': '',
+        };
+        // custom valdiation messages
+        // tslint:disable-next-line:member-ordering
+        this.validationMessages = {
+            'AreaName': {
+                'maxlength': 'AreaName cannot be more than 50 characters long.',
+                'required': 'AreaName is required.'
+            },
+            'CityID': {
+                'maxlength': 'CityID cannot be more than 50 characters long.',
+                'required': 'CityID is required.'
+            }
+        };
+    }
+    AreaformComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // built state form
+        this.areaFrm = this.fb.group({
+            AreaID: [''],
+            AreaName: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(250)]],
+            CityID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]]
+        });
+        // this.genders = Global.genders;
+        // this.technologies = Global.technologies;
+        this._cityService.getAllCity(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'City/' + 'getAllCity')
+            .subscribe(function (cities) {
+            _this.cities = cities;
+        });
+        // subscribe on value changed event of form to show validation message
+        this.areaFrm.valueChanges.subscribe(function (data) { return _this.onValueChanged(data); });
+        this.onValueChanged();
+        if (this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create) {
+            this.areaFrm.reset();
+        }
+        else {
+            this.areaFrm.setValue(this.data.area);
+        }
+        this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete ? false : true);
+    };
+    // form value change event
+    AreaformComponent.prototype.onValueChanged = function (data) {
+        if (!this.areaFrm) {
+            return;
+        }
+        var form = this.areaFrm;
+        // tslint:disable-next-line:forin
+        for (var field in this.formErrors) {
+            // clear previous error message (if any)
+            this.formErrors[field] = '';
+            var control = form.get(field);
+            // setup custom validation message to form
+            if (control && control.dirty && !control.valid) {
+                var messages = this.validationMessages[field];
+                // tslint:disable-next-line:forin
+                for (var key in control.errors) {
+                    this.formErrors[field] += messages[key] + ' ';
+                }
+            }
+        }
+    };
+    AreaformComponent.prototype.onSubmit = function (formData) {
+        var _this = this;
+        var areaData = this.mapAreaID(formData.value);
+        switch (this.data.dbops) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create:
+                this._areaService.addArea(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Area/' + 'addArea', areaData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].update:
+                this._areaService.updateArea(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Area/' + 'updateArea', areaData.AreaID, areaData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete:
+                this._areaService.deleteArea(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Area/' + 'deleteArea', areaData.AreaID).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+        }
+    };
+    AreaformComponent.prototype.SetControlsState = function (isEnable) {
+        isEnable ? this.areaFrm.enable() : this.areaFrm.disable();
+    };
+    AreaformComponent.prototype.mapAreaID = function (area) {
+        if (area.AreaID == null) {
+            area.AreaID = -1;
+        }
+        return area;
+    };
+    AreaformComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-areaform',
+            template: __webpack_require__(/*! ./areaform.component.html */ "./src/app/areaform/areaform.component.html"),
+            styles: [__webpack_require__(/*! ./areaform.component.css */ "./src/app/areaform/areaform.component.css")]
+        }),
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [Object, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+            _services_area_service__WEBPACK_IMPORTED_MODULE_4__["AreaService"],
+            _services_city_service__WEBPACK_IMPORTED_MODULE_3__["CityService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]])
+    ], AreaformComponent);
+    return AreaformComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/arealist/arealist.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/arealist/arealist.component.css ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* .arealist{\r\n  text-align: center;\r\n} */\r\n\r\n.spinner{\r\n    top: 45%;\r\n    left: 47%;\r\n    position: fixed;\r\n  }\r\n\r\n.arealist-container, #paginator {\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-width: 300px;\r\n    max-width: 1200px;\r\n    max-height: 700px;\r\n    overflow: auto;\r\n    margin: 0 auto;\r\n  }\r\n  "
+
+/***/ }),
+
+/***/ "./src/app/arealist/arealist.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/arealist/arealist.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else arealist\">  \n  <mat-spinner></mat-spinner>  \n  </div>  \n  <ng-template class=\"arealist\" #arealist>  \n    <h2 style=\"text-align: center;\">Area List</h2>  \n    <div class=\"arealist-container mat-elevation-z8\">  \n      <div><button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addArea()\">Create</button></div>  \n      <table mat-table #table [dataSource]=\"dataSource\">  \n    \n        <!-- Id Column -->  \n        <ng-container matColumnDef=\"AreaID\">  \n        <th mat-header-cell *matHeaderCellDef>Area Id </th>  \n        <td mat-cell *matCellDef=\"let element\">{{element.AreaID}} </td>  \n        </ng-container>\n    \n        <!-- Area Name Column -->  \n        <ng-container matColumnDef=\"AreaName\">  \n          <th mat-header-cell *matHeaderCellDef>Area Name</th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.AreaName}} </td>  \n        </ng-container>\n        \n        <!-- City Id Column -->  \n        <ng-container matColumnDef=\"CityID\">  \n          <th mat-header-cell *matHeaderCellDef>City Id </th>  \n          <td mat-cell *matCellDef=\"let element\">{{element.CityID}} </td>  \n          </ng-container>\n    \n      \n         \n        <ng-container matColumnDef=\"action\">  \n          <th mat-header-cell *matHeaderCellDef>Action</th>  \n          <td mat-cell *matCellDef=\"let element\">  \n            <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editArea(element.AreaID)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteArea(element.AreaID)\">Delete</button>  \n            <!-- <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editCity(1)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteCity(1)\">Delete</button>   -->\n          </td>  \n        </ng-container>  \n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>  \n\n        <!-- <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row> -->\n        <!-- <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row> -->\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>  \n      </table>  \n      </div>  \n  </ng-template> "
+
+/***/ }),
+
+/***/ "./src/app/arealist/arealist.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/arealist/arealist.component.ts ***!
+  \************************************************/
+/*! exports provided: ArealistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArealistComponent", function() { return ArealistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _areaform_areaform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../areaform/areaform.component */ "./src/app/areaform/areaform.component.ts");
+/* harmony import */ var _services_area_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/area.service */ "./src/app/services/area.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var ArealistComponent = /** @class */ (function () {
+    function ArealistComponent(snackBar, _areaService, dialog) {
+        this.snackBar = snackBar;
+        this._areaService = _areaService;
+        this.dialog = dialog;
+        // set columns that will need to show in listing table
+        this.displayedColumns = ['AreaID', 'AreaName', 'CityID', 'action'];
+        // setting up datasource for material table
+        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"]();
+    }
+    ArealistComponent.prototype.ngOnInit = function () {
+        this.loadingState = true;
+        this.loadAreas();
+    };
+    ArealistComponent.prototype.openDialog = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(_areaform_areaform_component__WEBPACK_IMPORTED_MODULE_2__["AreaformComponent"], {
+            width: '500px',
+            data: { dbops: this.dbops, modalTitle: this.modalTitle, modalBtnTitle: this.modalBtnTitle, area: this.area }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            // console.log('The dialog was closed');
+            if (result === 'success') {
+                _this.loadingState = true;
+                _this.loadAreas();
+                switch (_this.dbops) {
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create:
+                        _this.showMessage('Data successfully added.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update:
+                        _this.showMessage('Data successfully updated.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete:
+                        _this.showMessage('Data successfully deleted.');
+                        break;
+                }
+            }
+            else if (result === 'error') {
+                _this.showMessage('There is some issue in saving records, please contact to system administrator!');
+            }
+            else {
+                _this.showMessage('Please try again, something went wrong');
+            }
+        });
+    };
+    ArealistComponent.prototype.loadAreas = function () {
+        var _this = this;
+        this._areaService.getAllArea(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'Area/' + 'getAllArea')
+            .subscribe(function (areas) {
+            _this.loadingState = false;
+            _this.dataSource.data = areas;
+        });
+    };
+    ArealistComponent.prototype.getGender = function (gender) {
+        return _shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].genders.filter(function (ele) { return ele.id === gender; }).map(function (ele) { return ele.name; })[0];
+    };
+    ArealistComponent.prototype.addArea = function () {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create;
+        this.modalTitle = 'Add New Area';
+        this.modalBtnTitle = 'Add';
+        this.openDialog();
+    };
+    ArealistComponent.prototype.editArea = function (id) {
+        // console.log('id:' + id);
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update;
+        this.modalTitle = 'Edit Area';
+        this.modalBtnTitle = 'Update';
+        this.area = this.dataSource.data.filter(function (x) { return x.AreaID === id; })[0];
+        // console.log('this.city');
+        // console.log(this.city);
+        this.openDialog();
+    };
+    ArealistComponent.prototype.deleteArea = function (id) {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete;
+        this.modalTitle = 'Confirm to Delete ?';
+        this.modalBtnTitle = 'Delete';
+        this.area = this.dataSource.data.filter(function (x) { return x.AreaID === id; })[0];
+        this.openDialog();
+    };
+    ArealistComponent.prototype.showMessage = function (msg) {
+        this.snackBar.open(msg, '', {
+            duration: 3000
+        });
+    };
+    ArealistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-arealist',
+            template: __webpack_require__(/*! ./arealist.component.html */ "./src/app/arealist/arealist.component.html"),
+            styles: [__webpack_require__(/*! ./arealist.component.css */ "./src/app/arealist/arealist.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSnackBar"], _services_area_service__WEBPACK_IMPORTED_MODULE_3__["AreaService"], _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
+    ], ArealistComponent);
+    return ArealistComponent;
+}());
+
 
 
 /***/ }),
@@ -308,7 +690,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form  (ngSubmit)=\"onSubmit(cityFrm)\"  [formGroup]=\"cityFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>City Name</mat-label>  \n      <input matInput placeholder=\"City Name\" formControlName=\"CityName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.CityName\">  \n        {{ formErrors.CityName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n    <mat-label>Country ID</mat-label>  \n    <input matInput placeholder=\"Country ID\" formControlName=\"CountryID\">  \n    <mat-error *ngIf=\"formErrors.CountryID\">  \n      {{ formErrors.CountryID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>   -->\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a State\" formControlName=\"StateID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let state of states\" [value]=\"state.StateID\">  \n        {{ state.StateName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.StateID \">  \n      {{ formErrors.StateID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"cityFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+module.exports = "<form  (ngSubmit)=\"onSubmit(cityFrm)\" [formGroup]=\"cityFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>City Name</mat-label>  \n      <input matInput placeholder=\"City Name\" formControlName=\"CityName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.CityName\">  \n        {{ formErrors.CityName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n    <mat-label>Country ID</mat-label>  \n    <input matInput placeholder=\"Country ID\" formControlName=\"CountryID\">  \n    <mat-error *ngIf=\"formErrors.CountryID\">  \n      {{ formErrors.CountryID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>   -->\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a State\" formControlName=\"StateID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let state of states\" [value]=\"state.StateID\">  \n        {{ state.StateName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.StateID \">  \n      {{ formErrors.StateID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"cityFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
 
 /***/ }),
 
@@ -399,8 +781,7 @@ var CityformComponent = /** @class */ (function () {
             this.cityFrm.reset();
         }
         else {
-            this.cityFrm.setValue(this.data.state);
-            console.log(this.data);
+            this.cityFrm.setValue(this.data.city);
         }
         this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete ? false : true);
     };
@@ -994,10 +1375,10 @@ var CountrylistComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/eventform/eventform.component.css":
-/*!***************************************************!*\
-  !*** ./src/app/eventform/eventform.component.css ***!
-  \***************************************************/
+/***/ "./src/app/entityform/entityform.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/entityform/entityform.component.css ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1005,34 +1386,37 @@ module.exports = ""
 
 /***/ }),
 
-/***/ "./src/app/eventform/eventform.component.html":
-/*!****************************************************!*\
-  !*** ./src/app/eventform/eventform.component.html ***!
-  \****************************************************/
+/***/ "./src/app/entityform/entityform.component.html":
+/*!******************************************************!*\
+  !*** ./src/app/entityform/entityform.component.html ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form  (ngSubmit)=\"onSubmit(eventFrm)\"  [formGroup]=\"eventFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Name</mat-label>  \n      <input matInput placeholder=\"Event Name\" formControlName=\"EventName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.EventName\">  \n        {{ formErrors.EventName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Description</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Description\" formControlName=\"EventDescription\">\n      <mat-error *ngIf=\"formErrors.EventDescription\">  \n        {{ formErrors.EventDescription }}  \n      </mat-error>  \n    </mat-form-field>  \n    \n  </div> \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Address</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Address\" formControlName=\"EventAddress\">\n      <mat-error *ngIf=\"formErrors.EventAddress\">  \n        {{ formErrors.EventAddress }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <!-- <p>  \n      <mat-radio-group class=\"contact-radio-group\" formControlName=\"gender\" >  \n        <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let gndr of genders\" [value]=\"gndr.id\">  \n          {{ gndr.name }}  \n        </mat-radio-button>  \n      </mat-radio-group>  \n      <mat-error *ngIf=\"formErrors.gender\">  \n        {{ formErrors.gender }}  \n      </mat-error>  \n  </p>   -->\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <input matInput [matDatepicker]=\"picker1\" placeholder=\"Choose start date\" formControlName=\"EventStartDate\">  \n      <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>  \n      <mat-datepicker #picker1></mat-datepicker>  \n      \n    <mat-error *ngIf=\"formErrors.EventStartDate \">  \n      {{ formErrors.EventStartDate }}  \n    </mat-error>  \n    </mat-form-field>  \n  </div>  \n\n      <div>  \n          <mat-form-field appearance=\"outline\">  \n            <input matInput [matDatepicker]=\"picker2\" placeholder=\"Choose end date\" formControlName=\"EventEndDate\">  \n            <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>  \n            <mat-datepicker #picker2></mat-datepicker>  \n            \n          <mat-error *ngIf=\"formErrors.EventEndDate \">  \n            {{ formErrors.EventEndDate }}  \n          </mat-error>  \n          </mat-form-field>  \n        </div>  \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Start Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Start Time\" formControlName=\"EventStartTime\">\n            <mat-error *ngIf=\"formErrors.EventStartTime\">  \n              {{ formErrors.EventStartTime }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event End Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event End Time\" formControlName=\"EventEndTime\">\n            <mat-error *ngIf=\"formErrors.EventEndTime\">  \n              {{ formErrors.EventEndTime }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Venue Latitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Latitude\" formControlName=\"EventVenueLatitude\">\n            <mat-error *ngIf=\"formErrors.EventVenueLatitude\">  \n              {{ formErrors.EventVenueLatitude }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Venue Longitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Longitude\" formControlName=\"EventVenueLongitude\">\n            <mat-error *ngIf=\"formErrors.EventVenueLongitude\">  \n              {{ formErrors.EventVenueLongitude }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        \n        <!-- <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>CountryID</mat-label>  \n            <input matInput placeholder=\"Country ID\" formControlName=\"CountryID\">\n            <mat-error *ngIf=\"formErrors.CountryID\">  \n              {{ formErrors.CountryID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>  -->\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a Country\" formControlName=\"CountryID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let country  of countries\" [value]=\"country.CountryID\">  \n                {{ country.CountryName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.CountryID \">  \n              {{ formErrors.CountryID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>StateID</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"StateID\" formControlName=\"StateID\">\n            <mat-error *ngIf=\"formErrors.StateID\">  \n              {{ formErrors.StateID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n        \n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>CityID</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"CityID\" formControlName=\"CityID\">\n            <mat-error *ngIf=\"formErrors.CityID\">  \n              {{ formErrors.CityID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>AreaID</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"AreaID\" formControlName=\"AreaID\">\n            <mat-error *ngIf=\"formErrors.AreaID\">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>IsActive</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"IsActive\" formControlName=\"IsActive\">\n            <mat-error *ngIf=\"formErrors.IsActive\">  \n              {{ formErrors.IsActive }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n       \n<!-- <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Technology\" formControlName=\"techno\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let techno  of technologies\" [value]=\"techno\">  \n          {{ techno }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.techno \">  \n        {{ formErrors.techno }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n      <textarea matInput placeholder=\"Message...\" formControlName=\"message\"></textarea>  \n      <mat-error *ngIf=\"formErrors.message \">  \n        {{ formErrors.message }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+module.exports = "<form  (ngSubmit)=\"onSubmit(entityFrm)\" [formGroup]=\"entityFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label> Name</mat-label>  \n      <input matInput placeholder=\"Name\" formControlName=\"Name\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.Name\">  \n        {{ formErrors.Name }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n    <mat-label> Description</mat-label>  \n    <input matInput placeholder=\"Description\" formControlName=\"Description\">  \n    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n    <!-- <mat-hint>Hint</mat-hint> -->  \n    <mat-error *ngIf=\"formErrors.Description\">  \n      {{ formErrors.Description }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n<!-- \n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> IsRegistered</mat-label>  \n  <input matInput placeholder=\"IsRegistered\" formControlName=\"IsRegistered\">  \n \n  <mat-error *ngIf=\"formErrors.IsRegistered\">  \n    {{ formErrors.IsRegistered }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n\n<p>  \n  <mat-radio-group class=\"contact-radio-group\" formControlName=\"IsRegistered\" >  \n    <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of registeredOptions\" [value]=\"option.id\">  \n      {{ option.name }}  \n    </mat-radio-button>  \n  </mat-radio-group>  \n  <mat-error *ngIf=\"formErrors.IsRegistered\">  \n    {{ formErrors.IsRegistered }}  \n  </mat-error>  \n</p> \n\n\n\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n    <mat-label>First Name</mat-label>  \n    <input matInput placeholder=\"FirstName\" formControlName=\"FirstName\">  \n    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n    <!-- <mat-hint>Hint</mat-hint> -->  \n    <mat-error *ngIf=\"formErrors.FirstName\">  \n      {{ formErrors.FirstName }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Middle Name</mat-label>  \n  <input matInput placeholder=\"MiddleName\" formControlName=\"MiddleName\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.MiddleName\">  \n    {{ formErrors.MiddleName }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Last Name</mat-label>  \n  <input matInput placeholder=\"LastName\" formControlName=\"LastName\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.LastName\">  \n    {{ formErrors.LastName }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Nick Name</mat-label>  \n  <input matInput placeholder=\"NickName\" formControlName=\"NickName\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.NickName\">  \n    {{ formErrors.NickName }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Entity Type</mat-label>  \n  <input matInput placeholder=\"EntityType\" formControlName=\"EntityType\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.EntityType\">  \n    {{ formErrors.EntityType }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Registered Address</mat-label>  \n  <input matInput placeholder=\"RegisteredAddress\" formControlName=\"RegisteredAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.RegisteredAddress\">  \n    {{ formErrors.RegisteredAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n\n\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Registered CountryID</mat-label>  \n  <input matInput placeholder=\"RegisteredCountryID\" formControlName=\"RegisteredCountryID\">  \n \n  <mat-error *ngIf=\"formErrors.RegisteredCountryID\">  \n    {{ formErrors.RegisteredCountryID }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a Country\" formControlName=\"RegisteredCountryID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let country of countries\" [value]=\"country.CountryID\">  \n        {{ country.CountryName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.RegisteredCountryID \">  \n      {{ formErrors.RegisteredCountryID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Registered StateID</mat-label>  \n  <input matInput placeholder=\"RegisteredStateID\" formControlName=\"RegisteredStateID\">  \n  \n  <mat-error *ngIf=\"formErrors.RegisteredStateID\">  \n    {{ formErrors.RegisteredStateID }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a State\" formControlName=\"RegisteredStateID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let state of states\" [value]=\"state.StateID\">  \n        {{ state.StateName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.RegisteredStateID \">  \n      {{ formErrors.RegisteredStateID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n\n\n\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a City\" formControlName=\"RegisteredCityID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let city of cities\" [value]=\"city.CityID\">  \n        {{ city.CityName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.RegisteredCityID \">  \n      {{ formErrors.RegisteredCityID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a Area\" formControlName=\"RegisteredAreaID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let area of areas\" [value]=\"area.AreaID\">  \n        {{ area.AreaName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.RegisteredAreaID \">  \n      {{ formErrors.RegisteredAreaID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n\n\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Registered AreaID</mat-label>  \n  <input matInput placeholder=\"RegisteredAreaID\" formControlName=\"RegisteredAreaID\">  \n  \n  <mat-error *ngIf=\"formErrors.RegisteredAreaID\">  \n    {{ formErrors.RegisteredAreaID }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Email Address</mat-label>  \n  <input matInput placeholder=\"EmailAddress\" formControlName=\"EmailAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.EmailAddress\">  \n    {{ formErrors.EmailAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Website Address</mat-label>  \n  <input matInput placeholder=\"WebsiteAddress\" formControlName=\"WebsiteAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.WebsiteAddress\">  \n    {{ formErrors.WebsiteAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Facebook Address</mat-label>  \n  <input matInput placeholder=\"FacebookAddress\" formControlName=\"FacebookAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.FacebookAddress\">  \n    {{ formErrors.FacebookAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>YouTube Address</mat-label>  \n  <input matInput placeholder=\"YouTubeAddress\" formControlName=\"YouTubeAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.YouTubeAddress\">  \n    {{ formErrors.YouTubeAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Twitter Address</mat-label>  \n  <input matInput placeholder=\"TwitterAddress\" formControlName=\"TwitterAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.TwitterAddress\">  \n    {{ formErrors.TwitterAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>GooglePlusAddress</mat-label>  \n  <input matInput placeholder=\"GooglePlusAddress\" formControlName=\"GooglePlusAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.GooglePlusAddress\">  \n    {{ formErrors.GooglePlusAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>IsActive</mat-label>  \n  <input matInput placeholder=\"IsActive\" formControlName=\"IsActive\">  \n \n  <mat-error *ngIf=\"formErrors.IsActive\">  \n    {{ formErrors.IsActive }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n<p>  \n  <mat-radio-group class=\"contact-radio-group\" formControlName=\"IsActive\" >  \n    <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of activeOptions\" [value]=\"option.id\">  \n      {{ option.name }}  \n    </mat-radio-button>  \n  </mat-radio-group>  \n  <mat-error *ngIf=\"formErrors.IsActive\">  \n    {{ formErrors.IsActive }}  \n  </mat-error>  \n</p> \n\n\n\n\n\n\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"entityFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
 
 /***/ }),
 
-/***/ "./src/app/eventform/eventform.component.ts":
-/*!**************************************************!*\
-  !*** ./src/app/eventform/eventform.component.ts ***!
-  \**************************************************/
-/*! exports provided: EventformComponent */
+/***/ "./src/app/entityform/entityform.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/entityform/entityform.component.ts ***!
+  \****************************************************/
+/*! exports provided: EntityformComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventformComponent", function() { return EventformComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EntityformComponent", function() { return EntityformComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _services_event_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/event.service */ "./src/app/services/event.service.ts");
-/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/country.service */ "./src/app/services/country.service.ts");
-/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
-/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+/* harmony import */ var _services_city_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/city.service */ "./src/app/services/city.service.ts");
+/* harmony import */ var _services_state_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/state.service */ "./src/app/services/state.service.ts");
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/country.service */ "./src/app/services/country.service.ts");
+/* harmony import */ var _services_area_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/area.service */ "./src/app/services/area.service.ts");
+/* harmony import */ var _services_entity_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../services/entity.service */ "./src/app/services/entity.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1052,18 +1436,525 @@ var __param = (undefined && undefined.__param) || function (paramIndex, decorato
 
 
 
+
+
+
+var EntityformComponent = /** @class */ (function () {
+    function EntityformComponent(data, fb, _stateService, _cityService, _areaService, _countryService, _entityService, dialogRef) {
+        this.data = data;
+        this.fb = fb;
+        this._stateService = _stateService;
+        this._cityService = _cityService;
+        this._areaService = _areaService;
+        this._countryService = _countryService;
+        this._entityService = _entityService;
+        this.dialogRef = dialogRef;
+        this.indLoading = false;
+        // genders = [];
+        // technologies = [];
+        this.activeOptions = [];
+        this.registeredOptions = [];
+        this.states = [];
+        this.countries = [];
+        this.areas = [];
+        this.cities = [];
+        // form errors model
+        // tslint:disable-next-line:member-ordering
+        this.formErrors = {
+            'Name': '',
+            'Description': '',
+            'FirstName': '',
+            'MiddleName': '',
+            'LastName': '',
+            'NickName': '',
+            'EntityType': '',
+            'RegisteredAddress': '',
+            'RegisteredCountryID': '',
+            'RegisteredStateID': '',
+            'RegisteredCityID': '',
+            'RegisteredAreaID': '',
+            'EmailAddress': '',
+            'WebsiteAddress': '',
+            'FacebookAddress': '',
+            'YouTubeAddress': '',
+            'TwitterAddress': '',
+            'GooglePlusAddress': '',
+            'IsActive': '',
+            'IsRegistered': ''
+        };
+        // custom valdiation messages
+        // tslint:disable-next-line:member-ordering
+        this.validationMessages = {
+            'Name': {
+                'maxlength': 'Name cannot be more than 50 characters long.',
+                'required': 'Name is required.'
+            },
+            'Description': {
+                'maxlength': 'Description cannot be more than 50 characters long.',
+                'required': 'Description is required.'
+            },
+            'FirstName': {
+                'maxlength': 'FirstName cannot be more than 50 characters long.',
+                'required': 'FirstName is required.'
+            },
+            'MiddleName': {
+                'maxlength': 'MiddleName cannot be more than 50 characters long.',
+                'required': 'MiddleName is required.'
+            },
+            'LastName': {
+                'maxlength': 'LastName cannot be more than 50 characters long.',
+                'required': 'LastName is required.'
+            },
+            'NickName': {
+                'maxlength': 'NickName cannot be more than 50 characters long.',
+                'required': 'NickName is required.'
+            },
+            'EntityType': {
+                'maxlength': 'EntityType cannot be more than 50 characters long.',
+                'required': 'EntityType is required.'
+            },
+            'RegisteredAddress': {
+                'maxlength': 'RegisteredAddress cannot be more than 50 characters long.',
+                'required': 'RegisteredAddress is required.'
+            },
+            'RegisteredCountryID': {
+                'maxlength': 'RegisteredCountryID cannot be more than 50 characters long.',
+                'required': 'RegisteredCountryID is required.'
+            },
+            'RegisteredStateID': {
+                'maxlength': 'RegisteredStateID cannot be more than 50 characters long.',
+                'required': 'RegisteredStateID is required.'
+            },
+            'RegisteredCityID': {
+                'maxlength': 'RegisteredCityID cannot be more than 50 characters long.',
+                'required': 'RegisteredCityID is required.'
+            },
+            'RegisteredAreaID': {
+                'maxlength': 'RegisteredAreaID cannot be more than 50 characters long.',
+                'required': 'RegisteredAreaID is required.'
+            },
+            'EmailAddress': {
+                'maxlength': 'EmailAddress cannot be more than 50 characters long.',
+                'required': 'EmailAddress is required.'
+            },
+            'WebsiteAddress': {
+                'maxlength': 'WebsiteAddress cannot be more than 50 characters long.',
+                'required': 'WebsiteAddress is required.'
+            },
+            'FacebookAddress': {
+                'maxlength': 'FacebookAddress cannot be more than 50 characters long.',
+                'required': 'FacebookAddress is required.'
+            },
+            'YouTubeAddress': {
+                'maxlength': 'YouTubeAddress cannot be more than 50 characters long.',
+                'required': 'YouTubeAddress is required.'
+            },
+            'TwitterAddress': {
+                'maxlength': 'TwitterAddress cannot be more than 50 characters long.',
+                'required': 'TwitterAddress is required.'
+            },
+            'GooglePlusAddress': {
+                'maxlength': 'GooglePlusAddress cannot be more than 50 characters long.',
+                'required': 'GooglePlusAddress is required.'
+            },
+            'IsActive': {
+                'maxlength': 'IsActive cannot be more than 50 characters long.',
+                'required': 'IsActive is required.'
+            },
+            'IsRegistered': {
+                'maxlength': 'IsRegistered cannot be more than 50 characters long.',
+                'required': 'IsRegistered is required.'
+            }
+        };
+    }
+    EntityformComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // built state form
+        this.entityFrm = this.fb.group({
+            EntityID: [''],
+            Description: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            Name: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(250)]],
+            FirstName: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            MiddleName: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            LastName: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            NickName: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            EntityType: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            RegisteredAddress: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            RegisteredCountryID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            RegisteredStateID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            RegisteredCityID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            RegisteredAreaID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            EmailAddress: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            WebsiteAddress: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            FacebookAddress: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            YouTubeAddress: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            TwitterAddress: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            GooglePlusAddress: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            IsActive: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            IsRegistered: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+        });
+        // this.genders = Global.genders;
+        // this.technologies = Global.technologies;
+        this.activeOptions = _shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].activeOptions;
+        this.registeredOptions = _shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].registeredOptions;
+        this._countryService.getAllCountry(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry')
+            .subscribe(function (countries) {
+            _this.countries = countries;
+        });
+        this._stateService.getAllState(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'State/' + 'getAllState')
+            .subscribe(function (states) {
+            _this.states = states;
+        });
+        this._cityService.getAllCity(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'City/' + 'getAllCity')
+            .subscribe(function (cities) {
+            _this.cities = cities;
+        });
+        this._areaService.getAllArea(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'Area/' + 'getAllArea')
+            .subscribe(function (areas) {
+            _this.areas = areas;
+        });
+        // subscribe on value changed event of form to show validation message
+        this.entityFrm.valueChanges.subscribe(function (data) { return _this.onValueChanged(data); });
+        this.onValueChanged();
+        if (this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_8__["DBOperation"].create) {
+            this.entityFrm.reset();
+        }
+        else {
+            this.entityFrm.setValue(this.data.entity);
+        }
+        this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_8__["DBOperation"].delete ? false : true);
+    };
+    // form value change event
+    EntityformComponent.prototype.onValueChanged = function (data) {
+        if (!this.entityFrm) {
+            return;
+        }
+        var form = this.entityFrm;
+        // tslint:disable-next-line:forin
+        for (var field in this.formErrors) {
+            // clear previous error message (if any)
+            this.formErrors[field] = '';
+            var control = form.get(field);
+            // setup custom validation message to form
+            if (control && control.dirty && !control.valid) {
+                var messages = this.validationMessages[field];
+                // tslint:disable-next-line:forin
+                for (var key in control.errors) {
+                    this.formErrors[field] += messages[key] + ' ';
+                }
+            }
+        }
+    };
+    EntityformComponent.prototype.onSubmit = function (formData) {
+        var _this = this;
+        var entityData = this.mapEntityID(formData.value);
+        switch (this.data.dbops) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_8__["DBOperation"].create:
+                this._entityService.addEntity(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'Entity/' + 'addEntity', entityData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_8__["DBOperation"].update:
+                this._entityService.updateEntity(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'Entity/' + 'updateEntity', entityData.EntityID, entityData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_8__["DBOperation"].delete:
+                this._entityService.deleteEntity(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'Entity/' + 'deleteEntity', entityData.EntityID).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+        }
+    };
+    EntityformComponent.prototype.SetControlsState = function (isEnable) {
+        isEnable ? this.entityFrm.enable() : this.entityFrm.disable();
+    };
+    EntityformComponent.prototype.mapEntityID = function (entity) {
+        if (entity.EntityID == null) {
+            entity.EntityID = -1;
+        }
+        return entity;
+    };
+    EntityformComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-entityform',
+            template: __webpack_require__(/*! ./entityform.component.html */ "./src/app/entityform/entityform.component.html"),
+            styles: [__webpack_require__(/*! ./entityform.component.css */ "./src/app/entityform/entityform.component.css")]
+        }),
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [Object, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+            _services_state_service__WEBPACK_IMPORTED_MODULE_4__["StateService"],
+            _services_city_service__WEBPACK_IMPORTED_MODULE_3__["CityService"],
+            _services_area_service__WEBPACK_IMPORTED_MODULE_6__["AreaService"],
+            _services_country_service__WEBPACK_IMPORTED_MODULE_5__["CountryService"],
+            _services_entity_service__WEBPACK_IMPORTED_MODULE_7__["EntityService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]])
+    ], EntityformComponent);
+    return EntityformComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/entitylist/entitylist.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/entitylist/entitylist.component.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* .entitylist{\r\n  text-align: center;\r\n} */\r\n\r\n.spinner{\r\n    top: 45%;\r\n    left: 47%;\r\n    position: fixed;\r\n  }\r\n\r\n.entitylist-container, #paginator {\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-width: 300px;\r\n    max-width: 1200px;\r\n    max-height: 700px;\r\n    overflow: auto;\r\n    margin: 0 auto;\r\n  }\r\n  "
+
+/***/ }),
+
+/***/ "./src/app/entitylist/entitylist.component.html":
+/*!******************************************************!*\
+  !*** ./src/app/entitylist/entitylist.component.html ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else entitylist\">  \n  <mat-spinner></mat-spinner>  \n  </div>  \n  <ng-template class=\"entitylist\" #entitylist>  \n    <h2 style=\"text-align: center;\">Entity List</h2>  \n    <div class=\"entitylist-container mat-elevation-z8\">  \n      <div><button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addEntity()\">Create</button></div>  \n      <table mat-table #table [dataSource]=\"dataSource\">  \n    \n        <!-- Id Column -->  \n        <ng-container matColumnDef=\"EntityID\">  \n        <th mat-header-cell *matHeaderCellDef>Entity Id </th>  \n        <td mat-cell *matCellDef=\"let element\">{{element.EntityID}} </td>  \n        </ng-container>\n    \n        <!-- Name Column -->  \n        <ng-container matColumnDef=\"Name\">  \n          <th mat-header-cell *matHeaderCellDef>Name</th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.Name}} </td>  \n        </ng-container>\n        \n        <!-- State Id Column -->  \n        <ng-container matColumnDef=\"StateID\">  \n          <th mat-header-cell *matHeaderCellDef>State Id </th>  \n          <td mat-cell *matCellDef=\"let element\">{{element.StateID}} </td>  \n          </ng-container>\n    \n      \n         \n        <ng-container matColumnDef=\"action\">  \n          <th mat-header-cell *matHeaderCellDef>Action</th>  \n          <td mat-cell *matCellDef=\"let element\">  \n            <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editEntity(element.EntityID)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteEntity(element.EntityID)\">Delete</button>  \n            <!-- <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editCity(1)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteCity(1)\">Delete</button>   -->\n          </td>  \n        </ng-container>  \n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>  \n\n        <!-- <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row> -->\n        <!-- <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row> -->\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>  \n      </table>  \n      </div>  \n  </ng-template> "
+
+/***/ }),
+
+/***/ "./src/app/entitylist/entitylist.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/entitylist/entitylist.component.ts ***!
+  \****************************************************/
+/*! exports provided: EntitylistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EntitylistComponent", function() { return EntitylistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _entityform_entityform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../entityform/entityform.component */ "./src/app/entityform/entityform.component.ts");
+/* harmony import */ var _services_entity_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/entity.service */ "./src/app/services/entity.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var EntitylistComponent = /** @class */ (function () {
+    function EntitylistComponent(snackBar, _entityService, dialog) {
+        this.snackBar = snackBar;
+        this._entityService = _entityService;
+        this.dialog = dialog;
+        // set columns that will need to show in listing table
+        this.displayedColumns = ['EntityID', 'Name', 'StateID', 'action'];
+        // setting up datasource for material table
+        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"]();
+    }
+    EntitylistComponent.prototype.ngOnInit = function () {
+        this.loadingState = true;
+        this.loadEntities();
+    };
+    EntitylistComponent.prototype.openDialog = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(_entityform_entityform_component__WEBPACK_IMPORTED_MODULE_2__["EntityformComponent"], {
+            width: '500px',
+            data: { dbops: this.dbops, modalTitle: this.modalTitle, modalBtnTitle: this.modalBtnTitle, entity: this.entity }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            // console.log('The dialog was closed');
+            if (result === 'success') {
+                _this.loadingState = true;
+                _this.loadEntities();
+                switch (_this.dbops) {
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create:
+                        _this.showMessage('Data successfully added.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update:
+                        _this.showMessage('Data successfully updated.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete:
+                        _this.showMessage('Data successfully deleted.');
+                        break;
+                }
+            }
+            else if (result === 'error') {
+                _this.showMessage('There is some issue in saving records, please contact to system administrator!');
+            }
+            else {
+                _this.showMessage('Please try again, something went wrong');
+            }
+        });
+    };
+    EntitylistComponent.prototype.loadEntities = function () {
+        var _this = this;
+        this._entityService.getAllEntity(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'Entity/' + 'getAllEntity')
+            .subscribe(function (entities) {
+            _this.loadingState = false;
+            _this.dataSource.data = entities;
+        });
+    };
+    EntitylistComponent.prototype.getGender = function (gender) {
+        return _shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].genders.filter(function (ele) { return ele.id === gender; }).map(function (ele) { return ele.name; })[0];
+    };
+    EntitylistComponent.prototype.addEntity = function () {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create;
+        this.modalTitle = 'Add New Entity';
+        this.modalBtnTitle = 'Add';
+        this.openDialog();
+    };
+    EntitylistComponent.prototype.editEntity = function (id) {
+        // console.log('id:' + id);
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update;
+        this.modalTitle = 'Edit City';
+        this.modalBtnTitle = 'Update';
+        this.entity = this.dataSource.data.filter(function (x) { return x.EntityID === id; })[0];
+        // console.log('this.city');
+        // console.log(this.city);
+        this.openDialog();
+    };
+    EntitylistComponent.prototype.deleteEntity = function (id) {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete;
+        this.modalTitle = 'Confirm to Delete ?';
+        this.modalBtnTitle = 'Delete';
+        this.entity = this.dataSource.data.filter(function (x) { return x.EntityID === id; })[0];
+        this.openDialog();
+    };
+    EntitylistComponent.prototype.showMessage = function (msg) {
+        this.snackBar.open(msg, '', {
+            duration: 3000
+        });
+    };
+    EntitylistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-entitylist',
+            template: __webpack_require__(/*! ./entitylist.component.html */ "./src/app/entitylist/entitylist.component.html"),
+            styles: [__webpack_require__(/*! ./entitylist.component.css */ "./src/app/entitylist/entitylist.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSnackBar"], _services_entity_service__WEBPACK_IMPORTED_MODULE_3__["EntityService"], _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
+    ], EntitylistComponent);
+    return EntitylistComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/eventform/eventform.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/eventform/eventform.component.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/eventform/eventform.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/eventform/eventform.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<form  (ngSubmit)=\"onSubmit(eventFrm)\"  [formGroup]=\"eventFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Name</mat-label>  \n      <input matInput placeholder=\"Event Name\" formControlName=\"EventName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.EventName\">  \n        {{ formErrors.EventName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Description</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Description\" formControlName=\"EventDescription\">\n      <mat-error *ngIf=\"formErrors.EventDescription\">  \n        {{ formErrors.EventDescription }}  \n      </mat-error>  \n    </mat-form-field>  \n    \n  </div> \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Address</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Address\" formControlName=\"EventAddress\">\n      <mat-error *ngIf=\"formErrors.EventAddress\">  \n        {{ formErrors.EventAddress }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <!-- <p>  \n      <mat-radio-group class=\"contact-radio-group\" formControlName=\"gender\" >  \n        <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let gndr of genders\" [value]=\"gndr.id\">  \n          {{ gndr.name }}  \n        </mat-radio-button>  \n      </mat-radio-group>  \n      <mat-error *ngIf=\"formErrors.gender\">  \n        {{ formErrors.gender }}  \n      </mat-error>  \n  </p>   -->\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <input matInput [matDatepicker]=\"picker1\" placeholder=\"Choose start date\" formControlName=\"EventStartDate\">  \n      <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>  \n      <mat-datepicker #picker1></mat-datepicker>  \n      \n    <mat-error *ngIf=\"formErrors.EventStartDate \">  \n      {{ formErrors.EventStartDate }}  \n    </mat-error>  \n    </mat-form-field>  \n  </div>  \n\n      <div>  \n          <mat-form-field appearance=\"outline\">  \n            <input matInput [matDatepicker]=\"picker2\" placeholder=\"Choose end date\" formControlName=\"EventEndDate\">  \n            <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>  \n            <mat-datepicker #picker2></mat-datepicker>  \n            \n          <mat-error *ngIf=\"formErrors.EventEndDate \">  \n            {{ formErrors.EventEndDate }}  \n          </mat-error>  \n          </mat-form-field>  \n        </div>  \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Start Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Start Time\" formControlName=\"EventStartTime\">\n            <mat-error *ngIf=\"formErrors.EventStartTime\">  \n              {{ formErrors.EventStartTime }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event End Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event End Time\" formControlName=\"EventEndTime\">\n            <mat-error *ngIf=\"formErrors.EventEndTime\">  \n              {{ formErrors.EventEndTime }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Venue Latitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Latitude\" formControlName=\"EventVenueLatitude\">\n            <mat-error *ngIf=\"formErrors.EventVenueLatitude\">  \n              {{ formErrors.EventVenueLatitude }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Venue Longitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Longitude\" formControlName=\"EventVenueLongitude\">\n            <mat-error *ngIf=\"formErrors.EventVenueLongitude\">  \n              {{ formErrors.EventVenueLongitude }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a Country\" formControlName=\"CountryID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let country  of countries\" [value]=\"country.CountryID\">  \n                {{ country.CountryName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.CountryID \">  \n              {{ formErrors.CountryID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a State\" formControlName=\"StateID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let state of states\" [value]=\"state.StateID\">  \n                {{ state.StateName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.StateID \">  \n              {{ formErrors.StateID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a City\" formControlName=\"CityID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let city of cities\" [value]=\"city.CityID\">  \n                {{ city.CityName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.CityID \">  \n              {{ formErrors.CityID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n        \n   \n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a Area\" formControlName=\"AreaID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let area of areas\" [value]=\"area.AreaID\">  \n                {{ area.AreaName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.AreaID \">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n \n\n\n        <!-- <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>AreaID</mat-label>  \n            <input matInput placeholder=\"AreaID\" formControlName=\"AreaID\">\n            <mat-error *ngIf=\"formErrors.AreaID\">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> -->\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>IsActive</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"IsActive\" formControlName=\"IsActive\">\n            <mat-error *ngIf=\"formErrors.IsActive\">  \n              {{ formErrors.IsActive }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n       \n<!-- <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Technology\" formControlName=\"techno\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let techno  of technologies\" [value]=\"techno\">  \n          {{ techno }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.techno \">  \n        {{ formErrors.techno }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n      <textarea matInput placeholder=\"Message...\" formControlName=\"message\"></textarea>  \n      <mat-error *ngIf=\"formErrors.message \">  \n        {{ formErrors.message }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+
+/***/ }),
+
+/***/ "./src/app/eventform/eventform.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/eventform/eventform.component.ts ***!
+  \**************************************************/
+/*! exports provided: EventformComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventformComponent", function() { return EventformComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _services_event_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/event.service */ "./src/app/services/event.service.ts");
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/country.service */ "./src/app/services/country.service.ts");
+/* harmony import */ var _services_state_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/state.service */ "./src/app/services/state.service.ts");
+/* harmony import */ var _services_city_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/city.service */ "./src/app/services/city.service.ts");
+/* harmony import */ var _services_area_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../services/area.service */ "./src/app/services/area.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+
+
+
 var EventformComponent = /** @class */ (function () {
-    function EventformComponent(data, fb, _eventService, _countryService, dialogRef) {
+    function EventformComponent(data, fb, _eventService, _countryService, _stateService, _cityService, _areaService, dialogRef) {
         this.data = data;
         this.fb = fb;
         this._eventService = _eventService;
         this._countryService = _countryService;
+        this._stateService = _stateService;
+        this._cityService = _cityService;
+        this._areaService = _areaService;
         this.dialogRef = dialogRef;
         this.indLoading = false;
         this.genders = [];
         this.technologies = [];
-        // countries = new MatTableDataSource<ICountry>();
         this.countries = [];
+        this.states = [];
+        this.cities = [];
+        this.areas = [];
         // form errors model
         // tslint:disable-next-line:member-ordering
         this.formErrors = {
@@ -1172,21 +2063,33 @@ var EventformComponent = /** @class */ (function () {
         // loadCountriesddl():void{ this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'getAllCountry')
         // .subscribe(countries => {this.countries = countries;})}; // KB
         //   loadCountriesDDL(): void {
-        this._countryService.getAllCountry(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry')
+        this._countryService.getAllCountry(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry')
             .subscribe(function (countries) {
             _this.countries = countries;
         });
         //  };
+        this._stateService.getAllState(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'State/' + 'getAllState')
+            .subscribe(function (states) {
+            _this.states = states;
+        });
+        this._cityService.getAllCity(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'City/' + 'getAllCity')
+            .subscribe(function (cities) {
+            _this.cities = cities;
+        });
+        this._areaService.getAllArea(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'Area/' + 'getAllArea')
+            .subscribe(function (areas) {
+            _this.areas = areas;
+        });
         // subscribe on value changed event of form to show validation message
         this.eventFrm.valueChanges.subscribe(function (data) { return _this.onValueChanged(data); });
         this.onValueChanged();
-        if (this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create) {
+        if (this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_8__["DBOperation"].create) {
             this.eventFrm.reset();
         }
         else {
             this.eventFrm.setValue(this.data.event);
         }
-        this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete ? false : true);
+        this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_8__["DBOperation"].delete ? false : true);
     };
     // form value change event
     EventformComponent.prototype.onValueChanged = function (data) {
@@ -1213,8 +2116,8 @@ var EventformComponent = /** @class */ (function () {
         var _this = this;
         var eventData = this.mapDateData(this.mapEventID(formData.value));
         switch (this.data.dbops) {
-            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create:
-                this._eventService.addEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Event/' + 'addEvent', eventData).subscribe(function (data) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_8__["DBOperation"].create:
+                this._eventService.addEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'Event/' + 'addEvent', eventData).subscribe(function (data) {
                     // Success
                     if (data.message) {
                         _this.dialogRef.close('success');
@@ -1226,8 +2129,8 @@ var EventformComponent = /** @class */ (function () {
                     _this.dialogRef.close('error');
                 });
                 break;
-            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].update:
-                this._eventService.updateEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Event/' + 'updateEvent', eventData.EventID, eventData).subscribe(function (data) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_8__["DBOperation"].update:
+                this._eventService.updateEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'Event/' + 'updateEvent', eventData.EventID, eventData).subscribe(function (data) {
                     // Success
                     if (data.message) {
                         _this.dialogRef.close('success');
@@ -1239,8 +2142,8 @@ var EventformComponent = /** @class */ (function () {
                     _this.dialogRef.close('error');
                 });
                 break;
-            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete:
-                this._eventService.deleteEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Event/' + 'deleteEvent', eventData.EventID).subscribe(function (data) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_8__["DBOperation"].delete:
+                this._eventService.deleteEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].BASE_USER_ENDPOINT + 'Event/' + 'deleteEvent', eventData.EventID).subscribe(function (data) {
                     // Success
                     if (data.message) {
                         _this.dialogRef.close('success');
@@ -1278,6 +2181,9 @@ var EventformComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [Object, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
             _services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"],
             _services_country_service__WEBPACK_IMPORTED_MODULE_4__["CountryService"],
+            _services_state_service__WEBPACK_IMPORTED_MODULE_5__["StateService"],
+            _services_city_service__WEBPACK_IMPORTED_MODULE_6__["CityService"],
+            _services_area_service__WEBPACK_IMPORTED_MODULE_7__["AreaService"],
             _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]])
     ], EventformComponent);
     return EventformComponent;
@@ -1432,6 +2338,98 @@ var EventlistComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSnackBar"], _services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"], _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
     ], EventlistComponent);
     return EventlistComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/area.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/services/area.service.ts ***!
+  \******************************************/
+/*! exports provided: AreaService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AreaService", function() { return AreaService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var httpPostOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var AreaService = /** @class */ (function () {
+    function AreaService(http) {
+        this.http = http;
+    }
+    // get all area data
+    AreaService.prototype.getAllArea = function (url) {
+        return this.http.get(url)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // insert new area details
+    AreaService.prototype.addArea = function (url, area) {
+        return this.http.post(url, area, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // update area details
+    AreaService.prototype.updateArea = function (url, id, area) {
+        var newurl = url + "?id=" + id;
+        return this.http.put(newurl, area, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // delete area information
+    AreaService.prototype.deleteArea = function (url, id) {
+        var newurl = url + "?id=" + id; // DELETE api/area?id=42
+        return this.http.delete(newurl, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // custom handler
+    AreaService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    AreaService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], AreaService);
+    return AreaService;
 }());
 
 
@@ -1616,6 +2614,98 @@ var CountryService = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], CountryService);
     return CountryService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/entity.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/services/entity.service.ts ***!
+  \********************************************/
+/*! exports provided: EntityService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EntityService", function() { return EntityService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var httpPostOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var EntityService = /** @class */ (function () {
+    function EntityService(http) {
+        this.http = http;
+    }
+    // get all entity data
+    EntityService.prototype.getAllEntity = function (url) {
+        return this.http.get(url)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // insert new entity details
+    EntityService.prototype.addEntity = function (url, entity) {
+        return this.http.post(url, entity, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // update entity details
+    EntityService.prototype.updateEntity = function (url, id, entity) {
+        var newurl = url + "?id=" + id;
+        return this.http.put(newurl, entity, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // delete entity information
+    EntityService.prototype.deleteEntity = function (url, id) {
+        var newurl = url + "?id=" + id; // DELETE api/entity?id=42
+        return this.http.delete(newurl, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // custom handler
+    EntityService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    EntityService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], EntityService);
+    return EntityService;
 }());
 
 
@@ -1851,6 +2941,22 @@ var Global = /** @class */ (function () {
         }, {
             name: 'Female',
             id: 1
+        }];
+    Global.activeOptions = [{
+            name: 'Yes',
+            id: 1
+        },
+        {
+            name: 'No',
+            id: 0,
+        }];
+    Global.registeredOptions = [{
+            name: 'Registered',
+            id: 1
+        },
+        {
+            name: 'Not Registered',
+            id: 0,
         }];
     Global.technologies = ['JavaScript', 'SharePoint', 'C#'];
     return Global;

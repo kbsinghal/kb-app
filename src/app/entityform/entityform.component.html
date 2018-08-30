@@ -1,0 +1,336 @@
+<form  (ngSubmit)="onSubmit(entityFrm)" [formGroup]="entityFrm">  
+  <h2>{{data.modalTitle}}</h2>  
+    
+  <div>  
+      <mat-form-field appearance="outline">  
+      <mat-label> Name</mat-label>  
+      <input matInput placeholder="Name" formControlName="Name">  
+      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+      <!-- <mat-hint>Hint</mat-hint> -->  
+      <mat-error *ngIf="formErrors.Name">  
+        {{ formErrors.Name }}  
+      </mat-error>  
+    </mat-form-field>  
+  </div>
+
+  <div>  
+    <mat-form-field appearance="outline">  
+    <mat-label> Description</mat-label>  
+    <input matInput placeholder="Description" formControlName="Description">  
+    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+    <!-- <mat-hint>Hint</mat-hint> -->  
+    <mat-error *ngIf="formErrors.Description">  
+      {{ formErrors.Description }}  
+    </mat-error>  
+  </mat-form-field>  
+</div>
+<!-- 
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label> IsRegistered</mat-label>  
+  <input matInput placeholder="IsRegistered" formControlName="IsRegistered">  
+ 
+  <mat-error *ngIf="formErrors.IsRegistered">  
+    {{ formErrors.IsRegistered }}  
+  </mat-error>  
+</mat-form-field>  
+</div> -->
+
+
+<p>  
+  <mat-radio-group class="contact-radio-group" formControlName="IsRegistered" >  
+    <mat-radio-button class="contact-radio-button" *ngFor="let option of registeredOptions" [value]="option.id">  
+      {{ option.name }}  
+    </mat-radio-button>  
+  </mat-radio-group>  
+  <mat-error *ngIf="formErrors.IsRegistered">  
+    {{ formErrors.IsRegistered }}  
+  </mat-error>  
+</p> 
+
+
+
+  <div>  
+    <mat-form-field appearance="outline">  
+    <mat-label>First Name</mat-label>  
+    <input matInput placeholder="FirstName" formControlName="FirstName">  
+    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+    <!-- <mat-hint>Hint</mat-hint> -->  
+    <mat-error *ngIf="formErrors.FirstName">  
+      {{ formErrors.FirstName }}  
+    </mat-error>  
+  </mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Middle Name</mat-label>  
+  <input matInput placeholder="MiddleName" formControlName="MiddleName">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.MiddleName">  
+    {{ formErrors.MiddleName }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Last Name</mat-label>  
+  <input matInput placeholder="LastName" formControlName="LastName">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.LastName">  
+    {{ formErrors.LastName }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Nick Name</mat-label>  
+  <input matInput placeholder="NickName" formControlName="NickName">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.NickName">  
+    {{ formErrors.NickName }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Entity Type</mat-label>  
+  <input matInput placeholder="EntityType" formControlName="EntityType">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.EntityType">  
+    {{ formErrors.EntityType }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Registered Address</mat-label>  
+  <input matInput placeholder="RegisteredAddress" formControlName="RegisteredAddress">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.RegisteredAddress">  
+    {{ formErrors.RegisteredAddress }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+
+
+
+<!-- <div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Registered CountryID</mat-label>  
+  <input matInput placeholder="RegisteredCountryID" formControlName="RegisteredCountryID">  
+ 
+  <mat-error *ngIf="formErrors.RegisteredCountryID">  
+    {{ formErrors.RegisteredCountryID }}  
+  </mat-error>  
+</mat-form-field>  
+</div> -->
+
+
+<div>
+  <mat-form-field appearance="outline">  
+    <mat-select placeholder="Select a Country" formControlName="RegisteredCountryID">  
+      <mat-option>-- None --</mat-option>  
+      <mat-option *ngFor="let country of countries" [value]="country.CountryID">  
+        {{ country.CountryName }}  
+      </mat-option>  
+    </mat-select>  
+    <mat-error *ngIf="formErrors.RegisteredCountryID ">  
+      {{ formErrors.RegisteredCountryID }}  
+    </mat-error>  
+  </mat-form-field>  
+</div>
+
+
+
+<!-- <div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Registered StateID</mat-label>  
+  <input matInput placeholder="RegisteredStateID" formControlName="RegisteredStateID">  
+  
+  <mat-error *ngIf="formErrors.RegisteredStateID">  
+    {{ formErrors.RegisteredStateID }}  
+  </mat-error>  
+</mat-form-field>  
+</div> -->
+
+
+
+<div>
+  <mat-form-field appearance="outline">  
+    <mat-select placeholder="Select a State" formControlName="RegisteredStateID">  
+      <mat-option>-- None --</mat-option>  
+      <mat-option *ngFor="let state of states" [value]="state.StateID">  
+        {{ state.StateName }}  
+      </mat-option>  
+    </mat-select>  
+    <mat-error *ngIf="formErrors.RegisteredStateID ">  
+      {{ formErrors.RegisteredStateID }}  
+    </mat-error>  
+  </mat-form-field>  
+</div>
+
+
+
+
+
+
+<div>
+  <mat-form-field appearance="outline">  
+    <mat-select placeholder="Select a City" formControlName="RegisteredCityID">  
+      <mat-option>-- None --</mat-option>  
+      <mat-option *ngFor="let city of cities" [value]="city.CityID">  
+        {{ city.CityName }}  
+      </mat-option>  
+    </mat-select>  
+    <mat-error *ngIf="formErrors.RegisteredCityID ">  
+      {{ formErrors.RegisteredCityID }}  
+    </mat-error>  
+  </mat-form-field>  
+</div>
+
+<div>
+  <mat-form-field appearance="outline">  
+    <mat-select placeholder="Select a Area" formControlName="RegisteredAreaID">  
+      <mat-option>-- None --</mat-option>  
+      <mat-option *ngFor="let area of areas" [value]="area.AreaID">  
+        {{ area.AreaName }}  
+      </mat-option>  
+    </mat-select>  
+    <mat-error *ngIf="formErrors.RegisteredAreaID ">  
+      {{ formErrors.RegisteredAreaID }}  
+    </mat-error>  
+  </mat-form-field>  
+</div>
+
+
+
+
+<!-- <div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Registered AreaID</mat-label>  
+  <input matInput placeholder="RegisteredAreaID" formControlName="RegisteredAreaID">  
+  
+  <mat-error *ngIf="formErrors.RegisteredAreaID">  
+    {{ formErrors.RegisteredAreaID }}  
+  </mat-error>  
+</mat-form-field>  
+</div> -->
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Email Address</mat-label>  
+  <input matInput placeholder="EmailAddress" formControlName="EmailAddress">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.EmailAddress">  
+    {{ formErrors.EmailAddress }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Website Address</mat-label>  
+  <input matInput placeholder="WebsiteAddress" formControlName="WebsiteAddress">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.WebsiteAddress">  
+    {{ formErrors.WebsiteAddress }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Facebook Address</mat-label>  
+  <input matInput placeholder="FacebookAddress" formControlName="FacebookAddress">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.FacebookAddress">  
+    {{ formErrors.FacebookAddress }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>YouTube Address</mat-label>  
+  <input matInput placeholder="YouTubeAddress" formControlName="YouTubeAddress">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.YouTubeAddress">  
+    {{ formErrors.YouTubeAddress }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Twitter Address</mat-label>  
+  <input matInput placeholder="TwitterAddress" formControlName="TwitterAddress">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.TwitterAddress">  
+    {{ formErrors.TwitterAddress }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>GooglePlusAddress</mat-label>  
+  <input matInput placeholder="GooglePlusAddress" formControlName="GooglePlusAddress">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.GooglePlusAddress">  
+    {{ formErrors.GooglePlusAddress }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<!-- <div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>IsActive</mat-label>  
+  <input matInput placeholder="IsActive" formControlName="IsActive">  
+ 
+  <mat-error *ngIf="formErrors.IsActive">  
+    {{ formErrors.IsActive }}  
+  </mat-error>  
+</mat-form-field>  
+</div> -->
+
+<p>  
+  <mat-radio-group class="contact-radio-group" formControlName="IsActive" >  
+    <mat-radio-button class="contact-radio-button" *ngFor="let option of activeOptions" [value]="option.id">  
+      {{ option.name }}  
+    </mat-radio-button>  
+  </mat-radio-group>  
+  <mat-error *ngIf="formErrors.IsActive">  
+    {{ formErrors.IsActive }}  
+  </mat-error>  
+</p> 
+
+
+
+
+
+
+  
+  <div>  
+    
+    <button type="button" mat-raised-button color="warn" (click)="dialogRef.close()">Cancel</button>   
+    <button type="submit" mat-raised-button color="primary" [disabled]="entityFrm.invalid">{{data.modalBtnTitle}}</button>  
+  </div>  
+    
+  </form> 

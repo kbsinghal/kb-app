@@ -16,5 +16,7 @@ namespace kb_app.Models
         public DbSet<State> State { get; set; }
 
         public DbSet<City> City { get; set; }
+
+        public DbSet<Area> Area { get; set; }
     }
 }

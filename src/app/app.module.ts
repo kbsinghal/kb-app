@@ -19,6 +19,12 @@ import { StateService } from './services/state.service';
 import { CityformComponent } from './cityform/cityform.component';
 import { CitylistComponent } from './citylist/citylist.component';
 import { CityService } from './services/city.service';
+import { AreaformComponent } from './areaform/areaform.component';
+import { ArealistComponent } from './arealist/arealist.component';
+import { AreaService } from './services/area.service';
+import { EntityformComponent } from './entityform/entityform.component';
+import { EntitylistComponent } from './entitylist/entitylist.component';
+import { EntityService } from './services/entity.service';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 
@@ -32,7 +38,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     StateformComponent,
     StatelistComponent,
     CityformComponent,
-    CitylistComponent
+    CitylistComponent,
+    AreaformComponent,
+    ArealistComponent,
+    EntityformComponent,
+    EntitylistComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +59,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     EventService,
     CountryService,
     StateService,
-    CityService
+    CityService,
+    AreaService,
+    EntityService
   ],
   bootstrap: [AppComponent]
 })

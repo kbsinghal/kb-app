@@ -4,74 +4,74 @@ import { FormBuilder, Validators } from '@angular/forms';
 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, AUTOCOMPLETE_PANEL_HEIGHT } from '@angular/material';
 
-import { CitylistComponent } from '../citylist/citylist.component';
+import { ArealistComponent } from '../arealist/arealist.component';
 
 import { ICity } from '../model/city';
-import { IState } from '../model/state';
+import { IArea } from '../model/area';
 import { CityService } from '../services/city.service';
-import { StateService } from '../services/state.service';
+import { AreaService } from '../services/area.service';
 import { DBOperation } from '../shared/DBOperation';
 import { Global } from '../shared/Global';
 
 @Component({
-  selector: 'app-cityform',
-  templateUrl: './cityform.component.html',
-  styleUrls: ['./cityform.component.css']
+  selector: 'app-areaform',
+  templateUrl: './areaform.component.html',
+  styleUrls: ['./areaform.component.css']
 })
 
-export class CityformComponent implements OnInit {
+export class AreaformComponent implements OnInit {
   msg: string;
   indLoading = false;
-  cityFrm: FormGroup;
+  areaFrm: FormGroup;
    dbops: DBOperation;
    modalTitle: string;
    modalBtnTitle: string;
   listFilter: string;
   selectedOption: string;
-   city: ICity;
+   area: IArea;
   // genders = [];
   // technologies = [];
-  states = [];
+  cities = [];
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder,
-    private _stateService: StateService,
+    private _areaService: AreaService,
     private _cityService: CityService,
-    public dialogRef: MatDialogRef<CitylistComponent>) { }
+    public dialogRef: MatDialogRef<ArealistComponent>) { }
 
   ngOnInit() {
     // built state form
-    this.cityFrm = this.fb.group({
-      CityID: [''],
-      CityName: ['', [Validators.required, Validators.maxLength(250)]],
-      StateID: ['', [Validators.required]]
+    this.areaFrm = this.fb.group({
+      AreaID: [''],
+      AreaName: ['', [Validators.required, Validators.maxLength(250)]],
+      CityID: ['', [Validators.required]]
          });
     // this.genders = Global.genders;
     // this.technologies = Global.technologies;
 
 
-    this._stateService.getAllState(Global.BASE_USER_ENDPOINT + 'State/' + 'getAllState')
-    .subscribe(states => {
-      this.states = states;
+    this._cityService.getAllCity(Global.BASE_USER_ENDPOINT + 'City/' + 'getAllCity')
+    .subscribe(cities => {
+      this.cities = cities;
     });
 
 
 
     // subscribe on value changed event of form to show validation message
-    this.cityFrm.valueChanges.subscribe(data => this.onValueChanged(data));
+    this.areaFrm.valueChanges.subscribe(data => this.onValueChanged(data));
     this.onValueChanged();
 
     if (this.data.dbops === DBOperation.create) {
-      this.cityFrm.reset();
+      this.areaFrm.reset();
     } else {
-      this.cityFrm.setValue(this.data.city);
+      this.areaFrm.setValue(this.data.area);
     }
     this.SetControlsState(this.data.dbops === DBOperation.delete ? false : true);
   }
   // form value change event
   onValueChanged(data?: any) {
-    if (!this.cityFrm) { return; }
-    const form = this.cityFrm;
+    if (!this.areaFrm) { return; }
+    const form = this.areaFrm;
     // tslint:disable-next-line:forin
     for (const field in this.formErrors) {
       // clear previous error message (if any)
@@ -90,26 +90,26 @@ export class CityformComponent implements OnInit {
   // form errors model
   // tslint:disable-next-line:member-ordering
   formErrors = {
-    'CityName': '',
-    'StateID': '',
+    'AreaName': '',
+    'CityID': '',
   };
   // custom valdiation messages
   // tslint:disable-next-line:member-ordering
   validationMessages = {
-    'CityName': {
-      'maxlength': 'CityName cannot be more than 50 characters long.',
-      'required': 'CityName is required.'
+    'AreaName': {
+      'maxlength': 'AreaName cannot be more than 50 characters long.',
+      'required': 'AreaName is required.'
     },
-    'StateID': {
-      'maxlength': 'StateID cannot be more than 50 characters long.',
-      'required': 'StateID is required.'
+    'CityID': {
+      'maxlength': 'CityID cannot be more than 50 characters long.',
+      'required': 'CityID is required.'
     }
   };
   onSubmit(formData: any) {
-     const cityData = this.mapCityID(formData.value);
+     const areaData = this.mapAreaID(formData.value);
     switch (this.data.dbops) {
       case DBOperation.create:
-             this._cityService.addCity(Global.BASE_USER_ENDPOINT + 'City/' + 'addCity', cityData).subscribe(
+             this._areaService.addArea(Global.BASE_USER_ENDPOINT + 'Area/' + 'addArea', areaData).subscribe(
           data => {
             // Success
             if (data.message) {
@@ -124,7 +124,7 @@ export class CityformComponent implements OnInit {
         );
         break;
       case DBOperation.update:
-        this._cityService.updateCity(Global.BASE_USER_ENDPOINT + 'City/' + 'updateCity', cityData.CityID, cityData).subscribe(
+        this._areaService.updateArea(Global.BASE_USER_ENDPOINT + 'Area/' + 'updateArea', areaData.AreaID, areaData).subscribe(
           data => {
             // Success
             if (data.message) {
@@ -139,7 +139,7 @@ export class CityformComponent implements OnInit {
         );
         break;
       case DBOperation.delete:
-        this._cityService.deleteCity(Global.BASE_USER_ENDPOINT + 'City/' + 'deleteCity', cityData.CityID).subscribe(
+        this._areaService.deleteArea(Global.BASE_USER_ENDPOINT + 'Area/' + 'deleteArea', areaData.AreaID).subscribe(
           data => {
             // Success
             if (data.message) {
@@ -156,12 +156,12 @@ export class CityformComponent implements OnInit {
     }
   }
   SetControlsState(isEnable: boolean) {
-    isEnable ? this.cityFrm.enable() : this.cityFrm.disable();
+    isEnable ? this.areaFrm.enable() : this.areaFrm.disable();
   }
 
-    mapCityID(city: ICity): ICity {
-    if (city.CityID == null)    {
-      city.CityID = -1;  }
-    return city;
+    mapAreaID(area: IArea): IArea {
+    if (area.AreaID == null)    {
+      area.AreaID = -1;  }
+    return area;
   }
 }

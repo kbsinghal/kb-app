@@ -30,17 +30,19 @@ namespace kb_app.Models
 
         public string RegisteredAddress { get; set; }
 
-        public string RegisteredCity { get; set; }
+        //public string RegisteredCity { get; set; }
 
         public int RegisteredCityID { get; set; }
 
-        public string RegisteredState { get; set; }
+        //public string RegisteredState { get; set; }
 
         public int RegisteredStateID { get; set; }
 
-        public int AreaID { get; set; }
+        public int RegisteredAreaID { get; set; }
 
-        public string AreaName { get; set; }
+        public int RegisteredCountryID { get; set; }
+
+        //public string AreaName { get; set; }
 
         public string EmailAddress { get; set; }
 

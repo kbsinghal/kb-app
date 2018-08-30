@@ -11,7 +11,9 @@ import { IEvent } from '../model/event';
 import { ICountry } from '../model/country';
 import { EventService } from '../services/event.service';
 import { CountryService } from '../services/country.service';
-
+import { StateService } from '../services/state.service';
+import { CityService } from '../services/city.service';
+import { AreaService } from '../services/area.service';
 import { DBOperation } from '../shared/DBOperation';
 import { Global } from '../shared/Global';
 
@@ -33,13 +35,19 @@ export class EventformComponent implements OnInit {
    event: IEvent;
   genders = [];
   technologies = [];
-  // countries = new MatTableDataSource<ICountry>();
+  
    countries = [];
+   states = [];
+   cities = [];
+   areas = [];
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder,
     private _eventService: EventService,
     private _countryService: CountryService,
+    private _stateService: StateService,
+    private _cityService: CityService,
+    private _areaService: AreaService,
     public dialogRef: MatDialogRef<EventlistComponent>) { }
 
   ngOnInit() {
@@ -78,6 +86,21 @@ export class EventformComponent implements OnInit {
          this.countries = countries;
        });
     //  };
+
+    this._stateService.getAllState(Global.BASE_USER_ENDPOINT + 'State/' + 'getAllState')
+    .subscribe(states => {
+      this.states = states;
+    });
+
+    this._cityService.getAllCity(Global.BASE_USER_ENDPOINT + 'City/' + 'getAllCity')
+    .subscribe(cities => {
+      this.cities = cities;
+    });
+
+    this._areaService.getAllArea(Global.BASE_USER_ENDPOINT + 'Area/' + 'getAllArea')
+    .subscribe(areas => {
+      this.areas = areas;
+    });
 
 
     // subscribe on value changed event of form to show validation message
@@ -192,7 +215,6 @@ export class EventformComponent implements OnInit {
      const eventData = this.mapDateData(this.mapEventID(formData.value));
     switch (this.data.dbops) {
       case DBOperation.create:
-     
         this._eventService.addEvent(Global.BASE_USER_ENDPOINT + 'Event/' + 'addEvent', eventData).subscribe(
           data => {
             // Success
@@ -246,7 +268,6 @@ export class EventformComponent implements OnInit {
   mapDateData(event: IEvent): IEvent {
     event.EventStartDate = new Date(event.EventStartDate).toISOString();
     event.EventEndDate = new Date(event.EventEndDate).toISOString();
-      
     return event;
   }
 

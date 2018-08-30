@@ -10,29 +10,29 @@ using kb_app.DAL;
 namespace kb_app.Controllers
 {
     
-[Route("kbapi/[controller]")]  // set route attribute to make request as 'api/city'  
-public class CityController: Controller {  
+[Route("kbapi/[controller]")]  // set route attribute to make request as 'api/area'  
+public class AreaController: Controller {  
     private readonly KBAppContext _context;  
     
     // initiate database context  
-    public CityController(KBAppContext context) {  
+    public AreaController(KBAppContext context) {  
             _context = context;  
         }  
 
 
     [HttpGet]  
-    [Route("getAllCity")]  
-    public IEnumerable <City> GetAll() {  
+    [Route("getAllArea")]  
+    public IEnumerable <Area> GetAll() {  
             
-            return _context.City.ToList();  // fetch all city records  
+            return _context.Area.ToList();  // fetch all Area records  
         }  
 
 
     [HttpGet("{id}")]  
-    [Route("getCity")]  
+    [Route("getArea")]  
     public IActionResult GetById(long id) {  
             
-            var item = _context.City.FirstOrDefault(t => t.CityID == id);  // filter city records by city id  
+            var item = _context.Area.FirstOrDefault(t => t.AreaID == id);  // filter Area records by Area id  
             if (item == null) {  
                 return NotFound();  
             }  
@@ -41,15 +41,15 @@ public class CityController: Controller {
         
         
     [HttpPost]  
-    [Route("addCity")]  
-  public IActionResult Create([FromBody] City item) {  
+    [Route("addArea")]  
+  public IActionResult Create([FromBody] Area item) {  
             
             if (item == null) {  
-                return BadRequest();  // set bad request if country data is not provided in body  
+                return BadRequest();  // set bad request if Area data is not provided in body  
             }  
-            _context.City.Add(new City {  
-                     CityName = item.CityName,
-                     StateID = item.StateID,  
+            _context.Area.Add(new Area {  
+                     AreaName = item.AreaName,
+                     CityID = item.CityID,  
                     // EventDescription = item.EventDescription,  
                     // EventStartDate = item.EventStartDate,  
                     // EventEndDate = item.EventEndDate,  
@@ -72,27 +72,27 @@ public class CityController: Controller {
             });  
             _context.SaveChanges();  
             return Ok(new {  
-                message = "City is added successfully."  
+                message = "Area is added successfully."  
             });  
         }  
 
     [HttpPut("{id}")]
-    [Route("updateCity")]
-    public IActionResult Update(long id,[FromBody] City item)
+    [Route("updateArea")]
+    public IActionResult Update(long id,[FromBody] Area item)
     {
         if(item == null || id == 0)
         {
             return BadRequest();
         }
         
-        var city1 = _context.City.FirstOrDefault(t => t.CityID == id);
+        var area1 = _context.Area.FirstOrDefault(t => t.AreaID == id);
         
-        if(city1 == null){
+        if(area1 == null){
             return NotFound();
         }
             
-          city1.CityName = item.CityName;  
-          city1.StateID = item.StateID;  
+          area1.AreaName = item.AreaName;  
+          area1.CityID = item.CityID;  
         //  country1.EventDescription = item.EventDescription; 
         //  country1.EventStartDate = item.EventStartDate;  
         //  country1.EventEndDate = item.EventEndDate;  
@@ -106,13 +106,13 @@ public class CityController: Controller {
         //  country1.CityID = item.CityID;
         //  country1.AreaID = item.AreaID;
         // country1.IsActive = item.IsActive;
-         city1.UpdatedOn=DateTime.Now;
-        city1.UpdatedBy=1;//item.UpdatedBy;
+         area1.UpdatedOn=DateTime.Now;
+        area1.UpdatedBy=1;//item.UpdatedBy;
 
-        _context.City.Update(city1);
+        _context.Area.Update(area1);
          _context.SaveChanges();
         return Ok(new {  
-                 message = "City is updated successfully."  
+                 message = "Area is updated successfully."  
             });
 
 
@@ -121,16 +121,16 @@ public class CityController: Controller {
    
 
     // [HttpDelete("{id}")]  
-    //     [Route("deleteCity")]  
+    //     [Route("deleteArea")]  
     // public IActionResult Delete(long id) {  
-    //     var city = _context.City.FirstOrDefault(t => t.CityID == id);  
-    //     if (city == null) {  
+    //     var area = _context.City.FirstOrDefault(t => t.AreaID == id);  
+    //     if (area == null) {  
     //         return NotFound();  
     //     }  
-    //     _context.City.Remove(city);  
+    //     _context.Area.Remove(area);  
     //     _context.SaveChanges();  
     //     return Ok(new {  
-    //         message = "City is deleted successfully."  
+    //         message = "Area is deleted successfully."  
     //     });  
     // }  
 

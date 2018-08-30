@@ -3,48 +3,48 @@ import { MatTableDataSource, MatSnackBar } from '@angular/material';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { FormGroup, FormControl } from '@angular/forms';
 
-import { CityformComponent } from '../cityform/cityform.component';
+import { EntityformComponent } from '../entityform/entityform.component';
 
-import { CityService } from '../services/city.service';
-import { ICity } from '../model/city';
+import { EntityService } from '../services/entity.service';
+import { IEntity } from '../model/entity';
 import { DBOperation } from '../shared/DBOperation';
 import { Global } from '../shared/Global';
 
 @Component({
-  selector: 'app-citylist',
-  templateUrl: './citylist.component.html',
-  styleUrls: ['./citylist.component.css']
+  selector: 'app-entitylist',
+  templateUrl: './entitylist.component.html',
+  styleUrls: ['./entitylist.component.css']
 })
-export class CitylistComponent implements OnInit {
-  cities: ICity[];
-  city: ICity;
+export class EntitylistComponent implements OnInit {
+  entities: IEntity[];
+  entity: IEntity;
   loadingState: boolean;
   dbops: DBOperation;
   modalTitle: string;
   modalBtnTitle: string;
 
   // set columns that will need to show in listing table
-  displayedColumns = ['CityID', 'CityName', 'StateID', 'action'];
+  displayedColumns = ['EntityID', 'Name', 'StateID', 'action'];
   // setting up datasource for material table
-  dataSource = new MatTableDataSource<ICity>();
+  dataSource = new MatTableDataSource<IEntity>();
 
-  constructor(public snackBar: MatSnackBar, private _cityService: CityService, private dialog: MatDialog) { }
+  constructor(public snackBar: MatSnackBar, private _entityService: EntityService, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.loadingState = true;
-    this.loadCities();
+    this.loadEntities();
   }
   openDialog(): void {
-    const dialogRef = this.dialog.open(CityformComponent, {
+    const dialogRef = this.dialog.open(EntityformComponent, {
       width: '500px',
-      data: {dbops: this.dbops, modalTitle: this.modalTitle, modalBtnTitle: this.modalBtnTitle, city: this.city}
+      data: {dbops: this.dbops, modalTitle: this.modalTitle, modalBtnTitle: this.modalBtnTitle, entity: this.entity}
     });
 
     dialogRef.afterClosed().subscribe(result => {
       // console.log('The dialog was closed');
       if (result === 'success') {
         this.loadingState = true;
-        this.loadCities();
+        this.loadEntities();
         switch (this.dbops) {
           case DBOperation.create:
             this.showMessage('Data successfully added.');
@@ -64,12 +64,11 @@ export class CitylistComponent implements OnInit {
     });
   }
 
-  loadCities(): void {
-    // console.log(Global.BASE_USER_ENDPOINT + 'City/' + 'getAllCity');
-    this._cityService.getAllCity(Global.BASE_USER_ENDPOINT + 'City/' + 'getAllCity')
-    .subscribe(cities => {
+  loadEntities(): void {
+    this._entityService.getAllEntity(Global.BASE_USER_ENDPOINT + 'Entity/' + 'getAllEntity')
+    .subscribe(entities => {
     this.loadingState = false;
-    this.dataSource.data = cities;
+    this.dataSource.data = entities;
     });
   }
 
@@ -77,27 +76,27 @@ export class CitylistComponent implements OnInit {
     return Global.genders.filter(ele => ele.id === gender).map(ele => ele.name)[0];
   }
 
-  addCity() {
+  addEntity() {
     this.dbops = DBOperation.create;
-    this.modalTitle = 'Add New City';
+    this.modalTitle = 'Add New Entity';
     this.modalBtnTitle = 'Add';
     this.openDialog();
   }
-  editCity(id: number) {
-    console.log('id:' + id);
+  editEntity(id: number) {
+    // console.log('id:' + id);
     this.dbops = DBOperation.update;
     this.modalTitle = 'Edit City';
     this.modalBtnTitle = 'Update';
-    this.city = this.dataSource.data.filter(x => x.CityID === id)[0];
-    console.log('this.city');
-    console.log(this.city);
+    this.entity = this.dataSource.data.filter(x => x.EntityID === id)[0];
+    // console.log('this.city');
+    // console.log(this.city);
     this.openDialog();
   }
-  deleteCity(id: number) {
+  deleteEntity(id: number) {
     this.dbops = DBOperation.delete;
     this.modalTitle = 'Confirm to Delete ?';
     this.modalBtnTitle = 'Delete';
-    this.city = this.dataSource.data.filter(x => x.CityID === id)[0];
+    this.entity = this.dataSource.data.filter(x => x.EntityID === id)[0];
     this.openDialog();
   }
   showMessage(msg: string) {

@@ -9,6 +9,27 @@ export class Global {
         name: 'Female',
         id: 1
     }];
+    public static activeOptions = [{
+        name: 'Yes',
+        id: 1
+    },
+    {
+        name: 'No',
+        id: 0,
+    }];
+
+    public static registeredOptions = [{
+        name: 'Registered',
+         id: 1
+    },
+    {
+        name: 'Not Registered',
+        id: 0,
+    }];
+
+
+    
+
     public static technologies = ['JavaScript', 'SharePoint', 'C#'];
     // public static countries = [{
     //     CountryName: 'C1',

@@ -1,14 +1,14 @@
-<form  (ngSubmit)="onSubmit(cityFrm)" [formGroup]="cityFrm">  
+<form  (ngSubmit)="onSubmit(areaFrm)" [formGroup]="areaFrm">  
   <h2>{{data.modalTitle}}</h2>  
     
   <div>  
       <mat-form-field appearance="outline">  
-      <mat-label>City Name</mat-label>  
-      <input matInput placeholder="City Name" formControlName="CityName">  
+      <mat-label>Area Name</mat-label>  
+      <input matInput placeholder="Area Name" formControlName="AreaName">  
       <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
       <!-- <mat-hint>Hint</mat-hint> -->  
-      <mat-error *ngIf="formErrors.CityName">  
-        {{ formErrors.CityName }}  
+      <mat-error *ngIf="formErrors.AreaName">  
+        {{ formErrors.AreaName }}  
       </mat-error>  
     </mat-form-field>  
   </div>
@@ -25,14 +25,14 @@
 
 <div>
   <mat-form-field appearance="outline">  
-    <mat-select placeholder="Select a State" formControlName="StateID">  
+    <mat-select placeholder="Select a City" formControlName="CityID">  
       <mat-option>-- None --</mat-option>  
-      <mat-option *ngFor="let state of states" [value]="state.StateID">  
-        {{ state.StateName }}  
+      <mat-option *ngFor="let city of cities" [value]="city.CityID">  
+        {{ city.CityName }}  
       </mat-option>  
     </mat-select>  
-    <mat-error *ngIf="formErrors.StateID ">  
-      {{ formErrors.StateID }}  
+    <mat-error *ngIf="formErrors.CityID ">  
+      {{ formErrors.CityID }}  
     </mat-error>  
   </mat-form-field>  
 </div>
@@ -40,7 +40,7 @@
   <div>  
     
     <button type="button" mat-raised-button color="warn" (click)="dialogRef.close()">Cancel</button>   
-    <button type="submit" mat-raised-button color="primary" [disabled]="cityFrm.invalid">{{data.modalBtnTitle}}</button>  
+    <button type="submit" mat-raised-button color="primary" [disabled]="areaFrm.invalid">{{data.modalBtnTitle}}</button>  
   </div>  
     
   </form> 
