@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using kb_app.Models;
 using Microsoft.AspNetCore.Mvc;
 using kb_app.DAL;
-
+using System.Reflection;
 
 namespace kb_app.Controllers
 {
@@ -23,11 +23,12 @@ public class CountryController: Controller {
 
     [HttpGet]  
     [Route("getAllCountry")]  
-    public IEnumerable <Country> GetAll() {  
-            
-            return _context.Country.ToList();  // fetch all country records  
-        }  
-
+    public List<CountryModel> GetAll() {  
+            List<CountryModel> lstCountryModel=new List<CountryModel>();
+            //return _context.Country.ToList();  // fetch all country records  
+          _context.Country.ToList().ForEach(aa=>{CountryModel countryModel=new CountryModel();countryModel.CountryID=aa.CountryID; countryModel.CountryName=aa.CountryName;lstCountryModel.Add(countryModel);});  // fetch all country records  
+             return lstCountryModel;
+              }  
 
     [HttpGet("{id}")]  
     [Route("getCountry")]  
@@ -43,7 +44,7 @@ public class CountryController: Controller {
         
     [HttpPost]  
     [Route("addCountry")]  
-  public IActionResult Create([FromBody] Country item) {  
+  public IActionResult Create([FromBody] CountryModel item) {  
             
             if (item == null) {  
                 return BadRequest();  // set bad request if country data is not provided in body  
@@ -65,7 +66,7 @@ public class CountryController: Controller {
                     // IsActive=item.IsActive
                     CreatedOn=DateTime.Now,
                     UpdatedOn=DateTime.Now,
-                    CreatedBy=1,//item.CreatedBy
+                    CreatedBy=item.UserID
                     //UpdatedBy=1,//item.UpdatedBy
 
                    
@@ -78,7 +79,7 @@ public class CountryController: Controller {
 
     [HttpPut("{id}")]
     [Route("updateCountry")]
-    public IActionResult Update(long id,[FromBody] Country item)
+    public IActionResult Update(long id,[FromBody] CountryModel item)
     {
         if(item == null || id == 0)
         {
@@ -106,7 +107,7 @@ public class CountryController: Controller {
         //  country1.AreaID = item.AreaID;
         // country1.IsActive = item.IsActive;
          country1.UpdatedOn=DateTime.Now;
-        country1.UpdatedBy=1;//item.UpdatedBy;
+        country1.UpdatedBy=item.UserID;
 
         _context.Country.Update(country1);
          _context.SaveChanges();

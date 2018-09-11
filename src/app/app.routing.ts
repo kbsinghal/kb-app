@@ -14,20 +14,23 @@ import { AppComponent } from './app.component';
  import { AreaformComponent } from './areaform/areaform.component';
  import { EntitylistComponent } from './entitylist/entitylist.component';
  import { EntityformComponent } from './entityform/entityform.component';
+ import { EventOrganizerlistComponent } from './eventorganizerlist/eventorganizerlist.component';
+ import { EventOrganizerformComponent } from './eventorganizerform/eventorganizerform.component';
 
 const appRoutes: Routes = [
- //{ path: '',  pathMatch: 'full' , component: EventlistComponent },
- //{ path: 'eventform', component: EventformComponent },
-// { path: '',  pathMatch: 'full' , component: CountrylistComponent },
-// { path: 'countryform', component: CountryformComponent },
-// { path: '',  pathMatch: 'full' , component: StatelistComponent },
-// { path: 'stateform', component: StateformComponent },
-//  { path: '',  pathMatch: 'full' , component: CitylistComponent },
-//  { path: 'cityform', component: CityformComponent },
-// { path: '',  pathMatch: 'full' , component: ArealistComponent },
-// { path: 'areaform', component: AreaformComponent },
- { path: '',  pathMatch: 'full' , component: EntitylistComponent },
- { path: 'entityform', component: EntityformComponent }
-];
+ { path: 'eventlist',  pathMatch: 'full' , component: EventlistComponent },
+ { path: 'eventform', component: EventformComponent },
+ { path: 'countrylist',  pathMatch: 'full' , component: CountrylistComponent },
+ { path: 'countryform', component: CountryformComponent },
+ { path: 'statelist',  pathMatch: 'full' , component: StatelistComponent },
+ { path: 'stateform', component: StateformComponent },
+ { path: 'citylist',  pathMatch: 'full' , component: CitylistComponent },
+ { path: 'cityform', component: CityformComponent },
+ { path: 'arealist',  pathMatch: 'full' , component: ArealistComponent },
+ { path: 'areaform', component: AreaformComponent },
+ { path: 'entitylist',  pathMatch: 'full' , component: EntitylistComponent },
+ { path: 'entityform', component: EntityformComponent },
+ { path: 'eventorganizerlist',  pathMatch: 'full' , component: EventOrganizerlistComponent },
+ { path: 'eventorganizerform', component: EventOrganizerformComponent }];
 
 export const Routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

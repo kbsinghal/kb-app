@@ -18,5 +18,7 @@ namespace kb_app.Models
         public DbSet<City> City { get; set; }
 
         public DbSet<Area> Area { get; set; }
+
+        public DbSet<EventOrganizer> EventOrganizer { get; set; }
     }
 }

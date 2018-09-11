@@ -40,9 +40,16 @@ export class CountryformComponent implements OnInit {
     this.countryFrm = this.fb.group({
       CountryID: [-1],
       CountryName: ['', [Validators.required, Validators.maxLength(250)]],
+      UserID: [-1]
          });
     // this.genders = Global.genders;
     // this.technologies = Global.technologies;
+
+    // this.countryFrm.setValue({
+    //   CountryID: -1,
+    //   UserID: -1
+    // // CountryName: ' '
+    // });
 
     // subscribe on value changed event of form to show validation message
     this.countryFrm.valueChanges.subscribe(data => this.onValueChanged(data));
@@ -142,8 +149,10 @@ export class CountryformComponent implements OnInit {
   }
 
     mapCountryID(country: ICountry): ICountry {
-    if (country.CountryID == null)    {
-      country.CountryID = -1;  }
+      if (country.CountryID == null)    {
+      country.CountryID = -1;
+      country.UserID = -1;  
+    }
     return country;
   }
 }

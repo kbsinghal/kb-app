@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using kb_app.Models;
 using Microsoft.AspNetCore.Mvc;
 using kb_app.DAL;
-
+using System.Reflection;
 
 namespace kb_app.Controllers
 {
@@ -22,9 +22,19 @@ public class StateController: Controller {
 
     [HttpGet]  
     [Route("getAllState")]  
-    public IEnumerable <State> GetAll() {  
+    public List<StateModel> GetAll() {  
             
-            return _context.State.ToList();  // fetch all state records  
+             
+             List<StateModel> lstStateModel=new List<StateModel>();
+             List<Country> lstCountry=_context.Country.ToList();
+             List<State> lstState=_context.State.ToList();
+
+            //return _context.State.ToList();  // fetch all state records 
+          //_context.State.ToList().ForEach(aa=>{StateModel stateModel=new StateModel();stateModel.StateID=aa.StateID;stateModel.CountryID=aa.CountryID; stateModel.StateName=aa.StateName;lstStateModel.Add(stateModel);});  // fetch all state records  
+
+          lstStateModel= (from lc in lstCountry join ls in lstState on lc.CountryID equals ls.CountryID  select new StateModel(){StateID = ls.StateID, StateName = ls.StateName, CountryID=lc.CountryID,CountryName= lc.CountryName}).ToList<StateModel>();
+             return lstStateModel;
+
         }  
 
 
@@ -32,17 +42,28 @@ public class StateController: Controller {
     [Route("getState")]  
     public IActionResult GetById(long id) {  
             
-            var item = _context.State.FirstOrDefault(t => t.StateID == id);  // filter state records by state id  
-            if (item == null) {  
+            //var item = _context.State.FirstOrDefault(t => t.StateID == id);  // filter state records by state id  
+            State st=_context.State.Where<State>(t => t.StateID == id).FirstOrDefault();
+            
+            StateModel item=null;
+
+            if (st == null) {  
                 return NotFound();  
             }  
+            else
+            {
+                 item=new StateModel();
+                item.CountryID=st.CountryID;
+                item.StateID=st.StateID;
+                item.StateName=st.StateName;
+                
+            }
             return new ObjectResult(item);  
         }  
-        
-        
+      
     [HttpPost]  
     [Route("addState")]  
-  public IActionResult Create([FromBody] State item) {  
+  public IActionResult Create([FromBody] StateModel item) {  
             
             if (item == null) {  
                 return BadRequest();  // set bad request if country data is not provided in body  
@@ -65,7 +86,7 @@ public class StateController: Controller {
                     // IsActive=item.IsActive
                     CreatedOn=DateTime.Now,
                     UpdatedOn=DateTime.Now,
-                    CreatedBy=1,//item.CreatedBy
+                    CreatedBy=item.UserID,//item.CreatedBy
                     //UpdatedBy=1,//item.UpdatedBy
 
                    
@@ -78,7 +99,7 @@ public class StateController: Controller {
 
     [HttpPut("{id}")]
     [Route("updateState")]
-    public IActionResult Update(long id,[FromBody] State item)
+    public IActionResult Update(long id,[FromBody] StateModel item)
     {
         if(item == null || id == 0)
         {
@@ -107,7 +128,7 @@ public class StateController: Controller {
         //  country1.AreaID = item.AreaID;
         // country1.IsActive = item.IsActive;
          state1.UpdatedOn=DateTime.Now;
-        state1.UpdatedBy=1;//item.UpdatedBy;
+        state1.UpdatedBy=item.UserID;//item.UpdatedBy;
 
         _context.State.Update(state1);
          _context.SaveChanges();

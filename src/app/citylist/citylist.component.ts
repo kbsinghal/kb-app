@@ -24,7 +24,7 @@ export class CitylistComponent implements OnInit {
   modalBtnTitle: string;
 
   // set columns that will need to show in listing table
-  displayedColumns = ['CityID', 'CityName', 'StateID', 'action'];
+  displayedColumns = ['CityID', 'CityName', 'StateID', 'StateName', 'CountryID', 'CountryName', 'action'];
   // setting up datasource for material table
   dataSource = new MatTableDataSource<ICity>();
 

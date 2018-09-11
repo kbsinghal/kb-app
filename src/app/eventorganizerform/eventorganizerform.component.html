@@ -1,0 +1,115 @@
+<form  (ngSubmit)="onSubmit(eventOrganizerFrm)" [formGroup]="eventOrganizerFrm">  
+  <h2>{{data.modalTitle}}</h2>  
+    
+
+  <div>
+    <mat-form-field appearance="outline">  
+      <mat-select placeholder="Select a Event" formControlName="EventID">  
+        <mat-option>-- None --</mat-option>  
+        <mat-option *ngFor="let event of events" [value]="event.EventID">  
+          {{ event.EventName }}  
+        </mat-option>  
+      </mat-select>  
+      <mat-error *ngIf="formErrors.EventID ">  
+        {{ formErrors.EventID }}  
+      </mat-error>  
+    </mat-form-field>  
+  </div>
+
+
+  <!-- multiple -->
+
+  <div>
+    <mat-form-field appearance="outline">  
+      <mat-select placeholder="Select a Organizer" formControlName="EntityList">  
+        <mat-option>-- None --</mat-option>  
+        <mat-option *ngFor="let entity of entities" [value]="entity.EntityID">  
+          {{ entity.Name }}  
+        </mat-option>  
+      </mat-select>  
+      <mat-error *ngIf="formErrors.EntityList">  
+        {{ formErrors.EntityList }}  
+      </mat-error>  
+    </mat-form-field>  
+  </div>
+<div>
+  <mat-form-field appearance="outline">  
+    <mat-select placeholder="Select a Organizer" formControlName="EntityIDs" multiple>  
+      <mat-option>-- None --</mat-option>  
+      <mat-option *ngFor="let entity of entities" [value]="entity.EntityID">  
+        {{ entity.Name }}  
+      </mat-option>  
+    </mat-select>  
+    <mat-error *ngIf="formErrors.EntityIDs">  
+      {{ formErrors.EntityIDs }}  
+    </mat-error>  
+  </mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label> Name</mat-label>  
+  <input matInput placeholder="EventName" formControlName="EventName">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.EventName">  
+    {{ formErrors.EventName }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label> Name</mat-label>  
+  <input matInput placeholder="CreatedBy" formControlName="CreatedBy">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.CreatedBy">  
+    {{ formErrors.CreatedBy }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label> Name</mat-label>  
+  <input matInput placeholder="UpdatedBy" formControlName="UpdatedBy">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.UpdatedBy">  
+    {{ formErrors.UpdatedBy }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label> Name</mat-label>  
+  <input matInput placeholder="CreatedOn" formControlName="CreatedOn">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.CreatedOn">  
+    {{ formErrors.CreatedOn }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label> Name</mat-label>  
+  <input matInput placeholder="UpdatedOn" formControlName="UpdatedOn">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <mat-error *ngIf="formErrors.UpdatedOn">  
+    {{ formErrors.UpdatedOn }}  
+  </mat-error>  
+</mat-form-field>  
+</div>
+  
+  <div>  
+    
+    <button type="button" mat-raised-button color="warn" (click)="dialogRef.close()">Cancel</button>   
+    <button type="submit" mat-raised-button color="primary" [disabled]="eventOrganizerFrm.invalid">{{data.modalBtnTitle}}</button>  
+  </div>  
+    
+  </form> 

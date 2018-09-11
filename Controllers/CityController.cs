@@ -22,9 +22,23 @@ public class CityController: Controller {
 
     [HttpGet]  
     [Route("getAllCity")]  
-    public IEnumerable <City> GetAll() {  
+    public List<CityModel> GetAll() {  
             
-            return _context.City.ToList();  // fetch all city records  
+            //return _context.City.ToList();  // fetch all city records  
+
+             List<CityModel> lstCityModel=new List<CityModel>();
+             List<Country> lstCountry=_context.Country.ToList();
+             List<State> lstState=_context.State.ToList();
+             List<City> lstCity=_context.City.ToList();
+
+          
+
+          lstCityModel= (from lci in lstCity join  ls in lstState  on lci.StateID equals ls.StateID
+                          join   lc in lstCountry  on ls.CountryID  equals lc.CountryID  
+                          select new CityModel(){CityID=lci.CityID,CityName=lci.CityName,StateID = ls.StateID, StateName = ls.StateName, CountryID=lc.CountryID, CountryName= lc.CountryName}).ToList<CityModel>();
+             return lstCityModel;
+
+
         }  
 
 
@@ -32,17 +46,34 @@ public class CityController: Controller {
     [Route("getCity")]  
     public IActionResult GetById(long id) {  
             
-            var item = _context.City.FirstOrDefault(t => t.CityID == id);  // filter city records by city id  
-            if (item == null) {  
+            // var item = _context.City.FirstOrDefault(t => t.CityID == id);  // filter city records by city id  
+            // if (item == null) {  
+            //     return NotFound();  
+            // }  
+            // return new ObjectResult(item);  
+
+             City cy=_context.City.Where<City>(t => t.CityID == id).FirstOrDefault();
+            
+            CityModel item=null;
+
+            if (cy == null) {  
                 return NotFound();  
             }  
+            else
+            {
+                 item=new CityModel();
+                item.StateID=cy.StateID;
+                item.CityID=cy.CityID;
+                item.CityName=cy.CityName;
+                
+            }
             return new ObjectResult(item);  
         }  
         
         
     [HttpPost]  
     [Route("addCity")]  
-  public IActionResult Create([FromBody] City item) {  
+  public IActionResult Create([FromBody] CityModel item) {  
             
             if (item == null) {  
                 return BadRequest();  // set bad request if country data is not provided in body  
@@ -65,7 +96,7 @@ public class CityController: Controller {
                     // IsActive=item.IsActive
                     CreatedOn=DateTime.Now,
                     UpdatedOn=DateTime.Now,
-                    CreatedBy=1,//item.CreatedBy
+                    CreatedBy=item.UserID,//item.CreatedBy
                     //UpdatedBy=1,//item.UpdatedBy
 
                    
@@ -78,7 +109,7 @@ public class CityController: Controller {
 
     [HttpPut("{id}")]
     [Route("updateCity")]
-    public IActionResult Update(long id,[FromBody] City item)
+    public IActionResult Update(long id,[FromBody] CityModel item)
     {
         if(item == null || id == 0)
         {
@@ -107,7 +138,7 @@ public class CityController: Controller {
         //  country1.AreaID = item.AreaID;
         // country1.IsActive = item.IsActive;
          city1.UpdatedOn=DateTime.Now;
-        city1.UpdatedBy=1;//item.UpdatedBy;
+        city1.UpdatedBy=item.UserID;//item.UpdatedBy;
 
         _context.City.Update(city1);
          _context.SaveChanges();

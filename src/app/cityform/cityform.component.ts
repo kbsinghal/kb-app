@@ -42,9 +42,13 @@ export class CityformComponent implements OnInit {
   ngOnInit() {
     // built state form
     this.cityFrm = this.fb.group({
-      CityID: [''],
+      CityID: ['-1'],
       CityName: ['', [Validators.required, Validators.maxLength(250)]],
-      StateID: ['', [Validators.required]]
+      StateID: ['', [Validators.required]],
+      StateName : [''],
+      CountryID : ['-1'],
+      CountryName : ['']
+
          });
     // this.genders = Global.genders;
     // this.technologies = Global.technologies;
@@ -161,7 +165,11 @@ export class CityformComponent implements OnInit {
 
     mapCityID(city: ICity): ICity {
     if (city.CityID == null)    {
-      city.CityID = -1;  }
+      city.CityID = -1;
+      city.StateName = '';
+      city.CountryID = -1;
+      city.CountryName = '';
+    }
     return city;
   }
 }

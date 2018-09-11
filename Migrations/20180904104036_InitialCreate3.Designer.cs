@@ -10,9 +10,10 @@ using System;
 namespace kbapp.Migrations
 {
     [DbContext(typeof(KBAppContext))]
-    partial class KBAppContextModelSnapshot : ModelSnapshot
+    [Migration("20180904104036_InitialCreate3")]
+    partial class InitialCreate3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

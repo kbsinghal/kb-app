@@ -45,6 +45,8 @@ export class StateformComponent implements OnInit {
       StateID: [],
       StateName: ['', [Validators.required, Validators.maxLength(250)]],
       CountryID: [],
+      UserID: [],
+      CountryName: [''],
          });
     // this.genders = Global.genders;
     // this.technologies = Global.technologies;
@@ -161,7 +163,10 @@ export class StateformComponent implements OnInit {
 
     mapStateID(state: IState): IState {
     if (state.StateID == null)    {
-      state.StateID = -1;  }
+      state.StateID = -1;
+      state.UserID = -1;
+      state.CountryName = '';
+    }
     return state;
   }
 }

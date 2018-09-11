@@ -7,9 +7,9 @@ export interface IEntity {
     NickName: string;
     Description: string;
     EntityType: string;
-    //NoOfFollowers: number;
-    //NoOfUpcomingEvents: number;
-    //NoOfPastEvents: number;
+    // NoOfFollowers: number;
+    // NoOfUpcomingEvents: number;
+    // NoOfPastEvents: number;
     IsRegistered: number;
     RegisteredAddress: string;
     // RegisteredCity: string;

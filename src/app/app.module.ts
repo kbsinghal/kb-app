@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routing } from './app.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +25,9 @@ import { AreaService } from './services/area.service';
 import { EntityformComponent } from './entityform/entityform.component';
 import { EntitylistComponent } from './entitylist/entitylist.component';
 import { EntityService } from './services/entity.service';
+import { EventOrganizerformComponent } from './eventorganizerform/eventorganizerform.component';
+import { EventOrganizerlistComponent } from './eventorganizerlist/eventorganizerlist.component';
+import { EventOrganizerService } from './services/eventorganizer.service';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 
@@ -42,7 +45,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AreaformComponent,
     ArealistComponent,
     EntityformComponent,
-    EntitylistComponent
+    EntitylistComponent,
+    EventOrganizerformComponent,
+    EventOrganizerlistComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,7 +66,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     StateService,
     CityService,
     AreaService,
-    EntityService
+    EntityService,
+    EventOrganizerService
   ],
   bootstrap: [AppComponent]
 })
