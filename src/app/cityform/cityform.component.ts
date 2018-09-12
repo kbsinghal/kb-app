@@ -42,12 +42,13 @@ export class CityformComponent implements OnInit {
   ngOnInit() {
     // built state form
     this.cityFrm = this.fb.group({
-      CityID: ['-1'],
+      CityID: [-1],
       CityName: ['', [Validators.required, Validators.maxLength(250)]],
       StateID: ['', [Validators.required]],
-      StateName : [''],
-      CountryID : ['-1'],
-      CountryName : ['']
+      // StateName : [''],
+      // CountryID : [-1],
+      // CountryName : [''],
+      // UserID: [-1]
 
          });
     // this.genders = Global.genders;

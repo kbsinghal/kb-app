@@ -151,7 +151,7 @@ export class CountryformComponent implements OnInit {
     mapCountryID(country: ICountry): ICountry {
       if (country.CountryID == null)    {
       country.CountryID = -1;
-      country.UserID = -1;  
+      country.UserID = -1;
     }
     return country;
   }

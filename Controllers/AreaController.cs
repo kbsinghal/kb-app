@@ -22,9 +22,25 @@ public class AreaController: Controller {
 
     [HttpGet]  
     [Route("getAllArea")]  
-    public IEnumerable <Area> GetAll() {  
+    public List<AreaModel> GetAll() {  
             
-            return _context.Area.ToList();  // fetch all Area records  
+            //return _context.Area.ToList();  // fetch all Area records  
+
+              List<AreaModel> lstAreaModel=new List<AreaModel>();
+             List<Country> lstCountry=_context.Country.ToList();
+             List<State> lstState=_context.State.ToList();
+             List<City> lstCity=_context.City.ToList();
+             List<Area> lstArea=_context.Area.ToList();
+
+          
+
+          lstAreaModel= (from a in lstArea 
+                          join lci in lstCity on a.CityID equals lci.CityID
+                          join  ls in lstState  on lci.StateID equals ls.StateID
+                          join   lc in lstCountry  on ls.CountryID  equals lc.CountryID  
+
+                          select new AreaModel(){AreaID=a.AreaID, AreaName=a.AreaName, CityID=lci.CityID, CityName = lci.CityName, StateID = ls.StateID, StateName = ls.StateName, CountryID=lc.CountryID, CountryName= lc.CountryName}).ToList<AreaModel>();
+             return lstAreaModel;
         }  
 
 
@@ -32,17 +48,34 @@ public class AreaController: Controller {
     [Route("getArea")]  
     public IActionResult GetById(long id) {  
             
-            var item = _context.Area.FirstOrDefault(t => t.AreaID == id);  // filter Area records by Area id  
-            if (item == null) {  
+            // var item = _context.Area.FirstOrDefault(t => t.AreaID == id);  // filter Area records by Area id  
+            // if (item == null) {  
+            //     return NotFound();  
+            // }  
+            // return new ObjectResult(item); 
+
+              Area ar=_context.Area.Where<Area>(t => t.AreaID == id).FirstOrDefault();
+            
+            AreaModel item=null;
+
+            if (ar == null) {  
                 return NotFound();  
             }  
-            return new ObjectResult(item);  
+            else
+            {
+                 item=new AreaModel();
+                item.CityID=ar.CityID;
+                item.AreaID=ar.AreaID;
+                item.AreaName=ar.AreaName;
+                
+            }
+            return new ObjectResult(item);   
         }  
         
         
     [HttpPost]  
     [Route("addArea")]  
-  public IActionResult Create([FromBody] Area item) {  
+  public IActionResult Create([FromBody] AreaModel item) {  
             
             if (item == null) {  
                 return BadRequest();  // set bad request if Area data is not provided in body  
@@ -65,7 +98,7 @@ public class AreaController: Controller {
                     // IsActive=item.IsActive
                     CreatedOn=DateTime.Now,
                     UpdatedOn=DateTime.Now,
-                    CreatedBy=1,//item.CreatedBy
+                    CreatedBy=item.UserID,//item.CreatedBy
                     //UpdatedBy=1,//item.UpdatedBy
 
                    
@@ -78,7 +111,7 @@ public class AreaController: Controller {
 
     [HttpPut("{id}")]
     [Route("updateArea")]
-    public IActionResult Update(long id,[FromBody] Area item)
+    public IActionResult Update(long id,[FromBody] AreaModel item)
     {
         if(item == null || id == 0)
         {
@@ -107,7 +140,7 @@ public class AreaController: Controller {
         //  country1.AreaID = item.AreaID;
         // country1.IsActive = item.IsActive;
          area1.UpdatedOn=DateTime.Now;
-        area1.UpdatedBy=1;//item.UpdatedBy;
+        area1.UpdatedBy=item.UserID;//item.UpdatedBy;
 
         _context.Area.Update(area1);
          _context.SaveChanges();

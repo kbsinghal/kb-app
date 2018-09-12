@@ -42,9 +42,15 @@ export class AreaformComponent implements OnInit {
   ngOnInit() {
     // built state form
     this.areaFrm = this.fb.group({
-      AreaID: [''],
+      AreaID: [-1],
       AreaName: ['', [Validators.required, Validators.maxLength(250)]],
-      CityID: ['', [Validators.required]]
+      CityID: ['', [Validators.required]],
+      UserID: [-1],
+      CityName: [''],
+      StateID: [-1],
+      StateName: [''],
+      CountryID: [-1],
+      CountryName: ['']
          });
     // this.genders = Global.genders;
     // this.technologies = Global.technologies;
@@ -161,7 +167,15 @@ export class AreaformComponent implements OnInit {
 
     mapAreaID(area: IArea): IArea {
     if (area.AreaID == null)    {
-      area.AreaID = -1;  }
+      area.AreaID = -1;
+      //area.AreaName = '';
+      area.UserID = -1;
+      area.CityName = '';
+      area.StateID = -1;
+      area.StateName = '';
+      area.CountryID = -1;
+      area.CountryName = '';
+    }
     return area;
   }
 }
