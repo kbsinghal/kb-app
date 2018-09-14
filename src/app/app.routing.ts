@@ -16,6 +16,9 @@ import { AppComponent } from './app.component';
  import { EntityformComponent } from './entityform/entityform.component';
  import { EventOrganizerlistComponent } from './eventorganizerlist/eventorganizerlist.component';
  import { EventOrganizerformComponent } from './eventorganizerform/eventorganizerform.component';
+ import { EventArtistlistComponent } from './eventartistlist/eventartistlist.component';
+ import { EventArtistformComponent } from './eventartistform/eventartistform.component';
+
 
 const appRoutes: Routes = [
  { path: 'eventlist',  pathMatch: 'full' , component: EventlistComponent },
@@ -31,6 +34,10 @@ const appRoutes: Routes = [
  { path: 'entitylist',  pathMatch: 'full' , component: EntitylistComponent },
  { path: 'entityform', component: EntityformComponent },
  { path: 'eventorganizerlist',  pathMatch: 'full' , component: EventOrganizerlistComponent },
- { path: 'eventorganizerform', component: EventOrganizerformComponent }];
+ { path: 'eventorganizerform', component: EventOrganizerformComponent },
+ { path: 'eventartistlist',  pathMatch: 'full' , component: EventArtistlistComponent },
+ { path: 'eventartistform', component: EventArtistformComponent }
+
+];
 
 export const Routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

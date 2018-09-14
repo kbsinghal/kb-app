@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- The content below is only a placeholder and can be replaced.--> \n<!-- <div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>  -->\n<!--The content below is only a placeholder and can be replaced.-->\n<!-- <mat-toolbar>\n  <span>Event Application</span>\n</mat-toolbar> -->\n<!-- <a [routerLink]=\"'/countrylist'\">Country</a> | \n<a [routerLink]=\"'/statelist'\">State</a> |\n<a [routerLink]=\"'/citylist'\">City</a> |\n<a [routerLink]=\"'/arealist'\">Area</a> |\n<a [routerLink]=\"'/entitylist'\">Entity</a> |\n<a [routerLink]=\"'/eventlist'\">Event</a> |\n<a [routerLink]=\"'/eventorganizerlist'\">EventOrganizer</a>\n<router-outlet></router-outlet>  -->\n\n<div id=\"app\">\n  <nav class=\"navbar navbar-expand-sm bg-light\">\n      <ul class=\"navbar-nav\">\n      <li class=\"nav-item\">\n          <a routerLink=\"/\" class=\"nav-link\">Home</a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"/countrylist\" class=\"nav-link\">Country</a>\n    </li>\n      <li class=\"nav-item\">\n          <a routerLink=\"/statelist\" class=\"nav-link\">State</a>\n      </li>\n      <li class=\"nav-item\">\n          <a routerLink=\"/citylist\" class=\"nav-link\">City</a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"/arealist\" class=\"nav-link\">Area</a>\n    </li>\n    <li class=\"nav-item\">\n      <a routerLink=\"/entitylist\" class=\"nav-link\">Entity</a>\n  </li>\n  <li class=\"nav-item\">\n    <a routerLink=\"/eventlist\" class=\"nav-link\">Event</a>\n</li>\n<li class=\"nav-item\">\n  <a routerLink=\"/eventorganizerlist\" class=\"nav-link\">EventOrganizer</a>\n</li>\n      </ul>\n  </nav>\n  <div class=\"container\">\n      <router-outlet></router-outlet>\n  </div>\n</div>\n\n\n"
+module.exports = "<!-- The content below is only a placeholder and can be replaced.--> \n<!-- <div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>  -->\n<!--The content below is only a placeholder and can be replaced.-->\n<!-- <mat-toolbar>\n  <span>Event Application</span>\n</mat-toolbar> -->\n<!-- <a [routerLink]=\"'/countrylist'\">Country</a> | \n<a [routerLink]=\"'/statelist'\">State</a> |\n<a [routerLink]=\"'/citylist'\">City</a> |\n<a [routerLink]=\"'/arealist'\">Area</a> |\n<a [routerLink]=\"'/entitylist'\">Entity</a> |\n<a [routerLink]=\"'/eventlist'\">Event</a> |\n<a [routerLink]=\"'/eventorganizerlist'\">EventOrganizer</a>\n<router-outlet></router-outlet>  -->\n\n<div id=\"app\">\n  <nav class=\"navbar navbar-expand-sm bg-light\">\n      <ul class=\"navbar-nav\">\n      <li class=\"nav-item\">\n          <a routerLink=\"/\" class=\"nav-link\">Home</a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"/countrylist\" class=\"nav-link\">Country</a>\n    </li>\n      <li class=\"nav-item\">\n          <a routerLink=\"/statelist\" class=\"nav-link\">State</a>\n      </li>\n      <li class=\"nav-item\">\n          <a routerLink=\"/citylist\" class=\"nav-link\">City</a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"/arealist\" class=\"nav-link\">Area</a>\n    </li>\n    <li class=\"nav-item\">\n      <a routerLink=\"/entitylist\" class=\"nav-link\">Entity</a>\n  </li>\n  <li class=\"nav-item\">\n    <a routerLink=\"/eventlist\" class=\"nav-link\">Event</a>\n</li>\n<li class=\"nav-item\">\n  <a routerLink=\"/eventorganizerlist\" class=\"nav-link\">EventOrganizer</a>\n</li>\n<li class=\"nav-item\">\n  <a routerLink=\"/eventartistlist\" class=\"nav-link\">EventArtist</a>\n</li>\n      </ul>\n  </nav>\n  <div class=\"container\">\n      <router-outlet></router-outlet>\n  </div>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -196,13 +196,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _eventorganizerform_eventorganizerform_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./eventorganizerform/eventorganizerform.component */ "./src/app/eventorganizerform/eventorganizerform.component.ts");
 /* harmony import */ var _eventorganizerlist_eventorganizerlist_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./eventorganizerlist/eventorganizerlist.component */ "./src/app/eventorganizerlist/eventorganizerlist.component.ts");
 /* harmony import */ var _services_eventorganizer_service__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./services/eventorganizer.service */ "./src/app/services/eventorganizer.service.ts");
-/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
+/* harmony import */ var _eventartistform_eventartistform_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./eventartistform/eventartistform.component */ "./src/app/eventartistform/eventartistform.component.ts");
+/* harmony import */ var _eventartistlist_eventartistlist_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./eventartistlist/eventartistlist.component */ "./src/app/eventartistlist/eventartistlist.component.ts");
+/* harmony import */ var _services_eventartist_service__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./services/eventartist.service */ "./src/app/services/eventartist.service.ts");
+/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -255,6 +261,8 @@ var AppModule = /** @class */ (function () {
                 _entitylist_entitylist_component__WEBPACK_IMPORTED_MODULE_25__["EntitylistComponent"],
                 _eventorganizerform_eventorganizerform_component__WEBPACK_IMPORTED_MODULE_27__["EventOrganizerformComponent"],
                 _eventorganizerlist_eventorganizerlist_component__WEBPACK_IMPORTED_MODULE_28__["EventOrganizerlistComponent"],
+                _eventartistform_eventartistform_component__WEBPACK_IMPORTED_MODULE_30__["EventArtistformComponent"],
+                _eventartistlist_eventartistlist_component__WEBPACK_IMPORTED_MODULE_31__["EventArtistlistComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -265,7 +273,7 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
                 _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_7__["LayoutModule"],
                 _app_routing__WEBPACK_IMPORTED_MODULE_4__["Routing"],
-                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_30__["MatToolbarModule"]
+                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_33__["MatToolbarModule"]
             ],
             providers: [
                 _services_event_service__WEBPACK_IMPORTED_MODULE_11__["EventService"],
@@ -274,7 +282,8 @@ var AppModule = /** @class */ (function () {
                 _services_city_service__WEBPACK_IMPORTED_MODULE_20__["CityService"],
                 _services_area_service__WEBPACK_IMPORTED_MODULE_23__["AreaService"],
                 _services_entity_service__WEBPACK_IMPORTED_MODULE_26__["EntityService"],
-                _services_eventorganizer_service__WEBPACK_IMPORTED_MODULE_29__["EventOrganizerService"]
+                _services_eventorganizer_service__WEBPACK_IMPORTED_MODULE_29__["EventOrganizerService"],
+                _services_eventartist_service__WEBPACK_IMPORTED_MODULE_32__["EventArtistService"],
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
         })
@@ -311,6 +320,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _entityform_entityform_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./entityform/entityform.component */ "./src/app/entityform/entityform.component.ts");
 /* harmony import */ var _eventorganizerlist_eventorganizerlist_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./eventorganizerlist/eventorganizerlist.component */ "./src/app/eventorganizerlist/eventorganizerlist.component.ts");
 /* harmony import */ var _eventorganizerform_eventorganizerform_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./eventorganizerform/eventorganizerform.component */ "./src/app/eventorganizerform/eventorganizerform.component.ts");
+/* harmony import */ var _eventartistlist_eventartistlist_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./eventartistlist/eventartistlist.component */ "./src/app/eventartistlist/eventartistlist.component.ts");
+/* harmony import */ var _eventartistform_eventartistform_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./eventartistform/eventartistform.component */ "./src/app/eventartistform/eventartistform.component.ts");
+
+
 
 
 
@@ -340,7 +353,9 @@ var appRoutes = [
     { path: 'entitylist', pathMatch: 'full', component: _entitylist_entitylist_component__WEBPACK_IMPORTED_MODULE_11__["EntitylistComponent"] },
     { path: 'entityform', component: _entityform_entityform_component__WEBPACK_IMPORTED_MODULE_12__["EntityformComponent"] },
     { path: 'eventorganizerlist', pathMatch: 'full', component: _eventorganizerlist_eventorganizerlist_component__WEBPACK_IMPORTED_MODULE_13__["EventOrganizerlistComponent"] },
-    { path: 'eventorganizerform', component: _eventorganizerform_eventorganizerform_component__WEBPACK_IMPORTED_MODULE_14__["EventOrganizerformComponent"] }
+    { path: 'eventorganizerform', component: _eventorganizerform_eventorganizerform_component__WEBPACK_IMPORTED_MODULE_14__["EventOrganizerformComponent"] },
+    { path: 'eventartistlist', pathMatch: 'full', component: _eventartistlist_eventartistlist_component__WEBPACK_IMPORTED_MODULE_15__["EventArtistlistComponent"] },
+    { path: 'eventartistform', component: _eventartistform_eventartistform_component__WEBPACK_IMPORTED_MODULE_16__["EventArtistformComponent"] }
 ];
 var Routing = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes);
 
@@ -1451,7 +1466,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form  (ngSubmit)=\"onSubmit(entityFrm)\" [formGroup]=\"entityFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label> Name</mat-label>  \n      <input matInput placeholder=\"Name\" formControlName=\"Name\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.Name\">  \n        {{ formErrors.Name }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n    <mat-label> Description</mat-label>  \n    <input matInput placeholder=\"Description\" formControlName=\"Description\">  \n    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n    <!-- <mat-hint>Hint</mat-hint> -->  \n    <mat-error *ngIf=\"formErrors.Description\">  \n      {{ formErrors.Description }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n<!-- \n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> IsRegistered</mat-label>  \n  <input matInput placeholder=\"IsRegistered\" formControlName=\"IsRegistered\">  \n \n  <mat-error *ngIf=\"formErrors.IsRegistered\">  \n    {{ formErrors.IsRegistered }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n\n<p>  \n  <mat-radio-group class=\"contact-radio-group\" formControlName=\"IsRegistered\" >  \n    <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of registeredOptions\" [value]=\"option.id\">  \n      {{ option.name }}  \n    </mat-radio-button>  \n  </mat-radio-group>  \n  <mat-error *ngIf=\"formErrors.IsRegistered\">  \n    {{ formErrors.IsRegistered }}  \n  </mat-error>  \n</p> \n\n\n\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n    <mat-label>First Name</mat-label>  \n    <input matInput placeholder=\"FirstName\" formControlName=\"FirstName\">  \n    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n    <!-- <mat-hint>Hint</mat-hint> -->  \n    <mat-error *ngIf=\"formErrors.FirstName\">  \n      {{ formErrors.FirstName }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Middle Name</mat-label>  \n  <input matInput placeholder=\"MiddleName\" formControlName=\"MiddleName\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.MiddleName\">  \n    {{ formErrors.MiddleName }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Last Name</mat-label>  \n  <input matInput placeholder=\"LastName\" formControlName=\"LastName\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.LastName\">  \n    {{ formErrors.LastName }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Nick Name</mat-label>  \n  <input matInput placeholder=\"NickName\" formControlName=\"NickName\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.NickName\">  \n    {{ formErrors.NickName }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Entity Type</mat-label>  \n  <input matInput placeholder=\"EntityType\" formControlName=\"EntityType\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.EntityType\">  \n    {{ formErrors.EntityType }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Registered Address</mat-label>  \n  <input matInput placeholder=\"RegisteredAddress\" formControlName=\"RegisteredAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.RegisteredAddress\">  \n    {{ formErrors.RegisteredAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n\n\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Registered CountryID</mat-label>  \n  <input matInput placeholder=\"RegisteredCountryID\" formControlName=\"RegisteredCountryID\">  \n \n  <mat-error *ngIf=\"formErrors.RegisteredCountryID\">  \n    {{ formErrors.RegisteredCountryID }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a Country\" formControlName=\"RegisteredCountryID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let country of countries\" [value]=\"country.CountryID\">  \n        {{ country.CountryName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.RegisteredCountryID \">  \n      {{ formErrors.RegisteredCountryID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Registered StateID</mat-label>  \n  <input matInput placeholder=\"RegisteredStateID\" formControlName=\"RegisteredStateID\">  \n  \n  <mat-error *ngIf=\"formErrors.RegisteredStateID\">  \n    {{ formErrors.RegisteredStateID }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a State\" formControlName=\"RegisteredStateID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let state of states\" [value]=\"state.StateID\">  \n        {{ state.StateName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.RegisteredStateID \">  \n      {{ formErrors.RegisteredStateID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n\n\n\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a City\" formControlName=\"RegisteredCityID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let city of cities\" [value]=\"city.CityID\">  \n        {{ city.CityName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.RegisteredCityID \">  \n      {{ formErrors.RegisteredCityID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a Area\" formControlName=\"RegisteredAreaID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let area of areas\" [value]=\"area.AreaID\">  \n        {{ area.AreaName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.RegisteredAreaID \">  \n      {{ formErrors.RegisteredAreaID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n\n\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Registered AreaID</mat-label>  \n  <input matInput placeholder=\"RegisteredAreaID\" formControlName=\"RegisteredAreaID\">  \n  \n  <mat-error *ngIf=\"formErrors.RegisteredAreaID\">  \n    {{ formErrors.RegisteredAreaID }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Email Address</mat-label>  \n  <input matInput placeholder=\"EmailAddress\" formControlName=\"EmailAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.EmailAddress\">  \n    {{ formErrors.EmailAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Website Address</mat-label>  \n  <input matInput placeholder=\"WebsiteAddress\" formControlName=\"WebsiteAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.WebsiteAddress\">  \n    {{ formErrors.WebsiteAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Facebook Address</mat-label>  \n  <input matInput placeholder=\"FacebookAddress\" formControlName=\"FacebookAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.FacebookAddress\">  \n    {{ formErrors.FacebookAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>YouTube Address</mat-label>  \n  <input matInput placeholder=\"YouTubeAddress\" formControlName=\"YouTubeAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.YouTubeAddress\">  \n    {{ formErrors.YouTubeAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Twitter Address</mat-label>  \n  <input matInput placeholder=\"TwitterAddress\" formControlName=\"TwitterAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.TwitterAddress\">  \n    {{ formErrors.TwitterAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>GooglePlusAddress</mat-label>  \n  <input matInput placeholder=\"GooglePlusAddress\" formControlName=\"GooglePlusAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.GooglePlusAddress\">  \n    {{ formErrors.GooglePlusAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>IsActive</mat-label>  \n  <input matInput placeholder=\"IsActive\" formControlName=\"IsActive\">  \n \n  <mat-error *ngIf=\"formErrors.IsActive\">  \n    {{ formErrors.IsActive }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n<p>  \n  <mat-radio-group class=\"contact-radio-group\" formControlName=\"IsActive\" >  \n    <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of activeOptions\" [value]=\"option.id\">  \n      {{ option.name }}  \n    </mat-radio-button>  \n  </mat-radio-group>  \n  <mat-error *ngIf=\"formErrors.IsActive\">  \n    {{ formErrors.IsActive }}  \n  </mat-error>  \n</p> \n\n\n\n\n\n\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"entityFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+module.exports = "<form  (ngSubmit)=\"onSubmit(entityFrm)\" [formGroup]=\"entityFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label> Name</mat-label>  \n      <input matInput placeholder=\"Name\" formControlName=\"Name\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.Name\">  \n        {{ formErrors.Name }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n    <mat-label> Description</mat-label>  \n    <input matInput placeholder=\"Description\" formControlName=\"Description\">  \n    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n    <!-- <mat-hint>Hint</mat-hint> -->  \n    <mat-error *ngIf=\"formErrors.Description\">  \n      {{ formErrors.Description }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n<!-- \n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> IsRegistered</mat-label>  \n  <input matInput placeholder=\"IsRegistered\" formControlName=\"IsRegistered\">  \n \n  <mat-error *ngIf=\"formErrors.IsRegistered\">  \n    {{ formErrors.IsRegistered }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n\n<div>  \n  <mat-radio-group class=\"contact-radio-group\" formControlName=\"IsRegistered\" >  \n    <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of registeredOptions\" [value]=\"option.id\">  \n      {{ option.name }}  \n    </mat-radio-button>  \n  </mat-radio-group>  \n  <mat-error *ngIf=\"formErrors.IsRegistered\">  \n    {{ formErrors.IsRegistered }}  \n  </mat-error>  \n</div> \n\n\n\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n    <mat-label>First Name</mat-label>  \n    <input matInput placeholder=\"FirstName\" formControlName=\"FirstName\">  \n    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n    <!-- <mat-hint>Hint</mat-hint> -->  \n    <mat-error *ngIf=\"formErrors.FirstName\">  \n      {{ formErrors.FirstName }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Middle Name</mat-label>  \n  <input matInput placeholder=\"MiddleName\" formControlName=\"MiddleName\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.MiddleName\">  \n    {{ formErrors.MiddleName }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Last Name</mat-label>  \n  <input matInput placeholder=\"LastName\" formControlName=\"LastName\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.LastName\">  \n    {{ formErrors.LastName }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Nick Name</mat-label>  \n  <input matInput placeholder=\"NickName\" formControlName=\"NickName\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.NickName\">  \n    {{ formErrors.NickName }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Entity Type</mat-label>  \n  <input matInput placeholder=\"EntityType\" formControlName=\"EntityType\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.EntityType\">  \n    {{ formErrors.EntityType }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Registered Address</mat-label>  \n  <input matInput placeholder=\"RegisteredAddress\" formControlName=\"RegisteredAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.RegisteredAddress\">  \n    {{ formErrors.RegisteredAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n\n\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Registered CountryID</mat-label>  \n  <input matInput placeholder=\"RegisteredCountryID\" formControlName=\"RegisteredCountryID\">  \n \n  <mat-error *ngIf=\"formErrors.RegisteredCountryID\">  \n    {{ formErrors.RegisteredCountryID }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a Country\" formControlName=\"RegisteredCountryID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let country of countries\" [value]=\"country.CountryID\">  \n        {{ country.CountryName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.RegisteredCountryID \">  \n      {{ formErrors.RegisteredCountryID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Registered StateID</mat-label>  \n  <input matInput placeholder=\"RegisteredStateID\" formControlName=\"RegisteredStateID\">  \n  \n  <mat-error *ngIf=\"formErrors.RegisteredStateID\">  \n    {{ formErrors.RegisteredStateID }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a State\" formControlName=\"RegisteredStateID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let state of states\" [value]=\"state.StateID\">  \n        {{ state.StateName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.RegisteredStateID \">  \n      {{ formErrors.RegisteredStateID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n\n\n\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a City\" formControlName=\"RegisteredCityID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let city of cities\" [value]=\"city.CityID\">  \n        {{ city.CityName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.RegisteredCityID \">  \n      {{ formErrors.RegisteredCityID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a Area\" formControlName=\"RegisteredAreaID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let area of areas\" [value]=\"area.AreaID\">  \n        {{ area.AreaName }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.RegisteredAreaID \">  \n      {{ formErrors.RegisteredAreaID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n\n\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Registered AreaID</mat-label>  \n  <input matInput placeholder=\"RegisteredAreaID\" formControlName=\"RegisteredAreaID\">  \n  \n  <mat-error *ngIf=\"formErrors.RegisteredAreaID\">  \n    {{ formErrors.RegisteredAreaID }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Email Address</mat-label>  \n  <input matInput placeholder=\"EmailAddress\" formControlName=\"EmailAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.EmailAddress\">  \n    {{ formErrors.EmailAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Website Address</mat-label>  \n  <input matInput placeholder=\"WebsiteAddress\" formControlName=\"WebsiteAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.WebsiteAddress\">  \n    {{ formErrors.WebsiteAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Facebook Address</mat-label>  \n  <input matInput placeholder=\"FacebookAddress\" formControlName=\"FacebookAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.FacebookAddress\">  \n    {{ formErrors.FacebookAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>YouTube Address</mat-label>  \n  <input matInput placeholder=\"YouTubeAddress\" formControlName=\"YouTubeAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.YouTubeAddress\">  \n    {{ formErrors.YouTubeAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Twitter Address</mat-label>  \n  <input matInput placeholder=\"TwitterAddress\" formControlName=\"TwitterAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.TwitterAddress\">  \n    {{ formErrors.TwitterAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>GooglePlusAddress</mat-label>  \n  <input matInput placeholder=\"GooglePlusAddress\" formControlName=\"GooglePlusAddress\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.GooglePlusAddress\">  \n    {{ formErrors.GooglePlusAddress }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>IsActive</mat-label>  \n  <input matInput placeholder=\"IsActive\" formControlName=\"IsActive\">  \n \n  <mat-error *ngIf=\"formErrors.IsActive\">  \n    {{ formErrors.IsActive }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n<!-- <p>  \n  <mat-radio-group class=\"contact-radio-group\" formControlName=\"IsActive\" >  \n    <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of activeOptions\" [value]=\"option.id\">  \n      {{ option.name }}  \n    </mat-radio-button>  \n  </mat-radio-group>  \n  <mat-error *ngIf=\"formErrors.IsActive\">  \n    {{ formErrors.IsActive }}  \n  </mat-error>  \n</p>  -->\n\n\n\n\n\n\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"entityFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
 
 /***/ }),
 
@@ -1932,6 +1947,385 @@ var EntitylistComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/eventartistform/eventartistform.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/eventartistform/eventartistform.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/eventartistform/eventartistform.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/eventartistform/eventartistform.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<form  (ngSubmit)=\"onSubmit(eventartistFrm)\"  [formGroup]=\"eventartistFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Event\" formControlName=\"EventID\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let event  of events\" [value]=\"event.EventID\">  \n          {{ event.EventName }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.EventID \">  \n        {{ formErrors.EventID }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n\n\n\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a Artist\" formControlName=\"ArtistID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let entity  of entities\" [value]=\"entity.EntityID\">  \n        {{ entity.Name }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.ArtistID\">  \n      {{ formErrors.ArtistID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Start Time</mat-label>  \n  <input matInput placeholder=\"Start Time\" formControlName=\"StartTime\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <!-- <mat-error *ngIf=\"formErrors.StartTime\">  \n    {{ formErrors.StartTime }}  \n  </mat-error>   -->\n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>End Time</mat-label>  \n  <input matInput placeholder=\"End Time\" formControlName=\"EndTime\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <!-- <mat-error *ngIf=\"formErrors.EndTime\">  \n    {{ formErrors.EndTime }}  \n  </mat-error>   -->\n</mat-form-field>  \n</div>\n<div>  \n  <mat-radio-group class=\"contact-radio-group\" formControlName=\"IsActive\" >  \n    <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of activeOptions\" [value]=\"option.id\">  \n      {{ option.name }}  \n    </mat-radio-button>  \n  </mat-radio-group>  \n  <!-- <mat-error *ngIf=\"formErrors.IsActive\">  \n    {{ formErrors.IsActive }}  \n  </mat-error>   -->\n</div> \n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>User ID</mat-label>  \n  <input matInput placeholder=\"UserID\" formControlName=\"UserID\">  \n</mat-form-field>  \n</div> -->\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Country Name</mat-label>  \n  <input matInput placeholder=\"Country Name\" formControlName=\"CountryName\">  \n</mat-form-field>  \n</div> -->\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventartistFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+
+/***/ }),
+
+/***/ "./src/app/eventartistform/eventartistform.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/eventartistform/eventartistform.component.ts ***!
+  \**************************************************************/
+/*! exports provided: EventArtistformComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventArtistformComponent", function() { return EventArtistformComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _services_event_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/event.service */ "./src/app/services/event.service.ts");
+/* harmony import */ var _services_entity_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/entity.service */ "./src/app/services/entity.service.ts");
+/* harmony import */ var _services_eventartist_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/eventartist.service */ "./src/app/services/eventartist.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+
+var EventArtistformComponent = /** @class */ (function () {
+    function EventArtistformComponent(data, fb, _eventService, _entityService, _eventartistService, dialogRef) {
+        this.data = data;
+        this.fb = fb;
+        this._eventService = _eventService;
+        this._entityService = _entityService;
+        this._eventartistService = _eventartistService;
+        this.dialogRef = dialogRef;
+        this.indLoading = false;
+        // genders = [];
+        // technologies = [];
+        this.events = [];
+        this.entities = [];
+        this.activeOptions = [];
+        // form errors model
+        // tslint:disable-next-line:member-ordering
+        this.formErrors = {
+            'EventID': '',
+            'ArtistID': '',
+        };
+        // custom valdiation messages
+        // tslint:disable-next-line:member-ordering
+        this.validationMessages = {
+            'EventID': {
+                'maxlength': 'EventID cannot be more than 50 characters long.',
+                'required': 'EventID is required.'
+            },
+            'ArtistID': {
+                'maxlength': 'ArtistID cannot be more than 50 characters long.',
+                'required': 'ArtistID is required.'
+            }
+        };
+    }
+    EventArtistformComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // built event artist form
+        this.eventartistFrm = this.fb.group({
+            EventArtistID: [],
+            EventID: [-1, [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            ArtistID: [-1, [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            EventName: [''],
+            ArtistName: [''],
+            StartTime: [''],
+            EndTime: [''],
+            UserID: [],
+            IsActive: [],
+        });
+        // this.genders = Global.genders;
+        // this.technologies = Global.technologies;
+        this.activeOptions = _shared_Global__WEBPACK_IMPORTED_MODULE_7__["Global"].activeOptions;
+        this._eventService.getAllEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_7__["Global"].BASE_USER_ENDPOINT + 'Event/' + 'getAllEvent')
+            .subscribe(function (events) {
+            _this.events = events;
+        });
+        this._entityService.getAllEntity(_shared_Global__WEBPACK_IMPORTED_MODULE_7__["Global"].BASE_USER_ENDPOINT + 'Entity/' + 'getAllEntity')
+            .subscribe(function (entities) {
+            _this.entities = entities;
+        });
+        // subscribe on value changed event of form to show validation message
+        this.eventartistFrm.valueChanges.subscribe(function (data) { return _this.onValueChanged(data); });
+        this.onValueChanged();
+        if (this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_6__["DBOperation"].create) {
+            this.eventartistFrm.reset();
+        }
+        else {
+            this.eventartistFrm.setValue(this.data.eventartist);
+        }
+        this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_6__["DBOperation"].delete ? false : true);
+    };
+    // form value change event
+    EventArtistformComponent.prototype.onValueChanged = function (data) {
+        if (!this.eventartistFrm) {
+            return;
+        }
+        var form = this.eventartistFrm;
+        // tslint:disable-next-line:forin
+        for (var field in this.formErrors) {
+            // clear previous error message (if any)
+            this.formErrors[field] = '';
+            var control = form.get(field);
+            // setup custom validation message to form
+            if (control && control.dirty && !control.valid) {
+                var messages = this.validationMessages[field];
+                // tslint:disable-next-line:forin
+                for (var key in control.errors) {
+                    this.formErrors[field] += messages[key] + ' ';
+                }
+            }
+        }
+    };
+    EventArtistformComponent.prototype.onSubmit = function (formData) {
+        var _this = this;
+        var eventartistData = this.mapEventArtistID(formData.value);
+        switch (this.data.dbops) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_6__["DBOperation"].create:
+                this._eventartistService.addEventArtist(_shared_Global__WEBPACK_IMPORTED_MODULE_7__["Global"].BASE_USER_ENDPOINT + 'EventArtist/' + 'addEventArtist', eventartistData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_6__["DBOperation"].update:
+                this._eventartistService.updateEventArtist(_shared_Global__WEBPACK_IMPORTED_MODULE_7__["Global"].BASE_USER_ENDPOINT + 'EventArtist/' + 'updateEventArtist', eventartistData.EventArtistID, eventartistData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_6__["DBOperation"].delete:
+                this._eventartistService.deleteEventArtist(_shared_Global__WEBPACK_IMPORTED_MODULE_7__["Global"].BASE_USER_ENDPOINT + 'EventArtist/' + 'deleteEventArtist', eventartistData.EventArtistID).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+        }
+    };
+    EventArtistformComponent.prototype.SetControlsState = function (isEnable) {
+        isEnable ? this.eventartistFrm.enable() : this.eventartistFrm.disable();
+    };
+    EventArtistformComponent.prototype.mapEventArtistID = function (eventartist) {
+        if (eventartist.EventArtistID == null) {
+            eventartist.EventArtistID = -1;
+            eventartist.UserID = -1;
+            eventartist.EventName = '';
+            eventartist.ArtistName = '';
+            eventartist.StartTime = '';
+            eventartist.StartTime = '';
+            eventartist.IsActive = 0;
+        }
+        return eventartist;
+    };
+    EventArtistformComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-eventartistform',
+            template: __webpack_require__(/*! ./eventartistform.component.html */ "./src/app/eventartistform/eventartistform.component.html"),
+            styles: [__webpack_require__(/*! ./eventartistform.component.css */ "./src/app/eventartistform/eventartistform.component.css")]
+        }),
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [Object, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+            _services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"],
+            _services_entity_service__WEBPACK_IMPORTED_MODULE_4__["EntityService"],
+            _services_eventartist_service__WEBPACK_IMPORTED_MODULE_5__["EventArtistService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]])
+    ], EventArtistformComponent);
+    return EventArtistformComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/eventartistlist/eventartistlist.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/eventartistlist/eventartistlist.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* .statelist{\r\n  text-align: center;\r\n} */\r\n\r\n.spinner{\r\n    top: 45%;\r\n    left: 47%;\r\n    position: fixed;\r\n  }\r\n\r\n.eventartistlist-container, #paginator {\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-width: 300px;\r\n    max-width: 1200px;\r\n    max-height: 700px;\r\n    overflow: auto;\r\n    margin: 0 auto;\r\n  }\r\n  "
+
+/***/ }),
+
+/***/ "./src/app/eventartistlist/eventartistlist.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/eventartistlist/eventartistlist.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else eventartistlist\">  \n  <mat-spinner></mat-spinner>  \n  </div>  \n  <ng-template class=\"eventartistlist\" #eventartistlist>  \n    <h2 style=\"text-align: center;\">State List</h2>  \n    <div class=\"eventartistlist-container mat-elevation-z8\">  \n      <div><button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addEventArtist()\">Create</button></div>  \n      <table mat-table #table [dataSource]=\"dataSource\">  \n    \n        <!-- Event Artist ID Column -->  \n        <ng-container matColumnDef=\"EventArtistID\">  \n        <th mat-header-cell *matHeaderCellDef>EventArtist ID</th>  \n        <td mat-cell *matCellDef=\"let element\">{{element.EventArtistID}} </td>  \n        </ng-container>\n    \n        <!-- Event ID Column -->  \n        <ng-container matColumnDef=\"EventID\">  \n          <th mat-header-cell *matHeaderCellDef>Event ID</th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventID}} </td>  \n        </ng-container>\n        \n        <!-- Event Name Column -->  \n        <ng-container matColumnDef=\"EventName\">  \n          <th mat-header-cell *matHeaderCellDef>Event Name</th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventName}} </td>  \n        </ng-container>\n        \n        <!-- Artist Id Column -->  \n        <ng-container matColumnDef=\"ArtistID\">  \n          <th mat-header-cell *matHeaderCellDef>Artist Id </th>  \n          <td mat-cell *matCellDef=\"let element\">{{element.ArtistID}} </td>  \n          </ng-container>\n\n        <!-- Artist Name Column -->  \n        <ng-container matColumnDef=\"ArtistName\">  \n          <th mat-header-cell *matHeaderCellDef>Artist Name</th>  \n          <td mat-cell *matCellDef=\"let element\">{{element.ArtistName}} </td>  \n          </ng-container>\n    \n      \n         \n        <ng-container matColumnDef=\"action\">  \n          <th mat-header-cell *matHeaderCellDef>Action</th>  \n          <td mat-cell *matCellDef=\"let element\">  \n            <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editEventArtist(element.EventArtistID)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteEventArtist(element.EventArtistID)\">Delete</button>  \n          </td>  \n        </ng-container>  \n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>  \n\n        <!-- <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row> -->\n        <!-- <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row> -->\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>  \n      </table>  \n      </div>  \n  </ng-template> "
+
+/***/ }),
+
+/***/ "./src/app/eventartistlist/eventartistlist.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/eventartistlist/eventartistlist.component.ts ***!
+  \**************************************************************/
+/*! exports provided: EventArtistlistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventArtistlistComponent", function() { return EventArtistlistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _eventartistform_eventartistform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../eventartistform/eventartistform.component */ "./src/app/eventartistform/eventartistform.component.ts");
+/* harmony import */ var _services_eventartist_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/eventartist.service */ "./src/app/services/eventartist.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var EventArtistlistComponent = /** @class */ (function () {
+    function EventArtistlistComponent(snackBar, _eventartistService, dialog) {
+        this.snackBar = snackBar;
+        this._eventartistService = _eventartistService;
+        this.dialog = dialog;
+        // set columns that will need to show in listing table
+        this.displayedColumns = ['EventArtistID', 'EventID', 'EventName', 'ArtistID', 'ArtistName', 'action'];
+        // setting up datasource for material table
+        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"]();
+    }
+    EventArtistlistComponent.prototype.ngOnInit = function () {
+        this.loadingState = true;
+        this.loadEventArtists();
+    };
+    EventArtistlistComponent.prototype.openDialog = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(_eventartistform_eventartistform_component__WEBPACK_IMPORTED_MODULE_2__["EventArtistformComponent"], {
+            width: '500px',
+            data: { dbops: this.dbops, modalTitle: this.modalTitle, modalBtnTitle: this.modalBtnTitle, eventartist: this.eventartist }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'success') {
+                _this.loadingState = true;
+                _this.loadEventArtists();
+                switch (_this.dbops) {
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create:
+                        _this.showMessage('Data successfully added.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update:
+                        _this.showMessage('Data successfully updated.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete:
+                        _this.showMessage('Data successfully deleted.');
+                        break;
+                }
+            }
+            else if (result === 'error') {
+                _this.showMessage('There is some issue in saving records, please contact to system administrator!');
+            }
+            else {
+                _this.showMessage('Please try again, something went wrong');
+            }
+        });
+    };
+    EventArtistlistComponent.prototype.loadEventArtists = function () {
+        var _this = this;
+        this._eventartistService.getAllEventArtist(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'EventArtist/' + 'getAllEventArtist')
+            .subscribe(function (states) {
+            _this.loadingState = false;
+            _this.dataSource.data = states;
+        });
+    };
+    EventArtistlistComponent.prototype.getGender = function (gender) {
+        return _shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].genders.filter(function (ele) { return ele.id === gender; }).map(function (ele) { return ele.name; })[0];
+    };
+    EventArtistlistComponent.prototype.addEventArtist = function () {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create;
+        this.modalTitle = 'Add New EventArtist';
+        this.modalBtnTitle = 'Add';
+        this.openDialog();
+    };
+    EventArtistlistComponent.prototype.editEventArtist = function (id) {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update;
+        this.modalTitle = 'Edit EventArtist';
+        this.modalBtnTitle = 'Update';
+        this.eventartist = this.dataSource.data.filter(function (x) { return x.EventArtistID === id; })[0];
+        this.openDialog();
+    };
+    EventArtistlistComponent.prototype.deleteEventArtist = function (id) {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete;
+        this.modalTitle = 'Confirm to Delete ?';
+        this.modalBtnTitle = 'Delete';
+        this.eventartist = this.dataSource.data.filter(function (x) { return x.EventArtistID === id; })[0];
+        this.openDialog();
+    };
+    EventArtistlistComponent.prototype.showMessage = function (msg) {
+        this.snackBar.open(msg, '', {
+            duration: 3000
+        });
+    };
+    EventArtistlistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-eventartistlist',
+            template: __webpack_require__(/*! ./eventartistlist.component.html */ "./src/app/eventartistlist/eventartistlist.component.html"),
+            styles: [__webpack_require__(/*! ./eventartistlist.component.css */ "./src/app/eventartistlist/eventartistlist.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSnackBar"], _services_eventartist_service__WEBPACK_IMPORTED_MODULE_3__["EventArtistService"], _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
+    ], EventArtistlistComponent);
+    return EventArtistlistComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/eventform/eventform.component.css":
 /*!***************************************************!*\
   !*** ./src/app/eventform/eventform.component.css ***!
@@ -1950,7 +2344,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form  (ngSubmit)=\"onSubmit(eventFrm)\"  [formGroup]=\"eventFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Name</mat-label>  \n      <input matInput placeholder=\"Event Name\" formControlName=\"EventName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.EventName\">  \n        {{ formErrors.EventName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Description</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Description\" formControlName=\"EventDescription\">\n      <mat-error *ngIf=\"formErrors.EventDescription\">  \n        {{ formErrors.EventDescription }}  \n      </mat-error>  \n    </mat-form-field>  \n    \n  </div> \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Address</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Address\" formControlName=\"EventAddress\">\n      <mat-error *ngIf=\"formErrors.EventAddress\">  \n        {{ formErrors.EventAddress }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <!-- <p>  \n      <mat-radio-group class=\"contact-radio-group\" formControlName=\"gender\" >  \n        <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let gndr of genders\" [value]=\"gndr.id\">  \n          {{ gndr.name }}  \n        </mat-radio-button>  \n      </mat-radio-group>  \n      <mat-error *ngIf=\"formErrors.gender\">  \n        {{ formErrors.gender }}  \n      </mat-error>  \n  </p>   -->\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <input matInput [matDatepicker]=\"picker1\" placeholder=\"Choose start date\" formControlName=\"EventStartDate\">  \n      <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>  \n      <mat-datepicker #picker1></mat-datepicker>  \n      \n    <mat-error *ngIf=\"formErrors.EventStartDate \">  \n      {{ formErrors.EventStartDate }}  \n    </mat-error>  \n    </mat-form-field>  \n  </div>  \n\n      <div>  \n          <mat-form-field appearance=\"outline\">  \n            <input matInput [matDatepicker]=\"picker2\" placeholder=\"Choose end date\" formControlName=\"EventEndDate\">  \n            <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>  \n            <mat-datepicker #picker2></mat-datepicker>  \n            \n          <mat-error *ngIf=\"formErrors.EventEndDate \">  \n            {{ formErrors.EventEndDate }}  \n          </mat-error>  \n          </mat-form-field>  \n        </div>  \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Start Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Start Time\" formControlName=\"EventStartTime\">\n            <mat-error *ngIf=\"formErrors.EventStartTime\">  \n              {{ formErrors.EventStartTime }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event End Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event End Time\" formControlName=\"EventEndTime\">\n            <mat-error *ngIf=\"formErrors.EventEndTime\">  \n              {{ formErrors.EventEndTime }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Venue Latitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Latitude\" formControlName=\"EventVenueLatitude\">\n            <mat-error *ngIf=\"formErrors.EventVenueLatitude\">  \n              {{ formErrors.EventVenueLatitude }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Venue Longitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Longitude\" formControlName=\"EventVenueLongitude\">\n            <mat-error *ngIf=\"formErrors.EventVenueLongitude\">  \n              {{ formErrors.EventVenueLongitude }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a Country\" formControlName=\"CountryID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let country  of countries\" [value]=\"country.CountryID\">  \n                {{ country.CountryName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.CountryID \">  \n              {{ formErrors.CountryID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a State\" formControlName=\"StateID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let state of states\" [value]=\"state.StateID\">  \n                {{ state.StateName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.StateID \">  \n              {{ formErrors.StateID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a City\" formControlName=\"CityID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let city of cities\" [value]=\"city.CityID\">  \n                {{ city.CityName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.CityID \">  \n              {{ formErrors.CityID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n        \n   \n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a Area\" formControlName=\"AreaID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let area of areas\" [value]=\"area.AreaID\">  \n                {{ area.AreaName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.AreaID \">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n \n\n\n        <!-- <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>AreaID</mat-label>  \n            <input matInput placeholder=\"AreaID\" formControlName=\"AreaID\">\n            <mat-error *ngIf=\"formErrors.AreaID\">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> -->\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>IsActive</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"IsActive\" formControlName=\"IsActive\">\n            <mat-error *ngIf=\"formErrors.IsActive\">  \n              {{ formErrors.IsActive }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n       \n<!-- <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Technology\" formControlName=\"techno\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let techno  of technologies\" [value]=\"techno\">  \n          {{ techno }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.techno \">  \n        {{ formErrors.techno }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n      <textarea matInput placeholder=\"Message...\" formControlName=\"message\"></textarea>  \n      <mat-error *ngIf=\"formErrors.message \">  \n        {{ formErrors.message }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+module.exports = "<form  (ngSubmit)=\"onSubmit(eventFrm)\"  [formGroup]=\"eventFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Name</mat-label>  \n      <input matInput placeholder=\"Event Name\" formControlName=\"EventName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.EventName\">  \n        {{ formErrors.EventName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Description</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Description\" formControlName=\"EventDescription\">\n      <mat-error *ngIf=\"formErrors.EventDescription\">  \n        {{ formErrors.EventDescription }}  \n      </mat-error>  \n    </mat-form-field>  \n    \n  </div> \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Address</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Address\" formControlName=\"EventAddress\">\n      <mat-error *ngIf=\"formErrors.EventAddress\">  \n        {{ formErrors.EventAddress }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <!-- <p>  \n      <mat-radio-group class=\"contact-radio-group\" formControlName=\"gender\" >  \n        <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let gndr of genders\" [value]=\"gndr.id\">  \n          {{ gndr.name }}  \n        </mat-radio-button>  \n      </mat-radio-group>  \n      <mat-error *ngIf=\"formErrors.gender\">  \n        {{ formErrors.gender }}  \n      </mat-error>  \n  </p>   -->\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <input matInput [matDatepicker]=\"picker1\" placeholder=\"Choose start date\" formControlName=\"EventStartDate\">  \n      <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>  \n      <mat-datepicker #picker1></mat-datepicker>  \n      \n    <mat-error *ngIf=\"formErrors.EventStartDate \">  \n      {{ formErrors.EventStartDate }}  \n    </mat-error>  \n    </mat-form-field>  \n  </div>  \n\n      <div>  \n          <mat-form-field appearance=\"outline\">  \n            <input matInput [matDatepicker]=\"picker2\" placeholder=\"Choose end date\" formControlName=\"EventEndDate\">  \n            <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>  \n            <mat-datepicker #picker2></mat-datepicker>  \n            \n          <mat-error *ngIf=\"formErrors.EventEndDate \">  \n            {{ formErrors.EventEndDate }}  \n          </mat-error>  \n          </mat-form-field>  \n        </div>  \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Start Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Start Time\" formControlName=\"EventStartTime\">\n            <mat-error *ngIf=\"formErrors.EventStartTime\">  \n              {{ formErrors.EventStartTime }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event End Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event End Time\" formControlName=\"EventEndTime\">\n            <mat-error *ngIf=\"formErrors.EventEndTime\">  \n              {{ formErrors.EventEndTime }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Venue Latitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Latitude\" formControlName=\"EventVenueLatitude\">\n            <mat-error *ngIf=\"formErrors.EventVenueLatitude\">  \n              {{ formErrors.EventVenueLatitude }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Event Venue Longitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Longitude\" formControlName=\"EventVenueLongitude\">\n            <mat-error *ngIf=\"formErrors.EventVenueLongitude\">  \n              {{ formErrors.EventVenueLongitude }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a Country\" formControlName=\"CountryID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let country  of countries\" [value]=\"country.CountryID\">  \n                {{ country.CountryName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.CountryID \">  \n              {{ formErrors.CountryID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a State\" formControlName=\"StateID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let state of states\" [value]=\"state.StateID\">  \n                {{ state.StateName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.StateID \">  \n              {{ formErrors.StateID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a City\" formControlName=\"CityID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let city of cities\" [value]=\"city.CityID\">  \n                {{ city.CityName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.CityID \">  \n              {{ formErrors.CityID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n        \n   \n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n            <mat-select placeholder=\"Select a Area\" formControlName=\"AreaID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let area of areas\" [value]=\"area.AreaID\">  \n                {{ area.AreaName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.AreaID \">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n \n\n\n        <!-- <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>AreaID</mat-label>  \n            <input matInput placeholder=\"AreaID\" formControlName=\"AreaID\">\n            <mat-error *ngIf=\"formErrors.AreaID\">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> -->\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>IsActive</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"IsActive\" formControlName=\"IsActive\">\n            <mat-error *ngIf=\"formErrors.IsActive\">  \n              {{ formErrors.IsActive }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n        <div>  \n          <mat-radio-group class=\"contact-radio-group\" formControlName=\"IsActive\" >  \n            <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of activeOptions\" [value]=\"option.id\">  \n              {{ option.name }}  \n            </mat-radio-button>  \n          </mat-radio-group>  \n          <mat-error *ngIf=\"formErrors.IsActive\">  \n            {{ formErrors.IsActive }}  \n          </mat-error>  \n        </div> \n       \n<!-- <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Technology\" formControlName=\"techno\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let techno  of technologies\" [value]=\"techno\">  \n          {{ techno }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.techno \">  \n        {{ formErrors.techno }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n      <textarea matInput placeholder=\"Message...\" formControlName=\"message\"></textarea>  \n      <mat-error *ngIf=\"formErrors.message \">  \n        {{ formErrors.message }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
 
 /***/ }),
 
@@ -2009,6 +2403,7 @@ var EventformComponent = /** @class */ (function () {
         this.indLoading = false;
         this.genders = [];
         this.technologies = [];
+        this.activeOptions = [];
         this.countries = [];
         this.states = [];
         this.cities = [];
@@ -2022,9 +2417,9 @@ var EventformComponent = /** @class */ (function () {
             'EventStartDate': '',
             'EventEndDate': '',
             'EventStartTime': '',
-            'EventEndTime': '',
-            'EventVenueLatitude': '',
-            'EventVenueLongitude': '',
+            // 'EventEndTime': '',
+            // 'EventVenueLatitude': '',
+            // 'EventVenueLongitude': '',
             'CountryID': '',
             'StateID': '',
             'CityID': '',
@@ -2065,15 +2460,15 @@ var EventformComponent = /** @class */ (function () {
             'EventStartTime': {
                 'required': 'Event Start Time is required.'
             },
-            'EventEndTime': {
-                'required': 'Event End Time is required.'
-            },
-            'EventVenueLatitude': {
-                'required': 'Event Venue Latitude is required.'
-            },
-            'EventVenueLongitude': {
-                'required': 'Event Venue Longitude is required.'
-            },
+            // 'EventEndTime': {
+            //   'required': 'Event End Time is required.'
+            // },
+            // 'EventVenueLatitude': {
+            //   'required': 'Event Venue Latitude is required.'
+            // },
+            // 'EventVenueLongitude': {
+            //   'required': 'Event Venue Longitude is required.'
+            // },
             'CountryID': {
                 'required': 'Country is required.'
             },
@@ -2104,18 +2499,24 @@ var EventformComponent = /** @class */ (function () {
             EventStartDate: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
             EventEndDate: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
             EventStartTime: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
-            EventEndTime: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
-            EventVenueLatitude: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
-            EventVenueLongitude: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            EventEndTime: [''],
+            EventVenueLatitude: [''],
+            EventVenueLongitude: [''],
             CountryID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
             StateID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
             CityID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
             AreaID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
-            IsActive: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]]
+            IsActive: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            CountryName: [''],
+            StateName: [''],
+            CityName: [''],
+            AreaName: [''],
+            UserID: [-1]
         });
         // this.genders = Global.genders;
         // this.technologies = Global.technologies;
         // this.countries = Global.countries;
+        this.activeOptions = _shared_Global__WEBPACK_IMPORTED_MODULE_9__["Global"].activeOptions;
         // var aaaaa = this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'getAllCountry');
         // console.log(this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry'));
         // loadCountriesddl():void{ this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'getAllCountry')
@@ -2226,6 +2627,11 @@ var EventformComponent = /** @class */ (function () {
     EventformComponent.prototype.mapEventID = function (event) {
         if (event.EventID == null) {
             event.EventID = -1;
+            event.UserID = -1;
+            event.CountryName = '';
+            event.StateName = '';
+            event.CityName = '';
+            event.AreaName = '';
         }
         return event;
     };
@@ -2269,7 +2675,7 @@ module.exports = "/* .eventlist{\r\n  text-align: center;\r\n} */\r\n\r\n.spinne
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else eventlist\">  \n  <mat-spinner></mat-spinner>  \n  </div>  \n  <ng-template class=\"eventlist\" #eventlist>  \n    <h2 style=\"text-align: center;\">Event List</h2>  \n    <div class=\"eventlist-container mat-elevation-z8\">  \n      <div><button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addEvent()\">Create</button></div>  \n      <table mat-table #table [dataSource]=\"dataSource\">  \n    \n        <!-- Id Column -->  \n        <ng-container matColumnDef=\"EventID\">  \n        <th mat-header-cell *matHeaderCellDef>Event Id </th>  \n        <td mat-cell *matCellDef=\"let element\"> {{element.EventID}} </td>  \n        </ng-container>\n    \n        <!-- Event Name Column -->  \n        <ng-container matColumnDef=\"EventName\">  \n          <th mat-header-cell *matHeaderCellDef> Event Name </th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventName}} </td>  \n        </ng-container>  \n    \n        <!-- Event Description Column -->  \n        <ng-container matColumnDef=\"EventDescription\">  \n          <th mat-header-cell *matHeaderCellDef> Event Description </th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventDescription}} </td>  \n        </ng-container>  \n    \n        <!-- Event Address Column -->  \n        <ng-container matColumnDef=\"EventAddress\">  \n          <th mat-header-cell *matHeaderCellDef> Event Address </th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.EventAddress}} </td>  \n        </ng-container>  \n    \n        <!-- Event Start Date Column -->  \n        <ng-container matColumnDef=\"EventStartDate\">  \n          <th mat-header-cell *matHeaderCellDef> Start Date </th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventStartDate | date: 'MM-dd-yyyy' }} </td>  \n        </ng-container>  \n\n        <!-- Event End Date Column -->  \n        <ng-container matColumnDef=\"EventEndDate\">  \n          <th mat-header-cell *matHeaderCellDef> End Date </th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventEndDate | date: 'MM-dd-yyyy' }} </td>  \n        </ng-container>  \n\n        <!-- Event Start Time Column -->  \n        <ng-container matColumnDef=\"EventStartTime\">  \n          <th mat-header-cell *matHeaderCellDef>Event Start Time</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.EventStartTime}} </td>  \n        </ng-container>  \n\n        <!-- Event End Time Column -->  \n        <ng-container matColumnDef=\"EventEndTime\">  \n          <th mat-header-cell *matHeaderCellDef>Event End Time</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.EventEndTime}} </td>  \n        </ng-container>  \n\n        <ng-container matColumnDef=\"EventVenueLatitude\">  \n          <th mat-header-cell *matHeaderCellDef>Event Venue Latitude</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.EventVenueLatitude}} </td>  \n        </ng-container>  \n\n        <ng-container matColumnDef=\"EventVenueLongitude\">  \n          <th mat-header-cell *matHeaderCellDef>Event Venue Longitude</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.EventVenueLongitude}} </td>  \n        </ng-container>  \n\n        <ng-container matColumnDef=\"CountryID\">  \n          <th mat-header-cell *matHeaderCellDef>Country ID</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.CountryID}} </td>  \n        </ng-container>  \n\n        \n        <ng-container matColumnDef=\"StateID\">  \n          <th mat-header-cell *matHeaderCellDef>State ID</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.StateID}} </td>  \n        </ng-container>  \n\n        \n        <ng-container matColumnDef=\"CityID\">  \n          <th mat-header-cell *matHeaderCellDef>City ID</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.CityID}} </td>  \n        </ng-container>  \n\n        <ng-container matColumnDef=\"AreaID\">  \n          <th mat-header-cell *matHeaderCellDef>Area ID</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.AreaID}} </td>  \n        </ng-container>  \n\n        <ng-container matColumnDef=\"IsActive\">  \n          <th mat-header-cell *matHeaderCellDef>Is Active</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.IsActive}} </td>  \n        </ng-container>  \n    \n         \n        <ng-container matColumnDef=\"action\">  \n          <th mat-header-cell *matHeaderCellDef>Action</th>  \n          <td mat-cell *matCellDef=\"let element\">  \n            <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editEvent(element.EventID)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteEvent(element.EventID)\">Delete</button>  \n          </td>  \n        </ng-container>  \n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>  \n\n        <!-- <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row> -->\n        <!-- <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row> -->\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>  \n      </table>  \n\n    \n\n    </div>  \n  </ng-template> "
+module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else eventlist\">  \n  <mat-spinner></mat-spinner>  \n  </div>  \n  <ng-template class=\"eventlist\" #eventlist>  \n    <h2 style=\"text-align: center;\">Event List</h2>  \n    <div class=\"eventlist-container mat-elevation-z8\">  \n      <div><button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addEvent()\">Create</button></div>  \n      <table mat-table #table [dataSource]=\"dataSource\">  \n    \n        <!-- Id Column -->  \n        <ng-container matColumnDef=\"EventID\">  \n        <th mat-header-cell *matHeaderCellDef>Event Id </th>  \n        <td mat-cell *matCellDef=\"let element\"> {{element.EventID}} </td>  \n        </ng-container>\n    \n        <!-- Event Name Column -->  \n        <ng-container matColumnDef=\"EventName\">  \n          <th mat-header-cell *matHeaderCellDef> Event Name </th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventName}} </td>  \n        </ng-container>  \n    \n        Event Description Column  \n        <ng-container matColumnDef=\"EventDescription\">  \n          <th mat-header-cell *matHeaderCellDef> Event Description </th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventDescription}} </td>  \n        </ng-container>  \n    \n        <!-- Event Address Column -->  \n        <!-- <ng-container matColumnDef=\"EventAddress\">  \n          <th mat-header-cell *matHeaderCellDef> Event Address </th>  \n          \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventAddress}} </td>  \n        </ng-container>   -->\n    \n        <!-- Event Start Date Column -->  \n        <ng-container matColumnDef=\"EventStartDate\">  \n          <th mat-header-cell *matHeaderCellDef> Start Date </th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventStartDate | date: 'MM-dd-yyyy' }} </td>  \n        </ng-container>  \n\n        <!-- Event End Date Column -->  \n        <ng-container matColumnDef=\"EventEndDate\">  \n          <th mat-header-cell *matHeaderCellDef> End Date </th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventEndDate | date: 'MM-dd-yyyy' }} </td>  \n        </ng-container>  \n\n        <!-- Event Start Time Column -->  \n        <ng-container matColumnDef=\"EventStartTime\">  \n          <th mat-header-cell *matHeaderCellDef>Event Start Time</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.EventStartTime}} </td>  \n        </ng-container>  \n\n        <!-- Event End Time Column -->  \n        <ng-container matColumnDef=\"EventEndTime\">  \n          <th mat-header-cell *matHeaderCellDef>Event End Time</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.EventEndTime}} </td>  \n        </ng-container>  \n\n        \n\n        <ng-container matColumnDef=\"CountryID\">  \n          <th mat-header-cell *matHeaderCellDef>Country ID</th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.CountryID}} </td>  \n        </ng-container>  \n\n        <ng-container matColumnDef=\"CountryName\">  \n          <th mat-header-cell *matHeaderCellDef>Country Name</th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.CountryName}} </td>  \n        </ng-container>  \n\n        \n        <ng-container matColumnDef=\"StateID\">  \n          <th mat-header-cell *matHeaderCellDef>State ID</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.StateID}} </td>  \n        </ng-container>  \n\n        <ng-container matColumnDef=\"StateName\">  \n          <th mat-header-cell *matHeaderCellDef>State Name</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.StateName}} </td>  \n        </ng-container>  \n\n        \n        <ng-container matColumnDef=\"CityID\">  \n          <th mat-header-cell *matHeaderCellDef>City ID</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.CityID}} </td>  \n        </ng-container>  \n\n        <ng-container matColumnDef=\"CityName\">  \n          <th mat-header-cell *matHeaderCellDef>City Name</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.CityName}} </td>  \n        </ng-container>  \n\n        <ng-container matColumnDef=\"AreaID\">  \n          <th mat-header-cell *matHeaderCellDef>Area ID</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.AreaID}} </td>  \n        </ng-container>  \n\n        <ng-container matColumnDef=\"AreaName\">  \n          <th mat-header-cell *matHeaderCellDef>Area Name</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.AreaName}} </td>  \n        </ng-container>  \n\n        <ng-container matColumnDef=\"IsActive\">  \n          <th mat-header-cell *matHeaderCellDef>Is Active</th>  \n          <!-- <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>   -->\n          <td mat-cell *matCellDef=\"let element\"> {{element.IsActive}} </td>  \n        </ng-container>  \n    \n         \n        <ng-container matColumnDef=\"action\">  \n          <th mat-header-cell *matHeaderCellDef>Action</th>  \n          <td mat-cell *matCellDef=\"let element\">  \n            <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editEvent(element.EventID)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteEvent(element.EventID)\">Delete</button>  \n          </td>  \n        </ng-container>  \n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>  \n\n        <!-- <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row> -->\n        <!-- <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row> -->\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>  \n      </table>  \n\n    \n\n    </div>  \n  </ng-template> "
 
 /***/ }),
 
@@ -2312,7 +2718,7 @@ var EventlistComponent = /** @class */ (function () {
         this.dialog = dialog;
         // set columns that will need to show in listing table
         // displayedColumns = ['name', 'email', 'gender', 'birth', 'techno', 'message', 'action'];
-        this.displayedColumns = ['EventID', 'EventName', 'EventDescription', 'EventAddress', 'EventStartDate', 'EventEndDate', 'action'];
+        this.displayedColumns = ['EventID', 'EventName', 'EventStartDate', 'EventEndDate', 'CountryID', 'CountryName', 'StateID', 'StateName', 'CityID', 'CityName', 'AreaID', 'AreaName', 'action'];
         // setting up datasource for material table
         this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"]();
     }
@@ -2420,7 +2826,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form  (ngSubmit)=\"onSubmit(eventOrganizerFrm)\" [formGroup]=\"eventOrganizerFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n\n  <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Event\" formControlName=\"EventID\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let event of events\" [value]=\"event.EventID\">  \n          {{ event.EventName }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.EventID \">  \n        {{ formErrors.EventID }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n\n\n  <!-- multiple -->\n\n  <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Organizer\" formControlName=\"EntityList\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let entity of entities\" [value]=\"entity.EntityID\">  \n          {{ entity.Name }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.EntityList\">  \n        {{ formErrors.EntityList }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a Organizer\" formControlName=\"EntityIDs\" multiple>  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let entity of entities\" [value]=\"entity.EntityID\">  \n        {{ entity.Name }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.EntityIDs\">  \n      {{ formErrors.EntityIDs }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> Name</mat-label>  \n  <input matInput placeholder=\"EventName\" formControlName=\"EventName\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.EventName\">  \n    {{ formErrors.EventName }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> Name</mat-label>  \n  <input matInput placeholder=\"CreatedBy\" formControlName=\"CreatedBy\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.CreatedBy\">  \n    {{ formErrors.CreatedBy }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> Name</mat-label>  \n  <input matInput placeholder=\"UpdatedBy\" formControlName=\"UpdatedBy\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.UpdatedBy\">  \n    {{ formErrors.UpdatedBy }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> Name</mat-label>  \n  <input matInput placeholder=\"CreatedOn\" formControlName=\"CreatedOn\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.CreatedOn\">  \n    {{ formErrors.CreatedOn }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> Name</mat-label>  \n  <input matInput placeholder=\"UpdatedOn\" formControlName=\"UpdatedOn\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <mat-error *ngIf=\"formErrors.UpdatedOn\">  \n    {{ formErrors.UpdatedOn }}  \n  </mat-error>  \n</mat-form-field>  \n</div>\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventOrganizerFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+module.exports = "<form  (ngSubmit)=\"onSubmit(eventOrganizerFrm)\" [formGroup]=\"eventOrganizerFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n\n  <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Event\" formControlName=\"EventID\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let event of events\" [value]=\"event.EventID\">  \n          {{ event.EventName }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.EventID \">  \n        {{ formErrors.EventID }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n\n\n  <!-- multiple -->\n\n  <!-- <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Organizer\" formControlName=\"EntityList\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let entity of entities\" [value]=\"entity.EntityID\">  \n          {{ entity.Name }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.EntityList\">  \n        {{ formErrors.EntityList }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div> -->\n<div>\n  <mat-form-field appearance=\"outline\">  \n    <mat-select placeholder=\"Select a Organizer\" formControlName=\"EntityIDs\" multiple>  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let entity of entities\" [value]=\"entity.EntityID\">  \n        {{ entity.Name }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.EntityIDs\">  \n      {{ formErrors.EntityIDs }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> Name</mat-label>  \n  <input matInput placeholder=\"EventName\" formControlName=\"EventName\">  \n  <mat-error *ngIf=\"formErrors.EventName\">  \n    {{ formErrors.EventName }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> Name</mat-label>  \n  <input matInput placeholder=\"CreatedBy\" formControlName=\"CreatedBy\">  \n  \n  <mat-error *ngIf=\"formErrors.CreatedBy\">  \n    {{ formErrors.CreatedBy }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> Name</mat-label>  \n  <input matInput placeholder=\"UpdatedBy\" formControlName=\"UpdatedBy\">  \n  <mat-error *ngIf=\"formErrors.UpdatedBy\">  \n    {{ formErrors.UpdatedBy }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> Name</mat-label>  \n  <input matInput placeholder=\"CreatedOn\" formControlName=\"CreatedOn\">  \n  <mat-error *ngIf=\"formErrors.CreatedOn\">  \n    {{ formErrors.CreatedOn }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label> Name</mat-label>  \n  <input matInput placeholder=\"UpdatedOn\" formControlName=\"UpdatedOn\">  \n  <mat-error *ngIf=\"formErrors.UpdatedOn\">  \n    {{ formErrors.UpdatedOn }}  \n  </mat-error>  \n</mat-form-field>  \n</div> -->\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventOrganizerFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
 
 /***/ }),
 
@@ -2480,12 +2886,6 @@ var EventOrganizerformComponent = /** @class */ (function () {
         this.formErrors = {
             'EventID': '',
             'EntityIDs': '',
-            'EntityList': '',
-            'EventName': '',
-            'CreatedBy': '',
-            'UpdatedBy': '',
-            'CreatedOn': '',
-            'UpdatedOn': ''
         };
         // custom valdiation messages
         // tslint:disable-next-line:member-ordering
@@ -2498,26 +2898,19 @@ var EventOrganizerformComponent = /** @class */ (function () {
                 'maxlength': 'EntityIDs cannot be more than 50 characters long.',
                 'required': 'EntityIDs is required.'
             },
-            'EventName': {
-                'maxlength': 'EventName cannot be more than 50 characters long.',
-                'required': 'EventName is required.'
-            }
         };
     }
     EventOrganizerformComponent.prototype.ngOnInit = function () {
         var _this = this;
         // built state form
         this.eventOrganizerFrm = this.fb.group({
-            EventOrganizerID: [''],
+            EventOrganizerID: [-1],
             // AreaName: ['', [Validators.required, Validators.maxLength(250)]],
             EventID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
             EntityIDs: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
-            EntityList: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
-            EventName: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
-            CreatedBy: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
-            UpdatedBy: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
-            CreatedOn: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
-            UpdatedOn: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+            EntityList: [''],
+            EventName: [''],
+            UserID: [-1],
         });
         // this.genders = Global.genders;
         // this.technologies = Global.technologies;
@@ -2616,6 +3009,7 @@ var EventOrganizerformComponent = /** @class */ (function () {
     EventOrganizerformComponent.prototype.mapEventOrganizerID = function (eventOrganizer) {
         if (eventOrganizer == null || eventOrganizer.EventOrganizerID == null) {
             eventOrganizer.EventOrganizerID = -1;
+            eventOrganizer.UserID = -1;
         }
         return eventOrganizer;
     };
@@ -2657,7 +3051,7 @@ module.exports = "/* .arealist{\r\n  text-align: center;\r\n} */\r\n\r\n.spinner
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else eventorganizerlist\">  \n  <mat-spinner></mat-spinner>  \n  </div>  \n  <ng-template class=\"eventorganizerlist\" #eventorganizerlist>  \n    <h2 style=\"text-align: center;\">Event Organizer List</h2>  \n    <div class=\"eventorganizerlist-container mat-elevation-z8\">  \n      <div><button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addEventOrganizer()\">Create</button></div>  \n      <table mat-table #table [dataSource]=\"dataSource\">  \n    \n        <!-- Id Column -->  \n        <ng-container matColumnDef=\"EventID\">  \n        <th mat-header-cell *matHeaderCellDef>Event Id </th>  \n        <td mat-cell *matCellDef=\"let element\">{{element.EventID}} </td>  \n        </ng-container>\n    \n        <!-- Area Name Column -->  \n        <!-- <ng-container matColumnDef=\"AreaName\">  \n          <th mat-header-cell *matHeaderCellDef>Area Name</th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.AreaName}} </td>  \n        </ng-container> -->\n        \n        <!-- Event Name Column -->  \n        <ng-container matColumnDef=\"EventName\">  \n          <th mat-header-cell *matHeaderCellDef>Event Name</th>  \n          <td mat-cell *matCellDef=\"let element\">{{element.EventName}} </td>  \n          </ng-container>\n\n          <ng-container matColumnDef=\"EntityList\">  \n            <th mat-header-cell *matHeaderCellDef>EntityList</th>  \n            <td mat-cell *matCellDef=\"let element\"> \n              <span *ngFor=\"let item of element.EntityList\">\n                  {{item.Name}},\n              </span>\n\n            </td>  \n            </ng-container>\n    \n      \n         \n        <ng-container matColumnDef=\"action\">  \n          <th mat-header-cell *matHeaderCellDef>Action</th>  \n          <td mat-cell *matCellDef=\"let element\">  \n            <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editEventOrganizer(element.EventOrganizerID)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteEventOrganizer(element.EventOrganizerID)\">Delete</button>  \n            <!-- <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editCity(1)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteCity(1)\">Delete</button>   -->\n          </td>  \n        </ng-container>  \n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>  \n\n        <!-- <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row> -->\n        <!-- <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row> -->\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>  \n      </table>  \n      </div>  \n  </ng-template> "
+module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else eventorganizerlist\">  \n  <mat-spinner></mat-spinner>  \n  </div>  \n  <ng-template class=\"eventorganizerlist\" #eventorganizerlist>  \n    <h2 style=\"text-align: center;\">Event Organizer List</h2>  \n    <div class=\"eventorganizerlist-container mat-elevation-z8\">  \n      <div><button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addEventOrganizer()\">Create</button></div>  \n      <table mat-table #table [dataSource]=\"dataSource\">  \n    \n        <!-- Id Column -->  \n        <ng-container matColumnDef=\"EventID\">  \n        <th mat-header-cell *matHeaderCellDef>Event Id </th>  \n        <td mat-cell *matCellDef=\"let element\">{{element.EventID}} </td>  \n        </ng-container>\n    \n        <!-- Area Name Column -->  \n        <!-- <ng-container matColumnDef=\"AreaName\">  \n          <th mat-header-cell *matHeaderCellDef>Area Name</th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.AreaName}} </td>  \n        </ng-container> -->\n        \n        <!-- Event Name Column -->  \n        <ng-container matColumnDef=\"EventName\">  \n          <th mat-header-cell *matHeaderCellDef>Event Name</th>  \n          <td mat-cell *matCellDef=\"let element\">{{element.EventName}} </td>  \n          </ng-container>\n\n          <ng-container matColumnDef=\"EntityList\">  \n            <th mat-header-cell *matHeaderCellDef>Organizers</th>  \n            <td mat-cell *matCellDef=\"let element\"> \n              <span *ngFor=\"let item of element.EntityList\">\n                  {{item.Name}},\n              </span>\n\n            </td>  \n            </ng-container>\n    \n      \n         \n        <ng-container matColumnDef=\"action\">  \n          <th mat-header-cell *matHeaderCellDef>Action</th>  \n          <td mat-cell *matCellDef=\"let element\">  \n            <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editEventOrganizer(element.EventOrganizerID)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteEventOrganizer(element.EventOrganizerID)\">Delete</button>  \n            <!-- <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editCity(1)\">Edit</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteCity(1)\">Delete</button>   -->\n          </td>  \n        </ng-container>  \n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>  \n\n        <!-- <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row> -->\n        <!-- <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row> -->\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>  \n      </table>  \n      </div>  \n  </ng-template> "
 
 /***/ }),
 
@@ -3249,6 +3643,98 @@ var EventService = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], EventService);
     return EventService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/eventartist.service.ts":
+/*!*************************************************!*\
+  !*** ./src/app/services/eventartist.service.ts ***!
+  \*************************************************/
+/*! exports provided: EventArtistService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventArtistService", function() { return EventArtistService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var httpPostOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var EventArtistService = /** @class */ (function () {
+    function EventArtistService(http) {
+        this.http = http;
+    }
+    // get all eventartist data
+    EventArtistService.prototype.getAllEventArtist = function (url) {
+        return this.http.get(url)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // insert new eventartist details
+    EventArtistService.prototype.addEventArtist = function (url, eventartist) {
+        return this.http.post(url, eventartist, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // update eventartist details
+    EventArtistService.prototype.updateEventArtist = function (url, id, eventartist) {
+        var newurl = url + "?id=" + id;
+        return this.http.put(newurl, eventartist, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // delete eventartist information
+    EventArtistService.prototype.deleteEventArtist = function (url, id) {
+        var newurl = url + "?id=" + id; // DELETE api/eventartist?id=42
+        return this.http.delete(newurl, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // custom handler
+    EventArtistService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    EventArtistService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], EventArtistService);
+    return EventArtistService;
 }());
 
 

@@ -20,5 +20,7 @@ namespace kb_app.Models
         public DbSet<Area> Area { get; set; }
 
         public DbSet<EventOrganizer> EventOrganizer { get; set; }
+
+        public DbSet<EventArtist> EventArtist { get; set; }
     }
 }

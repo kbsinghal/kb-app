@@ -14,12 +14,8 @@ namespace kb_app.Models
 
          public int[] EntityIDs{ get; set; }
     
-         public int CreatedBy { get; set; }
+         public int UserID { get; set; }
 
-       public int UpdatedBy { get; set; }
-
-       public DateTime CreatedOn { get; set; }
-
-       public DateTime UpdatedOn { get; set; }
+        
     }
 }

@@ -14,4 +14,9 @@ export interface IEvent {
     EventVenueLongitude: number;
     EventStartTime: string;
     EventEndTime: string;
+    UserID: number;
+    CountryName: string;
+    StateName: string;
+    CityName: string;
+    AreaName: string;
 }

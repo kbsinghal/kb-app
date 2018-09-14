@@ -1,0 +1,88 @@
+<form  (ngSubmit)="onSubmit(eventartistFrm)"  [formGroup]="eventartistFrm">  
+  <h2>{{data.modalTitle}}</h2>  
+    
+  <div>
+    <mat-form-field appearance="outline">  
+      <mat-select placeholder="Select a Event" formControlName="EventID">  
+        <mat-option>-- None --</mat-option>  
+        <mat-option *ngFor="let event  of events" [value]="event.EventID">  
+          {{ event.EventName }}  
+        </mat-option>  
+      </mat-select>  
+      <mat-error *ngIf="formErrors.EventID ">  
+        {{ formErrors.EventID }}  
+      </mat-error>  
+    </mat-form-field>  
+  </div>
+
+
+
+<div>
+  <mat-form-field appearance="outline">  
+    <mat-select placeholder="Select a Artist" formControlName="ArtistID">  
+      <mat-option>-- None --</mat-option>  
+      <mat-option *ngFor="let entity  of entities" [value]="entity.EntityID">  
+        {{ entity.Name }}  
+      </mat-option>  
+    </mat-select>  
+    <mat-error *ngIf="formErrors.ArtistID">  
+      {{ formErrors.ArtistID }}  
+    </mat-error>  
+  </mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Start Time</mat-label>  
+  <input matInput placeholder="Start Time" formControlName="StartTime">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <!-- <mat-error *ngIf="formErrors.StartTime">  
+    {{ formErrors.StartTime }}  
+  </mat-error>   -->
+</mat-form-field>  
+</div>
+
+<div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>End Time</mat-label>  
+  <input matInput placeholder="End Time" formControlName="EndTime">  
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+  <!-- <mat-hint>Hint</mat-hint> -->  
+  <!-- <mat-error *ngIf="formErrors.EndTime">  
+    {{ formErrors.EndTime }}  
+  </mat-error>   -->
+</mat-form-field>  
+</div>
+<div>  
+  <mat-radio-group class="contact-radio-group" formControlName="IsActive" >  
+    <mat-radio-button class="contact-radio-button" *ngFor="let option of activeOptions" [value]="option.id">  
+      {{ option.name }}  
+    </mat-radio-button>  
+  </mat-radio-group>  
+  <!-- <mat-error *ngIf="formErrors.IsActive">  
+    {{ formErrors.IsActive }}  
+  </mat-error>   -->
+</div> 
+
+<!-- <div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>User ID</mat-label>  
+  <input matInput placeholder="UserID" formControlName="UserID">  
+</mat-form-field>  
+</div> -->
+
+<!-- <div>  
+  <mat-form-field appearance="outline">  
+  <mat-label>Country Name</mat-label>  
+  <input matInput placeholder="Country Name" formControlName="CountryName">  
+</mat-form-field>  
+</div> -->
+  
+  <div>  
+    
+    <button type="button" mat-raised-button color="warn" (click)="dialogRef.close()">Cancel</button>   
+    <button type="submit" mat-raised-button color="primary" [disabled]="eventartistFrm.invalid">{{data.modalBtnTitle}}</button>  
+  </div>  
+    
+  </form> 

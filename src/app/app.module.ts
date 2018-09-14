@@ -28,6 +28,9 @@ import { EntityService } from './services/entity.service';
 import { EventOrganizerformComponent } from './eventorganizerform/eventorganizerform.component';
 import { EventOrganizerlistComponent } from './eventorganizerlist/eventorganizerlist.component';
 import { EventOrganizerService } from './services/eventorganizer.service';
+import { EventArtistformComponent } from './eventartistform/eventartistform.component';
+import { EventArtistlistComponent } from './eventartistlist/eventartistlist.component';
+import { EventArtistService } from './services/eventartist.service';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 
@@ -48,6 +51,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     EntitylistComponent,
     EventOrganizerformComponent,
     EventOrganizerlistComponent,
+    EventArtistformComponent,
+    EventArtistlistComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +72,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     CityService,
     AreaService,
     EntityService,
-    EventOrganizerService
+    EventOrganizerService,
+    EventArtistService,
   ],
   bootstrap: [AppComponent]
 })

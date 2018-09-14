@@ -2,14 +2,19 @@ using System;
 
 namespace kb_app.Models
 {
-    public class EventOrganizer
+    public class EventArtist
     {
-         public int EventOrganizerID{ get; set; }
+         public int EventArtistID{ get; set; }
          public int EventID { get; set; }
 
-         public int EntityID { get; set; } 
+         public int ArtistID { get; set; } 
 
-        //public Entity EntityOrganizer { get; set; }
+
+       public DateTime? StartTime { get; set; }
+
+       public DateTime? EndTime { get; set; }
+
+        public int IsActive { get; set; }
 
         public int CreatedBy { get; set; }
 

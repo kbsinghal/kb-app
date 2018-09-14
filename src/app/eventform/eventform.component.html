@@ -196,6 +196,17 @@
             </mat-error>  
           </mat-form-field>  
         </div>
+
+        <div>  
+          <mat-radio-group class="contact-radio-group" formControlName="IsActive" >  
+            <mat-radio-button class="contact-radio-button" *ngFor="let option of activeOptions" [value]="option.id">  
+              {{ option.name }}  
+            </mat-radio-button>  
+          </mat-radio-group>  
+          <mat-error *ngIf="formErrors.IsActive">  
+            {{ formErrors.IsActive }}  
+          </mat-error>  
+        </div> 
        
 <!-- <div>
     <mat-form-field appearance="outline">  

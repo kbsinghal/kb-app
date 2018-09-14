@@ -10,9 +10,10 @@ using System;
 namespace kbapp.Migrations
 {
     [DbContext(typeof(KBAppContext))]
-    partial class KBAppContextModelSnapshot : ModelSnapshot
+    [Migration("20180913134038_InitialCreate4")]
+    partial class InitialCreate4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -192,34 +193,6 @@ namespace kbapp.Migrations
                     b.HasKey("EventID");
 
                     b.ToTable("Event");
-                });
-
-            modelBuilder.Entity("kb_app.Models.EventArtist", b =>
-                {
-                    b.Property<int>("EventArtistID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("ArtistID");
-
-                    b.Property<int>("CreatedBy");
-
-                    b.Property<DateTime>("CreatedOn");
-
-                    b.Property<DateTime?>("EndTime");
-
-                    b.Property<int>("EventID");
-
-                    b.Property<int>("IsActive");
-
-                    b.Property<DateTime?>("StartTime");
-
-                    b.Property<int>("UpdatedBy");
-
-                    b.Property<DateTime>("UpdatedOn");
-
-                    b.HasKey("EventArtistID");
-
-                    b.ToTable("EventArtist");
                 });
 
             modelBuilder.Entity("kb_app.Models.EventOrganizer", b =>

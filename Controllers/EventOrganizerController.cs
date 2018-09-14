@@ -112,7 +112,7 @@ foreach(int e in item.EntityIDs){
                      EntityID=e,
                      CreatedOn=DateTime.Now,
                     UpdatedOn=DateTime.Now,
-                    CreatedBy=1
+                    CreatedBy=item.UserID
     });
             _context.SaveChanges();  }
             
@@ -169,7 +169,7 @@ foreach(int e in item.EntityIDs){
                      EntityID=eid,
                      CreatedOn=DateTime.Now,
                     UpdatedOn=DateTime.Now,
-                    CreatedBy=1
+                    CreatedBy=item.UserID,
             });
           }
         _context.SaveChanges();

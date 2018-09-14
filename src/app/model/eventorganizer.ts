@@ -3,9 +3,10 @@ import { IEntity } from '../model/entity';
 export interface IEventOrganizer {
     EventOrganizerID: number;
     EventID: number;
-    // AreaName: string;
+    EventName: string;
     EntityList: IEntity[];
     EntityIDs: number[];
+    UserID: number;
     // CreatedBy: number;
     // UpdatedBy: number;
 }

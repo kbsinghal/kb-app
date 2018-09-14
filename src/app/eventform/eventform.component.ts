@@ -35,7 +35,7 @@ export class EventformComponent implements OnInit {
    event: IEvent;
   genders = [];
   technologies = [];
-  
+  activeOptions = [];
    countries = [];
    states = [];
    cities = [];
@@ -62,18 +62,26 @@ export class EventformComponent implements OnInit {
       EventStartDate: ['', [Validators.required]],
       EventEndDate: ['', [Validators.required]],
       EventStartTime: ['', [Validators.required]],
-      EventEndTime: ['', [Validators.required]],
-      EventVenueLatitude: ['', [Validators.required]],
-      EventVenueLongitude: ['', [Validators.required]],
+      EventEndTime: [''],
+      EventVenueLatitude: [''],
+      EventVenueLongitude: [''],
       CountryID: ['', [Validators.required]],
       StateID: ['', [Validators.required]],
       CityID: ['', [Validators.required]],
       AreaID: ['', [Validators.required]],
-      IsActive: ['', [Validators.required]]
+      IsActive: ['', [Validators.required]],
+      CountryName: [''],
+      StateName: [''],
+      CityName: [''],
+      AreaName: [''],
+      UserID: [-1]
          });
     // this.genders = Global.genders;
     // this.technologies = Global.technologies;
       // this.countries = Global.countries;
+
+      this.activeOptions = Global.activeOptions;
+
      // var aaaaa = this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'getAllCountry');
      // console.log(this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry'));
     // loadCountriesddl():void{ this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'getAllCountry')
@@ -142,9 +150,9 @@ export class EventformComponent implements OnInit {
     'EventStartDate': '',
     'EventEndDate': '',
     'EventStartTime': '',
-    'EventEndTime': '',
-    'EventVenueLatitude': '',
-    'EventVenueLongitude': '',
+    // 'EventEndTime': '',
+    // 'EventVenueLatitude': '',
+    // 'EventVenueLongitude': '',
     'CountryID': '',
     'StateID': '',
     'CityID': '',
@@ -185,15 +193,15 @@ export class EventformComponent implements OnInit {
     'EventStartTime': {
       'required': 'Event Start Time is required.'
     },
-    'EventEndTime': {
-      'required': 'Event End Time is required.'
-    },
-    'EventVenueLatitude': {
-      'required': 'Event Venue Latitude is required.'
-    },
-    'EventVenueLongitude': {
-      'required': 'Event Venue Longitude is required.'
-    },
+    // 'EventEndTime': {
+    //   'required': 'Event End Time is required.'
+    // },
+    // 'EventVenueLatitude': {
+    //   'required': 'Event Venue Latitude is required.'
+    // },
+    // 'EventVenueLongitude': {
+    //   'required': 'Event Venue Longitude is required.'
+    // },
     'CountryID': {
       'required': 'Country is required.'
     },
@@ -272,9 +280,13 @@ export class EventformComponent implements OnInit {
   }
 
   mapEventID(event: IEvent): IEvent {
-    if (event.EventID == null)
-    {
-      event.EventID = -1; 
+    if (event.EventID == null) {
+      event.EventID = -1;
+      event.UserID = -1;
+      event.CountryName = '';
+      event.StateName = '';
+      event.CityName = '';
+      event.AreaName = '';
     }
     return event;
   }

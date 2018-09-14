@@ -4,58 +4,67 @@ import { FormBuilder, Validators } from '@angular/forms';
 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, AUTOCOMPLETE_PANEL_HEIGHT } from '@angular/material';
 
-import { EventOrganizerlistComponent } from '../eventorganizerlist/eventorganizerlist.component';
+import { EventArtistlistComponent } from '../eventartistlist/eventartistlist.component';
 
 import { IEvent } from '../model/event';
 import { IEntity } from '../model/entity';
-import { IEventOrganizer } from '../model/eventorganizer';
+import { IEventArtist } from '../model/eventartist';
+
 import { EventService } from '../services/event.service';
 import { EntityService } from '../services/entity.service';
-import { EventOrganizerService } from '../services/eventorganizer.service';
+import { EventArtistService } from '../services/eventartist.service';
+
 import { DBOperation } from '../shared/DBOperation';
 import { Global } from '../shared/Global';
 
 @Component({
-  selector: 'app-eventorganizerform',
-  templateUrl: './eventorganizerform.component.html',
-  styleUrls: ['./eventorganizerform.component.css']
+  selector: 'app-eventartistform',
+  templateUrl: './eventartistform.component.html',
+  styleUrls: ['./eventartistform.component.css']
 })
 
-export class EventOrganizerformComponent implements OnInit {
+export class EventArtistformComponent implements OnInit {
   msg: string;
   indLoading = false;
-  eventOrganizerFrm: FormGroup;
+  eventartistFrm: FormGroup;
    dbops: DBOperation;
    modalTitle: string;
    modalBtnTitle: string;
   listFilter: string;
   selectedOption: string;
-   eventOrganizer: IEventOrganizer;
+   eventartist: IEventArtist;
   // genders = [];
   // technologies = [];
   events = [];
   entities = [];
+  activeOptions = [];
+
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder,
-    private _eventOrganizerService: EventOrganizerService,
     private _eventService: EventService,
     private _entityService: EntityService,
-    public dialogRef: MatDialogRef<EventOrganizerlistComponent>) { }
+    private _eventartistService: EventArtistService,
+
+    public dialogRef: MatDialogRef<EventArtistlistComponent>) { }
 
   ngOnInit() {
-    // built state form
-    this.eventOrganizerFrm = this.fb.group({
-      EventOrganizerID: [-1],
-     // AreaName: ['', [Validators.required, Validators.maxLength(250)]],
-      EventID: ['', [Validators.required]],
-      EntityIDs: ['', [Validators.required]],
-      EntityList: [''],
+    // built event artist form
+    this.eventartistFrm = this.fb.group({
+      EventArtistID: [],
+      EventID: [-1, [Validators.required]],
+      ArtistID: [-1, [Validators.required]],
       EventName: [''],
-      UserID: [-1],
-       });
+      ArtistName: [''],
+      StartTime: [''],
+      EndTime: [''],
+      UserID: [],
+      IsActive: [],
+      });
     // this.genders = Global.genders;
     // this.technologies = Global.technologies;
+
+    this.activeOptions = Global.activeOptions;
 
 
     this._eventService.getAllEvent(Global.BASE_USER_ENDPOINT + 'Event/' + 'getAllEvent')
@@ -71,24 +80,20 @@ export class EventOrganizerformComponent implements OnInit {
 
 
     // subscribe on value changed event of form to show validation message
-    this.eventOrganizerFrm.valueChanges.subscribe(data => this.onValueChanged(data));
+    this.eventartistFrm.valueChanges.subscribe(data => this.onValueChanged(data));
     this.onValueChanged();
 
     if (this.data.dbops === DBOperation.create) {
-      this.eventOrganizerFrm.reset();
+      this.eventartistFrm.reset();
     } else {
-      console.log('hi');
-      console.log(this.data.eventOrganizer);
-      console.log(this.data.eventorganizer);
-      // console.log(eventOrganizer);
-       this.eventOrganizerFrm.setValue(this.data.eventorganizer);
+      this.eventartistFrm.setValue(this.data.eventartist);
     }
     this.SetControlsState(this.data.dbops === DBOperation.delete ? false : true);
   }
   // form value change event
   onValueChanged(data?: any) {
-    if (!this.eventOrganizerFrm) { return; }
-    const form = this.eventOrganizerFrm;
+    if (!this.eventartistFrm) { return; }
+    const form = this.eventartistFrm;
     // tslint:disable-next-line:forin
     for (const field in this.formErrors) {
       // clear previous error message (if any)
@@ -108,13 +113,7 @@ export class EventOrganizerformComponent implements OnInit {
   // tslint:disable-next-line:member-ordering
   formErrors = {
     'EventID': '',
-    'EntityIDs': '',
-    // 'EntityList': '',
-    // 'EventName': '',
-    // 'CreatedBy': '',
-    // 'UpdatedBy': '',
-    // 'CreatedOn': '',
-    // 'UpdatedOn': ''
+    'ArtistID': '',
   };
   // custom valdiation messages
   // tslint:disable-next-line:member-ordering
@@ -123,21 +122,16 @@ export class EventOrganizerformComponent implements OnInit {
       'maxlength': 'EventID cannot be more than 50 characters long.',
       'required': 'EventID is required.'
     },
-    'EntityIDs': {
-      'maxlength': 'EntityIDs cannot be more than 50 characters long.',
-      'required': 'EntityIDs is required.'
-    },
-    // 'EventName': {
-    //   'maxlength': 'EventName cannot be more than 50 characters long.',
-    //   'required': 'EventName is required.'
-    // }
-
+    'ArtistID': {
+      'maxlength': 'ArtistID cannot be more than 50 characters long.',
+      'required': 'ArtistID is required.'
+    }
   };
   onSubmit(formData: any) {
-     const eventOrganizerData = this.mapEventOrganizerID(formData.value);
+     const eventartistData = this.mapEventArtistID(formData.value);
     switch (this.data.dbops) {
       case DBOperation.create:
-             this._eventOrganizerService.addEventOrganizer(Global.BASE_USER_ENDPOINT + 'EventOrganizer/' + 'addEventOrganizer', eventOrganizerData).subscribe(
+             this._eventartistService.addEventArtist(Global.BASE_USER_ENDPOINT + 'EventArtist/' + 'addEventArtist', eventartistData).subscribe(
           data => {
             // Success
             if (data.message) {
@@ -152,7 +146,7 @@ export class EventOrganizerformComponent implements OnInit {
         );
         break;
       case DBOperation.update:
-        this._eventOrganizerService.updateEventOrganizer(Global.BASE_USER_ENDPOINT + 'EventOrganizer/' + 'updateEventOrganizer', eventOrganizerData.EventOrganizerID, eventOrganizerData).subscribe(
+        this._eventartistService.updateEventArtist(Global.BASE_USER_ENDPOINT + 'EventArtist/' + 'updateEventArtist', eventartistData.EventArtistID, eventartistData).subscribe(
           data => {
             // Success
             if (data.message) {
@@ -167,7 +161,7 @@ export class EventOrganizerformComponent implements OnInit {
         );
         break;
       case DBOperation.delete:
-        this._eventOrganizerService.deleteEventOrganizer(Global.BASE_USER_ENDPOINT + 'EventOrganizer/' + 'deleteEventOrganizer', eventOrganizerData.EventOrganizerID).subscribe(
+        this._eventartistService.deleteEventArtist(Global.BASE_USER_ENDPOINT + 'EventArtist/' + 'deleteEventArtist', eventartistData.EventArtistID).subscribe(
           data => {
             // Success
             if (data.message) {
@@ -184,14 +178,19 @@ export class EventOrganizerformComponent implements OnInit {
     }
   }
   SetControlsState(isEnable: boolean) {
-    isEnable ? this.eventOrganizerFrm.enable() : this.eventOrganizerFrm.disable();
+    isEnable ? this.eventartistFrm.enable() : this.eventartistFrm.disable();
   }
 
-    mapEventOrganizerID(eventOrganizer: IEventOrganizer): IEventOrganizer {
-    if (eventOrganizer == null || eventOrganizer.EventOrganizerID == null)    {
-      eventOrganizer.EventOrganizerID = -1;
-      eventOrganizer.UserID = -1;
+  mapEventArtistID(eventartist: IEventArtist): IEventArtist {
+    if (eventartist.EventArtistID == null)    {
+      eventartist.EventArtistID = -1;
+      eventartist.UserID = -1;
+      eventartist.EventName = '';
+      eventartist.ArtistName = '';
+      eventartist.StartTime = '';
+      eventartist.StartTime = '';
+      eventartist.IsActive = 0;
     }
-    return eventOrganizer;
+    return eventartist;
   }
 }
