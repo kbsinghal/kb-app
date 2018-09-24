@@ -168,8 +168,8 @@ export class AreaformComponent implements OnInit {
     mapAreaID(area: IArea): IArea {
     if (area.AreaID == null)    {
       area.AreaID = -1;
-      //area.AreaName = '';
-      area.UserID = -1;
+      // area.AreaName = '';
+      area.UserID = 1;
       area.CityName = '';
       area.StateID = -1;
       area.StateName = '';

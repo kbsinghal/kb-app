@@ -37,7 +37,7 @@
 </div> -->
 
 
-<div>  
+<!-- <div>  
   <mat-radio-group class="contact-radio-group" formControlName="IsRegistered" >  
     <mat-radio-button class="contact-radio-button" *ngFor="let option of registeredOptions" [value]="option.id">  
       {{ option.name }}  
@@ -46,7 +46,19 @@
   <mat-error *ngIf="formErrors.IsRegistered">  
     {{ formErrors.IsRegistered }}  
   </mat-error>  
-</div> 
+</div>  -->
+
+<div>
+    <mat-label>Registered</mat-label>
+    <mat-radio-group class="contact-radio-group" formControlName="IsRegistered" >  
+      <mat-radio-button class="contact-radio-button" *ngFor="let option of YesNoOptions" [value]="option.id">  
+        {{ option.name }}  
+      </mat-radio-button>  
+    </mat-radio-group>  
+    <mat-error *ngIf="formErrors.IsRegistered">  
+      {{ formErrors.IsRegistered }}  
+    </mat-error>  
+  </div>
 
 
 
@@ -56,9 +68,9 @@
     <input matInput placeholder="FirstName" formControlName="FirstName">  
     <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
     <!-- <mat-hint>Hint</mat-hint> -->  
-    <mat-error *ngIf="formErrors.FirstName">  
+    <!-- <mat-error *ngIf="formErrors.FirstName">  
       {{ formErrors.FirstName }}  
-    </mat-error>  
+    </mat-error>   -->
   </mat-form-field>  
 </div>
 
@@ -68,9 +80,9 @@
   <input matInput placeholder="MiddleName" formControlName="MiddleName">  
   <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
   <!-- <mat-hint>Hint</mat-hint> -->  
-  <mat-error *ngIf="formErrors.MiddleName">  
+  <!-- <mat-error *ngIf="formErrors.MiddleName">  
     {{ formErrors.MiddleName }}  
-  </mat-error>  
+  </mat-error>   -->
 </mat-form-field>  
 </div>
 
@@ -80,9 +92,9 @@
   <input matInput placeholder="LastName" formControlName="LastName">  
   <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
   <!-- <mat-hint>Hint</mat-hint> -->  
-  <mat-error *ngIf="formErrors.LastName">  
+  <!-- <mat-error *ngIf="formErrors.LastName">  
     {{ formErrors.LastName }}  
-  </mat-error>  
+  </mat-error>   -->
 </mat-form-field>  
 </div>
 
@@ -92,23 +104,34 @@
   <input matInput placeholder="NickName" formControlName="NickName">  
   <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
   <!-- <mat-hint>Hint</mat-hint> -->  
-  <mat-error *ngIf="formErrors.NickName">  
+  <!-- <mat-error *ngIf="formErrors.NickName">  
     {{ formErrors.NickName }}  
-  </mat-error>  
+  </mat-error>   -->
 </mat-form-field>  
 </div>
 
-<div>  
+<!-- <div>  
   <mat-form-field appearance="outline">  
   <mat-label>Entity Type</mat-label>  
   <input matInput placeholder="EntityType" formControlName="EntityType">  
-  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
-  <!-- <mat-hint>Hint</mat-hint> -->  
+ 
   <mat-error *ngIf="formErrors.EntityType">  
     {{ formErrors.EntityType }}  
   </mat-error>  
 </mat-form-field>  
-</div>
+</div> -->
+
+<div>
+    <mat-label>Active</mat-label>
+    <mat-radio-group class="contact-radio-group" formControlName="EntityType" >  
+      <mat-radio-button class="contact-radio-button" *ngFor="let option of EntityTypeOptions" [value]="option.value">  
+        {{ option.name }}  
+      </mat-radio-button>  
+    </mat-radio-group>  
+    <mat-error *ngIf="formErrors.EntityType">  
+      {{ formErrors.EntityType }}  
+    </mat-error>  
+  </div>
 
 <div>  
   <mat-form-field appearance="outline">  
@@ -139,6 +162,7 @@
 
 <div>
   <mat-form-field appearance="outline">  
+      <mat-label>Country</mat-label>
     <mat-select placeholder="Select a Country" formControlName="RegisteredCountryID">  
       <mat-option>-- None --</mat-option>  
       <mat-option *ngFor="let country of countries" [value]="country.CountryID">  
@@ -168,6 +192,7 @@
 
 <div>
   <mat-form-field appearance="outline">  
+      <mat-label>State</mat-label>
     <mat-select placeholder="Select a State" formControlName="RegisteredStateID">  
       <mat-option>-- None --</mat-option>  
       <mat-option *ngFor="let state of states" [value]="state.StateID">  
@@ -187,6 +212,7 @@
 
 <div>
   <mat-form-field appearance="outline">  
+      <mat-label>City</mat-label>
     <mat-select placeholder="Select a City" formControlName="RegisteredCityID">  
       <mat-option>-- None --</mat-option>  
       <mat-option *ngFor="let city of cities" [value]="city.CityID">  
@@ -200,7 +226,8 @@
 </div>
 
 <div>
-  <mat-form-field appearance="outline">  
+  <mat-form-field appearance="outline">
+      <mat-label>Area</mat-label>  
     <mat-select placeholder="Select a Area" formControlName="RegisteredAreaID">  
       <mat-option>-- None --</mat-option>  
       <mat-option *ngFor="let area of areas" [value]="area.AreaID">  
@@ -245,9 +272,9 @@
   <input matInput placeholder="WebsiteAddress" formControlName="WebsiteAddress">  
   <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
   <!-- <mat-hint>Hint</mat-hint> -->  
-  <mat-error *ngIf="formErrors.WebsiteAddress">  
+  <!-- <mat-error *ngIf="formErrors.WebsiteAddress">  
     {{ formErrors.WebsiteAddress }}  
-  </mat-error>  
+  </mat-error>   -->
 </mat-form-field>  
 </div>
 
@@ -257,9 +284,9 @@
   <input matInput placeholder="FacebookAddress" formControlName="FacebookAddress">  
   <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
   <!-- <mat-hint>Hint</mat-hint> -->  
-  <mat-error *ngIf="formErrors.FacebookAddress">  
+  <!-- <mat-error *ngIf="formErrors.FacebookAddress">  
     {{ formErrors.FacebookAddress }}  
-  </mat-error>  
+  </mat-error>   -->
 </mat-form-field>  
 </div>
 
@@ -269,9 +296,9 @@
   <input matInput placeholder="YouTubeAddress" formControlName="YouTubeAddress">  
   <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
   <!-- <mat-hint>Hint</mat-hint> -->  
-  <mat-error *ngIf="formErrors.YouTubeAddress">  
+  <!-- <mat-error *ngIf="formErrors.YouTubeAddress">  
     {{ formErrors.YouTubeAddress }}  
-  </mat-error>  
+  </mat-error>   -->
 </mat-form-field>  
 </div>
 
@@ -281,9 +308,9 @@
   <input matInput placeholder="TwitterAddress" formControlName="TwitterAddress">  
   <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
   <!-- <mat-hint>Hint</mat-hint> -->  
-  <mat-error *ngIf="formErrors.TwitterAddress">  
+  <!-- <mat-error *ngIf="formErrors.TwitterAddress">  
     {{ formErrors.TwitterAddress }}  
-  </mat-error>  
+  </mat-error>   -->
 </mat-form-field>  
 </div>
 
@@ -293,9 +320,9 @@
   <input matInput placeholder="GooglePlusAddress" formControlName="GooglePlusAddress">  
   <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
   <!-- <mat-hint>Hint</mat-hint> -->  
-  <mat-error *ngIf="formErrors.GooglePlusAddress">  
+  <!-- <mat-error *ngIf="formErrors.GooglePlusAddress">  
     {{ formErrors.GooglePlusAddress }}  
-  </mat-error>  
+  </mat-error>   -->
 </mat-form-field>  
 </div>
 
@@ -310,22 +337,17 @@
 </mat-form-field>  
 </div> -->
 
-<!-- <p>  
+<div>
+  <mat-label>Active</mat-label>
   <mat-radio-group class="contact-radio-group" formControlName="IsActive" >  
-    <mat-radio-button class="contact-radio-button" *ngFor="let option of activeOptions" [value]="option.id">  
+    <mat-radio-button class="contact-radio-button" *ngFor="let option of YesNoOptions" [value]="option.id">  
       {{ option.name }}  
     </mat-radio-button>  
   </mat-radio-group>  
   <mat-error *ngIf="formErrors.IsActive">  
     {{ formErrors.IsActive }}  
   </mat-error>  
-</p>  -->
-
-
-
-
-
-
+</div>
   
   <div>  
     

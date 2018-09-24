@@ -1,10 +1,30 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+// used to create fake backend
+//import { fakeBackendProvider } from './_helpers/ake-backend';
+
+import { AppComponent } from './app.component';
 import { Routing } from './app.routing';
+
+import { AlertComponent } from './_directives/alert.component';
+import { AuthGuard } from './_guards/auth.guard';
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
+import { ErrorInterceptor } from './_helpers/error.interceptor';
+import { AlertService} from './services/alert.service';
+import {  AuthenticationService } from './services/authentication.service';
+import { UserService } from './services/user.service';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+ 
+
+
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+
 import { LayoutModule } from '@angular/cdk/layout';
 import { AppMaterialModule } from './app.material.module';
 import { EventformComponent } from './eventform/eventform.component';
@@ -31,6 +51,14 @@ import { EventOrganizerService } from './services/eventorganizer.service';
 import { EventArtistformComponent } from './eventartistform/eventartistform.component';
 import { EventArtistlistComponent } from './eventartistlist/eventartistlist.component';
 import { EventArtistService } from './services/eventartist.service';
+import { UserformComponent } from './userform/userform.component';
+import { UserlistComponent } from './userlist/userlist.component';
+
+
+
+
+
+
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 
@@ -53,6 +81,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     EventOrganizerlistComponent,
     EventArtistformComponent,
     EventArtistlistComponent,
+    AlertComponent,
+    LoginComponent,
+    HomeComponent,
+    UserformComponent,
+    UserlistComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +99,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatToolbarModule
   ],
    providers: [
+    AuthGuard,
+    AlertService,
+    AuthenticationService,
+    UserService,
     EventService,
     CountryService,
     StateService,
@@ -74,6 +111,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     EntityService,
     EventOrganizerService,
     EventArtistService,
+    AlertService,
+    UserService,
+    AuthenticationService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+ // provider used to create fake backend
+ //fakeBackendProvider
   ],
   bootstrap: [AppComponent]
 })

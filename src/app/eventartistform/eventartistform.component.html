@@ -2,11 +2,12 @@
   <h2>{{data.modalTitle}}</h2>  
     
   <div>
-    <mat-form-field appearance="outline">  
+    <mat-form-field appearance="outline">
+        <mat-label>Event</mat-label>  
       <mat-select placeholder="Select a Event" formControlName="EventID">  
         <mat-option>-- None --</mat-option>  
         <mat-option *ngFor="let event  of events" [value]="event.EventID">  
-          {{ event.EventName }}  
+          {{ event.EventStartDate | date: "dd-MMM-yyyy" }} - {{ event.EventName }}
         </mat-option>  
       </mat-select>  
       <mat-error *ngIf="formErrors.EventID ">  
@@ -18,7 +19,8 @@
 
 
 <div>
-  <mat-form-field appearance="outline">  
+  <mat-form-field appearance="outline">
+      <mat-label>Artist</mat-label>  
     <mat-select placeholder="Select a Artist" formControlName="ArtistID">  
       <mat-option>-- None --</mat-option>  
       <mat-option *ngFor="let entity  of entities" [value]="entity.EntityID">  
@@ -33,7 +35,7 @@
 
 <div>  
   <mat-form-field appearance="outline">  
-  <mat-label>Start Time</mat-label>  
+  <mat-label>Performance Start Time</mat-label>  
   <input matInput placeholder="Start Time" formControlName="StartTime">  
   <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
   <!-- <mat-hint>Hint</mat-hint> -->  
@@ -45,7 +47,7 @@
 
 <div>  
   <mat-form-field appearance="outline">  
-  <mat-label>End Time</mat-label>  
+  <mat-label>Performance End Time</mat-label>  
   <input matInput placeholder="End Time" formControlName="EndTime">  
   <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
   <!-- <mat-hint>Hint</mat-hint> -->  
@@ -56,7 +58,8 @@
 </div>
 <div>  
   <mat-radio-group class="contact-radio-group" formControlName="IsActive" >  
-    <mat-radio-button class="contact-radio-button" *ngFor="let option of activeOptions" [value]="option.id">  
+      <mat-label>Active</mat-label>  
+    <mat-radio-button class="contact-radio-button" *ngFor="let option of YesNoOptions" [value]="option.id">  
       {{ option.name }}  
     </mat-radio-button>  
   </mat-radio-group>  

@@ -16,7 +16,12 @@ using System.IO;
 using Newtonsoft.Json.Serialization;
 using System.Net.Http.Formatting;
 using System.Web.Http;
-
+using kb_app.Helpers;
+//using kb_app.Services; KB
+using AutoMapper;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 
 
@@ -24,78 +29,107 @@ namespace kb_app
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(Microsoft.Extensions.Configuration.IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public Microsoft.Extensions.Configuration.IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
 
-           
-            ////GlobalConfiguration.Configuration.Formatters.Add(new XmlMediaTypeFormatter());
-
-             services.AddDbContext<KBAppContext>(options =>  options.UseMySQL(Configuration.GetConnectionString("KBHIConnection")));
-            services.AddCors();
+           services.AddCors();
+            
+            //services.AddDbContext<DataContext>(x => x.UseInMemoryDatabase("TestDb"));
+            services.AddDbContext<KBAppContext>(options =>  options.UseMySQL(Configuration.GetConnectionString("KBHIConnection")));
+            
             services.AddMvc()
             .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+            services.AddAutoMapper();
 
-            
-             //System.Web.Http.GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
-            //Configuration.Formatters.Insert(0, new System.Net.Http.Formatting.JsonMediaTypeFormatter());
-            //GlobalConfiguration.Configuration.Formatters.Insert(0, new System.Net.Http.Formatting.JsonMediaTypeFormatter());
+           
+ 
+            // configure strongly typed settings objects
+            var appSettingsSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettingsSection);
+ 
+            // configure jwt authentication
+            var appSettings = appSettingsSection.Get<AppSettings>();
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(x =>
+            {
+                x.Events = new JwtBearerEvents
+                {
+                    OnTokenValidated = context =>
+                    {
+                        //var userService = context.HttpContext.RequestServices.GetRequiredService<IUserService>(); kb
+                        var userId = int.Parse(context.Principal.Identity.Name);
+                        //var user = userService.GetById(userId); KB
+                        // if (user == null)
+                        // {
+                        //     // return unauthorized if user no longer exists
+                        //     context.Fail("Unauthorized");
+                        // }
+                        return Task.CompletedTask;
+                    }
+                };
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+ 
+            // configure DI for application services
+            //services.AddScoped<IUserService, UserService>(); KB 
             
         }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) //new added
+        // {
+        //     loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+        //     loggerFactory.AddDebug();
+ 
+        //     // global cors policy
+        //     app.UseCors(x => x
+        //         .AllowAnyOrigin()
+        //         .AllowAnyMethod()
+        //         .AllowAnyHeader()
+        //         .AllowCredentials());
+ 
+        //     app.UseAuthentication();
+ 
+        //     app.UseMvc();
+        // }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
         
             
-            // if (env.IsDevelopment())
-            // {
-            //     app.UseDeveloperExceptionPage();
-            // }
-
-            // app.UseMvc();
-             //GlobalConfiguration.Configuration.Formatters.Clear();
-            //GlobalConfiguration.Configuration.Formatters.Add(new System.Net.Http.Formatting.JsonMediaTypeFormatter());
-            
+           
 //Redirect non api calls to angular app that will handle routing of the app.    
 
 app.Use(async (context, next) => {  
-    
-    
-    
     context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
-    //context.Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:5000");
     context.Response.Headers.Add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     context.Response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, PUT, OPTIONS");
-
     context.Request.Headers.Add("Access-Control-Allow-Origin", "*");//http://localhost:5000
-    //context.Request.Headers.Add("Access-Control-Allow-Origin", "http://localhost:5000");
-    //context.Request.Headers.Add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     context.Request.Headers.Add("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
     context.Request.Headers.Add("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE, PUT, OPTIONS");
 
-
-    
-
-
-    //'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT, OPTIONS',
-//      'Access-Control-Allow-Origin', 'http://localhost:5000',
-  //    'Access-Control-Allow-Headers', "X-Requested-With, Content-Type",
-
-    //context.Response.Headers.Add("Authorization","Basic " + Base64.encode("username" + ':' + "password"));
-    //context.Response.Headers.Add("Authorization","Basic a2FseWFhbmJoYXYgOiBNMHJwaCF1cw==");
-      //context.Response.Headers.Add("auth-token","C3PO R2D2");
-
-    //context.GlobalConfiguration.configuration.for
-    //context.GlobalConfiguration.Configuration.Formatters.Clear();
-    //context.GlobalConfiguration.Configuration.Formatters.Add(new System.Net.Http.Formatting.JsonMediaTypeFormatter());
     await next();  
     if (context.Response.StatusCode == 404 && !Path.HasExtension(context.Request.Path.Value) && !context.Request.Path.Value.StartsWith("/api/")) 
     {context.Request.Path = "/index.html";  
@@ -105,9 +139,6 @@ app.Use(async (context, next) => {
 // configure the app to serve index.html from /wwwroot folder    
 app.UseDefaultFiles();  
 app.UseStaticFiles();  
-//app.Use('Access-Control-Allow-Origin':'*');
-//app.UseCors();
-// configure the app for usage as api    
 app.UseMvcWithDefaultRoute(); 
 
        }

@@ -37,7 +37,7 @@ export class EventArtistformComponent implements OnInit {
   // technologies = [];
   events = [];
   entities = [];
-  activeOptions = [];
+  YesNoOptions = [];
 
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
@@ -64,7 +64,7 @@ export class EventArtistformComponent implements OnInit {
     // this.genders = Global.genders;
     // this.technologies = Global.technologies;
 
-    this.activeOptions = Global.activeOptions;
+    this.YesNoOptions = Global.YesNoOptions;
 
 
     this._eventService.getAllEvent(Global.BASE_USER_ENDPOINT + 'Event/' + 'getAllEvent')
@@ -184,12 +184,12 @@ export class EventArtistformComponent implements OnInit {
   mapEventArtistID(eventartist: IEventArtist): IEventArtist {
     if (eventartist.EventArtistID == null)    {
       eventartist.EventArtistID = -1;
-      eventartist.UserID = -1;
+      eventartist.UserID = 1;
       eventartist.EventName = '';
       eventartist.ArtistName = '';
-      eventartist.StartTime = '';
-      eventartist.StartTime = '';
-      eventartist.IsActive = 0;
+      // eventartist.StartTime = '';
+      // eventartist.StartTime = '';
+      // eventartist.IsActive = 0;
     }
     return eventartist;
   }

@@ -9,8 +9,6 @@ namespace kb_app.Models
 
          public int EntityID { get; set; } 
 
-        //public Entity EntityOrganizer { get; set; }
-
         public int CreatedBy { get; set; }
 
        public int UpdatedBy { get; set; }

@@ -24,7 +24,7 @@ export class EventlistComponent implements OnInit {
 
   // set columns that will need to show in listing table
   // displayedColumns = ['name', 'email', 'gender', 'birth', 'techno', 'message', 'action'];
-  displayedColumns = ['EventID', 'EventName', 'EventStartDate', 'EventEndDate', 'CountryID', 'CountryName','StateID','StateName','CityID','CityName','AreaID','AreaName' , 'action'];
+  displayedColumns = ['EventID', 'EventName', 'EventStartDate', 'EventEndDate', 'CountryID', 'CountryName', 'StateID', 'StateName', 'CityID', 'CityName', 'AreaID', 'AreaName' , 'action'];
    // setting up datasource for material table
   dataSource = new MatTableDataSource<IEvent>();
 
@@ -65,7 +65,7 @@ export class EventlistComponent implements OnInit {
   }
 
   loadEvents(): void {
-    this._eventService.getAllEvent(Global.BASE_USER_ENDPOINT + 'Event/' +'getAllEvent')
+    this._eventService.getAllEvent(Global.BASE_USER_ENDPOINT + 'Event/' + 'getAllEvent')
     .subscribe(events => {
     this.loadingState = false;
     this.dataSource.data = events;

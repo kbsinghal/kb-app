@@ -27,8 +27,8 @@ export class CountryformComponent implements OnInit {
   listFilter: string;
   selectedOption: string;
    country: ICountry;
-  genders = [];
-  technologies = [];
+  // genders = [];
+  // technologies = [];
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder,
@@ -151,7 +151,7 @@ export class CountryformComponent implements OnInit {
     mapCountryID(country: ICountry): ICountry {
       if (country.CountryID == null)    {
       country.CountryID = -1;
-      country.UserID = -1;
+      country.UserID = 1;
     }
     return country;
   }

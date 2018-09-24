@@ -23,9 +23,62 @@ public class EntityController: Controller {
 
     [HttpGet]  
     [Route("getAllEntity")]  
-    public IEnumerable <Entity> GetAll() {  
+    public IEnumerable <EntityModel> GetAll() {  
             
-            return _context.Entity.ToList();  // fetch all entity records  
+            //return _context.Entity.ToList();  // fetch all entity records  
+
+             List<EntityModel> lstEntityModel=new List<EntityModel>();
+             List<Area> lstArea=_context.Area.ToList();
+             List<Country> lstCountry=_context.Country.ToList();
+             List<State> lstState=_context.State.ToList();
+             List<City> lstCity=_context.City.ToList();
+             List<Entity> lstEntity=_context.Entity.ToList();
+
+
+            //return _context.State.ToList();  // fetch all state records 
+          //_context.State.ToList().ForEach(aa=>{StateModel stateModel=new StateModel();stateModel.StateID=aa.StateID;stateModel.CountryID=aa.CountryID; stateModel.StateName=aa.StateName;lstStateModel.Add(stateModel);});  // fetch all state records  
+
+          lstEntityModel= (from en in lstEntity join ar in lstArea on en.RegisteredAreaID equals ar.AreaID
+                            join ci in lstCity on ar.CityID equals ci.CityID
+                            join st in lstState on ci.StateID equals st.StateID
+                            join co in lstCountry on st.CountryID equals co.CountryID
+          
+                            //lc in lstCountry join ls in lstState on lc.CountryID equals ls.CountryID  
+                           //join ct in lstCity on ls.StateID equals ct.StateID 
+                           //join ar in lstArea on ct.CityID equals ar.CityID
+                           //join et in lstEntity on ar.CityID equals et.RegisteredCityID  
+          select new EntityModel()
+          {
+          RegisteredCountryID=co.CountryID,
+          CountryName= co.CountryName,    
+          RegisteredStateID = st.StateID, 
+          StateName = st.StateName, 
+          RegisteredCityID=ci.CityID,
+          CityName = ci.CityName,
+          RegisteredAreaID=ar.AreaID,
+          AreaName = ar.AreaName,
+          Name = en.Name,
+          FirstName = en.FirstName,
+          MiddleName = en.MiddleName,
+          LastName = en.LastName,
+          NickName = en.NickName,
+          Description = en.Description,
+          EntityType = en.EntityType,
+          IsRegistered = en.IsRegistered,
+          RegisteredAddress= en.RegisteredAddress,
+          EmailAddress = en.EmailAddress,
+          WebsiteAddress = en.WebsiteAddress,
+          Logo = en.Logo,
+          FacebookAddress = en.FacebookAddress,
+          YouTubeAddress = en.YouTubeAddress,
+          TwitterAddress = en.TwitterAddress,
+           GooglePlusAddress = en.GooglePlusAddress,
+           IsActive = en.IsActive,
+           EntityID=en.EntityID
+            
+          }).ToList<EntityModel>();
+             return lstEntityModel;
+
         }  
 
 
@@ -33,17 +86,58 @@ public class EntityController: Controller {
     [Route("getEntity")]  
     public IActionResult GetById(long id) {  
             
-            var item = _context.Entity.FirstOrDefault(t => t.EntityID == id);  // filter entity records by entity id  
-            if (item == null) {  
+            // var item = _context.Entity.FirstOrDefault(t => t.EntityID == id);  // filter entity records by entity id  
+            // if (item == null) {  
+            //     return NotFound();  
+            // }  
+            // return new ObjectResult(item);  
+
+            Entity ey=_context.Entity.Where<Entity>(t => t.EntityID == id).FirstOrDefault();
+            
+            EntityModel item=null;
+
+            if (ey == null) {  
                 return NotFound();  
             }  
-            return new ObjectResult(item);  
+            else
+            {
+                 item=new EntityModel();
+                
+                item.EntityID=ey.EntityID;
+                 item.RegisteredCountryID=ey.RegisteredCountryID;
+          //CountryName= lc.CountryName,    
+          item.RegisteredStateID = ey.RegisteredStateID;
+          //StateName = ls.StateName, 
+          item.RegisteredCityID=ey.RegisteredCityID;
+          //CityName = ct.CityName,
+          item.RegisteredAreaID=ey.RegisteredAreaID;
+          //AreaName = ar.AreaName,
+          item.Name = ey.Name;
+          item.FirstName = ey.FirstName;
+          item.MiddleName = ey.MiddleName;
+          item.LastName = ey.LastName;
+          item.NickName = ey.NickName;
+          item.Description = ey.Description;
+          item.EntityType = ey.EntityType;
+          item.IsRegistered = ey.IsRegistered;
+          item.RegisteredAddress= ey.RegisteredAddress;
+          item.EmailAddress = ey.EmailAddress;
+          item.WebsiteAddress = ey.WebsiteAddress;
+          item.Logo = ey.Logo;
+          item.FacebookAddress = ey.FacebookAddress;
+          item.YouTubeAddress = ey.YouTubeAddress;
+          item.TwitterAddress = ey.TwitterAddress;
+           item.GooglePlusAddress = ey.GooglePlusAddress;
+           item.IsActive = ey.IsActive;
+                
+            }
+            return new ObjectResult(item); 
         }  
         
         
     [HttpPost]  
     [Route("addEntity")]  
-  public IActionResult Create([FromBody] Entity item) {  
+  public IActionResult Create([FromBody] EntityModel item) {  
             
             if (item == null) {  
                 return BadRequest();  // set bad request if entity data is not provided in body  
@@ -55,7 +149,7 @@ public class EntityController: Controller {
                      LastName = item.LastName,
                      NickName = item.NickName,
                      Description = item.Description,
-                     //IsRegistered = item.IsRegistered,
+                     IsRegistered = item.IsRegistered,
                      RegisteredAddress = item.RegisteredAddress,
                      RegisteredCityID = item.RegisteredCityID,
                      RegisteredStateID = item.RegisteredStateID,
@@ -67,22 +161,14 @@ public class EntityController: Controller {
                      YouTubeAddress = item.YouTubeAddress,
                      TwitterAddress = item.TwitterAddress,
                      GooglePlusAddress = item.GooglePlusAddress,
-                     IsActive = item.IsActive
-                    // EventDescription = item.EventDescription,  
-                    // EventStartDate = item.EventStartDate,  
-                    // EventEndDate = item.EventEndDate,  
-                    // EventAddress = item.EventAddress,
-                    // EventStartTime=item.EventStartTime,
-                    // EventEndTime=item.EventEndTime,
-                    // EventVenueLatitude=item.EventVenueLatitude,
-                    // EventVenueLongitude=item.EventVenueLongitude,
-                    // CountryID=item.CountryID,
-                    // StateID=item.StateID,
-                    // CityID=item.CityID,
-                    // AreaID=item.AreaID,
-                    // IsActive=item.IsActive
-                    //CreatedOn=DateTime.Now,
-                    //CreatedBy=item.CreatedBy
+                     IsActive = item.IsActive,
+                     EntityType=item.EntityType,
+                   
+                    CreatedOn=DateTime.Now,
+                    CreatedBy=item.UserID,
+                    UpdatedOn= DateTime.Now,
+                    UpdatedBy =item.UserID
+
             });  
             _context.SaveChanges();  
             return Ok(new {  
@@ -92,7 +178,7 @@ public class EntityController: Controller {
 
     [HttpPut("{id}")]
     [Route("updateEntity")]
-    public IActionResult Update(long id,[FromBody] Entity item)
+    public IActionResult Update(long id,[FromBody] EntityModel item)
     {
         if(item == null || id == 0)
         {
@@ -126,23 +212,10 @@ public class EntityController: Controller {
          entity1.TwitterAddress = item.TwitterAddress;
          entity1.GooglePlusAddress = item.GooglePlusAddress;
          entity1.IsActive = item.IsActive;
-
-        //  entity1.EventName = item.EventName;  
-        //  entity1.EventDescription = item.EventDescription; 
-        //  entity1.EventStartDate = item.EventStartDate;  
-        //  entity1.EventEndDate = item.EventEndDate;  
-        //  entity1.EventAddress = item.EventAddress;
-        //  entity1.EventStartTime = item.EventStartTime;
-        //  entity1.EventEndTime=item.EventEndTime;
-        //  entity1.EventVenueLatitude = item.EventVenueLatitude;
-        //  entity1.EventVenueLongitude = item.EventVenueLongitude;
-        //  entity1.CountryID = item.CountryID;
-        //  entity1.StateID = item.StateID;
-        //  entity1.CityID = item.CityID;
-        //  entity1.AreaID = item.AreaID;
-        // entity1.IsActive = item.IsActive;
-         //event1.UpdatedOn=DateTime.Now;
-        //event1.UpdatedBy=item.UpdatedBy;
+        entity1.EntityType = item.EntityType;
+        
+         entity1.UpdatedOn=DateTime.Now;
+        entity1.UpdatedBy=item.UserID;
 
         _context.Entity.Update(entity1);
          _context.SaveChanges();

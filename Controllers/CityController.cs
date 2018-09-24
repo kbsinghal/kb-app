@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using kb_app.Models;
 using Microsoft.AspNetCore.Mvc;
-using kb_app.DAL;
+//using kb_app.DAL;
 
 
 namespace kb_app.Controllers

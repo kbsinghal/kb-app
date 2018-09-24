@@ -60,7 +60,7 @@ namespace kb_app.Models
 
         public string GooglePlusAddress { get; set; }
 
-        public bool IsActive { get; set; }
+        public short IsActive { get; set; }
 
         public int CreatedBy { get; set; }
 

@@ -39,8 +39,9 @@ export class EntityformComponent implements OnInit {
    entity: IEntity;
   // genders = [];
   // technologies = [];
-  activeOptions = [];
-  registeredOptions = [];
+  YesNoOptions = [];
+  EntityTypeOptions = [];
+  //registeredOptions = [];
   states = [];
   countries = [];
   areas = [];
@@ -60,32 +61,36 @@ export class EntityformComponent implements OnInit {
     // built state form
     this.entityFrm = this.fb.group({
       EntityID: [''],
-      Description: ['', [Validators.required]],
+      Description: [''],
       Name: ['', [Validators.required, Validators.maxLength(250)]],
-      FirstName: ['', [Validators.required]],
-      MiddleName: ['', [Validators.required]],
-      LastName: ['', [Validators.required]],
-      NickName: ['', [Validators.required]],
+      FirstName: [''],
+      MiddleName: [''],
+      LastName: [''],
+      NickName: [''],
       EntityType: ['', [Validators.required]],
       RegisteredAddress: ['', [Validators.required]],
       RegisteredCountryID: ['', [Validators.required]],
       RegisteredStateID: ['', [Validators.required]],
       RegisteredCityID: ['', [Validators.required]],
       RegisteredAreaID: ['', [Validators.required]],
-      EmailAddress: ['', [Validators.required]],
-      WebsiteAddress: ['', [Validators.required]],
-      FacebookAddress: ['', [Validators.required]],
-      YouTubeAddress: ['', [Validators.required]],
-      TwitterAddress: ['', [Validators.required]],
-      GooglePlusAddress: ['', [Validators.required]],
+      EmailAddress: [''],
+      WebsiteAddress: [''],
+      FacebookAddress: [''],
+      YouTubeAddress: [''],
+      TwitterAddress: [''],
+      GooglePlusAddress: [''],
       IsActive: ['', [Validators.required]],
       IsRegistered: ['', [Validators.required]],
-
+      CityName: [''],
+      StateName: [''],
+      CountryName: [''],
+      AreaName: ['']
          });
     // this.genders = Global.genders;
     // this.technologies = Global.technologies;
-    this.activeOptions = Global.activeOptions;
-    this.registeredOptions =  Global.registeredOptions;
+    this.YesNoOptions = Global.YesNoOptions;
+    this.EntityTypeOptions = Global.EntityTypeOptions;
+    //this.registeredOptions =  Global.registeredOptions;
 
     this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry')
     .subscribe(countries => {
@@ -161,7 +166,7 @@ export class EntityformComponent implements OnInit {
       'TwitterAddress': '',
       'GooglePlusAddress': '',
       'IsActive': '',
-      'IsRegistered':''
+      'IsRegistered': '',
   };
   // custom valdiation messages
   // tslint:disable-next-line:member-ordering
@@ -303,7 +308,14 @@ export class EntityformComponent implements OnInit {
 
     mapEntityID(entity: IEntity): IEntity {
     if (entity.EntityID == null)    {
-      entity.EntityID = -1;  }
+      entity.EntityID = -1;  
+      //entity.UserID = -1;  
+      entity.CityName = '';
+      entity.StateName = '';
+      entity.CountryName = '';
+      entity.AreaName = '';
+    
+    }
     return entity;
   }
 }

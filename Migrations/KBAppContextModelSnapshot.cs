@@ -16,7 +16,7 @@ namespace kbapp.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.2-rtm-10011");
+                .HasAnnotation("ProductVersion", "2.0.3-rtm-10026");
 
             modelBuilder.Entity("kb_app.Models.Area", b =>
                 {
@@ -103,7 +103,7 @@ namespace kbapp.Migrations
 
                     b.Property<string>("GooglePlusAddress");
 
-                    b.Property<bool>("IsActive");
+                    b.Property<short>("IsActive");
 
                     b.Property<short>("IsRegistered");
 
@@ -169,17 +169,19 @@ namespace kbapp.Migrations
 
                     b.Property<DateTime>("EventEndDate");
 
-                    b.Property<DateTime>("EventEndTime");
+                    b.Property<TimeSpan?>("EventEndTime");
 
                     b.Property<string>("EventName");
 
+                    b.Property<string>("EventOccurence");
+
                     b.Property<DateTime>("EventStartDate");
 
-                    b.Property<DateTime>("EventStartTime");
+                    b.Property<TimeSpan>("EventStartTime");
 
-                    b.Property<float>("EventVenueLatitude");
+                    b.Property<float?>("EventVenueLatitude");
 
-                    b.Property<float>("EventVenueLongitude");
+                    b.Property<float?>("EventVenueLongitude");
 
                     b.Property<int>("IsActive");
 
@@ -205,13 +207,13 @@ namespace kbapp.Migrations
 
                     b.Property<DateTime>("CreatedOn");
 
-                    b.Property<DateTime?>("EndTime");
+                    b.Property<TimeSpan?>("EndTime");
 
                     b.Property<int>("EventID");
 
                     b.Property<int>("IsActive");
 
-                    b.Property<DateTime?>("StartTime");
+                    b.Property<TimeSpan?>("StartTime");
 
                     b.Property<int>("UpdatedBy");
 
@@ -264,6 +266,36 @@ namespace kbapp.Migrations
                     b.HasKey("StateID");
 
                     b.ToTable("State");
+                });
+
+            modelBuilder.Entity("kb_app.Models.User", b =>
+                {
+                    b.Property<int>("UID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CreatedBy");
+
+                    b.Property<DateTime>("CreatedOn");
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
+
+                    b.Property<byte[]>("PasswordHash");
+
+                    b.Property<byte[]>("PasswordSalt");
+
+                    b.Property<int>("UpdatedBy");
+
+                    b.Property<DateTime>("UpdatedOn");
+
+                    b.Property<string>("Username");
+
+                    b.HasKey("UID");
+
+                    b.ToTable("User");
                 });
 #pragma warning restore 612, 618
         }

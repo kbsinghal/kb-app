@@ -35,7 +35,8 @@ export class EventformComponent implements OnInit {
    event: IEvent;
   genders = [];
   technologies = [];
-  activeOptions = [];
+  YesNoOptions = [];
+  OccurenceOptions = [];
    countries = [];
    states = [];
    cities = [];
@@ -55,7 +56,7 @@ export class EventformComponent implements OnInit {
     this.eventFrm = this.fb.group({
       EventID: [-1],
       EventName: ['', [Validators.required, Validators.maxLength(250)]],
-      EventDescription: ['', [Validators.required, Validators.maxLength(500)]],
+      EventDescription: ['', [Validators.maxLength(500)]],
       EventAddress: ['', [Validators.required, Validators.maxLength(250)]],
       // email: ['', [Validators.required, Validators.email]],
       // gender: ['', [Validators.required]],
@@ -63,6 +64,7 @@ export class EventformComponent implements OnInit {
       EventEndDate: ['', [Validators.required]],
       EventStartTime: ['', [Validators.required]],
       EventEndTime: [''],
+      EventOccurence: [''],
       EventVenueLatitude: [''],
       EventVenueLongitude: [''],
       CountryID: ['', [Validators.required]],
@@ -80,7 +82,8 @@ export class EventformComponent implements OnInit {
     // this.technologies = Global.technologies;
       // this.countries = Global.countries;
 
-      this.activeOptions = Global.activeOptions;
+      this.YesNoOptions = Global.YesNoOptions;
+      this.OccurenceOptions = Global.EventOccurenceTypeOptions;
 
      // var aaaaa = this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'getAllCountry');
      // console.log(this._countryService.getAllCountry(Global.BASE_USER_ENDPOINT + 'Country/' + 'getAllCountry'));
@@ -150,6 +153,7 @@ export class EventformComponent implements OnInit {
     'EventStartDate': '',
     'EventEndDate': '',
     'EventStartTime': '',
+    'EventOccurence': '',
     // 'EventEndTime': '',
     // 'EventVenueLatitude': '',
     // 'EventVenueLongitude': '',
@@ -193,6 +197,9 @@ export class EventformComponent implements OnInit {
     'EventStartTime': {
       'required': 'Event Start Time is required.'
     },
+    'EventOccurence': {
+      'required': 'Event Occurence is required.'
+    },
     // 'EventEndTime': {
     //   'required': 'Event End Time is required.'
     // },
@@ -220,7 +227,8 @@ export class EventformComponent implements OnInit {
 
   };
   onSubmit(formData: any) {
-     const eventData = this.mapDateData(this.mapEventID(formData.value));
+     //const eventData = this.mapDateData(this.mapEventID(formData.value));
+     const eventData = this.mapEventID(formData.value);
     switch (this.data.dbops) {
       case DBOperation.create:
         this._eventService.addEvent(Global.BASE_USER_ENDPOINT + 'Event/' + 'addEvent', eventData).subscribe(
@@ -273,16 +281,29 @@ export class EventformComponent implements OnInit {
     isEnable ? this.eventFrm.enable() : this.eventFrm.disable();
   }
 
-  mapDateData(event: IEvent): IEvent {
-    event.EventStartDate = new Date(event.EventStartDate).toISOString();
-    event.EventEndDate = new Date(event.EventEndDate).toISOString();
-    return event;
-  }
+  // mapDateData(event: IEvent): IEvent {
+  //   event.EventStartDate = new Date(event.EventStartDate).toISOString();
+  //   event.EventEndDate = new Date(event.EventEndDate).toISOString();
+  //   return event;
+  // }
 
   mapEventID(event: IEvent): IEvent {
+    if (event.EventStartDate != null) {
+      //event.EventStartDate = new Date(event.EventStartDate).toISOString();
+      const sd = new Date(event.EventStartDate);
+      const startdate = Date.UTC(sd.getFullYear(), sd.getMonth(), sd.getDate());
+      event.EventStartDate = new Date(startdate);
+
+    }
+     if (event.EventEndDate != null) {
+       //event.EventEndDate = new Date(event.EventEndDate).toISOString();
+       const ed = new Date(event.EventEndDate);
+       const enddate = Date.UTC(ed.getFullYear(), ed.getMonth(), ed.getDate());
+       event.EventEndDate = new Date(enddate);
+     }
     if (event.EventID == null) {
       event.EventID = -1;
-      event.UserID = -1;
+      event.UserID = 1;
       event.CountryName = '';
       event.StateName = '';
       event.CityName = '';

@@ -4,10 +4,11 @@
 
   <div>
     <mat-form-field appearance="outline">  
+        <mat-label>Event</mat-label>  
       <mat-select placeholder="Select a Event" formControlName="EventID">  
         <mat-option>-- None --</mat-option>  
         <mat-option *ngFor="let event of events" [value]="event.EventID">  
-          {{ event.EventName }}  
+            {{ event.EventStartDate | date: "dd-MMM-yyyy" }} - {{ event.EventName }}
         </mat-option>  
       </mat-select>  
       <mat-error *ngIf="formErrors.EventID ">  
@@ -34,6 +35,7 @@
   </div> -->
 <div>
   <mat-form-field appearance="outline">  
+      <mat-label>Organizer(s)</mat-label>  
     <mat-select placeholder="Select a Organizer" formControlName="EntityIDs" multiple>  
       <mat-option>-- None --</mat-option>  
       <mat-option *ngFor="let entity of entities" [value]="entity.EntityID">  

@@ -15,15 +15,15 @@ namespace kb_app.Models
 
         public DateTime EventEndDate { get; set; }
 
-        public DateTime EventStartTime { get; set; }
+        public TimeSpan EventStartTime { get; set; }
 
-        public DateTime EventEndTime { get; set; }
+        public TimeSpan? EventEndTime { get; set; }
 
         public string EventAddress { get; set; }
 
-        public float EventVenueLatitude { get; set; }
+        public float? EventVenueLatitude { get; set; }
 
-        public float EventVenueLongitude { get; set; }
+        public float? EventVenueLongitude { get; set; }
 
         //public string CountryName { get; set; }
         public int CountryID { get; set; }
@@ -35,6 +35,8 @@ namespace kb_app.Models
         public int CityID { get; set; }
         //public string AreaName { get; set; }
         public int AreaID { get; set; }
+
+        public string EventOccurence{ get; set; }
 
 
 

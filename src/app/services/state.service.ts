@@ -12,12 +12,12 @@ const httpOptions = {
   })
 };
 
-const httpPostOptions = {  
-  headers: new HttpHeaders({  
+const httpPostOptions = {
+  headers: new HttpHeaders({
     'Content-Type': 'application/json; charset=utf-8',
       'Accept': 'application/json'
-  })  
-}; 
+  })
+};
 
 @Injectable()
 export class StateService {

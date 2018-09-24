@@ -83,13 +83,13 @@ export class EventOrganizerlistComponent implements OnInit {
     this.openDialog();
   }
   editEventOrganizer(id: number) {
-     console.log('id:' + id);
+     //console.log('id:' + id);
     this.dbops = DBOperation.update;
     this.modalTitle = 'Edit Event Organizer';
     this.modalBtnTitle = 'Update';
     this.eventorganizer = this.dataSource.data.filter(x => x.EventID === id)[0];
-     console.log('this.eventorganizer');
-     console.log(this.eventorganizer);
+     //console.log('this.eventorganizer');
+     //console.log(this.eventorganizer);
     this.openDialog();
   }
   deleteEventOrganizer(id: number) {

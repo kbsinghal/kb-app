@@ -77,9 +77,9 @@ export class EventOrganizerformComponent implements OnInit {
     if (this.data.dbops === DBOperation.create) {
       this.eventOrganizerFrm.reset();
     } else {
-      console.log('hi');
-      console.log(this.data.eventOrganizer);
-      console.log(this.data.eventorganizer);
+      //console.log('hi');
+      //console.log(this.data.eventOrganizer);
+      //console.log(this.data.eventorganizer);
       // console.log(eventOrganizer);
        this.eventOrganizerFrm.setValue(this.data.eventorganizer);
     }
@@ -190,7 +190,7 @@ export class EventOrganizerformComponent implements OnInit {
     mapEventOrganizerID(eventOrganizer: IEventOrganizer): IEventOrganizer {
     if (eventOrganizer == null || eventOrganizer.EventOrganizerID == null)    {
       eventOrganizer.EventOrganizerID = -1;
-      eventOrganizer.UserID = -1;
+      eventOrganizer.UserID = 1;
     }
     return eventOrganizer;
   }

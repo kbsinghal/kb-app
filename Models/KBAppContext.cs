@@ -22,5 +22,7 @@ namespace kb_app.Models
         public DbSet<EventOrganizer> EventOrganizer { get; set; }
 
         public DbSet<EventArtist> EventArtist { get; set; }
+
+        public DbSet<User> User { get; set; }
     }
 }

@@ -18,8 +18,8 @@ export interface IEntity {
     RegisteredStateID: number;
     RegisteredCountryID: number;
     RegisteredAreaID: number;
-    AreaID: number;
-    AreaName: string;
+    //AreaID: number;
+    
     EmailAddress: string;
     WebsiteAddress: string;
     // public byte[] Logo { get; set; }
@@ -28,6 +28,10 @@ export interface IEntity {
     TwitterAddress: string;
     GooglePlusAddress: string;
     IsActive: number;
+    CountryName: string;
+    StateName: string;
+    CityName: string;
+    AreaName: string;
    // CreatedBy: number;
    // UpdatedBy: number;
     // public DateTime CreatedOn { get; set; }

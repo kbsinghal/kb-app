@@ -33,7 +33,7 @@ public class EventArtistController: Controller {
             //return _context.State.ToList();  // fetch all state records 
           //_context.State.ToList().ForEach(aa=>{StateModel stateModel=new StateModel();stateModel.StateID=aa.StateID;stateModel.CountryID=aa.CountryID; stateModel.StateName=aa.StateName;lstStateModel.Add(stateModel);});  // fetch all state records  
 
-           DateTime parsedTimeObj;
+           //DateTime parsedTimeObj;
 
           lstEventArtistModel= (from le in lstEvent join lea in lstEventArtist on le.EventID equals lea.EventID 
                                  join la in lstArtist on lea.ArtistID equals la.EntityID             
@@ -47,6 +47,8 @@ public class EventArtistController: Controller {
                ArtistID=la.EntityID,
                ArtistName= la.Name,
                IsActive=lea.IsActive,
+               StartTime=lea.StartTime,
+               EndTime=lea.EndTime,
                //StartTime=lea.StartTime==null?string.Empty:lea.StartTime.ToShortTimeString();
 
 
@@ -78,8 +80,8 @@ public class EventArtistController: Controller {
                 item.EventArtistID=st.EventArtistID;
                 item.EventID=st.EventID;
                 item.ArtistID=st.ArtistID;
-                //item.StartTime=Convert.ToString(st.StartTime);
-                //item.EndTime=Convert.ToString(st.EndTime);
+                item.StartTime=st.StartTime;
+                item.EndTime=st.EndTime;
                 item.IsActive=st.IsActive;
                 //item.StateName=st.StateName;
                 
@@ -94,15 +96,15 @@ public class EventArtistController: Controller {
             if (item == null) {  
                 return BadRequest();  // set bad request if country data is not provided in body  
             }  
-            DateTime starttime,endtime;
-            DateTime.TryParse(default(DateTime)+" "+ item.StartTime,out starttime);
-            DateTime.TryParse(default(DateTime)+" "+ item.EndTime,out endtime);
+            //DateTime starttime,endtime;
+            //DateTime.TryParse(default(DateTime)+" "+ item.StartTime,out starttime);
+            //DateTime.TryParse(default(DateTime)+" "+ item.EndTime,out endtime);
 
             _context.EventArtist.Add(new EventArtist {  
                      ArtistID = item.ArtistID,
                      EventID = item.EventID,
-                     StartTime= starttime,
-                     EndTime=endtime,  
+                     StartTime= item.StartTime,
+                     EndTime=item.EndTime,  
                      IsActive=item.IsActive,
                     // EventDescription = item.EventDescription,  
                     // EventStartDate = item.EventStartDate,  
@@ -145,15 +147,15 @@ public class EventArtistController: Controller {
             return NotFound();
         }
 
-            DateTime starttime,endtime;
-            DateTime.TryParse(default(DateTime)+" "+ item.StartTime,out starttime);
-            DateTime.TryParse(default(DateTime)+" "+ item.EndTime,out endtime);
+            //DateTime starttime,endtime;
+            //DateTime.TryParse(default(DateTime)+" "+ item.StartTime,out starttime);
+            //DateTime.TryParse(default(DateTime)+" "+ item.EndTime,out endtime);
 
             
           state1.EventID = item.EventID;  
           state1.ArtistID = item.ArtistID;
-           state1.StartTime = starttime;//item.StartTime.ToString();
-           state1.EndTime = endtime;
+           state1.StartTime = item.StartTime;//item.StartTime.ToString();
+           state1.EndTime = item.EndTime;
            state1.IsActive = item.IsActive;
         //  country1.EventDescription = item.EventDescription; 
         //  country1.EventStartDate = item.EventStartDate;  

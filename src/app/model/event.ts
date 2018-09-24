@@ -3,8 +3,8 @@ export interface IEvent {
     EventName: string;
     EventDescription: string;
     EventAddress: string;
-    EventStartDate: string;
-    EventEndDate: string;
+    EventStartDate: Date;
+    EventEndDate: Date;
     CountryID: number;
     StateID: number;
     CityID: number;
@@ -19,4 +19,5 @@ export interface IEvent {
     StateName: string;
     CityName: string;
     AreaName: string;
+    EventOccurence: string;
 }

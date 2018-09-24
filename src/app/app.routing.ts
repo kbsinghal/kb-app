@@ -18,26 +18,42 @@ import { AppComponent } from './app.component';
  import { EventOrganizerformComponent } from './eventorganizerform/eventorganizerform.component';
  import { EventArtistlistComponent } from './eventartistlist/eventartistlist.component';
  import { EventArtistformComponent } from './eventartistform/eventartistform.component';
+ import { UserlistComponent } from './userlist/userlist.component';
+ import { UserformComponent } from './userform/userform.component';
+ import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './_guards/auth.guard';
+
+
 
 
 const appRoutes: Routes = [
  { path: 'eventlist',  pathMatch: 'full' , component: EventlistComponent },
- { path: 'eventform', component: EventformComponent },
  { path: 'countrylist',  pathMatch: 'full' , component: CountrylistComponent },
- { path: 'countryform', component: CountryformComponent },
  { path: 'statelist',  pathMatch: 'full' , component: StatelistComponent },
- { path: 'stateform', component: StateformComponent },
  { path: 'citylist',  pathMatch: 'full' , component: CitylistComponent },
- { path: 'cityform', component: CityformComponent },
  { path: 'arealist',  pathMatch: 'full' , component: ArealistComponent },
- { path: 'areaform', component: AreaformComponent },
  { path: 'entitylist',  pathMatch: 'full' , component: EntitylistComponent },
- { path: 'entityform', component: EntityformComponent },
  { path: 'eventorganizerlist',  pathMatch: 'full' , component: EventOrganizerlistComponent },
- { path: 'eventorganizerform', component: EventOrganizerformComponent },
  { path: 'eventartistlist',  pathMatch: 'full' , component: EventArtistlistComponent },
- { path: 'eventartistform', component: EventArtistformComponent }
+ { path: 'userlist',  pathMatch: 'full' , component: UserlistComponent },
 
+ { path: 'eventform', component: EventformComponent },
+ { path: 'countryform', component: CountryformComponent },
+ { path: 'stateform', component: StateformComponent },
+ { path: 'cityform', component: CityformComponent },
+ { path: 'areaform', component: AreaformComponent },
+ { path: 'entityform', component: EntityformComponent },
+ { path: 'eventorganizerform', component: EventOrganizerformComponent },
+ { path: 'eventartistform', component: EventArtistformComponent },
+ { path: 'userform', component: UserformComponent },
+ { path: '', component: HomeComponent},
+ //{ path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  //{ path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  //{ path: 'login', component: LoginComponent },
+   
+ 
+    //{ path: '**', redirectTo: '' } // otherwise redirect to home
 ];
 
 export const Routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

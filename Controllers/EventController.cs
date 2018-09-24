@@ -60,7 +60,8 @@ public class EventController: Controller {
                               StateName = ls.StateName, 
                               CountryID =lc.CountryID, 
                               CountryName = lc.CountryName,
-                              IsActive=e.IsActive
+                              IsActive=e.IsActive,
+                              EventOccurence=e.EventOccurence,
                               }).ToList<EventModel>();
              return lstEventModel;
         }  
@@ -85,6 +86,9 @@ public class EventController: Controller {
             }  
             else
             {
+                //var st=new Date(et.EventStartDate);
+                //st.setMinutes(st.getMinutes() + st.getTimezoneOffset());
+                //DateTime.UtcNow
                  item=new EventModel();
                 item.EventID=et.EventID;
                 item.EventName=et.EventName;
@@ -105,6 +109,7 @@ public class EventController: Controller {
                 item.AreaID=et.AreaID;
                 //item.AreaName=et.AreaName;
                 item.IsActive=et.IsActive;
+                item.EventOccurence=et.EventOccurence;
 
             }
             
@@ -129,6 +134,7 @@ public class EventController: Controller {
                     EventEndTime=item.EventEndTime,
                     EventVenueLatitude=item.EventVenueLatitude,
                     EventVenueLongitude=item.EventVenueLongitude,
+                    EventOccurence=item.EventOccurence,
                     CountryID=item.CountryID,
                     StateID=item.StateID,
                     CityID=item.CityID,

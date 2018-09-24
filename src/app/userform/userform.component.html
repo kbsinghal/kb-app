@@ -1,0 +1,112 @@
+<form  (ngSubmit)="onSubmit(userFrm)"  [formGroup]="userFrm">  
+    <h2>{{data.modalTitle}}</h2> 
+
+                
+                    <!-- <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>
+                    </div> -->
+
+                    <div>  
+                        <mat-form-field appearance="outline">  
+                        <mat-label>firstName</mat-label>  
+                        <input matInput placeholder="FirstName" formControlName="FirstName">  
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+                        <!-- <mat-hint>Hint</mat-hint> -->  
+                        <mat-error *ngIf="formErrors.FirstName">  
+                          {{ formErrors.FirstName }}  
+                        </mat-error>  
+                      </mat-form-field>  
+                    </div>
+
+
+                    <!-- <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                    </div> -->
+
+                    <div>  
+                        <mat-form-field appearance="outline">  
+                        <mat-label>LastName</mat-label>  
+                        <input matInput placeholder="LastName" formControlName="LastName">  
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+                        <!-- <mat-hint>Hint</mat-hint> -->  
+                        <!-- <mat-error *ngIf="formErrors.LastName">  
+                          {{ formErrors.LastName }}  
+                        </mat-error>   -->
+                      </mat-form-field>  
+                    </div>
+
+
+
+
+                    <!-- <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
+                    </div> -->
+                    <div>  
+                        <mat-form-field appearance="outline">  
+                        <mat-label>Email</mat-label>  
+                        <input matInput placeholder="Email" formControlName="Email">  
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+                        <!-- <mat-hint>Hint</mat-hint> -->  
+                        <mat-error *ngIf="formErrors.Email">  
+                          {{ formErrors.Email }}  
+                        </mat-error>  
+                      </mat-form-field>  
+                    </div>
+
+                    <div>  
+                        <mat-form-field appearance="outline">  
+                        <mat-label>UserName</mat-label>  
+                        <input matInput placeholder="UserName" formControlName="UserName">  
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+                        <!-- <mat-hint>Hint</mat-hint> -->  
+                        <mat-error *ngIf="formErrors.UserName">  
+                          {{ formErrors.UserName }}  
+                        </mat-error>  
+                      </mat-form-field>  
+                    </div>    
+
+                    <!-- <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>
+                    </div> -->
+
+                    <div>  
+                        <mat-form-field appearance="outline">  
+                        <mat-label>Password</mat-label>  
+                        <input matInput placeholder="Password" formControlName="Password">  
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  
+                        <!-- <mat-hint>Hint</mat-hint> -->  
+                        <mat-error *ngIf="formErrors.Password">  
+                          {{ formErrors.Password }}  
+                        </mat-error>  
+                      </mat-form-field>  
+                    </div>
+
+                    <!-- <div class="form-group">
+                        <button [disabled]="loading" class="btn btn-primary">Register</button>
+                    </div> -->
+
+                    <div>  
+    
+                        <button type="button" mat-raised-button color="warn" (click)="dialogRef.close()">Cancel</button>   
+                        <button type="submit" mat-raised-button color="primary" [disabled]="userFrm.invalid">{{data.modalBtnTitle}}</button>  
+                      </div>  
+</form>
+          
