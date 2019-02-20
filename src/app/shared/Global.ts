@@ -1,7 +1,7 @@
 export class Global {
     // public static BASE_USER_ENDPOINT = 'api/event/';
     // public static BASE_USER_ENDPOINT = 'kbapi-dev.us-east-2.elasticbeanstalk.com/';
-    public static BASE_USER_ENDPOINT = 'http://localhost:5000/kbapi/';
+  public static BASE_USER_ENDPOINT = 'http://localhost:4200/kbapi/';
     public static genders = [{
         name: 'Male',
         id: 0,

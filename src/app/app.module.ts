@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { FileSelectDirective } from 'ng2-file-upload';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+//import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 // used to create fake backend
 //import { fakeBackendProvider } from './_helpers/ake-backend';
@@ -19,10 +20,8 @@ import {  AuthenticationService } from './services/authentication.service';
 import { UserService } from './services/user.service';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+
  
-
-
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LayoutModule } from '@angular/cdk/layout';
@@ -54,10 +53,26 @@ import { EventArtistService } from './services/eventartist.service';
 import { UserformComponent } from './userform/userform.component';
 import { UserlistComponent } from './userlist/userlist.component';
 
+import { EventBannerformComponent } from './eventbannerform/eventbannerform.component';
+import { EventBannerlistComponent } from './eventbannerlist/eventbannerlist.component';
+import { EventBannerService } from './services/eventbanner.service';
+import { FileService } from './services/files.services';
 
+//import { BrowserModule } from '@angular/platform-browser';
+//import { NgModule } from '@angular/core';
+//import { FormsModule } from '@angular/forms';
+//import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
-
-
+//import { AppComponent } from './app.component';
+//import { NavMenuComponent } from './nav-menu/nav-menu.component';
+//import { HomeComponent } from './home/home.component';
+import { CounterComponent } from './counter/counter.component';
+//import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { UploadComponent } from './upload/upload.component';
+//import { DndDirective } from './upload/upload.directive';
+import { UploadfilesComponent } from './uploadfiles/uploadfiles.component';
+///import { UploadFilesComponent } from './uploadfiles/uploadfiles.component';
 
 
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -65,6 +80,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
+    FileSelectDirective, // kb
     EventformComponent,
     EventlistComponent,
     CountryformComponent,
@@ -86,6 +102,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     HomeComponent,
     UserformComponent,
     UserlistComponent,
+    EventBannerformComponent,
+    EventBannerlistComponent,
+    //NavMenuComponent,
+    CounterComponent,
+    //FetchDataComponent,
+    UploadComponent,
+    UploadfilesComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -113,7 +137,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     EventArtistService,
     AlertService,
     UserService,
+    EventBannerService,
     AuthenticationService,
+    FileService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
  // provider used to create fake backend

@@ -1,0 +1,116 @@
+<style>
+  .my-drop-zone { border: dotted 3px lightgray; }
+  /* Default class applied to drop zones on over */
+  .invalid-drag { border: dotted 3px red; }
+  .valid-drag { border: dotted 3px green; }
+  html, body { height: 100%; }
+  .previewIcon{
+    width:100px;height:100px;
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
+ 
+  .inline-block{
+    display:inline-block;
+    margin:.2em;
+  }
+</style>
+
+<form  (ngSubmit)="onSubmit(eventbannerFrm)"  [formGroup]="eventbannerFrm">  
+  <h2>{{data.modalTitle}}</h2>  
+    
+  <div>
+    <mat-form-field appearance="outline">  
+        <mat-label>Event</mat-label>  
+      <mat-select placeholder="Select a Event" formControlName="EventID">  
+        <mat-option>-- None --</mat-option>  
+        <mat-option *ngFor="let event of events" [value]="event.EventID">  
+            {{ event.EventStartDate | date: "dd-MMM-yyyy" }} - {{ event.EventName }}
+        </mat-option>  
+      </mat-select>  
+      <mat-error *ngIf="formErrors.EventID ">  
+        {{ formErrors.EventID }}  
+      </mat-error>  
+    </mat-form-field>  
+  </div>
+  <h1 md-dialog-title>Dialog</h1>
+
+<!-- <div>
+  <input type="file" name="photo" ng2FileSelect [uploader]="uploader"/>
+
+  <button type="button" class="btn btn-success btn-s" 
+    (click)="uploader.uploadAll()" 
+    [disabled]="!uploader.getNotUploadedItems().length" >
+        Upload an Image
+  </button>
+
+</div> -->
+<!-- <ng-container>
+  <input type="file" id="file" multiple (change)="getFileDetails($event)">
+
+  <button (click)="uploadFiles()">Upload</button>
+</ng-container> -->
+
+<div ng-controller="Ctrl">
+  <!-- <input type="file" (change)="fileChange($event)" file-upload multiple accept=".jpg,.jpeg,.png,.bmp"/> 
+  <input style="display: none"  type="file" (change)="onFileChanged($event)" #fileInput> 
+  -->
+  <label>Ankur</label>
+  <input type="file" file-upload accept=".jpg,.jpeg,.png,.bmp" (change)="onFileChanged($event)" #fileInput/>
+
+  <!--  -->
+ 
+  <!-- <button (click)="fileInput.click()">Add File</button> -->
+
+
+  <!-- <input type="button" value="Add" (click)="addBanner($event)" /> -->
+  <ul>
+       <!-- <li ng-repeat="file in fileList">{{file.name}}</li>  -->
+       <!-- <li ng-repeat="file in fileList">{{ file.fileName }}</li> -->
+  </ul>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Size</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+  <tr *ngFor="let item of files;let i=index">
+    <td>
+      <div *ngIf="['image/gif','image/png','image/jpeg'].indexOf(item.type)>=0">
+         <div class="previewIcon" ngfBackground="item"></div> 
+        <img  ngf-resize="{width: 20, height: 20, quality: 0.9}" ngf-no-object-url="false">
+
+      <div  ngf-size="{width: 20, height: 20, quality: 0.9}" ngf-as-background="boolean"></div>
+      </div>
+      <strong>{{ item.name }}</strong>
+    </td>
+    <td nowrap>
+      {{ item.type }}
+    </td>
+    <td nowrap>
+      {{ item.size/1024/1024 | number:'.2' }} MB
+    </td>
+    <td nowrap>
+      <button type="button"
+        class="btn btn-danger btn-xs"
+        (click)="files.splice(i,1)">
+        <!-- <span class="glyphicon glyphicon-trash"></span> -->
+        <i class="fa fa-trash"></i>
+      </button>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+  <div>
+   
+    <button type="button" mat-raised-button color="warn" (click)="dialogRef.close()">Cancel</button>   
+    <button type="submit" mat-raised-button color="primary" [disabled]="eventbannerFrm.invalid">{{data.modalBtnTitle}}</button>  
+  </div>  
+    
+  </form> 

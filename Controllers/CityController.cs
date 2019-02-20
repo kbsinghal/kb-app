@@ -12,15 +12,13 @@ namespace kb_app.Controllers
     
 [Route("kbapi/[controller]")]  // set route attribute to make request as 'api/city'  
 public class CityController: Controller {  
-    private readonly KBAppContext _context;  
-    
-    // initiate database context  
-    public CityController(KBAppContext context) {  
-            _context = context;  
-        }  
+    private readonly KBAppContext _context;
+
+        // initiate database context  
+        public CityController(KBAppContext context) => _context = context;
 
 
-    [HttpGet]  
+        [HttpGet]  
     [Route("getAllCity")]  
     public List<CityModel> GetAll() {  
             

@@ -59,7 +59,7 @@
 <div>  
   <mat-radio-group class="contact-radio-group" formControlName="IsActive" >  
       <mat-label>Active</mat-label>  
-    <mat-radio-button class="contact-radio-button" *ngFor="let option of YesNoOptions" [value]="option.id">  
+    <mat-radio-button class="contact-radio-button" *ngFor="let option of YesNoOptions" [value]="option.id"  [checked]="option.id === 1">  
       {{ option.name }}  
     </mat-radio-button>  
   </mat-radio-group>  

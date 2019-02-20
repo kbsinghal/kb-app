@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +16,7 @@ using System.IO;
 using Newtonsoft.Json.Serialization;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using System.Web;
 using kb_app.Helpers;
 //using kb_app.Services; KB
 using AutoMapper;
@@ -29,19 +30,25 @@ namespace kb_app
 {
     public class Startup
     {
+        //public IConfigurationRoot Configuration { get; } //ADDED FOR UPLOAD
         public Startup(Microsoft.Extensions.Configuration.IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public Microsoft.Extensions.Configuration.IConfiguration Configuration { get; }
+        public Microsoft.Extensions.Configuration.IConfiguration Configuration { get; }//Commented for upload
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           //services.AddSingleton<Microsoft.AspNetCore.Http.IHttpContextAccessor, Microsoft.AspNetCore.Http.HttpContextAccessor>();//Added for upload            
 
            services.AddCors();
-            
+            //services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+
+            //services.AddSingleton<IHostingEnvironment>(new HostingEnvironment());
+
             //services.AddDbContext<DataContext>(x => x.UseInMemoryDatabase("TestDb"));
             services.AddDbContext<KBAppContext>(options =>  options.UseMySQL(Configuration.GetConnectionString("KBHIConnection")));
             
@@ -115,23 +122,28 @@ namespace kb_app
         // }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        //public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,IServiceProvider svp)
         {
         
+        //System.Web.Hosting.HostingEnvironment.m_IsHosted = true;
+        //services.AddSingleton<IHostingEnvironment>(new HostingEnvironment());
             
            
 //Redirect non api calls to angular app that will handle routing of the app.    
 
-app.Use(async (context, next) => {  
-    context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
+app.Use(async (context, next) => {
+  //context.Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:4200");
+  context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
     context.Response.Headers.Add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     context.Response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, PUT, OPTIONS");
-    context.Request.Headers.Add("Access-Control-Allow-Origin", "*");//http://localhost:5000
-    context.Request.Headers.Add("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
+    context.Request.Headers.Add("Access-Control-Allow-Origin", "*");//http://localhost:4200
+  context.Request.Headers.Add("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
     context.Request.Headers.Add("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE, PUT, OPTIONS");
+    //context.Response.Headers.Add("Access-Control-Allow-Credentials",true);    
 
-    await next();  
-    if (context.Response.StatusCode == 404 && !Path.HasExtension(context.Request.Path.Value) && !context.Request.Path.Value.StartsWith("/api/")) 
+    await next();  //commented due to upload 
+    if (context.Response.StatusCode == 404 && !Path.HasExtension(context.Request.Path.Value) && !context.Request.Path.Value.StartsWith("/kbapi/")) 
     {context.Request.Path = "/index.html";  
         await next();  
     }  
@@ -140,6 +152,33 @@ app.Use(async (context, next) => {
 app.UseDefaultFiles();  
 app.UseStaticFiles();  
 app.UseMvcWithDefaultRoute(); 
+
+
+
+//loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+  //  loggerFactory.AddDebug();
+
+    // System.Web.HttpContext.ServiceProvider = svp;
+    // //ServiceProvider=svp;
+    // System.Web.Hosting.HostingEnvironment.m_IsHosted = true;
+
+    // System.Web.HttpContext.Configure(app.ApplicationServices.
+    //     GetRequiredService<Microsoft.AspNetCore.Http.IHttpContextAccessor>()
+    // );
+
+
+    // app.UseCookieAuthentication(new CookieAuthenticationOptions()
+    // {
+    //     AuthenticationScheme = "MyCookieMiddlewareInstance",
+    //     LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Unauthorized/"),
+    //     AccessDeniedPath = new Microsoft.AspNetCore.Http.PathString("/Account/Forbidden/"),
+    //     AutomaticAuthenticate = true,
+    //     AutomaticChallenge = true,
+    //     CookieSecure = Microsoft.AspNetCore.Http.CookieSecurePolicy.SameAsRequest
+
+    //    , CookieHttpOnly=false
+
+    // });
 
        }
     }

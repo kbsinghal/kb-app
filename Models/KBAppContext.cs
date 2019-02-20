@@ -23,6 +23,10 @@ namespace kb_app.Models
 
         public DbSet<EventArtist> EventArtist { get; set; }
 
+        public DbSet<EventBanner> EventBanner { get; set; }
+
         public DbSet<User> User { get; set; }
+
+        public DbSet<file> files { get; set; }
     }
 }

@@ -6165,7 +6165,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- The content below is only a placeholder and can be replaced.--> \n<!-- <div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>  -->\n<!--The content below is only a placeholder and can be replaced.-->\n<!-- <mat-toolbar>\n  <span>Event Application</span>\n</mat-toolbar> -->\n<!-- <a [routerLink]=\"'/countrylist'\">Country</a> | \n<a [routerLink]=\"'/statelist'\">State</a> |\n<a [routerLink]=\"'/citylist'\">City</a> |\n<a [routerLink]=\"'/arealist'\">Area</a> |\n<a [routerLink]=\"'/entitylist'\">Entity</a> |\n<a [routerLink]=\"'/eventlist'\">Event</a> |\n<a [routerLink]=\"'/eventorganizerlist'\">EventOrganizer</a>\n<router-outlet></router-outlet>  -->\n\n<div id=\"app\">\n  <nav class=\"navbar navbar-expand-sm bg-light\">\n      <ul class=\"navbar-nav\">\n      <li class=\"nav-item\">\n          <a routerLink=\"/\" class=\"nav-link\">Home</a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"/countrylist\" class=\"nav-link\">Country</a>\n    </li>\n      <li class=\"nav-item\">\n          <a routerLink=\"/statelist\" class=\"nav-link\">State</a>\n      </li>\n      <li class=\"nav-item\">\n          <a routerLink=\"/citylist\" class=\"nav-link\">City</a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"/arealist\" class=\"nav-link\">Area</a>\n    </li>\n    <li class=\"nav-item\">\n      <a routerLink=\"/entitylist\" class=\"nav-link\">Entity</a>\n  </li>\n  <li class=\"nav-item\">\n    <a routerLink=\"/eventlist\" class=\"nav-link\">Event</a>\n</li>\n<li class=\"nav-item\">\n  <a routerLink=\"/eventorganizerlist\" class=\"nav-link\">EventOrganizer</a>\n</li>\n<li class=\"nav-item\">\n  <a routerLink=\"/eventartistlist\" class=\"nav-link\">EventArtist</a>\n</li>\n<li class=\"nav-item\">\n  <a routerLink=\"/userlist\" class=\"nav-link\">User</a>\n</li>\n      </ul>\n  </nav>\n  <div class=\"container\">\n      \n      <router-outlet></router-outlet>\n  </div>\n</div>\n\n\n"
+module.exports = "<!-- The content below is only a placeholder and can be replaced.--> \r\n<!-- <div style=\"text-align:center\">\r\n  <h1>\r\n    Welcome to {{ title }}!\r\n  </h1>\r\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n</div>\r\n<h2>Here are some links to help you start: </h2>\r\n<ul>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\r\n  </li>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\r\n  </li>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\r\n  </li>\r\n</ul>  -->\r\n<!--The content below is only a placeholder and can be replaced.-->\r\n<!-- <mat-toolbar>\r\n  <span>Event Application</span>\r\n</mat-toolbar> -->\r\n<!-- <a [routerLink]=\"'/countrylist'\">Country</a> | \r\n<a [routerLink]=\"'/statelist'\">State</a> |\r\n<a [routerLink]=\"'/citylist'\">City</a> |\r\n<a [routerLink]=\"'/arealist'\">Area</a> |\r\n<a [routerLink]=\"'/entitylist'\">Entity</a> |\r\n<a [routerLink]=\"'/eventlist'\">Event</a> |\r\n<a [routerLink]=\"'/eventorganizerlist'\">EventOrganizer</a>\r\n<router-outlet></router-outlet>  -->\r\n\r\n<div id=\"app\">\r\n  <nav class=\"navbar navbar-expand-sm bg-light\">\r\n    <ul class=\"navbar-nav\">\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/\" class=\"nav-link\">Home</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/countrylist\" class=\"nav-link\">Country</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/statelist\" class=\"nav-link\">State</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/citylist\" class=\"nav-link\">City</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/arealist\" class=\"nav-link\">Area</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/entitylist\" class=\"nav-link\">Entity</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/eventlist\" class=\"nav-link\">Event</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/eventorganizerlist\" class=\"nav-link\">EventOrganizer</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/eventartistlist\" class=\"nav-link\">EventArtist</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/eventbannerlist\" class=\"nav-link\">EventBanner</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/userlist\" class=\"nav-link\">User</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/upload\" class=\"nav-link\">Upload</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a routerLink=\"/uploadfiles\" class=\"nav-link\">Upload Files</a>\r\n      </li>\r\n    </ul>\r\n  </nav>\r\n  <div class=\"container\">\r\n      \r\n      <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -6297,48 +6297,57 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
-/* harmony import */ var _directives_alert_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_directives/alert.component */ "./src/app/_directives/alert.component.ts");
-/* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_guards/auth.guard */ "./src/app/_guards/auth.guard.ts");
-/* harmony import */ var _helpers_jwt_interceptor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./_helpers/jwt.interceptor */ "./src/app/_helpers/jwt.interceptor.ts");
-/* harmony import */ var _helpers_error_interceptor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./_helpers/error.interceptor */ "./src/app/_helpers/error.interceptor.ts");
-/* harmony import */ var _services_alert_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./services/alert.service */ "./src/app/services/alert.service.ts");
-/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
-/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/user.service */ "./src/app/services/user.service.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
-/* harmony import */ var _app_material_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./app.material.module */ "./src/app/app.material.module.ts");
-/* harmony import */ var _eventform_eventform_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./eventform/eventform.component */ "./src/app/eventform/eventform.component.ts");
-/* harmony import */ var _eventlist_eventlist_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./eventlist/eventlist.component */ "./src/app/eventlist/eventlist.component.ts");
-/* harmony import */ var _services_event_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services/event.service */ "./src/app/services/event.service.ts");
-/* harmony import */ var _countryform_countryform_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./countryform/countryform.component */ "./src/app/countryform/countryform.component.ts");
-/* harmony import */ var _countrylist_countrylist_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./countrylist/countrylist.component */ "./src/app/countrylist/countrylist.component.ts");
-/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./services/country.service */ "./src/app/services/country.service.ts");
-/* harmony import */ var _stateform_stateform_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./stateform/stateform.component */ "./src/app/stateform/stateform.component.ts");
-/* harmony import */ var _statelist_statelist_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./statelist/statelist.component */ "./src/app/statelist/statelist.component.ts");
-/* harmony import */ var _services_state_service__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./services/state.service */ "./src/app/services/state.service.ts");
-/* harmony import */ var _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./cityform/cityform.component */ "./src/app/cityform/cityform.component.ts");
-/* harmony import */ var _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./citylist/citylist.component */ "./src/app/citylist/citylist.component.ts");
-/* harmony import */ var _services_city_service__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./services/city.service */ "./src/app/services/city.service.ts");
-/* harmony import */ var _areaform_areaform_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./areaform/areaform.component */ "./src/app/areaform/areaform.component.ts");
-/* harmony import */ var _arealist_arealist_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./arealist/arealist.component */ "./src/app/arealist/arealist.component.ts");
-/* harmony import */ var _services_area_service__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./services/area.service */ "./src/app/services/area.service.ts");
-/* harmony import */ var _entityform_entityform_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./entityform/entityform.component */ "./src/app/entityform/entityform.component.ts");
-/* harmony import */ var _entitylist_entitylist_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./entitylist/entitylist.component */ "./src/app/entitylist/entitylist.component.ts");
-/* harmony import */ var _services_entity_service__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./services/entity.service */ "./src/app/services/entity.service.ts");
-/* harmony import */ var _eventorganizerform_eventorganizerform_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./eventorganizerform/eventorganizerform.component */ "./src/app/eventorganizerform/eventorganizerform.component.ts");
-/* harmony import */ var _eventorganizerlist_eventorganizerlist_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./eventorganizerlist/eventorganizerlist.component */ "./src/app/eventorganizerlist/eventorganizerlist.component.ts");
-/* harmony import */ var _services_eventorganizer_service__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./services/eventorganizer.service */ "./src/app/services/eventorganizer.service.ts");
-/* harmony import */ var _eventartistform_eventartistform_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./eventartistform/eventartistform.component */ "./src/app/eventartistform/eventartistform.component.ts");
-/* harmony import */ var _eventartistlist_eventartistlist_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./eventartistlist/eventartistlist.component */ "./src/app/eventartistlist/eventartistlist.component.ts");
-/* harmony import */ var _services_eventartist_service__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./services/eventartist.service */ "./src/app/services/eventartist.service.ts");
-/* harmony import */ var _userform_userform_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./userform/userform.component */ "./src/app/userform/userform.component.ts");
-/* harmony import */ var _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./userlist/userlist.component */ "./src/app/userlist/userlist.component.ts");
-/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
+/* harmony import */ var ng2_file_upload__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ng2-file-upload */ "./node_modules/ng2-file-upload/index.js");
+/* harmony import */ var ng2_file_upload__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ng2_file_upload__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
+/* harmony import */ var _directives_alert_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_directives/alert.component */ "./src/app/_directives/alert.component.ts");
+/* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./_guards/auth.guard */ "./src/app/_guards/auth.guard.ts");
+/* harmony import */ var _helpers_jwt_interceptor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./_helpers/jwt.interceptor */ "./src/app/_helpers/jwt.interceptor.ts");
+/* harmony import */ var _helpers_error_interceptor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./_helpers/error.interceptor */ "./src/app/_helpers/error.interceptor.ts");
+/* harmony import */ var _services_alert_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/alert.service */ "./src/app/services/alert.service.ts");
+/* harmony import */ var _services_authentication_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/user.service */ "./src/app/services/user.service.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
+/* harmony import */ var _app_material_module__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./app.material.module */ "./src/app/app.material.module.ts");
+/* harmony import */ var _eventform_eventform_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./eventform/eventform.component */ "./src/app/eventform/eventform.component.ts");
+/* harmony import */ var _eventlist_eventlist_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./eventlist/eventlist.component */ "./src/app/eventlist/eventlist.component.ts");
+/* harmony import */ var _services_event_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/event.service */ "./src/app/services/event.service.ts");
+/* harmony import */ var _countryform_countryform_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./countryform/countryform.component */ "./src/app/countryform/countryform.component.ts");
+/* harmony import */ var _countrylist_countrylist_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./countrylist/countrylist.component */ "./src/app/countrylist/countrylist.component.ts");
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./services/country.service */ "./src/app/services/country.service.ts");
+/* harmony import */ var _stateform_stateform_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./stateform/stateform.component */ "./src/app/stateform/stateform.component.ts");
+/* harmony import */ var _statelist_statelist_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./statelist/statelist.component */ "./src/app/statelist/statelist.component.ts");
+/* harmony import */ var _services_state_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/state.service */ "./src/app/services/state.service.ts");
+/* harmony import */ var _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./cityform/cityform.component */ "./src/app/cityform/cityform.component.ts");
+/* harmony import */ var _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./citylist/citylist.component */ "./src/app/citylist/citylist.component.ts");
+/* harmony import */ var _services_city_service__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./services/city.service */ "./src/app/services/city.service.ts");
+/* harmony import */ var _areaform_areaform_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./areaform/areaform.component */ "./src/app/areaform/areaform.component.ts");
+/* harmony import */ var _arealist_arealist_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./arealist/arealist.component */ "./src/app/arealist/arealist.component.ts");
+/* harmony import */ var _services_area_service__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./services/area.service */ "./src/app/services/area.service.ts");
+/* harmony import */ var _entityform_entityform_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./entityform/entityform.component */ "./src/app/entityform/entityform.component.ts");
+/* harmony import */ var _entitylist_entitylist_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./entitylist/entitylist.component */ "./src/app/entitylist/entitylist.component.ts");
+/* harmony import */ var _services_entity_service__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./services/entity.service */ "./src/app/services/entity.service.ts");
+/* harmony import */ var _eventorganizerform_eventorganizerform_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./eventorganizerform/eventorganizerform.component */ "./src/app/eventorganizerform/eventorganizerform.component.ts");
+/* harmony import */ var _eventorganizerlist_eventorganizerlist_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./eventorganizerlist/eventorganizerlist.component */ "./src/app/eventorganizerlist/eventorganizerlist.component.ts");
+/* harmony import */ var _services_eventorganizer_service__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./services/eventorganizer.service */ "./src/app/services/eventorganizer.service.ts");
+/* harmony import */ var _eventartistform_eventartistform_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./eventartistform/eventartistform.component */ "./src/app/eventartistform/eventartistform.component.ts");
+/* harmony import */ var _eventartistlist_eventartistlist_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./eventartistlist/eventartistlist.component */ "./src/app/eventartistlist/eventartistlist.component.ts");
+/* harmony import */ var _services_eventartist_service__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./services/eventartist.service */ "./src/app/services/eventartist.service.ts");
+/* harmony import */ var _userform_userform_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./userform/userform.component */ "./src/app/userform/userform.component.ts");
+/* harmony import */ var _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./userlist/userlist.component */ "./src/app/userlist/userlist.component.ts");
+/* harmony import */ var _eventbannerform_eventbannerform_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./eventbannerform/eventbannerform.component */ "./src/app/eventbannerform/eventbannerform.component.ts");
+/* harmony import */ var _eventbannerlist_eventbannerlist_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./eventbannerlist/eventbannerlist.component */ "./src/app/eventbannerlist/eventbannerlist.component.ts");
+/* harmony import */ var _services_eventbanner_service__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./services/eventbanner.service */ "./src/app/services/eventbanner.service.ts");
+/* harmony import */ var _services_files_services__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./services/files.services */ "./src/app/services/files.services.ts");
+/* harmony import */ var _counter_counter_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./counter/counter.component */ "./src/app/counter/counter.component.ts");
+/* harmony import */ var _upload_upload_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./upload/upload.component */ "./src/app/upload/upload.component.ts");
+/* harmony import */ var _uploadfiles_uploadfiles_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./uploadfiles/uploadfiles.component */ "./src/app/uploadfiles/uploadfiles.component.ts");
+/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6349,6 +6358,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+//import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 // used to create fake backend
 //import { fakeBackendProvider } from './_helpers/ake-backend';
 
@@ -6392,66 +6403,89 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
+//import { AppComponent } from './app.component';
+//import { NavMenuComponent } from './nav-menu/nav-menu.component';
+//import { HomeComponent } from './home/home.component';
+
+//import { FetchDataComponent } from './fetch-data/fetch-data.component';
+
+//import { DndDirective } from './upload/upload.directive';
+
+///import { UploadFilesComponent } from './uploadfiles/uploadfiles.component';
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _eventform_eventform_component__WEBPACK_IMPORTED_MODULE_18__["EventformComponent"],
-                _eventlist_eventlist_component__WEBPACK_IMPORTED_MODULE_19__["EventlistComponent"],
-                _countryform_countryform_component__WEBPACK_IMPORTED_MODULE_21__["CountryformComponent"],
-                _countrylist_countrylist_component__WEBPACK_IMPORTED_MODULE_22__["CountrylistComponent"],
-                _stateform_stateform_component__WEBPACK_IMPORTED_MODULE_24__["StateformComponent"],
-                _statelist_statelist_component__WEBPACK_IMPORTED_MODULE_25__["StatelistComponent"],
-                _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_27__["CityformComponent"],
-                _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_28__["CitylistComponent"],
-                _areaform_areaform_component__WEBPACK_IMPORTED_MODULE_30__["AreaformComponent"],
-                _arealist_arealist_component__WEBPACK_IMPORTED_MODULE_31__["ArealistComponent"],
-                _entityform_entityform_component__WEBPACK_IMPORTED_MODULE_33__["EntityformComponent"],
-                _entitylist_entitylist_component__WEBPACK_IMPORTED_MODULE_34__["EntitylistComponent"],
-                _eventorganizerform_eventorganizerform_component__WEBPACK_IMPORTED_MODULE_36__["EventOrganizerformComponent"],
-                _eventorganizerlist_eventorganizerlist_component__WEBPACK_IMPORTED_MODULE_37__["EventOrganizerlistComponent"],
-                _eventartistform_eventartistform_component__WEBPACK_IMPORTED_MODULE_39__["EventArtistformComponent"],
-                _eventartistlist_eventartistlist_component__WEBPACK_IMPORTED_MODULE_40__["EventArtistlistComponent"],
-                _directives_alert_component__WEBPACK_IMPORTED_MODULE_6__["AlertComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"],
-                _home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"],
-                _userform_userform_component__WEBPACK_IMPORTED_MODULE_42__["UserformComponent"],
-                _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_43__["UserlistComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                ng2_file_upload__WEBPACK_IMPORTED_MODULE_3__["FileSelectDirective"],
+                _eventform_eventform_component__WEBPACK_IMPORTED_MODULE_19__["EventformComponent"],
+                _eventlist_eventlist_component__WEBPACK_IMPORTED_MODULE_20__["EventlistComponent"],
+                _countryform_countryform_component__WEBPACK_IMPORTED_MODULE_22__["CountryformComponent"],
+                _countrylist_countrylist_component__WEBPACK_IMPORTED_MODULE_23__["CountrylistComponent"],
+                _stateform_stateform_component__WEBPACK_IMPORTED_MODULE_25__["StateformComponent"],
+                _statelist_statelist_component__WEBPACK_IMPORTED_MODULE_26__["StatelistComponent"],
+                _cityform_cityform_component__WEBPACK_IMPORTED_MODULE_28__["CityformComponent"],
+                _citylist_citylist_component__WEBPACK_IMPORTED_MODULE_29__["CitylistComponent"],
+                _areaform_areaform_component__WEBPACK_IMPORTED_MODULE_31__["AreaformComponent"],
+                _arealist_arealist_component__WEBPACK_IMPORTED_MODULE_32__["ArealistComponent"],
+                _entityform_entityform_component__WEBPACK_IMPORTED_MODULE_34__["EntityformComponent"],
+                _entitylist_entitylist_component__WEBPACK_IMPORTED_MODULE_35__["EntitylistComponent"],
+                _eventorganizerform_eventorganizerform_component__WEBPACK_IMPORTED_MODULE_37__["EventOrganizerformComponent"],
+                _eventorganizerlist_eventorganizerlist_component__WEBPACK_IMPORTED_MODULE_38__["EventOrganizerlistComponent"],
+                _eventartistform_eventartistform_component__WEBPACK_IMPORTED_MODULE_40__["EventArtistformComponent"],
+                _eventartistlist_eventartistlist_component__WEBPACK_IMPORTED_MODULE_41__["EventArtistlistComponent"],
+                _directives_alert_component__WEBPACK_IMPORTED_MODULE_7__["AlertComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_15__["LoginComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_14__["HomeComponent"],
+                _userform_userform_component__WEBPACK_IMPORTED_MODULE_43__["UserformComponent"],
+                _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_44__["UserlistComponent"],
+                _eventbannerform_eventbannerform_component__WEBPACK_IMPORTED_MODULE_45__["EventBannerformComponent"],
+                _eventbannerlist_eventbannerlist_component__WEBPACK_IMPORTED_MODULE_46__["EventBannerlistComponent"],
+                //NavMenuComponent,
+                _counter_counter_component__WEBPACK_IMPORTED_MODULE_49__["CounterComponent"],
+                //FetchDataComponent,
+                _upload_upload_component__WEBPACK_IMPORTED_MODULE_50__["UploadComponent"],
+                _uploadfiles_uploadfiles_component__WEBPACK_IMPORTED_MODULE_51__["UploadfilesComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__["BrowserAnimationsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-                _app_material_module__WEBPACK_IMPORTED_MODULE_17__["AppMaterialModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__["BrowserAnimationsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                _app_material_module__WEBPACK_IMPORTED_MODULE_18__["AppMaterialModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
-                _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_16__["LayoutModule"],
-                _app_routing__WEBPACK_IMPORTED_MODULE_5__["Routing"],
-                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_44__["MatToolbarModule"]
+                _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_17__["LayoutModule"],
+                _app_routing__WEBPACK_IMPORTED_MODULE_6__["Routing"],
+                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_52__["MatToolbarModule"]
             ],
             providers: [
-                _guards_auth_guard__WEBPACK_IMPORTED_MODULE_7__["AuthGuard"],
-                _services_alert_service__WEBPACK_IMPORTED_MODULE_10__["AlertService"],
-                _services_authentication_service__WEBPACK_IMPORTED_MODULE_11__["AuthenticationService"],
-                _services_user_service__WEBPACK_IMPORTED_MODULE_12__["UserService"],
-                _services_event_service__WEBPACK_IMPORTED_MODULE_20__["EventService"],
-                _services_country_service__WEBPACK_IMPORTED_MODULE_23__["CountryService"],
-                _services_state_service__WEBPACK_IMPORTED_MODULE_26__["StateService"],
-                _services_city_service__WEBPACK_IMPORTED_MODULE_29__["CityService"],
-                _services_area_service__WEBPACK_IMPORTED_MODULE_32__["AreaService"],
-                _services_entity_service__WEBPACK_IMPORTED_MODULE_35__["EntityService"],
-                _services_eventorganizer_service__WEBPACK_IMPORTED_MODULE_38__["EventOrganizerService"],
-                _services_eventartist_service__WEBPACK_IMPORTED_MODULE_41__["EventArtistService"],
-                _services_alert_service__WEBPACK_IMPORTED_MODULE_10__["AlertService"],
-                _services_user_service__WEBPACK_IMPORTED_MODULE_12__["UserService"],
-                _services_authentication_service__WEBPACK_IMPORTED_MODULE_11__["AuthenticationService"],
-                { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HTTP_INTERCEPTORS"], useClass: _helpers_jwt_interceptor__WEBPACK_IMPORTED_MODULE_8__["JwtInterceptor"], multi: true },
-                { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HTTP_INTERCEPTORS"], useClass: _helpers_error_interceptor__WEBPACK_IMPORTED_MODULE_9__["ErrorInterceptor"], multi: true },
+                _guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__["AuthGuard"],
+                _services_alert_service__WEBPACK_IMPORTED_MODULE_11__["AlertService"],
+                _services_authentication_service__WEBPACK_IMPORTED_MODULE_12__["AuthenticationService"],
+                _services_user_service__WEBPACK_IMPORTED_MODULE_13__["UserService"],
+                _services_event_service__WEBPACK_IMPORTED_MODULE_21__["EventService"],
+                _services_country_service__WEBPACK_IMPORTED_MODULE_24__["CountryService"],
+                _services_state_service__WEBPACK_IMPORTED_MODULE_27__["StateService"],
+                _services_city_service__WEBPACK_IMPORTED_MODULE_30__["CityService"],
+                _services_area_service__WEBPACK_IMPORTED_MODULE_33__["AreaService"],
+                _services_entity_service__WEBPACK_IMPORTED_MODULE_36__["EntityService"],
+                _services_eventorganizer_service__WEBPACK_IMPORTED_MODULE_39__["EventOrganizerService"],
+                _services_eventartist_service__WEBPACK_IMPORTED_MODULE_42__["EventArtistService"],
+                _services_alert_service__WEBPACK_IMPORTED_MODULE_11__["AlertService"],
+                _services_user_service__WEBPACK_IMPORTED_MODULE_13__["UserService"],
+                _services_eventbanner_service__WEBPACK_IMPORTED_MODULE_47__["EventBannerService"],
+                _services_authentication_service__WEBPACK_IMPORTED_MODULE_12__["AuthenticationService"],
+                _services_files_services__WEBPACK_IMPORTED_MODULE_48__["FileService"],
+                { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HTTP_INTERCEPTORS"], useClass: _helpers_jwt_interceptor__WEBPACK_IMPORTED_MODULE_9__["JwtInterceptor"], multi: true },
+                { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HTTP_INTERCEPTORS"], useClass: _helpers_error_interceptor__WEBPACK_IMPORTED_MODULE_10__["ErrorInterceptor"], multi: true },
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -6488,9 +6522,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _eventorganizerform_eventorganizerform_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./eventorganizerform/eventorganizerform.component */ "./src/app/eventorganizerform/eventorganizerform.component.ts");
 /* harmony import */ var _eventartistlist_eventartistlist_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./eventartistlist/eventartistlist.component */ "./src/app/eventartistlist/eventartistlist.component.ts");
 /* harmony import */ var _eventartistform_eventartistform_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./eventartistform/eventartistform.component */ "./src/app/eventartistform/eventartistform.component.ts");
-/* harmony import */ var _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./userlist/userlist.component */ "./src/app/userlist/userlist.component.ts");
-/* harmony import */ var _userform_userform_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./userform/userform.component */ "./src/app/userform/userform.component.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _eventbannerlist_eventbannerlist_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./eventbannerlist/eventbannerlist.component */ "./src/app/eventbannerlist/eventbannerlist.component.ts");
+/* harmony import */ var _eventbannerform_eventbannerform_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./eventbannerform/eventbannerform.component */ "./src/app/eventbannerform/eventbannerform.component.ts");
+/* harmony import */ var _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./userlist/userlist.component */ "./src/app/userlist/userlist.component.ts");
+/* harmony import */ var _userform_userform_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./userform/userform.component */ "./src/app/userform/userform.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _upload_upload_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./upload/upload.component */ "./src/app/upload/upload.component.ts");
+/* harmony import */ var _uploadfiles_uploadfiles_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./uploadfiles/uploadfiles.component */ "./src/app/uploadfiles/uploadfiles.component.ts");
 
 
 
@@ -6510,6 +6548,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+//import { UploadFilesComponent } from './upload-files/upload-files.component';
 
 var appRoutes = [
     { path: 'eventlist', pathMatch: 'full', component: _eventlist_eventlist_component__WEBPACK_IMPORTED_MODULE_1__["EventlistComponent"] },
@@ -6520,7 +6563,8 @@ var appRoutes = [
     { path: 'entitylist', pathMatch: 'full', component: _entitylist_entitylist_component__WEBPACK_IMPORTED_MODULE_11__["EntitylistComponent"] },
     { path: 'eventorganizerlist', pathMatch: 'full', component: _eventorganizerlist_eventorganizerlist_component__WEBPACK_IMPORTED_MODULE_13__["EventOrganizerlistComponent"] },
     { path: 'eventartistlist', pathMatch: 'full', component: _eventartistlist_eventartistlist_component__WEBPACK_IMPORTED_MODULE_15__["EventArtistlistComponent"] },
-    { path: 'userlist', pathMatch: 'full', component: _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_17__["UserlistComponent"] },
+    { path: 'eventbannerlist', pathMatch: 'full', component: _eventbannerlist_eventbannerlist_component__WEBPACK_IMPORTED_MODULE_17__["EventBannerlistComponent"] },
+    { path: 'userlist', pathMatch: 'full', component: _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_19__["UserlistComponent"] },
     { path: 'eventform', component: _eventform_eventform_component__WEBPACK_IMPORTED_MODULE_2__["EventformComponent"] },
     { path: 'countryform', component: _countryform_countryform_component__WEBPACK_IMPORTED_MODULE_4__["CountryformComponent"] },
     { path: 'stateform', component: _stateform_stateform_component__WEBPACK_IMPORTED_MODULE_6__["StateformComponent"] },
@@ -6529,8 +6573,19 @@ var appRoutes = [
     { path: 'entityform', component: _entityform_entityform_component__WEBPACK_IMPORTED_MODULE_12__["EntityformComponent"] },
     { path: 'eventorganizerform', component: _eventorganizerform_eventorganizerform_component__WEBPACK_IMPORTED_MODULE_14__["EventOrganizerformComponent"] },
     { path: 'eventartistform', component: _eventartistform_eventartistform_component__WEBPACK_IMPORTED_MODULE_16__["EventArtistformComponent"] },
-    { path: 'userform', component: _userform_userform_component__WEBPACK_IMPORTED_MODULE_18__["UserformComponent"] },
-    { path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_19__["HomeComponent"] },
+    { path: 'eventbannerform', component: _eventbannerform_eventbannerform_component__WEBPACK_IMPORTED_MODULE_18__["EventBannerformComponent"] },
+    { path: 'userform', component: _userform_userform_component__WEBPACK_IMPORTED_MODULE_20__["UserformComponent"] },
+    /////{ path: '', component: HomeComponent},
+    //{ path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+    //{ path: '', component: HomeComponent, canActivate: [AuthGuard] },
+    //{ path: 'login', component: LoginComponent },
+    { path: 'upload', component: _upload_upload_component__WEBPACK_IMPORTED_MODULE_22__["UploadComponent"] },
+    { path: 'uploadfiles', component: _uploadfiles_uploadfiles_component__WEBPACK_IMPORTED_MODULE_23__["UploadfilesComponent"] },
+    //{ path: '', component: HomeComponent, pathMatch: 'full' },
+    ////{ path: 'counter', component: CounterComponent },
+    //    { path: 'fetch-data', component: FetchDataComponent },
+    //{ path: '**', redirectTo: '' } // otherwise redirect to home
+    { path: '**', component: _home_home_component__WEBPACK_IMPORTED_MODULE_21__["HomeComponent"] }
 ];
 var Routing = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes);
 
@@ -7268,6 +7323,55 @@ var CitylistComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSnackBar"], _services_city_service__WEBPACK_IMPORTED_MODULE_3__["CityService"], _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
     ], CitylistComponent);
     return CitylistComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/counter/counter.component.html":
+/*!************************************************!*\
+  !*** ./src/app/counter/counter.component.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Counter</h1>\r\n\r\n<p>This is a simple example of an Angular component.</p>\r\n\r\n<p>Current count: <strong>{{ currentCount }}</strong></p>\r\n\r\n<button (click)=\"incrementCounter()\">Increment</button>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/counter/counter.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/counter/counter.component.ts ***!
+  \**********************************************/
+/*! exports provided: CounterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CounterComponent", function() { return CounterComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var CounterComponent = /** @class */ (function () {
+    function CounterComponent() {
+        this.currentCount = 0;
+    }
+    CounterComponent.prototype.incrementCounter = function () {
+        this.currentCount++;
+    };
+    CounterComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-counter-component',
+            template: __webpack_require__(/*! ./counter.component.html */ "./src/app/counter/counter.component.html")
+        })
+    ], CounterComponent);
+    return CounterComponent;
 }());
 
 
@@ -8151,7 +8255,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form  (ngSubmit)=\"onSubmit(eventartistFrm)\"  [formGroup]=\"eventartistFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>\n    <mat-form-field appearance=\"outline\">\n        <mat-label>Event</mat-label>  \n      <mat-select placeholder=\"Select a Event\" formControlName=\"EventID\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let event  of events\" [value]=\"event.EventID\">  \n          {{ event.EventStartDate | date: \"dd-MMM-yyyy\" }} - {{ event.EventName }}\n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.EventID \">  \n        {{ formErrors.EventID }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n\n\n\n<div>\n  <mat-form-field appearance=\"outline\">\n      <mat-label>Artist</mat-label>  \n    <mat-select placeholder=\"Select a Artist\" formControlName=\"ArtistID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let entity  of entities\" [value]=\"entity.EntityID\">  \n        {{ entity.Name }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.ArtistID\">  \n      {{ formErrors.ArtistID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Performance Start Time</mat-label>  \n  <input matInput placeholder=\"Start Time\" formControlName=\"StartTime\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <!-- <mat-error *ngIf=\"formErrors.StartTime\">  \n    {{ formErrors.StartTime }}  \n  </mat-error>   -->\n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Performance End Time</mat-label>  \n  <input matInput placeholder=\"End Time\" formControlName=\"EndTime\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <!-- <mat-error *ngIf=\"formErrors.EndTime\">  \n    {{ formErrors.EndTime }}  \n  </mat-error>   -->\n</mat-form-field>  \n</div>\n<div>  \n  <mat-radio-group class=\"contact-radio-group\" formControlName=\"IsActive\" >  \n      <mat-label>Active</mat-label>  \n    <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of YesNoOptions\" [value]=\"option.id\">  \n      {{ option.name }}  \n    </mat-radio-button>  \n  </mat-radio-group>  \n  <!-- <mat-error *ngIf=\"formErrors.IsActive\">  \n    {{ formErrors.IsActive }}  \n  </mat-error>   -->\n</div> \n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>User ID</mat-label>  \n  <input matInput placeholder=\"UserID\" formControlName=\"UserID\">  \n</mat-form-field>  \n</div> -->\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Country Name</mat-label>  \n  <input matInput placeholder=\"Country Name\" formControlName=\"CountryName\">  \n</mat-form-field>  \n</div> -->\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventartistFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+module.exports = "<form  (ngSubmit)=\"onSubmit(eventartistFrm)\"  [formGroup]=\"eventartistFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>\n    <mat-form-field appearance=\"outline\">\n        <mat-label>Event</mat-label>  \n      <mat-select placeholder=\"Select a Event\" formControlName=\"EventID\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let event  of events\" [value]=\"event.EventID\">  \n          {{ event.EventStartDate | date: \"dd-MMM-yyyy\" }} - {{ event.EventName }}\n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.EventID \">  \n        {{ formErrors.EventID }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n\n\n\n<div>\n  <mat-form-field appearance=\"outline\">\n      <mat-label>Artist</mat-label>  \n    <mat-select placeholder=\"Select a Artist\" formControlName=\"ArtistID\">  \n      <mat-option>-- None --</mat-option>  \n      <mat-option *ngFor=\"let entity  of entities\" [value]=\"entity.EntityID\">  \n        {{ entity.Name }}  \n      </mat-option>  \n    </mat-select>  \n    <mat-error *ngIf=\"formErrors.ArtistID\">  \n      {{ formErrors.ArtistID }}  \n    </mat-error>  \n  </mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Performance Start Time</mat-label>  \n  <input matInput placeholder=\"Start Time\" formControlName=\"StartTime\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <!-- <mat-error *ngIf=\"formErrors.StartTime\">  \n    {{ formErrors.StartTime }}  \n  </mat-error>   -->\n</mat-form-field>  \n</div>\n\n<div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Performance End Time</mat-label>  \n  <input matInput placeholder=\"End Time\" formControlName=\"EndTime\">  \n  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n  <!-- <mat-hint>Hint</mat-hint> -->  \n  <!-- <mat-error *ngIf=\"formErrors.EndTime\">  \n    {{ formErrors.EndTime }}  \n  </mat-error>   -->\n</mat-form-field>  \n</div>\n<div>  \n  <mat-radio-group class=\"contact-radio-group\" formControlName=\"IsActive\" >  \n      <mat-label>Active</mat-label>  \n    <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of YesNoOptions\" [value]=\"option.id\"  [checked]=\"option.id === 1\">  \n      {{ option.name }}  \n    </mat-radio-button>  \n  </mat-radio-group>  \n  <!-- <mat-error *ngIf=\"formErrors.IsActive\">  \n    {{ formErrors.IsActive }}  \n  </mat-error>   -->\n</div> \n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>User ID</mat-label>  \n  <input matInput placeholder=\"UserID\" formControlName=\"UserID\">  \n</mat-form-field>  \n</div> -->\n\n<!-- <div>  \n  <mat-form-field appearance=\"outline\">  \n  <mat-label>Country Name</mat-label>  \n  <input matInput placeholder=\"Country Name\" formControlName=\"CountryName\">  \n</mat-form-field>  \n</div> -->\n  \n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventartistFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
 
 /***/ }),
 
@@ -8512,6 +8616,434 @@ var EventArtistlistComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/eventbannerform/eventbannerform.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/eventbannerform/eventbannerform.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/eventbannerform/eventbannerform.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/eventbannerform/eventbannerform.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<style>\n  .my-drop-zone { border: dotted 3px lightgray; }\n  /* Default class applied to drop zones on over */\n  .invalid-drag { border: dotted 3px red; }\n  .valid-drag { border: dotted 3px green; }\n  html, body { height: 100%; }\n  .previewIcon{\n    width:100px;height:100px;\n    background-size:cover;\n    background-repeat:no-repeat;\n  }\n \n  .inline-block{\n    display:inline-block;\n    margin:.2em;\n  }\n</style>\n\n<form  (ngSubmit)=\"onSubmit(eventbannerFrm)\"  [formGroup]=\"eventbannerFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>\n    <mat-form-field appearance=\"outline\">  \n        <mat-label>Event</mat-label>  \n      <mat-select placeholder=\"Select a Event\" formControlName=\"EventID\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let event of events\" [value]=\"event.EventID\">  \n            {{ event.EventStartDate | date: \"dd-MMM-yyyy\" }} - {{ event.EventName }}\n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.EventID \">  \n        {{ formErrors.EventID }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>\n  <h1 md-dialog-title>Dialog</h1>\n\n<!-- <div>\n  <input type=\"file\" name=\"photo\" ng2FileSelect [uploader]=\"uploader\"/>\n\n  <button type=\"button\" class=\"btn btn-success btn-s\" \n    (click)=\"uploader.uploadAll()\" \n    [disabled]=\"!uploader.getNotUploadedItems().length\" >\n        Upload an Image\n  </button>\n\n</div> -->\n<!-- <ng-container>\n  <input type=\"file\" id=\"file\" multiple (change)=\"getFileDetails($event)\">\n\n  <button (click)=\"uploadFiles()\">Upload</button>\n</ng-container> -->\n\n<div ng-controller=\"Ctrl\">\n  <!-- <input type=\"file\" (change)=\"fileChange($event)\" file-upload multiple accept=\".jpg,.jpeg,.png,.bmp\"/> \n  <input style=\"display: none\"  type=\"file\" (change)=\"onFileChanged($event)\" #fileInput> \n  -->\n  <label>Ankur</label>\n  <input type=\"file\" file-upload accept=\".jpg,.jpeg,.png,.bmp\" (change)=\"onFileChanged($event)\" #fileInput/>\n\n  <!--  -->\n \n  <!-- <button (click)=\"fileInput.click()\">Add File</button> -->\n\n\n  <!-- <input type=\"button\" value=\"Add\" (click)=\"addBanner($event)\" /> -->\n  <ul>\n       <!-- <li ng-repeat=\"file in fileList\">{{file.name}}</li>  -->\n       <!-- <li ng-repeat=\"file in fileList\">{{ file.fileName }}</li> -->\n  </ul>\n  <table class=\"table\">\n    <thead>\n      <tr>\n        <th>Name</th>\n        <th>Type</th>\n        <th>Size</th>\n        <th>Actions</th>\n      </tr>\n    </thead>\n    <tbody>\n  <tr *ngFor=\"let item of files;let i=index\">\n    <td>\n      <div *ngIf=\"['image/gif','image/png','image/jpeg'].indexOf(item.type)>=0\">\n         <div class=\"previewIcon\" ngfBackground=\"item\"></div> \n        <img  ngf-resize=\"{width: 20, height: 20, quality: 0.9}\" ngf-no-object-url=\"false\">\n\n      <div  ngf-size=\"{width: 20, height: 20, quality: 0.9}\" ngf-as-background=\"boolean\"></div>\n      </div>\n      <strong>{{ item.name }}</strong>\n    </td>\n    <td nowrap>\n      {{ item.type }}\n    </td>\n    <td nowrap>\n      {{ item.size/1024/1024 | number:'.2' }} MB\n    </td>\n    <td nowrap>\n      <button type=\"button\"\n        class=\"btn btn-danger btn-xs\"\n        (click)=\"files.splice(i,1)\">\n        <!-- <span class=\"glyphicon glyphicon-trash\"></span> -->\n        <i class=\"fa fa-trash\"></i>\n      </button>\n    </td>\n  </tr>\n</tbody>\n</table>\n</div>\n\n  <div>\n   \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventbannerFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> \n"
+
+/***/ }),
+
+/***/ "./src/app/eventbannerform/eventbannerform.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/eventbannerform/eventbannerform.component.ts ***!
+  \**************************************************************/
+/*! exports provided: EventBannerformComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventBannerformComponent", function() { return EventBannerformComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _services_event_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/event.service */ "./src/app/services/event.service.ts");
+/* harmony import */ var _services_eventbanner_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/eventbanner.service */ "./src/app/services/eventbanner.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+var URL = _shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + '/EventBanner/addEventBanner';
+var EventBannerformComponent = /** @class */ (function () {
+    //files = []FileList;
+    function EventBannerformComponent(data, fb, _eventService, _eventbannerService, dialogRef) {
+        this.data = data;
+        this.fb = fb;
+        this._eventService = _eventService;
+        this._eventbannerService = _eventbannerService;
+        this.dialogRef = dialogRef;
+        this.indLoading = false;
+        //files: FileList;
+        //selectedFile: File;
+        //fileList: File[];
+        this.events = [];
+        //files = [];
+        this.eventbanners = [];
+        //fileList = [];
+        this.files = [];
+        // form errors model
+        // tslint:disable-next-line:member-ordering
+        this.formErrors = {
+            'EventID': '',
+            'Banner': '',
+        };
+        // custom valdiation messages
+        // tslint:disable-next-line:member-ordering
+        this.validationMessages = {
+            'EventID': {
+                'maxlength': 'EventID cannot be more than 50 characters long.',
+                'required': 'EventID is required.'
+            },
+            'Banner': {
+                'maxlength': 'Banner cannot be more than 50 characters long.',
+                'required': 'Banner is required.'
+            }
+        };
+    }
+    //public uploader: FileUploader = new FileUploader({url: URL, itemAlias: 'photo'}); //KB Upload
+    EventBannerformComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // built event form
+        this.eventbannerFrm = this.fb.group({
+            EventBannerID: [-1],
+            EventID: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(250)]],
+            Banner: [''],
+            UserID: [-1]
+        });
+        this._eventService.getAllEvent(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'Event/' + 'getAllEvent')
+            .subscribe(function (events) {
+            _this.events = events;
+        });
+        //this.files = [];
+        // this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; }; //Kb Upload
+        // this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
+        //      console.log('ImageUpload:uploaded:', item, status, response);
+        //      alert('File uploaded successfully');
+        //  };
+        // subscribe on value changed event of form to show validation message
+        this.eventbannerFrm.valueChanges.subscribe(function (data) { return _this.onValueChanged(data); });
+        this.onValueChanged();
+        if (this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create) {
+            this.eventbannerFrm.reset();
+        }
+        else {
+            this.eventbannerFrm.setValue(this.data.eventbanner);
+        }
+        this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete ? false : true);
+    };
+    // addBanner(event) {
+    //   //eventbanner.Banner = event.target.file;
+    //   //eventbanner.EventID=1;
+    //   console.log('eventbanner.Banner: ' + event.target.file);
+    //   console.log('eventbanner.EventID: 1');
+    // }
+    EventBannerformComponent.prototype.onFileChanged = function (event) {
+        debugger;
+        //this.selectedFile = event.target.files[0];
+        //let eventbanner: IEventBanner=new IEventBanner();
+        //this.fileList.push(event.target.files[0]);
+        this.files.push(event.target.files[0]);
+        console.log(this.files);
+        this.eventbanner.EventID = 1;
+        this.eventbanner.Banner = event.target.files[0];
+        console.log(this.eventbanner);
+        this.eventbanners.push(this.eventbanner);
+        console.log('this.eventbanners:   ' + this.eventbanners);
+        //console.log('this.selectedFile: ' + event.target.files[0]);
+        //console.log('eventbanner.EventID: 1');
+        //console.log('this.eventbanner.EventID:1');
+        //console.log('this.eventbanner.Banner' + event.target.files[0]);
+        //console.log('this.fileList: ' + this.fileList);
+        //this.formData
+    };
+    EventBannerformComponent.prototype.fileChange = function (event) {
+        //let fileList: FileList = event.target.files;
+        // if(fileList.length > 0) {
+        //     let file: File = fileList[0];
+        //     let formData:FormData = new FormData();
+        //     formData.append('uploadFile', file, file.name);
+        //     let headers = new Headers();
+        //     /** In Angular 5, including the header Content-Type can invalidate your request */
+        //     headers.append('Content-Type', 'multipart/form-data');
+        //     headers.append('Accept', 'application/json');
+        //     let options = new RequestOptions({ headers: headers });
+        //     this.http.post(`${this.apiEndPoint}`, formData, options)
+        //         .map(res => res.json())
+        //         .catch(error => Observable.throw(error))
+        //         .subscribe(
+        //             data => console.log('success'),
+        //             error => console.log(error)
+        //         )
+        // }
+    };
+    // form value change event
+    EventBannerformComponent.prototype.onValueChanged = function (data) {
+        if (!this.eventbannerFrm) {
+            return;
+        }
+        var form = this.eventbannerFrm;
+        // tslint:disable-next-line:forin
+        for (var field in this.formErrors) {
+            // clear previous error message (if any)
+            this.formErrors[field] = '';
+            var control = form.get(field);
+            // setup custom validation message to form
+            if (control && control.dirty && !control.valid) {
+                var messages = this.validationMessages[field];
+                // tslint:disable-next-line:forin
+                for (var key in control.errors) {
+                    this.formErrors[field] += messages[key] + ' ';
+                }
+            }
+        }
+    };
+    EventBannerformComponent.prototype.onSubmit = function (formData) {
+        var _this = this;
+        //const eventData = this.mapDateData(this.mapEventID(formData.value));
+        //const eventbannerData = this.mapEventBannerID(formData.value);
+        var formData1 = this.mapEventBannerID(formData.value);
+        //console.log('eventbannerData.Banner' + eventbannerData.Banner);
+        switch (this.data.dbops) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create:
+                this._eventbannerService.addEventBanner(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'EventBanner/' + 'addEventBanner', 2, this.files).subscribe(
+                //this._eventbannerService.addEventBanner(Global.BASE_USER_ENDPOINT + 'EventBanner/' + 'addEventBanner', eventbannerData).subscribe(
+                //this._eventbannerService.addEventBanner(Global.BASE_USER_ENDPOINT + 'EventBanner/' + 'addEventBanner', eventbannerData.EventID, this.files).subscribe(  
+                function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+        }
+    };
+    EventBannerformComponent.prototype.SetControlsState = function (isEnable) {
+        isEnable ? this.eventbannerFrm.enable() : this.eventbannerFrm.disable();
+    };
+    // mapDateData(event: IEvent): IEvent {
+    //   event.EventStartDate = new Date(event.EventStartDate).toISOString();
+    //   event.EventEndDate = new Date(event.EventEndDate).toISOString();
+    //   return event;
+    // }
+    //mapEventBannerID(eventbanner: IEventBanner): IEventBanner {
+    EventBannerformComponent.prototype.mapEventBannerID = function (eventbanner) {
+        debugger;
+        console.log('in function');
+        eventbanner.Banner = this.files; // uploaded files
+        //   for (const file of this.files) {
+        //     eventbanner.append(name, file, file.name);
+        // }
+        var formData2 = new FormData();
+        formData2.append('eventbanner', JSON.stringify(eventbanner));
+        for (var i = 0; i < this.files.length; i++) {
+            formData2.append('file' + i, this.files[i]);
+        }
+        // for (const file of this.files) {
+        //     formData2.append(name, file, file.name);
+        // }
+        //var count = 0;
+        //for (let count = 0; count <= this.files.length - 1 ; count++) {
+        //  formData2.append('file' + count, this.files[count], this.files[count].name);
+        //}
+        console.log('eventbanner.Banner' + eventbanner.Banner);
+        console.log('eventbanner' + eventbanner);
+        console.log('out function');
+        if (eventbanner.EventBannerID == null) {
+            eventbanner.EventBannerID = -1;
+            eventbanner.UserID = 1;
+            eventbanner.EventName = '';
+        }
+        //return eventbanner;
+        return formData2;
+    };
+    EventBannerformComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-eventbannerform',
+            template: __webpack_require__(/*! ./eventbannerform.component.html */ "./src/app/eventbannerform/eventbannerform.component.html"),
+            styles: [__webpack_require__(/*! ./eventbannerform.component.css */ "./src/app/eventbannerform/eventbannerform.component.css")]
+        }),
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [Object, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+            _services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"],
+            _services_eventbanner_service__WEBPACK_IMPORTED_MODULE_4__["EventBannerService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]])
+    ], EventBannerformComponent);
+    return EventBannerformComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/eventbannerlist/eventbannerlist.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/eventbannerlist/eventbannerlist.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* .eventbannerlist{\r\n  text-align: center;\r\n} */\r\n\r\n.spinner{\r\n    top: 45%;\r\n    left: 47%;\r\n    position: fixed;\r\n  }\r\n\r\n.eventbannerlist-container, #paginator {\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-width: 300px;\r\n    max-width: 1200px;\r\n    max-height: 700px;\r\n    overflow: auto;\r\n    margin: 0 auto;\r\n  }\r\n  "
+
+/***/ }),
+
+/***/ "./src/app/eventbannerlist/eventbannerlist.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/eventbannerlist/eventbannerlist.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else eventbannerlist\">  \n  <mat-spinner></mat-spinner>  \n  </div>  \n  <ng-template class=\"eventbannerlist\" #eventbannerlist>  \n    <h2 style=\"text-align: center;\">Event Banner List</h2>  \n    <div class=\"eventbannerlist-container mat-elevation-z8\">  \n      <div><button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addEventBanner()\">Create</button></div>  \n      <table mat-table #table [dataSource]=\"dataSource\">  \n    \n        <!-- Event Id Column -->  \n        <ng-container matColumnDef=\"EventID\">  \n        <th mat-header-cell *matHeaderCellDef>Event Id </th>  \n        <td mat-cell *matCellDef=\"let element\"> {{element.EventID}} </td>  \n        </ng-container>\n    \n        <!-- Event Name Column -->  \n        <ng-container matColumnDef=\"EventName\">  \n          <th mat-header-cell *matHeaderCellDef> Event Name </th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventName}} </td>  \n        </ng-container>  \n    \n        <!-- Total Banners Column -->  \n        <!-- <ng-container matColumnDef=\"EventName\">  \n          <th mat-header-cell *matHeaderCellDef> Event Name </th>  \n          <td mat-cell *matCellDef=\"let element\"> {{element.EventName}} </td>  \n        </ng-container>   -->\n\n         \n        <ng-container matColumnDef=\"action\">  \n          <th mat-header-cell *matHeaderCellDef>Action</th>  \n          <td mat-cell *matCellDef=\"let element\">  \n            <button title=\"Edit12345\" mat-raised-button color=\"primary\" (click)=\"editEventBanner(element.EventID)\">Edit1234</button>  \n            <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteEventBanner(element.EventID)\">Delete</button>  \n          </td>  \n        </ng-container>  \n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>  \n\n        <!-- <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row> -->\n        <!-- <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row> -->\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>  \n      </table>  \n\n    \n\n    </div>  \n  </ng-template> \n"
+
+/***/ }),
+
+/***/ "./src/app/eventbannerlist/eventbannerlist.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/eventbannerlist/eventbannerlist.component.ts ***!
+  \**************************************************************/
+/*! exports provided: EventBannerlistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventBannerlistComponent", function() { return EventBannerlistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _eventbannerform_eventbannerform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../eventbannerform/eventbannerform.component */ "./src/app/eventbannerform/eventbannerform.component.ts");
+/* harmony import */ var _services_eventbanner_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/eventbanner.service */ "./src/app/services/eventbanner.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var EventBannerlistComponent = /** @class */ (function () {
+    function EventBannerlistComponent(snackBar, _eventbannerService, dialog) {
+        this.snackBar = snackBar;
+        this._eventbannerService = _eventbannerService;
+        this.dialog = dialog;
+        // set columns that will need to show in listing table
+        // displayedColumns = ['name', 'email', 'gender', 'birth', 'techno', 'message', 'action'];
+        this.displayedColumns = ['EventID', 'EventName', 'action'];
+        // setting up datasource for material table
+        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"]();
+    }
+    EventBannerlistComponent.prototype.ngOnInit = function () {
+        this.loadingState = true;
+        this.loadEventBanners();
+    };
+    EventBannerlistComponent.prototype.openDialog = function () {
+        var _this = this;
+        debugger;
+        var dialogRef = this.dialog.open(_eventbannerform_eventbannerform_component__WEBPACK_IMPORTED_MODULE_2__["EventBannerformComponent"], {
+            width: '500px',
+            data: { dbops: this.dbops, modalTitle: this.modalTitle, modalBtnTitle: this.modalBtnTitle, event: this.eventbanner }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            // console.log('The dialog was closed');
+            if (result === 'success') {
+                _this.loadingState = true;
+                _this.loadEventBanners();
+                switch (_this.dbops) {
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create:
+                        _this.showMessage('Data successfully added.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update:
+                        _this.showMessage('Data successfully updated.');
+                        break;
+                    case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete:
+                        _this.showMessage('Data successfully deleted.');
+                        break;
+                }
+            }
+            else if (result === 'error') {
+                _this.showMessage('There is some issue in saving records, please contact to system administrator!');
+            }
+            else {
+                _this.showMessage('Please try again, something went wrong');
+            }
+        });
+    };
+    EventBannerlistComponent.prototype.loadEventBanners = function () {
+        var _this = this;
+        this._eventbannerService.getAllEventBanner(_shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].BASE_USER_ENDPOINT + 'EventBanner/' + 'getAllEventBanner')
+            .subscribe(function (eventbanners) {
+            _this.loadingState = false;
+            _this.dataSource.data = eventbanners;
+        });
+    };
+    EventBannerlistComponent.prototype.getGender = function (gender) {
+        return _shared_Global__WEBPACK_IMPORTED_MODULE_5__["Global"].genders.filter(function (ele) { return ele.id === gender; }).map(function (ele) { return ele.name; })[0];
+    };
+    EventBannerlistComponent.prototype.addEventBanner = function () {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].create;
+        this.modalTitle = 'Add New Event Banner';
+        this.modalBtnTitle = 'Add';
+        this.openDialog();
+    };
+    EventBannerlistComponent.prototype.editEventBanner = function (id) {
+        debugger;
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].update;
+        this.modalTitle = 'Edit Event Banner';
+        this.modalBtnTitle = 'Update';
+        this.eventbanner = this.dataSource.data.filter(function (x) { return x.EventID === id; })[0];
+        this.openDialog();
+    };
+    EventBannerlistComponent.prototype.deleteEventBanner = function (id) {
+        this.dbops = _shared_DBOperation__WEBPACK_IMPORTED_MODULE_4__["DBOperation"].delete;
+        this.modalTitle = 'Confirm to Delete ?';
+        this.modalBtnTitle = 'Delete';
+        this.eventbanner = this.dataSource.data.filter(function (x) { return x.EventID === id; })[0];
+        this.openDialog();
+    };
+    EventBannerlistComponent.prototype.showMessage = function (msg) {
+        this.snackBar.open(msg, '', {
+            duration: 3000
+        });
+    };
+    EventBannerlistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-eventbannerlist',
+            template: __webpack_require__(/*! ./eventbannerlist.component.html */ "./src/app/eventbannerlist/eventbannerlist.component.html"),
+            styles: [__webpack_require__(/*! ./eventbannerlist.component.css */ "./src/app/eventbannerlist/eventbannerlist.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSnackBar"], _services_eventbanner_service__WEBPACK_IMPORTED_MODULE_3__["EventBannerService"], _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
+    ], EventBannerlistComponent);
+    return EventBannerlistComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/eventform/eventform.component.css":
 /*!***************************************************!*\
   !*** ./src/app/eventform/eventform.component.css ***!
@@ -8530,7 +9062,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form  (ngSubmit)=\"onSubmit(eventFrm)\"  [formGroup]=\"eventFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Name</mat-label>  \n      <input matInput placeholder=\"Event Name\" formControlName=\"EventName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.EventName\">  \n        {{ formErrors.EventName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Description</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Description\" formControlName=\"EventDescription\">\n      <mat-error *ngIf=\"formErrors.EventDescription\">  \n        {{ formErrors.EventDescription }}  \n      </mat-error>  \n    </mat-form-field>  \n    \n  </div> \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Address</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Address\" formControlName=\"EventAddress\">\n      <mat-error *ngIf=\"formErrors.EventAddress\">  \n        {{ formErrors.EventAddress }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <!-- <p>  \n      <mat-radio-group class=\"contact-radio-group\" formControlName=\"gender\" >  \n        <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let gndr of genders\" [value]=\"gndr.id\">  \n          {{ gndr.name }}  \n        </mat-radio-button>  \n      </mat-radio-group>  \n      <mat-error *ngIf=\"formErrors.gender\">  \n        {{ formErrors.gender }}  \n      </mat-error>  \n  </p>   -->\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n        <mat-label>Start Date</mat-label>\n      <input matInput [matDatepicker]=\"picker1\" placeholder=\"Choose start date\" formControlName=\"EventStartDate\">  \n      <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>  \n      <mat-datepicker #picker1></mat-datepicker>  \n      \n    <mat-error *ngIf=\"formErrors.EventStartDate \">  \n      {{ formErrors.EventStartDate }}  \n    </mat-error>  \n    </mat-form-field>  \n  </div>  \n\n      <div>  \n          <mat-form-field appearance=\"outline\">  \n              <mat-label>End Date</mat-label>  \n            <input matInput [matDatepicker]=\"picker2\" placeholder=\"Choose end date\" formControlName=\"EventEndDate\">  \n            <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>  \n            <mat-datepicker #picker2></mat-datepicker>  \n            \n          <mat-error *ngIf=\"formErrors.EventEndDate \">  \n            {{ formErrors.EventEndDate }}  \n          </mat-error>  \n          </mat-form-field>  \n        </div>  \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Start Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Start Time\" formControlName=\"EventStartTime\">\n            \n            <mat-error *ngIf=\"formErrors.EventStartTime\">  \n              {{ formErrors.EventStartTime}}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>End Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"End Time\" formControlName=\"EventEndTime\">\n            <!-- <mat-error *ngIf=\"formErrors.EventEndTime\">  \n              {{ formErrors.EventEndTime }}  \n            </mat-error>   -->\n          </mat-form-field>  \n        </div> \n\n        <!-- <div>  \n            <mat-label>Occurence Type</mat-label>  \n          <mat-radio-group class=\"contact-radio-group\" formControlName=\"EventOccurence\" >  \n            <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of OccurenceOptions\" [value]=\"option.value\">  \n              {{ option.name }}  \n            </mat-radio-button>  \n          </mat-radio-group>  \n          <mat-error *ngIf=\"formErrors.EventOccurence\">  \n            {{ formErrors.EventOccurence }}  \n          </mat-error>  \n        </div>  -->\n\n\n        <div>\n            <mat-form-field appearance=\"outline\">  \n                <mat-label>Occurence Type</mat-label> \n              <mat-select placeholder=\"Select Occurence Type\" formControlName=\"EventOccurence\">  \n                <mat-option>-- None --</mat-option>  \n                <mat-option *ngFor=\"let option  of OccurenceOptions\" [value]=\"option.value\">  \n                    {{ option.name }}  \n                </mat-option>  \n              </mat-select>  \n              <mat-error *ngIf=\"formErrors.EventOccurence \">  \n                {{ formErrors.EventOccurence }}  \n              </mat-error>  \n            </mat-form-field>  \n          </div>\n\n\n\n\n\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Venue Latitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Venue Latitude\" formControlName=\"EventVenueLatitude\">\n            <!-- <mat-error *ngIf=\"formErrors.EventVenueLatitude\">  \n              {{ formErrors.EventVenueLatitude }}  \n            </mat-error>   -->\n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Venue Longitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Longitude\" formControlName=\"EventVenueLongitude\">\n            <!-- <mat-error *ngIf=\"formErrors.EventVenueLongitude\">  \n              {{ formErrors.EventVenueLongitude }}  \n            </mat-error>   -->\n          </mat-form-field>  \n        </div> \n\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n              <mat-label>Country</mat-label> \n            <mat-select placeholder=\"Select a Country\" formControlName=\"CountryID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let country  of countries\" [value]=\"country.CountryID\">  \n                {{ country.CountryName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.CountryID \">  \n              {{ formErrors.CountryID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n              <mat-label>State</mat-label> \n            <mat-select placeholder=\"Select a State\" formControlName=\"StateID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let state of states\" [value]=\"state.StateID\">  \n                {{ state.StateName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.StateID \">  \n              {{ formErrors.StateID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n              <mat-label>City</mat-label> \n            <mat-select placeholder=\"Select a City\" formControlName=\"CityID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let city of cities\" [value]=\"city.CityID\">  \n                {{ city.CityName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.CityID \">  \n              {{ formErrors.CityID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n        \n   \n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n              <mat-label>Area</mat-label> \n            <mat-select placeholder=\"Select a Area\" formControlName=\"AreaID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let area of areas\" [value]=\"area.AreaID\">  \n                {{ area.AreaName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.AreaID \">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n \n\n\n        <!-- <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>AreaID</mat-label>  \n            <input matInput placeholder=\"AreaID\" formControlName=\"AreaID\">\n            <mat-error *ngIf=\"formErrors.AreaID\">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> -->\n\n        <!-- <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>IsActive</mat-label>  \n            \n            <input matInput placeholder=\"IsActive\" formControlName=\"IsActive\">\n            <mat-error *ngIf=\"formErrors.IsActive\">  \n              {{ formErrors.IsActive }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> -->\n\n        <div>  \n            <mat-label>Active</mat-label>  \n          <mat-radio-group class=\"contact-radio-group\" formControlName=\"IsActive\" >  \n            <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of YesNoOptions\" [value]=\"option.id\">  \n              {{ option.name }}  \n            </mat-radio-button>  \n          </mat-radio-group>  \n          <mat-error *ngIf=\"formErrors.IsActive\">  \n            {{ formErrors.IsActive }}  \n          </mat-error>  \n        </div> \n       \n<!-- <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Technology\" formControlName=\"techno\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let techno  of technologies\" [value]=\"techno\">  \n          {{ techno }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.techno \">  \n        {{ formErrors.techno }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n      <textarea matInput placeholder=\"Message...\" formControlName=\"message\"></textarea>  \n      <mat-error *ngIf=\"formErrors.message \">  \n        {{ formErrors.message }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
+module.exports = "<form  (ngSubmit)=\"onSubmit(eventFrm)\"  [formGroup]=\"eventFrm\">  \n  <h2>{{data.modalTitle}}</h2>  \n    \n  <div>  \n      <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Name</mat-label>  \n      <input matInput placeholder=\"Event Name\" formControlName=\"EventName\">  \n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->  \n      <!-- <mat-hint>Hint</mat-hint> -->  \n      <mat-error *ngIf=\"formErrors.EventName\">  \n        {{ formErrors.EventName }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Description</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Description\" formControlName=\"EventDescription\">\n      <mat-error *ngIf=\"formErrors.EventDescription\">  \n        {{ formErrors.EventDescription }}  \n      </mat-error>  \n    </mat-form-field>  \n    \n  </div> \n  <div>  \n    <mat-form-field appearance=\"outline\">  \n      <mat-label>Event Address</mat-label>  \n      <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n      <input matInput placeholder=\"Event Address\" formControlName=\"EventAddress\">\n      <mat-error *ngIf=\"formErrors.EventAddress\">  \n        {{ formErrors.EventAddress }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>  \n  <!-- <p>  \n      <mat-radio-group class=\"contact-radio-group\" formControlName=\"gender\" >  \n        <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let gndr of genders\" [value]=\"gndr.id\">  \n          {{ gndr.name }}  \n        </mat-radio-button>  \n      </mat-radio-group>  \n      <mat-error *ngIf=\"formErrors.gender\">  \n        {{ formErrors.gender }}  \n      </mat-error>  \n  </p>   -->\n  <div>  \n    <mat-form-field appearance=\"outline\">  \n        <mat-label>Start Date</mat-label>\n      <input matInput [matDatepicker]=\"picker1\" placeholder=\"Choose start date\" formControlName=\"EventStartDate\">  \n      <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>  \n      <mat-datepicker #picker1></mat-datepicker>  \n      \n    <mat-error *ngIf=\"formErrors.EventStartDate \">  \n      {{ formErrors.EventStartDate }}  \n    </mat-error>  \n    </mat-form-field>  \n  </div>  \n\n      <div>  \n          <mat-form-field appearance=\"outline\">  \n              <mat-label>End Date</mat-label>  \n            <input matInput [matDatepicker]=\"picker2\" placeholder=\"Choose end date\" formControlName=\"EventEndDate\">  \n            <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>  \n            <mat-datepicker #picker2></mat-datepicker>  \n            \n          <mat-error *ngIf=\"formErrors.EventEndDate \">  \n            {{ formErrors.EventEndDate }}  \n          </mat-error>  \n          </mat-form-field>  \n        </div>  \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Start Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Start Time\" formControlName=\"EventStartTime\">\n            \n            <mat-error *ngIf=\"formErrors.EventStartTime\">  \n              {{ formErrors.EventStartTime}}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>End Time</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"End Time\" formControlName=\"EventEndTime\">\n            <!-- <mat-error *ngIf=\"formErrors.EventEndTime\">  \n              {{ formErrors.EventEndTime }}  \n            </mat-error>   -->\n          </mat-form-field>  \n        </div> \n\n        <!-- <div>  \n            <mat-label>Occurence Type</mat-label>  \n          <mat-radio-group class=\"contact-radio-group\" formControlName=\"EventOccurence\" >  \n            <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of OccurenceOptions\" [value]=\"option.value\">  \n              {{ option.name }}  \n            </mat-radio-button>  \n          </mat-radio-group>  \n          <mat-error *ngIf=\"formErrors.EventOccurence\">  \n            {{ formErrors.EventOccurence }}  \n          </mat-error>  \n        </div>  -->\n\n\n        <div>\n            <mat-form-field appearance=\"outline\">  \n                <mat-label>Occurence Type</mat-label> \n              <mat-select placeholder=\"Select Occurence Type\" formControlName=\"EventOccurence\">  \n                <mat-option>-- None --</mat-option>  \n                <mat-option *ngFor=\"let option  of OccurenceOptions\" [value]=\"option.value\">  \n                    {{ option.name }}  \n                </mat-option>  \n              </mat-select>  \n              <mat-error *ngIf=\"formErrors.EventOccurence \">  \n                {{ formErrors.EventOccurence }}  \n              </mat-error>  \n            </mat-form-field>  \n          </div>\n\n\n\n\n\n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Venue Latitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Venue Latitude\" formControlName=\"EventVenueLatitude\">\n            <!-- <mat-error *ngIf=\"formErrors.EventVenueLatitude\">  \n              {{ formErrors.EventVenueLatitude }}  \n            </mat-error>   -->\n          </mat-form-field>  \n        </div> \n\n        <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>Venue Longitude</mat-label>  \n            <!-- <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">   -->\n            <input matInput placeholder=\"Event Venue Longitude\" formControlName=\"EventVenueLongitude\">\n            <!-- <mat-error *ngIf=\"formErrors.EventVenueLongitude\">  \n              {{ formErrors.EventVenueLongitude }}  \n            </mat-error>   -->\n          </mat-form-field>  \n        </div> \n\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n              <mat-label>Country</mat-label> \n            <mat-select placeholder=\"Select a Country\" formControlName=\"CountryID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let country  of countries\" [value]=\"country.CountryID\">  \n                {{ country.CountryName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.CountryID \">  \n              {{ formErrors.CountryID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n              <mat-label>State</mat-label> \n            <mat-select placeholder=\"Select a State\" formControlName=\"StateID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let state of states\" [value]=\"state.StateID\">  \n                {{ state.StateName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.StateID \">  \n              {{ formErrors.StateID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n\n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n              <mat-label>City</mat-label> \n            <mat-select placeholder=\"Select a City\" formControlName=\"CityID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let city of cities\" [value]=\"city.CityID\">  \n                {{ city.CityName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.CityID \">  \n              {{ formErrors.CityID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n        \n   \n\n        <div>\n          <mat-form-field appearance=\"outline\">  \n              <mat-label>Area</mat-label> \n            <mat-select placeholder=\"Select a Area\" formControlName=\"AreaID\">  \n              <mat-option>-- None --</mat-option>  \n              <mat-option *ngFor=\"let area of areas\" [value]=\"area.AreaID\">  \n                {{ area.AreaName }}  \n              </mat-option>  \n            </mat-select>  \n            <mat-error *ngIf=\"formErrors.AreaID \">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div>\n \n\n\n        <!-- <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>AreaID</mat-label>  \n            <input matInput placeholder=\"AreaID\" formControlName=\"AreaID\">\n            <mat-error *ngIf=\"formErrors.AreaID\">  \n              {{ formErrors.AreaID }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> -->\n\n        <!-- <div>  \n          <mat-form-field appearance=\"outline\">  \n            <mat-label>IsActive</mat-label>  \n            \n            <input matInput placeholder=\"IsActive\" formControlName=\"IsActive\">\n            <mat-error *ngIf=\"formErrors.IsActive\">  \n              {{ formErrors.IsActive }}  \n            </mat-error>  \n          </mat-form-field>  \n        </div> -->\n\n        <div>  \n            <mat-label>Active</mat-label>  \n          <mat-radio-group class=\"contact-radio-group\" formControlName=\"IsActive\">  \n            <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let option of YesNoOptions\" [value]=\"option.id\" [checked]=\"option.id === 1\">  \n              {{ option.name }}  \n            </mat-radio-button>  \n          </mat-radio-group>  \n          <mat-error *ngIf=\"formErrors.IsActive\">  \n            {{ formErrors.IsActive }}  \n          </mat-error>  \n        </div> \n       \n<!-- <div>\n    <mat-form-field appearance=\"outline\">  \n      <mat-select placeholder=\"Select a Technology\" formControlName=\"techno\">  \n        <mat-option>-- None --</mat-option>  \n        <mat-option *ngFor=\"let techno  of technologies\" [value]=\"techno\">  \n          {{ techno }}  \n        </mat-option>  \n      </mat-select>  \n      <mat-error *ngIf=\"formErrors.techno \">  \n        {{ formErrors.techno }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <!-- <div>  \n    <mat-form-field appearance=\"outline\">  \n      <textarea matInput placeholder=\"Message...\" formControlName=\"message\"></textarea>  \n      <mat-error *ngIf=\"formErrors.message \">  \n        {{ formErrors.message }}  \n      </mat-error>  \n    </mat-form-field>  \n  </div>   -->\n  <div>  \n    \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>   \n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"eventFrm.invalid\">{{data.modalBtnTitle}}</button>  \n  </div>  \n    \n  </form> "
 
 /***/ }),
 
@@ -9572,6 +10104,95 @@ var LoginComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/model/guid.ts":
+/*!*******************************!*\
+  !*** ./src/app/model/guid.ts ***!
+  \*******************************/
+/*! exports provided: Guid */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Guid", function() { return Guid; });
+var Guid = /** @class */ (function () {
+    function Guid() {
+    }
+    Guid.newGuid = function () {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    };
+    return Guid;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/model/uploader.ts":
+/*!***********************************!*\
+  !*** ./src/app/model/uploader.ts ***!
+  \***********************************/
+/*! exports provided: Uploader */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Uploader", function() { return Uploader; });
+var Uploader = /** @class */ (function () {
+    function Uploader() {
+        this.queue = [];
+    }
+    return Uploader;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/model/uploadqueue.ts":
+/*!**************************************!*\
+  !*** ./src/app/model/uploadqueue.ts ***!
+  \**************************************/
+/*! exports provided: UploadQueue */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UploadQueue", function() { return UploadQueue; });
+/* harmony import */ var _model_guid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../model/guid */ "./src/app/model/guid.ts");
+
+/**
+ * Represents an UploadQueue
+ */
+var UploadQueue = /** @class */ (function () {
+    function UploadQueue(file) {
+        this.file = file;
+        this.progress = 0;
+        this.id = _model_guid__WEBPACK_IMPORTED_MODULE_0__["Guid"].newGuid();
+        this.message = '';
+        this.isCancel = false;
+        this.isError = false;
+    }
+    Object.defineProperty(UploadQueue.prototype, "isSuccess", {
+        get: function () {
+            if (this.progress === 100) {
+                return true;
+            }
+            return false;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ;
+    return UploadQueue;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/alert.service.ts":
 /*!*******************************************!*\
   !*** ./src/app/services/alert.service.ts ***!
@@ -10273,6 +10894,106 @@ var EventArtistService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/eventbanner.service.ts":
+/*!*************************************************!*\
+  !*** ./src/app/services/eventbanner.service.ts ***!
+  \*************************************************/
+/*! exports provided: EventBannerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventBannerService", function() { return EventBannerService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        'Content-Type': 'application/json; charset=utf-8',
+        'Accept': 'application/json'
+    })
+};
+var httpPostOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+        //'Content-Type': 'application/json; charset=utf-8',
+        'Content-Type': 'multipart/form-data',
+        'Accept': 'application/json',
+    })
+};
+var EventBannerService = /** @class */ (function () {
+    function EventBannerService(http) {
+        this.http = http;
+    }
+    // get all eventartist data
+    EventBannerService.prototype.getAllEventBanner = function (url) {
+        return this.http.get(url)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // insert new eventbanner details
+    EventBannerService.prototype.addEventBanner = function (url, id, files) {
+        //addEventBanner(url: string, eventbanner: IEventBanner): Observable<any> {
+        //addEventBanner(url: string, formData: FormData): Observable<any> {
+        //const newurl = `${url}?id=${id}`; //ADDED BY KB
+        return this.http.post(url, files, httpPostOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    // // update eventbanner details
+    // updateEventBanner(url: string, id: number, eventbanner: IEventBanner): Observable<any> {
+    //   const newurl = `${url}?id=${id}`;
+    //   return this.http.put(newurl, eventbanner, httpPostOptions)
+    //     .pipe(
+    //       catchError(this.handleError)
+    //     );
+    // }
+    // // delete eventbanner information
+    // deleteEventBanner(url: string, id: number): Observable<any> {
+    //   const newurl = `${url}?id=${id}`; // DELETE api/eventbanner?id=42
+    //   return this.http.delete(newurl, httpOptions)
+    //     .pipe(
+    //       catchError(this.handleError)
+    //     );
+    // }
+    // custom handler
+    EventBannerService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    EventBannerService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], EventBannerService);
+    return EventBannerService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/eventorganizer.service.ts":
 /*!****************************************************!*\
   !*** ./src/app/services/eventorganizer.service.ts ***!
@@ -10359,6 +11080,55 @@ var EventOrganizerService = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], EventOrganizerService);
     return EventOrganizerService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/files.services.ts":
+/*!********************************************!*\
+  !*** ./src/app/services/files.services.ts ***!
+  \********************************************/
+/*! exports provided: FileService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FileService", function() { return FileService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+//import { IState } from '../model/state';
+var FileService = /** @class */ (function () {
+    function FileService(http) {
+        this.http = http;
+    }
+    FileService.prototype.upload = function (file) {
+        var input = new FormData();
+        //let input = new FormData();
+        input.append('filesData', file);
+        return this.http.post('http://localhost:4200/kbapi/files/filesList', input)
+            .map(function (res) { return res.json(); });
+        //.pipe(map((response: any) => response.json()));
+    };
+    FileService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"]])
+    ], FileService);
+    return FileService;
 }());
 
 
@@ -10584,7 +11354,7 @@ var Global = /** @class */ (function () {
     }
     // public static BASE_USER_ENDPOINT = 'api/event/';
     // public static BASE_USER_ENDPOINT = 'kbapi-dev.us-east-2.elasticbeanstalk.com/';
-    Global.BASE_USER_ENDPOINT = 'http://localhost:5000/kbapi/';
+    Global.BASE_USER_ENDPOINT = 'http://localhost:4200/kbapi/';
     Global.genders = [{
             name: 'Male',
             id: 0,
@@ -11000,6 +11770,232 @@ var StatelistComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSnackBar"], _services_state_service__WEBPACK_IMPORTED_MODULE_3__["StateService"], _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
     ], StatelistComponent);
     return StatelistComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/upload/upload.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/upload/upload.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<div class=\"row\">\r\n    <div class=\"col-md-3\">\r\n      <h3>Select file</h3>\r\n  \r\n      <!-- Example: nv-file-select=\"\" uploader=\"{Object}\" options=\"{Object}\" filters=\"{String}\" -->\r\n      <input type=\"file\" id=\"file\" uploader=\"uploader\" multiple (change)=\"onSelectChange($event)\" /><br />\r\n      <!-- <div id=\"result\"></div>\r\n      <div class=\"dropzone\" appDnd (filesChangeEmiter)=\"onFilesChange($event)\" (filesInvalidEmiter)=\"onFileInvalids($event)\" [allowed_extensions]=\"['zip','jpg','png','jpeg','rar','JPG']\">\r\n        <div style=\"height:100px;\" class=\"text-wrapper\">\r\n          <div class=\"centered\">Drop your file here!</div>\r\n        </div>\r\n      </div> -->\r\n    </div>\r\n    <div class=\"col-md-9\" style=\"margin-bottom: 40px\">\r\n      <h3>Add File here</h3>\r\n      <p>Queue length: {{ uploader.queue.length }}</p>\r\n      <table class=\"table\">\r\n        <thead>\r\n          <tr>\r\n            <th width=\"50%\">Name</th>\r\n            <th ng-show=\"uploader.isHTML5\">Size</th>\r\n            <th ng-show=\"uploader.isHTML5\">Progress</th>\r\n            <th>Status</th>\r\n            <th>Actions</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of uploader.queue\">\r\n            <td>\r\n              <strong>{{ item.file.name }}</strong>\r\n              <!-- Image preview -->\r\n              <!--auto height-->\r\n              <!--<div ng-thumb=\"{ file: item.file, width: 100 }\"></div>-->\r\n              <!--auto width-->\r\n              <div ng-show=\"uploader.isHTML5\" ng-thumb=\"{ file: item._file, height: 100 }\"></div>\r\n              <!--fixed width and height -->\r\n              <!--<div ng-thumb=\"{ file: item.file, width: 100, height: 100 }\"></div>-->\r\n            </td>\r\n            <td ng-show=\"uploader.isHTML5\" nowrap>{{ item.file.size/1024/1024 | number }} MB</td>\r\n            <td ng-show=\"uploader.isHTML5\">\r\n              <div class=\"progress\" style=\"margin-bottom: 0;\">\r\n                <div class=\"progress-bar\" role=\"progressbar\" [ngStyle]=\"{ 'width': item.progress + '%' }\"></div>\r\n              </div>\r\n            </td>\r\n            <td class=\"text-center\">\r\n              <span *ngIf=\"item.isSuccess\"><i class=\"glyphicon glyphicon-ok\"></i></span>\r\n              <span *ngIf=\"item.isCancel\"><i class=\"glyphicon glyphicon-ban-circle\"></i></span>\r\n              <span *ngIf=\"item.isError\"><i class=\"glyphicon glyphicon-remove\"></i></span>\r\n            </td>\r\n            <td nowrap>\r\n              <button type=\"button\" class=\"btn btn-success btn-xs\" (click)=\"upload(item.id)\" ng-disabled=\"item.isReady || item.isUploading || item.isSuccess\">\r\n                <span class=\"glyphicon glyphicon-upload\"></span> Upload\r\n              </button>\r\n              <button type=\"button\" class=\"btn btn-warning btn-xs\" ng-click=\"item.cancel()\" ng-disabled=\"!item.isUploading\">\r\n                <span class=\"glyphicon glyphicon-ban-circle\"></span> Cancel\r\n              </button>\r\n  \r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div>\r\n        <div>\r\n          Queue progress:\r\n          <div class=\"progress\" style=\"\">\r\n            <div class=\"progress-bar\" role=\"progressbar\" [ngStyle]=\"{ 'width': progress + '%' }\"></div>\r\n          </div>\r\n        </div>\r\n        <button type=\"button\" class=\"btn btn-success btn-s\" (click)=\"uploadAll()\">\r\n          <span class=\"glyphicon glyphicon-upload\"></span> Upload all\r\n        </button>\r\n        <button type=\"button\" class=\"btn btn-warning btn-s\" (click)=\"cancelAll()\">\r\n          <span class=\"glyphicon glyphicon-ban-circle\"></span> Cancel all\r\n        </button>\r\n  \r\n      </div>\r\n    </div>\r\n  </div>\r\n  "
+
+/***/ }),
+
+/***/ "./src/app/upload/upload.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/upload/upload.component.ts ***!
+  \********************************************/
+/*! exports provided: UploadComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UploadComponent", function() { return UploadComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _model_uploader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../model/uploader */ "./src/app/model/uploader.ts");
+/* harmony import */ var _model_uploadqueue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../model/uploadqueue */ "./src/app/model/uploadqueue.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var UploadComponent = /** @class */ (function () {
+    function UploadComponent(http) {
+        this.http = http;
+        this.uploader = new _model_uploader__WEBPACK_IMPORTED_MODULE_2__["Uploader"]();
+        this.message = '';
+    }
+    Object.defineProperty(UploadComponent.prototype, "progress", {
+        //getter : get overall progress
+        get: function () {
+            var psum = 0;
+            for (var _i = 0, _a = this.uploader.queue; _i < _a.length; _i++) {
+                var entry = _a[_i];
+                //for (let entry of this.uploader.queue) {
+                psum += entry.progress;
+            }
+            if (psum === 0) {
+                return 0;
+            }
+            return Math.round(psum / this.uploader.queue.length);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    UploadComponent.prototype.onFilesChange = function (fileList) {
+        for (var _i = 0, fileList_1 = fileList; _i < fileList_1.length; _i++) {
+            var file = fileList_1[_i];
+            //for (let file of fileList) {
+            this.uploader.queue.push(new _model_uploadqueue__WEBPACK_IMPORTED_MODULE_3__["UploadQueue"](file));
+        }
+    };
+    UploadComponent.prototype.onFileInvalids = function (fileList) {
+        //TODO handle invalid files here
+    };
+    UploadComponent.prototype.onSelectChange = function (event) {
+        // let eventObj: MSInputMethodContext = <MSInputMethodContext>event;
+        // let target: HTMLInputElement = <HTMLInputElement>eventObj.target;
+        // let files: FileList = target.files;
+        // let file = files[0];
+        var eventObj = event;
+        var target = eventObj.target;
+        var files = target.files;
+        var file = files[0];
+        if (file) {
+            this.uploader.queue.push(new _model_uploadqueue__WEBPACK_IMPORTED_MODULE_3__["UploadQueue"](file));
+            //console.log(file);
+            console.log('Total Count:' + this.uploader.queue.length);
+        }
+    };
+    // upload 
+    UploadComponent.prototype.upload = function (id) {
+        if (id == null) {
+            return;
+        }
+        //let selectedFile = this.uploader.queue.find(s => s.id == id);
+        var selectedFile = this.uploader.queue.find(function (s) { return s.id === id; });
+        if (selectedFile) {
+            var formData = new FormData();
+            formData.append(selectedFile.file.name, selectedFile.file);
+            var uploadReq = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpRequest"]('POST', "kbapi/upload", formData, {
+                reportProgress: true,
+            });
+            this.http.request(uploadReq).subscribe(function (event) {
+                if (event.type === _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpEventType"].UploadProgress) {
+                    selectedFile.progress = Math.round(100 * event.loaded / event.total);
+                }
+                else if (event.type === _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpEventType"].Response) {
+                    selectedFile.message = event.body.toString();
+                }
+            });
+        }
+    };
+    //upload all selected files to server
+    UploadComponent.prototype.uploadAll = function () {
+        //find the remaning files to upload
+        //let remainingFiles = this.uploader.queue.filter(s => !s.isSuccess);
+        var remainingFiles = this.uploader.queue.filter(function (s) { return !s.isSuccess; });
+        for (var _i = 0, remainingFiles_1 = remainingFiles; _i < remainingFiles_1.length; _i++) {
+            var item = remainingFiles_1[_i];
+            //for (let item of remainingFiles) {
+            this.upload(item.id);
+        }
+    };
+    // cancel all 
+    UploadComponent.prototype.cancelAll = function () {
+        //TODO
+    };
+    UploadComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-upload',
+            template: __webpack_require__(/*! ./upload.component.html */ "./src/app/upload/upload.component.html")
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], UploadComponent);
+    return UploadComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/uploadfiles/uploadfiles.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/uploadfiles/uploadfiles.component.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/uploadfiles/uploadfiles.component.html":
+/*!********************************************************!*\
+  !*** ./src/app/uploadfiles/uploadfiles.component.html ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<form>\r\n  <p>\r\n    upload-files works!\r\n    <input type=\"file\" (change)=\"uploadPhoto()\" #fileInput>\r\n  </p>\r\n</form>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/uploadfiles/uploadfiles.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/uploadfiles/uploadfiles.component.ts ***!
+  \******************************************************/
+/*! exports provided: UploadfilesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UploadfilesComponent", function() { return UploadfilesComponent; });
+/* harmony import */ var _services_files_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/files.services */ "./src/app/services/files.services.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+// import { Component, OnInit } from '@angular/core';
+// @Component({
+//   selector: 'app-upload-files',
+//   templateUrl: './upload-files.component.html',
+//   styleUrls: ['./upload-files.component.css']
+// })
+// export class UploadFilesComponent implements OnInit {
+//   constructor() { }
+//   ngOnInit() {
+//   }
+// }
+//import { Subject } from 'rxjs/Subject';
+
+//import { StateService } from '../services/state.service';
+
+var UploadfilesComponent = /** @class */ (function () {
+    function UploadfilesComponent(fileService) {
+        this.fileService = fileService;
+    }
+    UploadfilesComponent.prototype.ngOnInit = function () {
+    };
+    UploadfilesComponent.prototype.uploadPhoto = function () {
+        var nativeElement = this.fileInput.nativeElement;
+        //let nativeElement: HTMLInputElement = this.fileInput.nativeElement;
+        this.fileService.upload(nativeElement.files);
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('fileInput'),
+        __metadata("design:type", Object)
+    ], UploadfilesComponent.prototype, "fileInput", void 0);
+    UploadfilesComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-uploadfiles',
+            template: __webpack_require__(/*! ./uploadfiles.component.html */ "./src/app/uploadfiles/uploadfiles.component.html"),
+            styles: [__webpack_require__(/*! ./uploadfiles.component.css */ "./src/app/uploadfiles/uploadfiles.component.css")]
+        }),
+        __metadata("design:paramtypes", [_services_files_services__WEBPACK_IMPORTED_MODULE_0__["FileService"]])
+    ], UploadfilesComponent);
+    return UploadfilesComponent;
 }());
 
 
